@@ -1,0 +1,98 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =  002710 L
+    .__.ABS.                                                    =  000000 G
+    .__.CPU.                                                    =  000000 L
+    .__.H$L.                                                    =  000000 L
+    _LCDC_REG                                                      ****** GX
+    __muluchar                                                     ****** GX
+  7 __xinit__dist                                                  000003 R
+  7 __xinit__joypadCurrent                                         000004 R
+  7 __xinit__joypadPrevious                                        000005 R
+  7 __xinit__player_dir                                            000002 R
+  7 __xinit__player_x                                              000000 R
+  7 __xinit__player_y                                              000001 R
+  0 _check_l_walls_e                                               000663 GR
+  0 _check_l_walls_n                                               000489 GR
+  0 _check_l_walls_s                                               00083C GR
+  0 _check_l_walls_w                                               000A16 GR
+  0 _check_m_walls                                                 0002C3 GR
+  0 _check_r_walls_e                                               000DC9 GR
+  0 _check_r_walls_n                                               000BEF GR
+  0 _check_r_walls_s                                               000FA2 GR
+  0 _check_r_walls_w                                               00117C GR
+  2 _dist                                                          000003 R
+    _dng_tileset                                                   ****** GX
+    _door1_bkg                                                     ****** GX
+    _door1_l_bkg                                                   ****** GX
+    _door1_r_bkg                                                   ****** GX
+    _door2_bkg                                                     ****** GX
+    _door2_l_bkg                                                   ****** GX
+    _door2_r_bkg                                                   ****** GX
+    _door3_bkg                                                     ****** GX
+    _door3_l_bkg                                                   ****** GX
+    _door3_r_bkg                                                   ****** GX
+  0 _init_gfx                                                      00027A GR
+    _joypad                                                        ****** GX
+  2 _joypadCurrent                                                 000004 R
+  2 _joypadPrevious                                                000005 R
+  0 _main                                                          001443 GR
+    _news                                                          ****** GX
+    _nowall1_l_bkg                                                 ****** GX
+    _nowall1_r_bkg                                                 ****** GX
+    _nowall2_l_bkg                                                 ****** GX
+    _nowall2_r_bkg                                                 ****** GX
+    _nowall3_l_bkg                                                 ****** GX
+    _nowall3_r_bkg                                                 ****** GX
+    _nowall_door1_l_bkg                                            ****** GX
+    _nowall_door1_r_bkg                                            ****** GX
+    _nowall_door2_l_bkg                                            ****** GX
+    _nowall_door2_r_bkg                                            ****** GX
+    _nowall_door3_l_bkg                                            ****** GX
+    _nowall_door3_r_bkg                                            ****** GX
+  2 _player_dir                                                    000002 R
+  2 _player_x                                                      000000 R
+  2 _player_y                                                      000001 R
+  0 _return_value                                                  000000 GR
+    _set_bkg_data                                                  ****** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    _set_bkg_tiles                                                 ****** GX
+    _set_sprite_data                                               ****** GX
+    _shadow_OAM                                                    ****** GX
+  0 _test_dungeon                                                  000199 GR
+  0 _update_dng                                                    001355 GR
+    _wait_vbl_done                                                 ****** GX
+    _wall1_bkg                                                     ****** GX
+    _wall1_l_bkg                                                   ****** GX
+    _wall1_r_bkg                                                   ****** GX
+    _wall2_bkg                                                     ****** GX
+    _wall2_l_bkg                                                   ****** GX
+    _wall2_r_bkg                                                   ****** GX
+    _wall3_bkg                                                     ****** GX
+    _wall3_l_bkg                                                   ****** GX
+    _wall3_r_bkg                                                   ****** GX
+  0 _white_screen                                                  000045 GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [24-Bits]
+
+Area Table
+
+   0 _CODE                                      size   158D   flags    0
+   1 _DATA                                      size      0   flags    0
+   2 _INITIALIZED                               size      6   flags    0
+   3 _DABS                                      size      0   flags    8
+   4 _HOME                                      size      0   flags    0
+   5 _GSINIT                                    size      0   flags    0
+   6 _GSFINAL                                   size      0   flags    0
+   7 _INITIALIZER                               size      6   flags    0
+   8 _CABS                                      size      0   flags    8
+

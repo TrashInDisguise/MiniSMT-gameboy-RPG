@@ -1,0 +1,14 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/red/Documents/GameBoyDev/MiniSMT/obj",
+            "binaryPath": "/home/red/Documents/GameBoyDev/MiniSMT/obj/MiniSMT.gb",
+            "binaryArgs": []
+        }
+    ],
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "typedef_structs.h": "c",
+        "dng_wip.h": "c"
+    }
+}
