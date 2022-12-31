@@ -10,10 +10,3 @@ Project directories
   - obj: Debug files go in this directory
   - bin: Compiled ROM (.gb) goes here
 
-
-== Sprite and Background tiles from: ==
-
-https://sondanielson.itch.io/gameboy-simple-rpg-tileset
-"Licence is under CCA so you can use these assets both privately and commercially"
-"You are free to use them as is or modify them to your liking. All i ask is you credit me if you do use them please :)"
-
