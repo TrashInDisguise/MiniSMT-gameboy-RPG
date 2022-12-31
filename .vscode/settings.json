@@ -9,6 +9,7 @@
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
         "typedef_structs.h": "c",
-        "dng_wip.h": "c"
+        "dng_wip.h": "c",
+        "stdint.h": "c"
     }
 }
