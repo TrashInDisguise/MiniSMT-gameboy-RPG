@@ -1,0 +1,27 @@
+XL3
+H 9 areas 2 global symbols
+M nesw
+O -msm83
+S .__.ABS. Def000000
+A _CODE size 40 flags 0 addr 0
+S _news Def000000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00 00
+R 00 00 00 00
+T 00 00 00 C3 C3 E3 E3 F3 F3 FB FB DF DF CF CF C7
+R 00 00 00 00
+T 0D 00 00 C7 C3 C3 FF FF FF FF C0 C0 F8 F8 F8 F8
+R 00 00 00 00
+T 1A 00 00 C0 C0 FF FF FF FF 3E 3E 7E 7E 60 60 30
+R 00 00 00 00
+T 27 00 00 30 18 18 0C 0C 7E 7E 7C 7C DB DB DB DB
+R 00 00 00 00
+T 34 00 00 DB DB DB DB DB DB DB DB FF FF 3C 3C
+R 00 00 00 00
