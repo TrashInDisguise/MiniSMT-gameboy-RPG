@@ -7,18 +7,24 @@ Symbol Table
     .__.ABS.                                                    =  000000 G
     .__.CPU.                                                    =  000000 L
     .__.H$L.                                                    =  000000 L
-  0 _door1_bkg                                                     000414 GR
-  0 _door1_c_bkg                                                   00033C GR
   0 _door1_l_bkg                                                   00001B GR
+  0 _door1_left_half_bkg                                           0003DE GR
+  0 _door1_left_half_c_bkg                                         00033C GR
   0 _door1_r_bkg                                                   000051 GR
-  0 _door2_bkg                                                     0004C8 GR
-  0 _door2_c_bkg                                                   000558 GR
+  0 _door1_right_half_bkg                                          000414 GR
+  0 _door1_right_half_c_bkg                                        000372 GR
   0 _door2_l_bkg                                                   0000EA GR
+  0 _door2_left_half_bkg                                           00046E GR
+  0 _door2_left_half_c_bkg                                         0004FE GR
   0 _door2_r_bkg                                                   00010E GR
-  0 _door3_bkg                                                     0005D6 GR
-  0 _door3_c_bkg                                                   000642 GR
+  0 _door2_right_half_bkg                                          000492 GR
+  0 _door2_right_half_c_bkg                                        000522 GR
   0 _door3_l_bkg                                                   0001E6 GR
+  0 _door3_left_half_bkg                                           000561 GR
+  0 _door3_left_half_c_bkg                                         000597 GR
   0 _door3_r_bkg                                                   0001EF GR
+  0 _door3_right_half_bkg                                          0005B2 GR
+  0 _door3_right_half_c_bkg                                        0005E8 GR
   0 _nowall1_l_bkg                                                 00006C GR
   0 _nowall1_r_bkg                                                 0000A2 GR
   0 _nowall2_l_bkg                                                 000120 GR
@@ -31,18 +37,21 @@ Symbol Table
   0 _nowall_door2_r_bkg                                            00017A GR
   0 _nowall_door3_l_bkg                                            00022E GR
   0 _nowall_door3_r_bkg                                            00029A GR
-  0 _wall1_bkg                                                     0003A8 GR
-  0 _wall1_c_bkg                                                   0002D0 GR
+  0 _wall1_half_bkg                                                0003A8 GR
   0 _wall1_l_bkg                                                   000000 GR
+  0 _wall1_left_half_c_bkg                                         0002D0 GR
   0 _wall1_r_bkg                                                   000036 GR
-  0 _wall2_bkg                                                     000480 GR
-  0 _wall2_c_bkg                                                   000510 GR
+  0 _wall1_right_half_c_bkg                                        000306 GR
+  0 _wall2_half_bkg                                                00044A GR
   0 _wall2_l_bkg                                                   0000D8 GR
+  0 _wall2_left_half_c_bkg                                         0004B6 GR
   0 _wall2_r_bkg                                                   0000FC GR
-  0 _wall3_bkg                                                     0005A0 GR
-  0 _wall3_c_bkg                                                   00060C GR
+  0 _wall2_right_half_c_bkg                                        0004DA GR
+  0 _wall3_half_bkg                                                000546 GR
   0 _wall3_l_bkg                                                   0001D4 GR
+  0 _wall3_left_half_c_bkg                                         00057C GR
   0 _wall3_r_bkg                                                   0001DD GR
+  0 _wall3_right_half_c_bkg                                        0005CD GR
 
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
@@ -50,7 +59,7 @@ Hexadecimal [24-Bits]
 
 Area Table
 
-   0 _CODE                                      size    678   flags    0
+   0 _CODE                                      size    603   flags    0
    1 _DATA                                      size      0   flags    0
    2 _INITIALIZED                               size      0   flags    0
    3 _DABS                                      size      0   flags    8
