@@ -731,7 +731,7 @@ _check_m_walls::
 	pop	hl
 	add	sp, #5
 	jp	(hl)
-;src/dng_crawling.c:205: void check_l_walls_n(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
+;src/dng_crawling.c:206: void check_l_walls_n(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
 ;	---------------------------------
 ; Function check_l_walls_n
 ; ---------------------------------
@@ -740,7 +740,7 @@ _check_l_walls_n::
 	dec	sp
 	ldhl	sp,	#1
 	ld	(hl), a
-;src/dng_crawling.c:206: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-2);
+;src/dng_crawling.c:207: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-2);
 	ldhl	sp,	#6
 	ld	c, (hl)
 	ld	a, c
@@ -767,15 +767,15 @@ _check_l_walls_n::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:207: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:208: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00111$
 	cp	a, #0x01
 	jr	Z, 00111$
-;src/dng_crawling.c:208: if( w == 0x06){
+;src/dng_crawling.c:209: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00102$
-;src/dng_crawling.c:209: set_bkg_tiles(6,0,1,9,door3_l_bkg);
+;src/dng_crawling.c:210: set_bkg_tiles(6,0,1,9,door3_l_bkg);
 	push	de
 	ld	hl, #_door3_l_bkg
 	push	hl
@@ -788,7 +788,7 @@ _check_l_walls_n::
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:211: set_bkg_tiles(6,0,1,9,wall3_l_bkg);
+;src/dng_crawling.c:212: set_bkg_tiles(6,0,1,9,wall3_l_bkg);
 	push	de
 	ld	hl, #_wall3_l_bkg
 	push	hl
@@ -801,7 +801,7 @@ _check_l_walls_n::
 	pop	de
 	jr	00112$
 00111$:
-;src/dng_crawling.c:214: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-3);
+;src/dng_crawling.c:215: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-3);
 	ld	a, c
 	add	a, #0xfd
 	push	bc
@@ -819,15 +819,15 @@ _check_l_walls_n::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:215: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:216: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00112$
 	cp	a, #0x01
 	jr	Z, 00112$
-;src/dng_crawling.c:216: if( w == 0x03){
+;src/dng_crawling.c:217: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00105$
-;src/dng_crawling.c:217: set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
+;src/dng_crawling.c:218: set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
 	push	de
 	ld	hl, #_nowall_door3_l_bkg
 	push	hl
@@ -840,7 +840,7 @@ _check_l_walls_n::
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:219: set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
+;src/dng_crawling.c:220: set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
 	push	de
 	ld	hl, #_nowall3_l_bkg
 	push	hl
@@ -852,7 +852,7 @@ _check_l_walls_n::
 	add	sp, #6
 	pop	de
 00112$:
-;src/dng_crawling.c:223: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-1);
+;src/dng_crawling.c:224: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-1);
 	dec	c
 	push	bc
 	push	de
@@ -870,15 +870,15 @@ _check_l_walls_n::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:224: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:225: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00124$
 	cp	a, #0x01
 	jr	Z, 00124$
-;src/dng_crawling.c:225: if( w == 0x06){
+;src/dng_crawling.c:226: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00115$
-;src/dng_crawling.c:226: set_bkg_tiles(4,0,2,9,door2_l_bkg);
+;src/dng_crawling.c:227: set_bkg_tiles(4,0,2,9,door2_l_bkg);
 	push	de
 	ld	hl, #_door2_l_bkg
 	push	hl
@@ -891,7 +891,7 @@ _check_l_walls_n::
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:228: set_bkg_tiles(4,0,2,9,wall2_l_bkg);
+;src/dng_crawling.c:229: set_bkg_tiles(4,0,2,9,wall2_l_bkg);
 	push	de
 	ld	hl, #_wall2_l_bkg
 	push	hl
@@ -904,7 +904,7 @@ _check_l_walls_n::
 	pop	de
 	jr	00125$
 00124$:
-;src/dng_crawling.c:231: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-2);
+;src/dng_crawling.c:232: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-2);
 	push	bc
 	push	de
 	ldhl	sp,	#4
@@ -922,15 +922,15 @@ _check_l_walls_n::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:232: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:233: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00125$
 	cp	a, #0x01
 	jr	Z, 00125$
-;src/dng_crawling.c:233: if( w == 0x03){
+;src/dng_crawling.c:234: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00118$
-;src/dng_crawling.c:234: set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
+;src/dng_crawling.c:235: set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
 	push	de
 	ld	hl, #_nowall_door2_l_bkg
 	push	hl
@@ -943,7 +943,7 @@ _check_l_walls_n::
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:236: set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
+;src/dng_crawling.c:237: set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
 	push	de
 	ld	hl, #_nowall2_l_bkg
 	push	hl
@@ -955,7 +955,7 @@ _check_l_walls_n::
 	add	sp, #6
 	pop	de
 00125$:
-;src/dng_crawling.c:241: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y);
+;src/dng_crawling.c:242: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y);
 	push	bc
 	push	de
 	ldhl	sp,	#10
@@ -970,15 +970,15 @@ _check_l_walls_n::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:242: if(w!=0x00 && w != 0x01){
+;src/dng_crawling.c:243: if(w!=0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00137$
 	cp	a, #0x01
 	jr	Z, 00137$
-;src/dng_crawling.c:243: if( w == 0x06){
+;src/dng_crawling.c:244: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00128$
-;src/dng_crawling.c:244: set_bkg_tiles(1,0,3,9,door1_l_bkg);
+;src/dng_crawling.c:245: set_bkg_tiles(1,0,3,9,door1_l_bkg);
 	ld	de, #_door1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -993,7 +993,7 @@ _check_l_walls_n::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:246: set_bkg_tiles(1,0,3,9,wall1_l_bkg);
+;src/dng_crawling.c:247: set_bkg_tiles(1,0,3,9,wall1_l_bkg);
 	ld	de, #_wall1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -1008,7 +1008,7 @@ _check_l_walls_n::
 	add	sp, #6
 	jr	00140$
 00137$:
-;src/dng_crawling.c:249: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-1);
+;src/dng_crawling.c:250: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-1);
 	ld	a, c
 	push	af
 	inc	sp
@@ -1021,15 +1021,15 @@ _check_l_walls_n::
 	ldhl	sp,	#4
 	ld	a, (hl)
 	call	_return_value
-;src/dng_crawling.c:250: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:251: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00140$
 	cp	a, #0x01
 	jr	Z, 00140$
-;src/dng_crawling.c:251: if( w == 0x03){
+;src/dng_crawling.c:252: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00131$
-;src/dng_crawling.c:252: set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
+;src/dng_crawling.c:253: set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
 	ld	de, #_nowall_door1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -1044,7 +1044,7 @@ _check_l_walls_n::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:254: set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
+;src/dng_crawling.c:255: set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
 	ld	de, #_nowall1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -1058,13 +1058,13 @@ _check_l_walls_n::
 	call	_set_bkg_tiles
 	add	sp, #6
 00140$:
-;src/dng_crawling.c:258: }
+;src/dng_crawling.c:259: }
 	inc	sp
 	inc	sp
 	pop	hl
 	add	sp, #3
 	jp	(hl)
-;src/dng_crawling.c:260: void check_l_walls_e(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
+;src/dng_crawling.c:261: void check_l_walls_e(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
 ;	---------------------------------
 ; Function check_l_walls_e
 ; ---------------------------------
@@ -1073,7 +1073,7 @@ _check_l_walls_e::
 	dec	sp
 	ldhl	sp,	#1
 	ld	(hl), a
-;src/dng_crawling.c:261: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x+2, player_y-1);
+;src/dng_crawling.c:262: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x+2, player_y-1);
 	ldhl	sp,	#6
 	ld	a, (hl-)
 	ld	b, a
@@ -1096,15 +1096,15 @@ _check_l_walls_e::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:262: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:263: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00111$
 	cp	a, #0x01
 	jr	Z, 00111$
-;src/dng_crawling.c:263: if( w == 0x03){
+;src/dng_crawling.c:264: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00102$
-;src/dng_crawling.c:264: set_bkg_tiles(6,0,1,9,door3_l_bkg);
+;src/dng_crawling.c:265: set_bkg_tiles(6,0,1,9,door3_l_bkg);
 	push	de
 	ld	hl, #_door3_l_bkg
 	push	hl
@@ -1117,7 +1117,7 @@ _check_l_walls_e::
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:266: set_bkg_tiles(6,0,1,9,wall3_l_bkg);
+;src/dng_crawling.c:267: set_bkg_tiles(6,0,1,9,wall3_l_bkg);
 	push	de
 	ld	hl, #_wall3_l_bkg
 	push	hl
@@ -1130,7 +1130,7 @@ _check_l_walls_e::
 	pop	de
 	jr	00112$
 00111$:
-;src/dng_crawling.c:269: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+3, player_y-1);
+;src/dng_crawling.c:270: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+3, player_y-1);
 	ld	a, c
 	inc	a
 	inc	a
@@ -1150,15 +1150,15 @@ _check_l_walls_e::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:270: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:271: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00112$
 	cp	a, #0x01
 	jr	Z, 00112$
-;src/dng_crawling.c:271: if( w == 0x04){
+;src/dng_crawling.c:272: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00105$
-;src/dng_crawling.c:272: set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
+;src/dng_crawling.c:273: set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
 	push	de
 	ld	hl, #_nowall_door3_l_bkg
 	push	hl
@@ -1171,7 +1171,7 @@ _check_l_walls_e::
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:274: set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
+;src/dng_crawling.c:275: set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
 	push	de
 	ld	hl, #_nowall3_l_bkg
 	push	hl
@@ -1183,7 +1183,7 @@ _check_l_walls_e::
 	add	sp, #6
 	pop	de
 00112$:
-;src/dng_crawling.c:278: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-1);
+;src/dng_crawling.c:279: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-1);
 	inc	c
 	push	bc
 	push	de
@@ -1197,15 +1197,15 @@ _check_l_walls_e::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:279: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:280: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00124$
 	cp	a, #0x01
 	jr	Z, 00124$
-;src/dng_crawling.c:280: if( w == 0x03){
+;src/dng_crawling.c:281: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00115$
-;src/dng_crawling.c:281: set_bkg_tiles(4,0,2,9,door2_l_bkg);
+;src/dng_crawling.c:282: set_bkg_tiles(4,0,2,9,door2_l_bkg);
 	push	de
 	ld	hl, #_door2_l_bkg
 	push	hl
@@ -1218,7 +1218,7 @@ _check_l_walls_e::
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:283: set_bkg_tiles(4,0,2,9,wall2_l_bkg);
+;src/dng_crawling.c:284: set_bkg_tiles(4,0,2,9,wall2_l_bkg);
 	push	de
 	ld	hl, #_wall2_l_bkg
 	push	hl
@@ -1231,7 +1231,7 @@ _check_l_walls_e::
 	pop	de
 	jr	00125$
 00124$:
-;src/dng_crawling.c:286: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+2, player_y-1);
+;src/dng_crawling.c:287: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+2, player_y-1);
 	push	bc
 	push	de
 	push	bc
@@ -1249,15 +1249,15 @@ _check_l_walls_e::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:287: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:288: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00125$
 	cp	a, #0x01
 	jr	Z, 00125$
-;src/dng_crawling.c:288: if( w == 0x04){
+;src/dng_crawling.c:289: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00118$
-;src/dng_crawling.c:289: set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
+;src/dng_crawling.c:290: set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
 	push	de
 	ld	hl, #_nowall_door2_l_bkg
 	push	hl
@@ -1270,7 +1270,7 @@ _check_l_walls_e::
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:291: set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
+;src/dng_crawling.c:292: set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
 	push	de
 	ld	hl, #_nowall2_l_bkg
 	push	hl
@@ -1282,7 +1282,7 @@ _check_l_walls_e::
 	add	sp, #6
 	pop	de
 00125$:
-;src/dng_crawling.c:296: w = return_value(dng,dungeon_width,dungeon_hieght,player_x, player_y-1);
+;src/dng_crawling.c:297: w = return_value(dng,dungeon_width,dungeon_hieght,player_x, player_y-1);
 	push	bc
 	push	de
 	push	bc
@@ -1297,15 +1297,15 @@ _check_l_walls_e::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:297: if(w!=0x00 && w != 0x01){
+;src/dng_crawling.c:298: if(w!=0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00137$
 	cp	a, #0x01
 	jr	Z, 00137$
-;src/dng_crawling.c:298: if( w == 0x03){
+;src/dng_crawling.c:299: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00128$
-;src/dng_crawling.c:299: set_bkg_tiles(1,0,3,9,door1_l_bkg);
+;src/dng_crawling.c:300: set_bkg_tiles(1,0,3,9,door1_l_bkg);
 	ld	de, #_door1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -1320,7 +1320,7 @@ _check_l_walls_e::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:301: set_bkg_tiles(1,0,3,9,wall1_l_bkg);
+;src/dng_crawling.c:302: set_bkg_tiles(1,0,3,9,wall1_l_bkg);
 	ld	de, #_wall1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -1335,7 +1335,7 @@ _check_l_walls_e::
 	add	sp, #6
 	jr	00140$
 00137$:
-;src/dng_crawling.c:304: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-1);
+;src/dng_crawling.c:305: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-1);
 	push	bc
 	ldhl	sp,	#6
 	ld	a, (hl)
@@ -1344,15 +1344,15 @@ _check_l_walls_e::
 	ldhl	sp,	#4
 	ld	a, (hl)
 	call	_return_value
-;src/dng_crawling.c:305: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:306: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00140$
 	cp	a, #0x01
 	jr	Z, 00140$
-;src/dng_crawling.c:306: if( w == 0x04){
+;src/dng_crawling.c:307: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00131$
-;src/dng_crawling.c:307: set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
+;src/dng_crawling.c:308: set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
 	ld	de, #_nowall_door1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -1367,7 +1367,7 @@ _check_l_walls_e::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:309: set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
+;src/dng_crawling.c:310: set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
 	ld	de, #_nowall1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -1381,13 +1381,13 @@ _check_l_walls_e::
 	call	_set_bkg_tiles
 	add	sp, #6
 00140$:
-;src/dng_crawling.c:313: }
+;src/dng_crawling.c:314: }
 	inc	sp
 	inc	sp
 	pop	hl
 	add	sp, #3
 	jp	(hl)
-;src/dng_crawling.c:315: void check_l_walls_s(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
+;src/dng_crawling.c:316: void check_l_walls_s(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
 ;	---------------------------------
 ; Function check_l_walls_s
 ; ---------------------------------
@@ -1396,7 +1396,7 @@ _check_l_walls_s::
 	dec	sp
 	ldhl	sp,	#1
 	ld	(hl), a
-;src/dng_crawling.c:316: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+2);
+;src/dng_crawling.c:317: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+2);
 	ldhl	sp,	#6
 	ld	c, (hl)
 	ld	a, c
@@ -1423,15 +1423,15 @@ _check_l_walls_s::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:317: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:318: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00111$
 	cp	a, #0x01
 	jr	Z, 00111$
-;src/dng_crawling.c:318: if( w == 0x04){
+;src/dng_crawling.c:319: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00102$
-;src/dng_crawling.c:319: set_bkg_tiles(6,0,1,9,door3_l_bkg);
+;src/dng_crawling.c:320: set_bkg_tiles(6,0,1,9,door3_l_bkg);
 	push	de
 	ld	hl, #_door3_l_bkg
 	push	hl
@@ -1444,7 +1444,7 @@ _check_l_walls_s::
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:321: set_bkg_tiles(6,0,1,9,wall3_l_bkg);
+;src/dng_crawling.c:322: set_bkg_tiles(6,0,1,9,wall3_l_bkg);
 	push	de
 	ld	hl, #_wall3_l_bkg
 	push	hl
@@ -1457,7 +1457,7 @@ _check_l_walls_s::
 	pop	de
 	jr	00112$
 00111$:
-;src/dng_crawling.c:324: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+3);
+;src/dng_crawling.c:325: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+3);
 	ld	a, c
 	inc	a
 	inc	a
@@ -1477,15 +1477,15 @@ _check_l_walls_s::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:325: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:326: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00112$
 	cp	a, #0x01
 	jr	Z, 00112$
-;src/dng_crawling.c:326: if( w == 0x05){
+;src/dng_crawling.c:327: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00105$
-;src/dng_crawling.c:327: set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
+;src/dng_crawling.c:328: set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
 	push	de
 	ld	hl, #_nowall_door3_l_bkg
 	push	hl
@@ -1498,7 +1498,7 @@ _check_l_walls_s::
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:329: set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
+;src/dng_crawling.c:330: set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
 	push	de
 	ld	hl, #_nowall3_l_bkg
 	push	hl
@@ -1510,7 +1510,7 @@ _check_l_walls_s::
 	add	sp, #6
 	pop	de
 00112$:
-;src/dng_crawling.c:333: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+1);
+;src/dng_crawling.c:334: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+1);
 	inc	c
 	push	bc
 	push	de
@@ -1528,15 +1528,15 @@ _check_l_walls_s::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:334: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:335: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00124$
 	cp	a, #0x01
 	jr	Z, 00124$
-;src/dng_crawling.c:335: if( w == 0x04){
+;src/dng_crawling.c:336: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00115$
-;src/dng_crawling.c:336: set_bkg_tiles(4,0,2,9,door2_l_bkg);
+;src/dng_crawling.c:337: set_bkg_tiles(4,0,2,9,door2_l_bkg);
 	push	de
 	ld	hl, #_door2_l_bkg
 	push	hl
@@ -1549,7 +1549,7 @@ _check_l_walls_s::
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:338: set_bkg_tiles(4,0,2,9,wall2_l_bkg);
+;src/dng_crawling.c:339: set_bkg_tiles(4,0,2,9,wall2_l_bkg);
 	push	de
 	ld	hl, #_wall2_l_bkg
 	push	hl
@@ -1562,7 +1562,7 @@ _check_l_walls_s::
 	pop	de
 	jr	00125$
 00124$:
-;src/dng_crawling.c:341: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+2);
+;src/dng_crawling.c:342: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+2);
 	push	bc
 	push	de
 	ldhl	sp,	#4
@@ -1580,15 +1580,15 @@ _check_l_walls_s::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:342: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:343: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00125$
 	cp	a, #0x01
 	jr	Z, 00125$
-;src/dng_crawling.c:343: if( w == 0x05){
+;src/dng_crawling.c:344: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00118$
-;src/dng_crawling.c:344: set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
+;src/dng_crawling.c:345: set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
 	push	de
 	ld	hl, #_nowall_door2_l_bkg
 	push	hl
@@ -1601,7 +1601,7 @@ _check_l_walls_s::
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:346: set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
+;src/dng_crawling.c:347: set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
 	push	de
 	ld	hl, #_nowall2_l_bkg
 	push	hl
@@ -1613,7 +1613,7 @@ _check_l_walls_s::
 	add	sp, #6
 	pop	de
 00125$:
-;src/dng_crawling.c:351: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y);
+;src/dng_crawling.c:352: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y);
 	push	bc
 	push	de
 	ldhl	sp,	#10
@@ -1628,15 +1628,15 @@ _check_l_walls_s::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:352: if(w!=0x00 && w != 0x01){
+;src/dng_crawling.c:353: if(w!=0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00137$
 	cp	a, #0x01
 	jr	Z, 00137$
-;src/dng_crawling.c:353: if( w == 0x04){
+;src/dng_crawling.c:354: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00128$
-;src/dng_crawling.c:354: set_bkg_tiles(1,0,3,9,door1_l_bkg);
+;src/dng_crawling.c:355: set_bkg_tiles(1,0,3,9,door1_l_bkg);
 	ld	de, #_door1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -1651,7 +1651,7 @@ _check_l_walls_s::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:356: set_bkg_tiles(1,0,3,9,wall1_l_bkg);
+;src/dng_crawling.c:357: set_bkg_tiles(1,0,3,9,wall1_l_bkg);
 	ld	de, #_wall1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -1666,7 +1666,7 @@ _check_l_walls_s::
 	add	sp, #6
 	jr	00140$
 00137$:
-;src/dng_crawling.c:359: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+1);
+;src/dng_crawling.c:360: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+1);
 	ld	a, c
 	push	af
 	inc	sp
@@ -1679,15 +1679,15 @@ _check_l_walls_s::
 	ldhl	sp,	#4
 	ld	a, (hl)
 	call	_return_value
-;src/dng_crawling.c:360: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:361: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00140$
 	cp	a, #0x01
 	jr	Z, 00140$
-;src/dng_crawling.c:361: if( w == 0x05){
+;src/dng_crawling.c:362: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00131$
-;src/dng_crawling.c:362: set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
+;src/dng_crawling.c:363: set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
 	ld	de, #_nowall_door1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -1702,7 +1702,7 @@ _check_l_walls_s::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:364: set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
+;src/dng_crawling.c:365: set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
 	ld	de, #_nowall1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -1716,13 +1716,13 @@ _check_l_walls_s::
 	call	_set_bkg_tiles
 	add	sp, #6
 00140$:
-;src/dng_crawling.c:368: }
+;src/dng_crawling.c:369: }
 	inc	sp
 	inc	sp
 	pop	hl
 	add	sp, #3
 	jp	(hl)
-;src/dng_crawling.c:370: void check_l_walls_w(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
+;src/dng_crawling.c:371: void check_l_walls_w(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
 ;	---------------------------------
 ; Function check_l_walls_w
 ; ---------------------------------
@@ -1731,7 +1731,7 @@ _check_l_walls_w::
 	dec	sp
 	ldhl	sp,	#1
 	ld	(hl), a
-;src/dng_crawling.c:371: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x-2, player_y+1);
+;src/dng_crawling.c:372: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x-2, player_y+1);
 	ldhl	sp,	#6
 	ld	a, (hl-)
 	ld	b, a
@@ -1754,15 +1754,15 @@ _check_l_walls_w::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:372: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:373: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00111$
 	cp	a, #0x01
 	jr	Z, 00111$
-;src/dng_crawling.c:373: if( w == 0x05){
+;src/dng_crawling.c:374: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00102$
-;src/dng_crawling.c:374: set_bkg_tiles(6,0,1,9,door3_l_bkg);
+;src/dng_crawling.c:375: set_bkg_tiles(6,0,1,9,door3_l_bkg);
 	push	de
 	ld	hl, #_door3_l_bkg
 	push	hl
@@ -1775,7 +1775,7 @@ _check_l_walls_w::
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:376: set_bkg_tiles(6,0,1,9,wall3_l_bkg);
+;src/dng_crawling.c:377: set_bkg_tiles(6,0,1,9,wall3_l_bkg);
 	push	de
 	ld	hl, #_wall3_l_bkg
 	push	hl
@@ -1788,7 +1788,7 @@ _check_l_walls_w::
 	pop	de
 	jr	00112$
 00111$:
-;src/dng_crawling.c:379: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-3, player_y+1);
+;src/dng_crawling.c:380: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-3, player_y+1);
 	ld	a, c
 	add	a, #0xfd
 	push	bc
@@ -1806,15 +1806,15 @@ _check_l_walls_w::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:380: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:381: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00112$
 	cp	a, #0x01
 	jr	Z, 00112$
-;src/dng_crawling.c:381: if( w == 0x06){
+;src/dng_crawling.c:382: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00105$
-;src/dng_crawling.c:382: set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
+;src/dng_crawling.c:383: set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
 	push	de
 	ld	hl, #_nowall_door3_l_bkg
 	push	hl
@@ -1827,7 +1827,7 @@ _check_l_walls_w::
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:384: set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
+;src/dng_crawling.c:385: set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
 	push	de
 	ld	hl, #_nowall3_l_bkg
 	push	hl
@@ -1839,7 +1839,7 @@ _check_l_walls_w::
 	add	sp, #6
 	pop	de
 00112$:
-;src/dng_crawling.c:388: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+1);
+;src/dng_crawling.c:389: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+1);
 	dec	c
 	push	bc
 	push	de
@@ -1853,15 +1853,15 @@ _check_l_walls_w::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:389: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:390: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00124$
 	cp	a, #0x01
 	jr	Z, 00124$
-;src/dng_crawling.c:390: if( w == 0x05){
+;src/dng_crawling.c:391: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00115$
-;src/dng_crawling.c:391: set_bkg_tiles(4,0,2,9,door2_l_bkg);
+;src/dng_crawling.c:392: set_bkg_tiles(4,0,2,9,door2_l_bkg);
 	push	de
 	ld	hl, #_door2_l_bkg
 	push	hl
@@ -1874,7 +1874,7 @@ _check_l_walls_w::
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:393: set_bkg_tiles(4,0,2,9,wall2_l_bkg);
+;src/dng_crawling.c:394: set_bkg_tiles(4,0,2,9,wall2_l_bkg);
 	push	de
 	ld	hl, #_wall2_l_bkg
 	push	hl
@@ -1887,7 +1887,7 @@ _check_l_walls_w::
 	pop	de
 	jr	00125$
 00124$:
-;src/dng_crawling.c:396: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-2, player_y+1);
+;src/dng_crawling.c:397: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-2, player_y+1);
 	push	bc
 	push	de
 	push	bc
@@ -1905,15 +1905,15 @@ _check_l_walls_w::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:397: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:398: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00125$
 	cp	a, #0x01
 	jr	Z, 00125$
-;src/dng_crawling.c:398: if( w == 0x06){
+;src/dng_crawling.c:399: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00118$
-;src/dng_crawling.c:399: set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
+;src/dng_crawling.c:400: set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
 	push	de
 	ld	hl, #_nowall_door2_l_bkg
 	push	hl
@@ -1926,7 +1926,7 @@ _check_l_walls_w::
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:401: set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
+;src/dng_crawling.c:402: set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
 	push	de
 	ld	hl, #_nowall2_l_bkg
 	push	hl
@@ -1938,7 +1938,7 @@ _check_l_walls_w::
 	add	sp, #6
 	pop	de
 00125$:
-;src/dng_crawling.c:406: w = return_value(dng,dungeon_width,dungeon_hieght,player_x, player_y+1);
+;src/dng_crawling.c:407: w = return_value(dng,dungeon_width,dungeon_hieght,player_x, player_y+1);
 	push	bc
 	push	de
 	push	bc
@@ -1953,15 +1953,15 @@ _check_l_walls_w::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:407: if(w!=0x00 && w != 0x01){
+;src/dng_crawling.c:408: if(w!=0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00137$
 	cp	a, #0x01
 	jr	Z, 00137$
-;src/dng_crawling.c:408: if( w == 0x05){
+;src/dng_crawling.c:409: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00128$
-;src/dng_crawling.c:409: set_bkg_tiles(1,0,3,9,door1_l_bkg);
+;src/dng_crawling.c:410: set_bkg_tiles(1,0,3,9,door1_l_bkg);
 	ld	de, #_door1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -1976,7 +1976,7 @@ _check_l_walls_w::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:411: set_bkg_tiles(1,0,3,9,wall1_l_bkg);
+;src/dng_crawling.c:412: set_bkg_tiles(1,0,3,9,wall1_l_bkg);
 	ld	de, #_wall1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -1991,7 +1991,7 @@ _check_l_walls_w::
 	add	sp, #6
 	jr	00140$
 00137$:
-;src/dng_crawling.c:414: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+1);
+;src/dng_crawling.c:415: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+1);
 	push	bc
 	ldhl	sp,	#6
 	ld	a, (hl)
@@ -2000,15 +2000,15 @@ _check_l_walls_w::
 	ldhl	sp,	#4
 	ld	a, (hl)
 	call	_return_value
-;src/dng_crawling.c:415: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:416: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00140$
 	cp	a, #0x01
 	jr	Z, 00140$
-;src/dng_crawling.c:416: if( w == 0x06){
+;src/dng_crawling.c:417: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00131$
-;src/dng_crawling.c:417: set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
+;src/dng_crawling.c:418: set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
 	ld	de, #_nowall_door1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -2023,7 +2023,7 @@ _check_l_walls_w::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:419: set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
+;src/dng_crawling.c:420: set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
 	ld	de, #_nowall1_l_bkg
 	push	de
 	ld	hl, #0x903
@@ -2037,13 +2037,13 @@ _check_l_walls_w::
 	call	_set_bkg_tiles
 	add	sp, #6
 00140$:
-;src/dng_crawling.c:423: }
+;src/dng_crawling.c:424: }
 	inc	sp
 	inc	sp
 	pop	hl
 	add	sp, #3
 	jp	(hl)
-;src/dng_crawling.c:425: void check_r_walls_n(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
+;src/dng_crawling.c:426: void check_r_walls_n(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
 ;	---------------------------------
 ; Function check_r_walls_n
 ; ---------------------------------
@@ -2052,7 +2052,7 @@ _check_r_walls_n::
 	dec	sp
 	ldhl	sp,	#1
 	ld	(hl), a
-;src/dng_crawling.c:426: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-2);
+;src/dng_crawling.c:427: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-2);
 	ldhl	sp,	#6
 	ld	c, (hl)
 	ld	a, c
@@ -2079,15 +2079,15 @@ _check_r_walls_n::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:427: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:428: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00111$
 	cp	a, #0x01
 	jr	Z, 00111$
-;src/dng_crawling.c:428: if( w == 0x04){
+;src/dng_crawling.c:429: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00102$
-;src/dng_crawling.c:429: set_bkg_tiles(13,0,1,9,door3_r_bkg);
+;src/dng_crawling.c:430: set_bkg_tiles(13,0,1,9,door3_r_bkg);
 	push	de
 	ld	hl, #_door3_r_bkg
 	push	hl
@@ -2100,7 +2100,7 @@ _check_r_walls_n::
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:431: set_bkg_tiles(13,0,1,9,wall3_r_bkg);
+;src/dng_crawling.c:432: set_bkg_tiles(13,0,1,9,wall3_r_bkg);
 	push	de
 	ld	hl, #_wall3_r_bkg
 	push	hl
@@ -2113,7 +2113,7 @@ _check_r_walls_n::
 	pop	de
 	jr	00112$
 00111$:
-;src/dng_crawling.c:434: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-3);
+;src/dng_crawling.c:435: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-3);
 	ld	a, c
 	add	a, #0xfd
 	push	bc
@@ -2131,15 +2131,15 @@ _check_r_walls_n::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:435: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:436: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00112$
 	cp	a, #0x01
 	jr	Z, 00112$
-;src/dng_crawling.c:436: if( w == 0x03){
+;src/dng_crawling.c:437: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00105$
-;src/dng_crawling.c:437: set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
+;src/dng_crawling.c:438: set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
 	push	de
 	ld	hl, #_nowall_door3_r_bkg
 	push	hl
@@ -2152,7 +2152,7 @@ _check_r_walls_n::
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:439: set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
+;src/dng_crawling.c:440: set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
 	push	de
 	ld	hl, #_nowall3_r_bkg
 	push	hl
@@ -2164,7 +2164,7 @@ _check_r_walls_n::
 	add	sp, #6
 	pop	de
 00112$:
-;src/dng_crawling.c:443: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-1);
+;src/dng_crawling.c:444: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-1);
 	dec	c
 	push	bc
 	push	de
@@ -2182,15 +2182,15 @@ _check_r_walls_n::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:444: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:445: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00124$
 	cp	a, #0x01
 	jr	Z, 00124$
-;src/dng_crawling.c:445: if( w == 0x04){
+;src/dng_crawling.c:446: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00115$
-;src/dng_crawling.c:446: set_bkg_tiles(14,0,2,9,door2_r_bkg);
+;src/dng_crawling.c:447: set_bkg_tiles(14,0,2,9,door2_r_bkg);
 	push	de
 	ld	hl, #_door2_r_bkg
 	push	hl
@@ -2203,7 +2203,7 @@ _check_r_walls_n::
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:448: set_bkg_tiles(14,0,2,9,wall2_r_bkg);
+;src/dng_crawling.c:449: set_bkg_tiles(14,0,2,9,wall2_r_bkg);
 	push	de
 	ld	hl, #_wall2_r_bkg
 	push	hl
@@ -2216,7 +2216,7 @@ _check_r_walls_n::
 	pop	de
 	jr	00125$
 00124$:
-;src/dng_crawling.c:451: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-2);
+;src/dng_crawling.c:452: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-2);
 	push	bc
 	push	de
 	ldhl	sp,	#4
@@ -2234,15 +2234,15 @@ _check_r_walls_n::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:452: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:453: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00125$
 	cp	a, #0x01
 	jr	Z, 00125$
-;src/dng_crawling.c:453: if( w == 0x03){
+;src/dng_crawling.c:454: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00118$
-;src/dng_crawling.c:454: set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
+;src/dng_crawling.c:455: set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
 	push	de
 	ld	hl, #_nowall_door2_r_bkg
 	push	hl
@@ -2255,7 +2255,7 @@ _check_r_walls_n::
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:456: set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
+;src/dng_crawling.c:457: set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
 	push	de
 	ld	hl, #_nowall2_r_bkg
 	push	hl
@@ -2267,7 +2267,7 @@ _check_r_walls_n::
 	add	sp, #6
 	pop	de
 00125$:
-;src/dng_crawling.c:461: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y);
+;src/dng_crawling.c:462: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y);
 	push	bc
 	push	de
 	ldhl	sp,	#10
@@ -2282,15 +2282,15 @@ _check_r_walls_n::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:462: if(w!=0x00 && w != 0x01){
+;src/dng_crawling.c:463: if(w!=0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00137$
 	cp	a, #0x01
 	jr	Z, 00137$
-;src/dng_crawling.c:463: if( w == 0x04){
+;src/dng_crawling.c:464: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00128$
-;src/dng_crawling.c:464: set_bkg_tiles(16,0,3,9,door1_r_bkg);
+;src/dng_crawling.c:465: set_bkg_tiles(16,0,3,9,door1_r_bkg);
 	ld	de, #_door1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -2305,7 +2305,7 @@ _check_r_walls_n::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:466: set_bkg_tiles(16,0,3,9,wall1_r_bkg);
+;src/dng_crawling.c:467: set_bkg_tiles(16,0,3,9,wall1_r_bkg);
 	ld	de, #_wall1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -2320,7 +2320,7 @@ _check_r_walls_n::
 	add	sp, #6
 	jr	00140$
 00137$:
-;src/dng_crawling.c:469: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-1);
+;src/dng_crawling.c:470: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-1);
 	ld	a, c
 	push	af
 	inc	sp
@@ -2333,15 +2333,15 @@ _check_r_walls_n::
 	ldhl	sp,	#4
 	ld	a, (hl)
 	call	_return_value
-;src/dng_crawling.c:470: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:471: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00140$
 	cp	a, #0x01
 	jr	Z, 00140$
-;src/dng_crawling.c:471: if( w == 0x03){
+;src/dng_crawling.c:472: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00131$
-;src/dng_crawling.c:472: set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
+;src/dng_crawling.c:473: set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
 	ld	de, #_nowall_door1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -2356,7 +2356,7 @@ _check_r_walls_n::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:474: set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
+;src/dng_crawling.c:475: set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
 	ld	de, #_nowall1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -2370,13 +2370,13 @@ _check_r_walls_n::
 	call	_set_bkg_tiles
 	add	sp, #6
 00140$:
-;src/dng_crawling.c:478: }
+;src/dng_crawling.c:479: }
 	inc	sp
 	inc	sp
 	pop	hl
 	add	sp, #3
 	jp	(hl)
-;src/dng_crawling.c:480: void check_r_walls_e(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
+;src/dng_crawling.c:481: void check_r_walls_e(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
 ;	---------------------------------
 ; Function check_r_walls_e
 ; ---------------------------------
@@ -2385,7 +2385,7 @@ _check_r_walls_e::
 	dec	sp
 	ldhl	sp,	#1
 	ld	(hl), a
-;src/dng_crawling.c:481: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x+2, player_y+1);
+;src/dng_crawling.c:482: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x+2, player_y+1);
 	ldhl	sp,	#6
 	ld	a, (hl-)
 	ld	b, a
@@ -2408,15 +2408,15 @@ _check_r_walls_e::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:482: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:483: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00111$
 	cp	a, #0x01
 	jr	Z, 00111$
-;src/dng_crawling.c:483: if( w == 0x05){
+;src/dng_crawling.c:484: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00102$
-;src/dng_crawling.c:484: set_bkg_tiles(13,0,1,9,door3_r_bkg);
+;src/dng_crawling.c:485: set_bkg_tiles(13,0,1,9,door3_r_bkg);
 	push	de
 	ld	hl, #_door3_r_bkg
 	push	hl
@@ -2429,7 +2429,7 @@ _check_r_walls_e::
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:486: set_bkg_tiles(13,0,1,9,wall3_r_bkg);
+;src/dng_crawling.c:487: set_bkg_tiles(13,0,1,9,wall3_r_bkg);
 	push	de
 	ld	hl, #_wall3_r_bkg
 	push	hl
@@ -2442,7 +2442,7 @@ _check_r_walls_e::
 	pop	de
 	jr	00112$
 00111$:
-;src/dng_crawling.c:489: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+3, player_y+1);
+;src/dng_crawling.c:490: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+3, player_y+1);
 	ld	a, c
 	inc	a
 	inc	a
@@ -2462,15 +2462,15 @@ _check_r_walls_e::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:490: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:491: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00112$
 	cp	a, #0x01
 	jr	Z, 00112$
-;src/dng_crawling.c:491: if( w == 0x04){
+;src/dng_crawling.c:492: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00105$
-;src/dng_crawling.c:492: set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
+;src/dng_crawling.c:493: set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
 	push	de
 	ld	hl, #_nowall_door3_r_bkg
 	push	hl
@@ -2483,7 +2483,7 @@ _check_r_walls_e::
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:494: set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
+;src/dng_crawling.c:495: set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
 	push	de
 	ld	hl, #_nowall3_r_bkg
 	push	hl
@@ -2495,7 +2495,7 @@ _check_r_walls_e::
 	add	sp, #6
 	pop	de
 00112$:
-;src/dng_crawling.c:498: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+1);
+;src/dng_crawling.c:499: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+1);
 	inc	c
 	push	bc
 	push	de
@@ -2509,15 +2509,15 @@ _check_r_walls_e::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:499: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:500: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00124$
 	cp	a, #0x01
 	jr	Z, 00124$
-;src/dng_crawling.c:500: if( w == 0x05){
+;src/dng_crawling.c:501: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00115$
-;src/dng_crawling.c:501: set_bkg_tiles(14,0,2,9,door2_r_bkg);
+;src/dng_crawling.c:502: set_bkg_tiles(14,0,2,9,door2_r_bkg);
 	push	de
 	ld	hl, #_door2_r_bkg
 	push	hl
@@ -2530,7 +2530,7 @@ _check_r_walls_e::
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:503: set_bkg_tiles(14,0,2,9,wall2_r_bkg);
+;src/dng_crawling.c:504: set_bkg_tiles(14,0,2,9,wall2_r_bkg);
 	push	de
 	ld	hl, #_wall2_r_bkg
 	push	hl
@@ -2543,7 +2543,7 @@ _check_r_walls_e::
 	pop	de
 	jr	00125$
 00124$:
-;src/dng_crawling.c:506: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+2, player_y+1);
+;src/dng_crawling.c:507: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+2, player_y+1);
 	push	bc
 	push	de
 	push	bc
@@ -2561,15 +2561,15 @@ _check_r_walls_e::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:507: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:508: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00125$
 	cp	a, #0x01
 	jr	Z, 00125$
-;src/dng_crawling.c:508: if( w == 0x04){
+;src/dng_crawling.c:509: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00118$
-;src/dng_crawling.c:509: set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
+;src/dng_crawling.c:510: set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
 	push	de
 	ld	hl, #_nowall_door2_r_bkg
 	push	hl
@@ -2582,7 +2582,7 @@ _check_r_walls_e::
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:511: set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
+;src/dng_crawling.c:512: set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
 	push	de
 	ld	hl, #_nowall2_r_bkg
 	push	hl
@@ -2594,7 +2594,7 @@ _check_r_walls_e::
 	add	sp, #6
 	pop	de
 00125$:
-;src/dng_crawling.c:516: w = return_value(dng,dungeon_width,dungeon_hieght,player_x, player_y+1);
+;src/dng_crawling.c:517: w = return_value(dng,dungeon_width,dungeon_hieght,player_x, player_y+1);
 	push	bc
 	push	de
 	push	bc
@@ -2609,15 +2609,15 @@ _check_r_walls_e::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:517: if(w!=0x00 && w != 0x01){
+;src/dng_crawling.c:518: if(w!=0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00137$
 	cp	a, #0x01
 	jr	Z, 00137$
-;src/dng_crawling.c:518: if( w == 0x05){
+;src/dng_crawling.c:519: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00128$
-;src/dng_crawling.c:519: set_bkg_tiles(16,0,3,9,door1_r_bkg);
+;src/dng_crawling.c:520: set_bkg_tiles(16,0,3,9,door1_r_bkg);
 	ld	de, #_door1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -2632,7 +2632,7 @@ _check_r_walls_e::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:521: set_bkg_tiles(16,0,3,9,wall1_r_bkg);
+;src/dng_crawling.c:522: set_bkg_tiles(16,0,3,9,wall1_r_bkg);
 	ld	de, #_wall1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -2647,7 +2647,7 @@ _check_r_walls_e::
 	add	sp, #6
 	jr	00140$
 00137$:
-;src/dng_crawling.c:524: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+1);
+;src/dng_crawling.c:525: w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+1);
 	push	bc
 	ldhl	sp,	#6
 	ld	a, (hl)
@@ -2656,15 +2656,15 @@ _check_r_walls_e::
 	ldhl	sp,	#4
 	ld	a, (hl)
 	call	_return_value
-;src/dng_crawling.c:525: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:526: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00140$
 	cp	a, #0x01
 	jr	Z, 00140$
-;src/dng_crawling.c:526: if( w == 0x04){
+;src/dng_crawling.c:527: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00131$
-;src/dng_crawling.c:527: set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
+;src/dng_crawling.c:528: set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
 	ld	de, #_nowall_door1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -2679,7 +2679,7 @@ _check_r_walls_e::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:529: set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
+;src/dng_crawling.c:530: set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
 	ld	de, #_nowall1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -2693,13 +2693,13 @@ _check_r_walls_e::
 	call	_set_bkg_tiles
 	add	sp, #6
 00140$:
-;src/dng_crawling.c:533: }
+;src/dng_crawling.c:534: }
 	inc	sp
 	inc	sp
 	pop	hl
 	add	sp, #3
 	jp	(hl)
-;src/dng_crawling.c:535: void check_r_walls_s(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
+;src/dng_crawling.c:536: void check_r_walls_s(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
 ;	---------------------------------
 ; Function check_r_walls_s
 ; ---------------------------------
@@ -2708,7 +2708,7 @@ _check_r_walls_s::
 	dec	sp
 	ldhl	sp,	#1
 	ld	(hl), a
-;src/dng_crawling.c:536: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+2);
+;src/dng_crawling.c:537: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+2);
 	ldhl	sp,	#6
 	ld	c, (hl)
 	ld	a, c
@@ -2735,15 +2735,15 @@ _check_r_walls_s::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:537: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:538: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00111$
 	cp	a, #0x01
 	jr	Z, 00111$
-;src/dng_crawling.c:538: if( w == 0x06){
+;src/dng_crawling.c:539: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00102$
-;src/dng_crawling.c:539: set_bkg_tiles(13,0,1,9,door3_r_bkg);
+;src/dng_crawling.c:540: set_bkg_tiles(13,0,1,9,door3_r_bkg);
 	push	de
 	ld	hl, #_door3_r_bkg
 	push	hl
@@ -2756,7 +2756,7 @@ _check_r_walls_s::
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:541: set_bkg_tiles(13,0,1,9,wall3_r_bkg);
+;src/dng_crawling.c:542: set_bkg_tiles(13,0,1,9,wall3_r_bkg);
 	push	de
 	ld	hl, #_wall3_r_bkg
 	push	hl
@@ -2769,7 +2769,7 @@ _check_r_walls_s::
 	pop	de
 	jr	00112$
 00111$:
-;src/dng_crawling.c:544: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+3);
+;src/dng_crawling.c:545: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+3);
 	ld	a, c
 	inc	a
 	inc	a
@@ -2789,15 +2789,15 @@ _check_r_walls_s::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:545: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:546: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00112$
 	cp	a, #0x01
 	jr	Z, 00112$
-;src/dng_crawling.c:546: if( w == 0x05){
+;src/dng_crawling.c:547: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00105$
-;src/dng_crawling.c:547: set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
+;src/dng_crawling.c:548: set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
 	push	de
 	ld	hl, #_nowall_door3_r_bkg
 	push	hl
@@ -2810,7 +2810,7 @@ _check_r_walls_s::
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:549: set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
+;src/dng_crawling.c:550: set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
 	push	de
 	ld	hl, #_nowall3_r_bkg
 	push	hl
@@ -2822,7 +2822,7 @@ _check_r_walls_s::
 	add	sp, #6
 	pop	de
 00112$:
-;src/dng_crawling.c:553: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+1);
+;src/dng_crawling.c:554: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+1);
 	inc	c
 	push	bc
 	push	de
@@ -2840,15 +2840,15 @@ _check_r_walls_s::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:554: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:555: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00124$
 	cp	a, #0x01
 	jr	Z, 00124$
-;src/dng_crawling.c:555: if( w == 0x06){
+;src/dng_crawling.c:556: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00115$
-;src/dng_crawling.c:556: set_bkg_tiles(14,0,2,9,door2_r_bkg);
+;src/dng_crawling.c:557: set_bkg_tiles(14,0,2,9,door2_r_bkg);
 	push	de
 	ld	hl, #_door2_r_bkg
 	push	hl
@@ -2861,7 +2861,7 @@ _check_r_walls_s::
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:558: set_bkg_tiles(14,0,2,9,wall2_r_bkg);
+;src/dng_crawling.c:559: set_bkg_tiles(14,0,2,9,wall2_r_bkg);
 	push	de
 	ld	hl, #_wall2_r_bkg
 	push	hl
@@ -2874,7 +2874,7 @@ _check_r_walls_s::
 	pop	de
 	jr	00125$
 00124$:
-;src/dng_crawling.c:561: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+2);
+;src/dng_crawling.c:562: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+2);
 	push	bc
 	push	de
 	ldhl	sp,	#4
@@ -2892,15 +2892,15 @@ _check_r_walls_s::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:562: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:563: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00125$
 	cp	a, #0x01
 	jr	Z, 00125$
-;src/dng_crawling.c:563: if( w == 0x05){
+;src/dng_crawling.c:564: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00118$
-;src/dng_crawling.c:564: set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
+;src/dng_crawling.c:565: set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
 	push	de
 	ld	hl, #_nowall_door2_r_bkg
 	push	hl
@@ -2913,7 +2913,7 @@ _check_r_walls_s::
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:566: set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
+;src/dng_crawling.c:567: set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
 	push	de
 	ld	hl, #_nowall2_r_bkg
 	push	hl
@@ -2925,7 +2925,7 @@ _check_r_walls_s::
 	add	sp, #6
 	pop	de
 00125$:
-;src/dng_crawling.c:571: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y);
+;src/dng_crawling.c:572: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y);
 	push	bc
 	push	de
 	ldhl	sp,	#10
@@ -2940,15 +2940,15 @@ _check_r_walls_s::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:572: if(w!=0x00 && w != 0x01){
+;src/dng_crawling.c:573: if(w!=0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00137$
 	cp	a, #0x01
 	jr	Z, 00137$
-;src/dng_crawling.c:573: if( w == 0x06){
+;src/dng_crawling.c:574: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00128$
-;src/dng_crawling.c:574: set_bkg_tiles(16,0,3,9,door1_r_bkg);
+;src/dng_crawling.c:575: set_bkg_tiles(16,0,3,9,door1_r_bkg);
 	ld	de, #_door1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -2963,7 +2963,7 @@ _check_r_walls_s::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:576: set_bkg_tiles(16,0,3,9,wall1_r_bkg);
+;src/dng_crawling.c:577: set_bkg_tiles(16,0,3,9,wall1_r_bkg);
 	ld	de, #_wall1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -2978,7 +2978,7 @@ _check_r_walls_s::
 	add	sp, #6
 	jr	00140$
 00137$:
-;src/dng_crawling.c:579: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+1);
+;src/dng_crawling.c:580: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+1);
 	ld	a, c
 	push	af
 	inc	sp
@@ -2991,15 +2991,15 @@ _check_r_walls_s::
 	ldhl	sp,	#4
 	ld	a, (hl)
 	call	_return_value
-;src/dng_crawling.c:580: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:581: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00140$
 	cp	a, #0x01
 	jr	Z, 00140$
-;src/dng_crawling.c:581: if( w == 0x05){
+;src/dng_crawling.c:582: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00131$
-;src/dng_crawling.c:582: set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
+;src/dng_crawling.c:583: set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
 	ld	de, #_nowall_door1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -3014,7 +3014,7 @@ _check_r_walls_s::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:584: set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
+;src/dng_crawling.c:585: set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
 	ld	de, #_nowall1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -3028,13 +3028,13 @@ _check_r_walls_s::
 	call	_set_bkg_tiles
 	add	sp, #6
 00140$:
-;src/dng_crawling.c:588: }
+;src/dng_crawling.c:589: }
 	inc	sp
 	inc	sp
 	pop	hl
 	add	sp, #3
 	jp	(hl)
-;src/dng_crawling.c:590: void check_r_walls_w(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
+;src/dng_crawling.c:591: void check_r_walls_w(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_hieght, uint8_t player_x, uint8_t player_y){
 ;	---------------------------------
 ; Function check_r_walls_w
 ; ---------------------------------
@@ -3043,7 +3043,7 @@ _check_r_walls_w::
 	dec	sp
 	ldhl	sp,	#1
 	ld	(hl), a
-;src/dng_crawling.c:591: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x-2, player_y-1);
+;src/dng_crawling.c:592: unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x-2, player_y-1);
 	ldhl	sp,	#6
 	ld	a, (hl-)
 	ld	b, a
@@ -3066,15 +3066,15 @@ _check_r_walls_w::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:592: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:593: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00111$
 	cp	a, #0x01
 	jr	Z, 00111$
-;src/dng_crawling.c:593: if( w == 0x03){
+;src/dng_crawling.c:594: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00102$
-;src/dng_crawling.c:594: set_bkg_tiles(13,0,1,9,door3_r_bkg);
+;src/dng_crawling.c:595: set_bkg_tiles(13,0,1,9,door3_r_bkg);
 	push	de
 	ld	hl, #_door3_r_bkg
 	push	hl
@@ -3087,7 +3087,7 @@ _check_r_walls_w::
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:596: set_bkg_tiles(13,0,1,9,wall3_r_bkg);
+;src/dng_crawling.c:597: set_bkg_tiles(13,0,1,9,wall3_r_bkg);
 	push	de
 	ld	hl, #_wall3_r_bkg
 	push	hl
@@ -3100,7 +3100,7 @@ _check_r_walls_w::
 	pop	de
 	jr	00112$
 00111$:
-;src/dng_crawling.c:599: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-3, player_y-1);
+;src/dng_crawling.c:600: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-3, player_y-1);
 	ld	a, c
 	add	a, #0xfd
 	push	bc
@@ -3118,15 +3118,15 @@ _check_r_walls_w::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:600: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:601: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00112$
 	cp	a, #0x01
 	jr	Z, 00112$
-;src/dng_crawling.c:601: if( w == 0x06){
+;src/dng_crawling.c:602: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00105$
-;src/dng_crawling.c:602: set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
+;src/dng_crawling.c:603: set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
 	push	de
 	ld	hl, #_nowall_door3_r_bkg
 	push	hl
@@ -3139,7 +3139,7 @@ _check_r_walls_w::
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:604: set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
+;src/dng_crawling.c:605: set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
 	push	de
 	ld	hl, #_nowall3_r_bkg
 	push	hl
@@ -3151,7 +3151,7 @@ _check_r_walls_w::
 	add	sp, #6
 	pop	de
 00112$:
-;src/dng_crawling.c:608: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-1);
+;src/dng_crawling.c:609: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-1);
 	dec	c
 	push	bc
 	push	de
@@ -3165,15 +3165,15 @@ _check_r_walls_w::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:609: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:610: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00124$
 	cp	a, #0x01
 	jr	Z, 00124$
-;src/dng_crawling.c:610: if( w == 0x03){
+;src/dng_crawling.c:611: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00115$
-;src/dng_crawling.c:611: set_bkg_tiles(14,0,2,9,door2_r_bkg);
+;src/dng_crawling.c:612: set_bkg_tiles(14,0,2,9,door2_r_bkg);
 	push	de
 	ld	hl, #_door2_r_bkg
 	push	hl
@@ -3186,7 +3186,7 @@ _check_r_walls_w::
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:613: set_bkg_tiles(14,0,2,9,wall2_r_bkg);
+;src/dng_crawling.c:614: set_bkg_tiles(14,0,2,9,wall2_r_bkg);
 	push	de
 	ld	hl, #_wall2_r_bkg
 	push	hl
@@ -3199,7 +3199,7 @@ _check_r_walls_w::
 	pop	de
 	jr	00125$
 00124$:
-;src/dng_crawling.c:616: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-2, player_y-1);
+;src/dng_crawling.c:617: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-2, player_y-1);
 	push	bc
 	push	de
 	push	bc
@@ -3217,15 +3217,15 @@ _check_r_walls_w::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:617: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:618: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00125$
 	cp	a, #0x01
 	jr	Z, 00125$
-;src/dng_crawling.c:618: if( w == 0x06){
+;src/dng_crawling.c:619: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00118$
-;src/dng_crawling.c:619: set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
+;src/dng_crawling.c:620: set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
 	push	de
 	ld	hl, #_nowall_door2_r_bkg
 	push	hl
@@ -3238,7 +3238,7 @@ _check_r_walls_w::
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:621: set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
+;src/dng_crawling.c:622: set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
 	push	de
 	ld	hl, #_nowall2_r_bkg
 	push	hl
@@ -3250,7 +3250,7 @@ _check_r_walls_w::
 	add	sp, #6
 	pop	de
 00125$:
-;src/dng_crawling.c:626: w = return_value(dng,dungeon_width,dungeon_hieght,player_x, player_y-1);
+;src/dng_crawling.c:627: w = return_value(dng,dungeon_width,dungeon_hieght,player_x, player_y-1);
 	push	bc
 	push	de
 	push	bc
@@ -3265,15 +3265,15 @@ _check_r_walls_w::
 	call	_return_value
 	pop	de
 	pop	bc
-;src/dng_crawling.c:627: if(w!=0x00 && w != 0x01){
+;src/dng_crawling.c:628: if(w!=0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00137$
 	cp	a, #0x01
 	jr	Z, 00137$
-;src/dng_crawling.c:628: if( w == 0x03){
+;src/dng_crawling.c:629: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00128$
-;src/dng_crawling.c:629: set_bkg_tiles(16,0,3,9,door1_r_bkg);
+;src/dng_crawling.c:630: set_bkg_tiles(16,0,3,9,door1_r_bkg);
 	ld	de, #_door1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -3288,7 +3288,7 @@ _check_r_walls_w::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:631: set_bkg_tiles(16,0,3,9,wall1_r_bkg);
+;src/dng_crawling.c:632: set_bkg_tiles(16,0,3,9,wall1_r_bkg);
 	ld	de, #_wall1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -3303,7 +3303,7 @@ _check_r_walls_w::
 	add	sp, #6
 	jr	00140$
 00137$:
-;src/dng_crawling.c:634: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-1);
+;src/dng_crawling.c:635: w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-1);
 	push	bc
 	ldhl	sp,	#6
 	ld	a, (hl)
@@ -3312,15 +3312,15 @@ _check_r_walls_w::
 	ldhl	sp,	#4
 	ld	a, (hl)
 	call	_return_value
-;src/dng_crawling.c:635: if(w != 0x00 && w != 0x01){
+;src/dng_crawling.c:636: if(w != 0x00 && w != 0x01){
 	or	a, a
 	jr	Z, 00140$
 	cp	a, #0x01
 	jr	Z, 00140$
-;src/dng_crawling.c:636: if( w == 0x06){
+;src/dng_crawling.c:637: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00131$
-;src/dng_crawling.c:637: set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
+;src/dng_crawling.c:638: set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
 	ld	de, #_nowall_door1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -3335,7 +3335,7 @@ _check_r_walls_w::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:639: set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
+;src/dng_crawling.c:640: set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
 	ld	de, #_nowall1_r_bkg
 	push	de
 	ld	hl, #0x903
@@ -3349,7 +3349,7 @@ _check_r_walls_w::
 	call	_set_bkg_tiles
 	add	sp, #6
 00140$:
-;src/dng_crawling.c:643: }
+;src/dng_crawling.c:644: }
 	inc	sp
 	inc	sp
 	pop	hl

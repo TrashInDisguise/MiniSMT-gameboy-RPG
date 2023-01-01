@@ -9,6 +9,7 @@
 ; Public variables in this module
 ;--------------------------------------------------------
 	.globl _main
+	.globl _dungeon_logic_upd
 	.globl _update_dng
 	.globl _init_dungeon
 	.globl _check_r_walls_e
@@ -20,6 +21,7 @@
 	.globl _check_l_walls_s
 	.globl _check_l_walls_n
 	.globl _check_m_walls
+	.globl _return_value
 	.globl _set_sprite_data
 	.globl _set_bkg_tiles
 	.globl _set_bkg_data
@@ -835,26 +837,489 @@ _update_dng::
 	pop	hl
 	inc	sp
 	jp	(hl)
-;src/main.c:119: void main(void)
+;src/main.c:118: void dungeon_logic_upd(){
 ;	---------------------------------
-; Function main
+; Function dungeon_logic_upd
 ; ---------------------------------
-_main::
-;src/main.c:122: init_dungeon(test_dungeon, 15, 15);
-	ld	a, #0x0f
-	push	af
-	inc	sp
-	ld	a, #0x0f
-	ld	de, #_test_dungeon
-	call	_init_dungeon
-;src/main.c:123: update_dng(test_dungeon,15,15);
+_dungeon_logic_upd::
+;src/main.c:119: joypadPrevious = joypadCurrent;
+	ld	a, (#_joypadCurrent)
+	ld	(#_joypadPrevious),a
+;src/main.c:120: joypadCurrent = joypad();
+	call	_joypad
+	ld	hl, #_joypadCurrent
+	ld	(hl), a
+;src/main.c:122: if((joypadCurrent & J_LEFT) && !(joypadPrevious & J_LEFT)){
+	bit	1, (hl)
+	jr	Z, 00104$
+	ld	a, (#_joypadPrevious)
+	bit	1, a
+	jr	NZ, 00104$
+;src/main.c:123: player_dir--;
+	ld	hl, #_player_dir
+	dec	(hl)
+;src/main.c:124: if (player_dir==255){
+	ld	a, (hl)
+	inc	a
+	jr	NZ, 00102$
+;src/main.c:125: player_dir = west;
+	ld	hl, #_player_dir
+	ld	(hl), #0x03
+00102$:
+;src/main.c:127: update_dng(test_dungeon,15,15);
 	ld	a, #0x0f
 	push	af
 	inc	sp
 	ld	a, #0x0f
 	ld	de, #_test_dungeon
 	call	_update_dng
-;src/main.c:124: set_sprite_data(0,4,news);
+;src/main.c:128: set_sprite_tile(0,player_dir);
+	ld	hl, #_player_dir
+	ld	c, (hl)
+;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
+	ld	hl, #(_shadow_OAM + 2)
+	ld	(hl), c
+;src/main.c:128: set_sprite_tile(0,player_dir);
+00104$:
+;src/main.c:130: if((joypadCurrent & J_RIGHT) && !(joypadPrevious & J_RIGHT)){
+	ld	a, (#_joypadCurrent)
+	rrca
+	jr	NC, 00109$
+	ld	a, (#_joypadPrevious)
+	rrca
+	jr	C, 00109$
+;src/main.c:131: player_dir++;
+	ld	hl, #_player_dir
+	inc	(hl)
+;src/main.c:132: if(player_dir==4){
+	ld	a, (hl)
+	sub	a, #0x04
+	jr	NZ, 00107$
+;src/main.c:133: player_dir=north;
+	ld	hl, #_player_dir
+	ld	(hl), #0x00
+00107$:
+;src/main.c:135: update_dng(test_dungeon,15,15);
+	ld	a, #0x0f
+	push	af
+	inc	sp
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_update_dng
+;src/main.c:136: set_sprite_tile(0,player_dir);
+	ld	hl, #_player_dir
+	ld	c, (hl)
+;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
+	ld	hl, #(_shadow_OAM + 2)
+	ld	(hl), c
+;src/main.c:136: set_sprite_tile(0,player_dir);
+00109$:
+;src/main.c:138: if((joypadCurrent & J_UP) && !(joypadPrevious & J_UP)){
+	ld	a, (#_joypadCurrent)
+	bit	2, a
+	jp	Z,00129$
+	ld	a, (#_joypadPrevious)
+	bit	2, a
+	jp	NZ,00129$
+;src/main.c:141: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+	ld	hl, #_player_y
+	ld	e, (hl)
+;src/main.c:139: switch(player_dir){
+	ld	a, (#_player_dir)
+	or	a, a
+	jr	Z, 00111$
+;src/main.c:147: if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
+	ld	hl, #_player_x
+	ld	c, (hl)
+;src/main.c:139: switch(player_dir){
+	ld	a, (#_player_dir)
+	dec	a
+	jr	Z, 00115$
+	ld	a, (#_player_dir)
+	sub	a, #0x02
+	jp	Z,00119$
+	ld	a, (#_player_dir)
+	sub	a, #0x03
+	jp	Z,00123$
+	jp	00129$
+;src/main.c:140: case north:
+00111$:
+;src/main.c:141: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+	ld	b, e
+	dec	b
+	push	bc
+	inc	sp
+	ld	a, (#_player_x)
+	ld	h, a
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	or	a, a
+	jr	Z, 00112$
+	ld	a, (#_player_y)
+	dec	a
+	push	af
+	inc	sp
+	ld	a, (#_player_x)
+	ld	h, a
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	dec	a
+	jp	NZ,00129$
+00112$:
+;src/main.c:142: player_y--;
+	ld	hl, #_player_y
+	dec	(hl)
+;src/main.c:143: update_dng(test_dungeon,15,15);
+	ld	a, #0x0f
+	push	af
+	inc	sp
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_update_dng
+;src/main.c:145: break;
+	jp	00129$
+;src/main.c:146: case east:
+00115$:
+;src/main.c:147: if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
+	inc	c
+	ld	a, (#_player_y)
+	push	af
+	inc	sp
+	ld	h, c
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	or	a, a
+	jr	Z, 00116$
+	ld	a, (#_player_x)
+	inc	a
+	ld	hl, #_player_y
+	ld	h, (hl)
+;	spillPairReg hl
+;	spillPairReg hl
+	push	hl
+	inc	sp
+	ld	h, a
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	dec	a
+	jp	NZ,00129$
+00116$:
+;src/main.c:148: player_x++;
+	ld	hl, #_player_x
+	inc	(hl)
+;src/main.c:149: update_dng(test_dungeon,15,15);
+	ld	a, #0x0f
+	push	af
+	inc	sp
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_update_dng
+;src/main.c:151: break;
+	jp	00129$
+;src/main.c:152: case south:
+00119$:
+;src/main.c:153: if(return_value(test_dungeon,15,15,player_x,player_y+1)==0x00||return_value(test_dungeon,15,15,player_x,player_y+1)==0x01){
+	ld	b, e
+	inc	b
+	push	bc
+	inc	sp
+	ld	a, (#_player_x)
+	ld	h, a
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	or	a, a
+	jr	Z, 00120$
+	ld	a, (#_player_y)
+	inc	a
+	push	af
+	inc	sp
+	ld	a, (#_player_x)
+	ld	h, a
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	dec	a
+	jr	NZ, 00129$
+00120$:
+;src/main.c:154: player_y++;
+	ld	hl, #_player_y
+	inc	(hl)
+;src/main.c:155: update_dng(test_dungeon,15,15);
+	ld	a, #0x0f
+	push	af
+	inc	sp
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_update_dng
+;src/main.c:157: break;
+	jr	00129$
+;src/main.c:158: case west:
+00123$:
+;src/main.c:159: if(return_value(test_dungeon,15,15,player_x-1,player_y)==0x00||return_value(test_dungeon,15,15,player_x-1,player_y)==0x01){
+	dec	c
+	ld	a, (#_player_y)
+	push	af
+	inc	sp
+	ld	h, c
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	or	a, a
+	jr	Z, 00124$
+	ld	a, (#_player_x)
+	dec	a
+	ld	hl, #_player_y
+	ld	h, (hl)
+;	spillPairReg hl
+;	spillPairReg hl
+	push	hl
+	inc	sp
+	ld	h, a
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	dec	a
+	jr	NZ, 00129$
+00124$:
+;src/main.c:160: player_x--;
+	ld	hl, #_player_x
+	dec	(hl)
+;src/main.c:161: update_dng(test_dungeon,15,15);
+	ld	a, #0x0f
+	push	af
+	inc	sp
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_update_dng
+;src/main.c:164: }
+00129$:
+;src/main.c:166: if((joypadCurrent & J_DOWN) && !(joypadPrevious & J_DOWN)){
+	ld	a, (#_joypadCurrent)
+	bit	3, a
+	ret	Z
+	ld	a, (#_joypadPrevious)
+	bit	3, a
+	ret	NZ
+;src/main.c:141: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+	ld	hl, #_player_y
+	ld	b, (hl)
+	dec	b
+;src/main.c:167: switch(player_dir){
+	ld	a, (#_player_dir)
+	or	a, a
+	jr	Z, 00131$
+	ld	a, (#_player_dir)
+	dec	a
+	jr	Z, 00135$
+	ld	a, (#_player_dir)
+	sub	a, #0x02
+	jp	Z,00139$
+	ld	a, (#_player_dir)
+	sub	a, #0x03
+	jp	Z,00143$
+	ret
+;src/main.c:168: case north:
+00131$:
+;src/main.c:169: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+	push	bc
+	inc	sp
+	ld	a, (#_player_x)
+	ld	h, a
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	or	a, a
+	jr	Z, 00132$
+	ld	a, (#_player_y)
+	dec	a
+	push	af
+	inc	sp
+	ld	a, (#_player_x)
+	ld	h, a
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	dec	a
+	ret	NZ
+00132$:
+;src/main.c:170: player_y++;
+	ld	hl, #_player_y
+	inc	(hl)
+;src/main.c:171: update_dng(test_dungeon,15,15);
+	ld	a, #0x0f
+	push	af
+	inc	sp
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_update_dng
+;src/main.c:173: break;
+	ret
+;src/main.c:174: case east:
+00135$:
+;src/main.c:175: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+	push	bc
+	inc	sp
+	ld	a, (#_player_x)
+	ld	h, a
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	or	a, a
+	jr	Z, 00136$
+	ld	a, (#_player_y)
+	dec	a
+	push	af
+	inc	sp
+	ld	a, (#_player_x)
+	ld	h, a
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	dec	a
+	ret	NZ
+00136$:
+;src/main.c:176: player_x--;
+	ld	hl, #_player_x
+	dec	(hl)
+;src/main.c:177: update_dng(test_dungeon,15,15);
+	ld	a, #0x0f
+	push	af
+	inc	sp
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_update_dng
+;src/main.c:179: break;
+	ret
+;src/main.c:180: case south:
+00139$:
+;src/main.c:181: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+	push	bc
+	inc	sp
+	ld	a, (#_player_x)
+	ld	h, a
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	or	a, a
+	jr	Z, 00140$
+	ld	a, (#_player_y)
+	dec	a
+	push	af
+	inc	sp
+	ld	a, (#_player_x)
+	ld	h, a
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	dec	a
+	ret	NZ
+00140$:
+;src/main.c:182: player_y--;
+	ld	hl, #_player_y
+	dec	(hl)
+;src/main.c:183: update_dng(test_dungeon,15,15);
+	ld	a, #0x0f
+	push	af
+	inc	sp
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_update_dng
+;src/main.c:185: break;
+	ret
+;src/main.c:186: case west:
+00143$:
+;src/main.c:187: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+	push	bc
+	inc	sp
+	ld	a, (#_player_x)
+	ld	h, a
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	or	a, a
+	jr	Z, 00144$
+	ld	a, (#_player_y)
+	dec	a
+	push	af
+	inc	sp
+	ld	a, (#_player_x)
+	ld	h, a
+	ld	l, #0x0f
+	push	hl
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_return_value
+	dec	a
+	ret	NZ
+00144$:
+;src/main.c:188: player_x++;
+	ld	hl, #_player_x
+	inc	(hl)
+;src/main.c:189: update_dng(test_dungeon,15,15);
+	ld	a, #0x0f
+	push	af
+	inc	sp
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_update_dng
+;src/main.c:192: }
+;src/main.c:194: }
+	ret
+;src/main.c:196: void main(void)
+;	---------------------------------
+; Function main
+; ---------------------------------
+_main::
+;src/main.c:199: init_dungeon(test_dungeon, 15, 15);
+	ld	a, #0x0f
+	push	af
+	inc	sp
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_init_dungeon
+;src/main.c:200: update_dng(test_dungeon,15,15);
+	ld	a, #0x0f
+	push	af
+	inc	sp
+	ld	a, #0x0f
+	ld	de, #_test_dungeon
+	call	_update_dng
+;src/main.c:201: set_sprite_data(0,4,news);
 	ld	de, #_news
 	push	de
 	ld	a, #0x04
@@ -865,7 +1330,7 @@ _main::
 	inc	sp
 	call	_set_sprite_data
 	add	sp, #4
-;src/main.c:125: set_sprite_tile(0,player_dir);
+;src/main.c:202: set_sprite_tile(0,player_dir);
 	ld	hl, #_player_dir
 	ld	c, (hl)
 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
@@ -877,216 +1342,18 @@ _main::
 	ld	(hl), #0x10
 	inc	hl
 	ld	(hl), #0x0a
-;src/main.c:127: SHOW_SPRITES;
+;src/main.c:204: SHOW_SPRITES;
 	ldh	a, (_LCDC_REG + 0)
 	or	a, #0x02
 	ldh	(_LCDC_REG + 0), a
-;src/main.c:129: while(1) {
-00128$:
-;src/main.c:131: joypadPrevious = joypadCurrent;
-	ld	a, (#_joypadCurrent)
-	ld	(#_joypadPrevious),a
-;src/main.c:132: joypadCurrent = joypad();
-	call	_joypad
-	ld	hl, #_joypadCurrent
-	ld	(hl), a
-;src/main.c:134: if((joypadCurrent & J_LEFT) && !(joypadPrevious & J_LEFT)){
-	bit	1, (hl)
-	jr	Z, 00104$
-	ld	a, (#_joypadPrevious)
-	bit	1, a
-	jr	NZ, 00104$
-;src/main.c:135: player_dir--;
-	ld	hl, #_player_dir
-	dec	(hl)
-;src/main.c:136: if (player_dir==255){
-	ld	a, (hl)
-	inc	a
-	jr	NZ, 00102$
-;src/main.c:137: player_dir = west;
-	ld	hl, #_player_dir
-	ld	(hl), #0x03
+;src/main.c:206: while(1) {
 00102$:
-;src/main.c:139: update_dng(test_dungeon,15,15);
-	ld	a, #0x0f
-	push	af
-	inc	sp
-	ld	a, #0x0f
-	ld	de, #_test_dungeon
-	call	_update_dng
-;src/main.c:140: set_sprite_tile(0,player_dir);
-	ld	hl, #_player_dir
-	ld	c, (hl)
-;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
-	ld	hl, #(_shadow_OAM + 2)
-	ld	(hl), c
-;src/main.c:140: set_sprite_tile(0,player_dir);
-00104$:
-;src/main.c:142: if((joypadCurrent & J_RIGHT) && !(joypadPrevious & J_RIGHT)){
-	ld	a, (#_joypadCurrent)
-	rrca
-	jr	NC, 00109$
-	ld	a, (#_joypadPrevious)
-	rrca
-	jr	C, 00109$
-;src/main.c:143: player_dir++;
-	ld	hl, #_player_dir
-	inc	(hl)
-;src/main.c:144: if(player_dir==4){
-	ld	a, (hl)
-	sub	a, #0x04
-	jr	NZ, 00107$
-;src/main.c:145: player_dir=north;
-	ld	hl, #_player_dir
-	ld	(hl), #0x00
-00107$:
-;src/main.c:147: update_dng(test_dungeon,15,15);
-	ld	a, #0x0f
-	push	af
-	inc	sp
-	ld	a, #0x0f
-	ld	de, #_test_dungeon
-	call	_update_dng
-;src/main.c:148: set_sprite_tile(0,player_dir);
-	ld	hl, #_player_dir
-	ld	c, (hl)
-;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
-	ld	hl, #(_shadow_OAM + 2)
-	ld	(hl), c
-;src/main.c:148: set_sprite_tile(0,player_dir);
-00109$:
-;src/main.c:150: if((joypadCurrent & J_UP) && !(joypadPrevious & J_UP)){
-	ld	a, (#_joypadCurrent)
-	bit	2, a
-	jr	Z, 00117$
-	ld	a, (#_joypadPrevious)
-	bit	2, a
-	jr	NZ, 00117$
-;src/main.c:151: switch(player_dir){
-	ld	a, (#_player_dir)
-	or	a, a
-	jr	Z, 00111$
-	ld	a, (#_player_dir)
-	dec	a
-	jr	Z, 00112$
-	ld	a, (#_player_dir)
-	sub	a, #0x02
-	jr	Z, 00113$
-	ld	a, (#_player_dir)
-	sub	a, #0x03
-	jr	Z, 00114$
-	jr	00115$
-;src/main.c:152: case north:
-00111$:
-;src/main.c:153: player_y--;
-	ld	hl, #_player_y
-	dec	(hl)
-;src/main.c:154: break;
-	jr	00115$
-;src/main.c:155: case east:
-00112$:
-;src/main.c:156: player_x++;
-	ld	hl, #_player_x
-	inc	(hl)
-;src/main.c:157: break;
-	jr	00115$
-;src/main.c:158: case south:
-00113$:
-;src/main.c:159: player_y++;
-	ld	hl, #_player_y
-	inc	(hl)
-;src/main.c:160: break;
-	jr	00115$
-;src/main.c:161: case west:
-00114$:
-;src/main.c:162: player_x--;
-	ld	hl, #_player_x
-	dec	(hl)
-;src/main.c:164: }
-00115$:
-;src/main.c:165: update_dng(test_dungeon,15,15);
-	ld	a, #0x0f
-	push	af
-	inc	sp
-	ld	a, #0x0f
-	ld	de, #_test_dungeon
-	call	_update_dng
-;src/main.c:166: set_sprite_tile(0,player_dir);
-	ld	hl, #_player_dir
-	ld	c, (hl)
-;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
-	ld	hl, #(_shadow_OAM + 2)
-	ld	(hl), c
-;src/main.c:166: set_sprite_tile(0,player_dir);
-00117$:
-;src/main.c:168: if((joypadCurrent & J_DOWN) && !(joypadPrevious & J_DOWN)){
-	ld	a, (#_joypadCurrent)
-	bit	3, a
-	jr	Z, 00125$
-	ld	a, (#_joypadPrevious)
-	bit	3, a
-	jr	NZ, 00125$
-;src/main.c:169: switch(player_dir){
-	ld	a, (#_player_dir)
-	or	a, a
-	jr	Z, 00119$
-	ld	a, (#_player_dir)
-	dec	a
-	jr	Z, 00120$
-	ld	a, (#_player_dir)
-	sub	a, #0x02
-	jr	Z, 00121$
-	ld	a, (#_player_dir)
-	sub	a, #0x03
-	jr	Z, 00122$
-	jr	00123$
-;src/main.c:170: case north:
-00119$:
-;src/main.c:171: player_y++;
-	ld	hl, #_player_y
-	inc	(hl)
-;src/main.c:172: break;
-	jr	00123$
-;src/main.c:173: case east:
-00120$:
-;src/main.c:174: player_x--;
-	ld	hl, #_player_x
-	dec	(hl)
-;src/main.c:175: break;
-	jr	00123$
-;src/main.c:176: case south:
-00121$:
-;src/main.c:177: player_y--;
-	ld	hl, #_player_y
-	dec	(hl)
-;src/main.c:178: break;
-	jr	00123$
-;src/main.c:179: case west:
-00122$:
-;src/main.c:180: player_x++;
-	ld	hl, #_player_x
-	inc	(hl)
-;src/main.c:182: }
-00123$:
-;src/main.c:183: update_dng(test_dungeon,15,15);
-	ld	a, #0x0f
-	push	af
-	inc	sp
-	ld	a, #0x0f
-	ld	de, #_test_dungeon
-	call	_update_dng
-;src/main.c:184: set_sprite_tile(0,player_dir);
-	ld	hl, #_player_dir
-	ld	c, (hl)
-;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
-	ld	hl, #(_shadow_OAM + 2)
-	ld	(hl), c
-;src/main.c:184: set_sprite_tile(0,player_dir);
-00125$:
-;src/main.c:196: wait_vbl_done();
+;src/main.c:208: dungeon_logic_upd();
+	call	_dungeon_logic_upd
+;src/main.c:219: wait_vbl_done();
 	call	_wait_vbl_done
-;src/main.c:198: }
-	jp	00128$
+;src/main.c:221: }
+	jr	00102$
 	.area _CODE
 	.area _INITIALIZER
 __xinit__player_x:

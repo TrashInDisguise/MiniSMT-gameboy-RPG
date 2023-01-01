@@ -9,7 +9,7 @@
 
 static uint8_t player_x=0;
 static uint8_t player_y=0;
-static uint8_t global_state = 1;// 0 - owerworld // 1 - 3d dungeon exploration // 3 - turn based combat // 4 - inventory // 5 - dialog  
+static uint8_t global_state = 1;// 0 - owerworld // 1 - 3d dungeon exploration // 3 - turn based combat // 4 - inventory // 5 - dialog// 6 - interactive scene  
 static enum direction{north,east,south,west};
 //static enum wall_type{none,wall,door};
 static enum direction player_dir = north;
@@ -115,6 +115,87 @@ void update_dng(unsigned char *dng,uint8_t dungeon_width, uint8_t dungeon_hieght
 
 }
 
+void collision_check(const unsigned char dng*, uint8_t dng_width, uint8_t dng_height){
+    //TODO check collision refactoring + interactivetis
+}
+
+void dungeon_logic_upd(){
+    joypadPrevious = joypadCurrent;
+    joypadCurrent = joypad();
+
+    if((joypadCurrent & J_LEFT) && !(joypadPrevious & J_LEFT)){
+        player_dir--;
+        if (player_dir==255){
+            player_dir = west;
+        }
+        update_dng(test_dungeon,15,15);
+        set_sprite_tile(0,player_dir);
+    }
+    if((joypadCurrent & J_RIGHT) && !(joypadPrevious & J_RIGHT)){
+        player_dir++;
+        if(player_dir==4){
+            player_dir=north;
+        }
+        update_dng(test_dungeon,15,15);
+        set_sprite_tile(0,player_dir);
+    }
+    if((joypadCurrent & J_UP) && !(joypadPrevious & J_UP)){
+        switch(player_dir){
+            case north:
+                if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+                    player_y--;
+                    update_dng(test_dungeon,15,15);
+                }
+            break;
+            case east:
+                if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
+                    player_x++;
+                    update_dng(test_dungeon,15,15);
+                }
+            break;
+            case south:
+                if(return_value(test_dungeon,15,15,player_x,player_y+1)==0x00||return_value(test_dungeon,15,15,player_x,player_y+1)==0x01){
+                    player_y++;
+                    update_dng(test_dungeon,15,15);
+                }
+            break;
+            case west:
+                if(return_value(test_dungeon,15,15,player_x-1,player_y)==0x00||return_value(test_dungeon,15,15,player_x-1,player_y)==0x01){
+                    player_x--;
+                    update_dng(test_dungeon,15,15);
+                }
+            break;
+        }
+    }
+    if((joypadCurrent & J_DOWN) && !(joypadPrevious & J_DOWN)){
+        switch(player_dir){
+            case north:
+                if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+                    player_y++;
+                    update_dng(test_dungeon,15,15);
+                }
+            break;
+            case east:
+                if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+                    player_x--;
+                    update_dng(test_dungeon,15,15);
+                }
+            break;
+            case south:
+                if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+                    player_y--;
+                    update_dng(test_dungeon,15,15);
+                }
+            break;
+            case west:
+                if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+                    player_x++;
+                    update_dng(test_dungeon,15,15);
+                }
+            break;
+        }
+    }
+}
 
 void main(void)
 {
@@ -128,61 +209,7 @@ void main(void)
     // Loop forever
     while(1) {
         //controller handler
-        joypadPrevious = joypadCurrent;
-        joypadCurrent = joypad();
-
-        if((joypadCurrent & J_LEFT) && !(joypadPrevious & J_LEFT)){
-            player_dir--;
-            if (player_dir==255){
-                player_dir = west;
-            }
-            update_dng(test_dungeon,15,15);
-            set_sprite_tile(0,player_dir);
-        }
-        if((joypadCurrent & J_RIGHT) && !(joypadPrevious & J_RIGHT)){
-            player_dir++;
-            if(player_dir==4){
-                player_dir=north;
-            }
-            update_dng(test_dungeon,15,15);
-            set_sprite_tile(0,player_dir);
-        }
-        if((joypadCurrent & J_UP) && !(joypadPrevious & J_UP)){
-            switch(player_dir){
-                case north:
-                    player_y--;
-                break;
-                case east:
-                    player_x++;
-                break;
-                case south:
-                    player_y++;
-                break;
-                case west:
-                    player_x--;
-                break;
-            }
-            update_dng(test_dungeon,15,15);
-            set_sprite_tile(0,player_dir);
-        }
-        if((joypadCurrent & J_DOWN) && !(joypadPrevious & J_DOWN)){
-            switch(player_dir){
-                case north:
-                    player_y++;
-                break;
-                case east:
-                    player_x--;
-                break;
-                case south:
-                    player_y--;
-                break;
-                case west:
-                    player_x++;
-                break;
-            }
-            update_dng(test_dungeon,15,15);
-            set_sprite_tile(0,player_dir);
-        }
+        dungeon_logic_upd();
       
         //player_draw(&pl);
         
