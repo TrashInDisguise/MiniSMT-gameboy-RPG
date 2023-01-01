@@ -57,14 +57,14 @@ unsigned char return_value(const unsigned char *dng, uint8_t width, uint8_t heig
 }
 */
 
-void init_gfx() {
+void init_dungeon(const unsigned char *dng,uint8_t dng_width, uint8_t dng_height) {
 
 	// Load player sprite
     set_bkg_data(0,74,dng_tileset);
     //locating player start position
-    for(uint8_t i = 0; i < 15; i++){
-        for(uint8_t j = 0; j < 15; j++){
-            if(test_dungeon[i*15+j]==0x01){
+    for(uint8_t i = 0; i < dng_width; i++){
+        for(uint8_t j = 0; j < dng_height; j++){
+            if(dng[i*dng_width+j]==0x01){
                 player_x = j;
                 player_y = i;
             }
@@ -82,6 +82,7 @@ void update_dng(unsigned char *dng,uint8_t dungeon_width, uint8_t dungeon_hieght
     switch (player_dir){
         case north:
             check_l_walls_n(dng,dungeon_width,dungeon_hieght,player_x,player_y);
+            //check_l_walls(dng,dungeon_width,dungeon_hieght,player_x, player_y, player_dir);
             check_r_walls_n(dng,dungeon_width,dungeon_hieght,player_x,player_y);
             check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y, 0, -1);
             
@@ -89,18 +90,21 @@ void update_dng(unsigned char *dng,uint8_t dungeon_width, uint8_t dungeon_hieght
         break;
         case south:
             check_l_walls_s(dng,dungeon_width,dungeon_hieght,player_x,player_y);
+            //check_l_walls(dng,dungeon_width,dungeon_hieght,player_x, player_y, player_dir);
             check_r_walls_s(dng,dungeon_width,dungeon_hieght,player_x,player_y);
             check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,0,+1);
             SHOW_BKG;
         break;
         case west:
             check_l_walls_w(dng,dungeon_width,dungeon_hieght,player_x,player_y);
+            //check_l_walls(dng,dungeon_width,dungeon_hieght,player_x, player_y, player_dir);
             check_r_walls_w(dng,dungeon_width,dungeon_hieght,player_x,player_y);
             check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,-1,0);
             
             SHOW_BKG;
         break;
         case east:
+            //check_l_walls(dng,dungeon_width,dungeon_hieght,player_x, player_y, player_dir);
             check_l_walls_e(dng,dungeon_width,dungeon_hieght,player_x,player_y);
             check_r_walls_e(dng,dungeon_width,dungeon_hieght,player_x,player_y);
             check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,+1,0);
@@ -115,7 +119,7 @@ void update_dng(unsigned char *dng,uint8_t dungeon_width, uint8_t dungeon_hieght
 void main(void)
 {
     
-    init_gfx();
+    init_dungeon(test_dungeon, 15, 15);
     update_dng(test_dungeon,15,15);
     set_sprite_data(0,4,news);
     set_sprite_tile(0,player_dir);

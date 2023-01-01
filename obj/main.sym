@@ -8,6 +8,7 @@ Symbol Table
     .__.CPU.                                                    =  000000 L
     .__.H$L.                                                    =  000000 L
     _LCDC_REG                                                      ****** GX
+    __muluchar                                                     ****** GX
   7 __xinit__global_state                                          000002 R
   7 __xinit__joypadCurrent                                         000004 R
   7 __xinit__joypadPrevious                                        000005 R
@@ -25,11 +26,11 @@ Symbol Table
     _check_r_walls_w                                               ****** GX
     _dng_tileset                                                   ****** GX
   2 _global_state                                                  000002 R
-  0 _init_gfx                                                      000000 GR
+  0 _init_dungeon                                                  000000 GR
     _joypad                                                        ****** GX
   2 _joypadCurrent                                                 000004 R
   2 _joypadPrevious                                                000005 R
-  0 _main                                                          00034E GR
+  0 _main                                                          000365 GR
     _news                                                          ****** GX
   2 _player_dir                                                    000003 R
   2 _player_x                                                      000000 R
@@ -38,17 +39,18 @@ Symbol Table
     _set_bkg_tiles                                                 ****** GX
     _set_sprite_data                                               ****** GX
     _shadow_OAM                                                    ****** GX
-  0 _test_dungeon                                                  000111 GR
-  0 _update_dng                                                    0001F2 GR
+  0 _test_dungeon                                                  000128 GR
+  0 _update_dng                                                    000209 GR
     _wait_vbl_done                                                 ****** GX
-  0 _white_screen                                                  000049 GR
+  0 _white_screen                                                  000060 GR
+
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
 Hexadecimal [24-Bits]
 
 Area Table
 
-   0 _CODE                                      size    498   flags    0
+   0 _CODE                                      size    4B8   flags    0
    1 _DATA                                      size      0   flags    0
    2 _INITIALIZED                               size      6   flags    0
    3 _DABS                                      size      0   flags    8
