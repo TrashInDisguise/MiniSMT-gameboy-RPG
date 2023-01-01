@@ -13,7 +13,7 @@ static uint8_t global_state = 1;// 0 - owerworld // 1 - 3d dungeon exploration /
 static enum direction{north,east,south,west};
 //static enum wall_type{none,wall,door};
 static enum direction player_dir = north;
-static uint8_t dist=0;
+//static uint8_t dist=0;
 static uint8_t joypadCurrent=0,joypadPrevious=0;
 
 //0x02 - wall, 0x03 - south door, 0x04 - west door, 0x05 - north door, 0x6 - east door, 0x01 - start

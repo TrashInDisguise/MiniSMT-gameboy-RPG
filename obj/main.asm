@@ -46,8 +46,6 @@ _global_state:
 	.ds 1
 _player_dir:
 	.ds 1
-_dist:
-	.ds 1
 _joypadCurrent:
 	.ds 1
 _joypadPrevious:
@@ -1078,8 +1076,6 @@ __xinit__player_y:
 __xinit__global_state:
 	.db #0x01	; 1
 __xinit__player_dir:
-	.db #0x00	; 0
-__xinit__dist:
 	.db #0x00	; 0
 __xinit__joypadCurrent:
 	.db #0x00	; 0
