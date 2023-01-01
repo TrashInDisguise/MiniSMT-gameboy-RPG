@@ -24,14 +24,15 @@ Symbol Table
     _check_r_walls_n                                               ****** GX
     _check_r_walls_s                                               ****** GX
     _check_r_walls_w                                               ****** GX
+  0 _collision_check                                               000365 GR
     _dng_tileset                                                   ****** GX
-  0 _dungeon_logic_upd                                             000365 GR
+  0 _dungeon_logic_upd                                             000368 GR
   2 _global_state                                                  000002 R
   0 _init_dungeon                                                  000000 GR
     _joypad                                                        ****** GX
   2 _joypadCurrent                                                 000004 R
   2 _joypadPrevious                                                000005 R
-  0 _main                                                          000623 GR
+  0 _main                                                          000631 GR
     _news                                                          ****** GX
   2 _player_dir                                                    000003 R
   2 _player_x                                                      000000 R
@@ -46,12 +47,13 @@ Symbol Table
     _wait_vbl_done                                                 ****** GX
   0 _white_screen                                                  000060 GR
 
+
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
 Hexadecimal [24-Bits]
 
 Area Table
 
-   0 _CODE                                      size    669   flags    0
+   0 _CODE                                      size    677   flags    0
    1 _DATA                                      size      0   flags    0
    2 _INITIALIZED                               size      6   flags    0
    3 _DABS                                      size      0   flags    8

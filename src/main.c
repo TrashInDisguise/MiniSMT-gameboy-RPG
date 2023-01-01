@@ -115,7 +115,7 @@ void update_dng(unsigned char *dng,uint8_t dungeon_width, uint8_t dungeon_hieght
 
 }
 
-void collision_check(const unsigned char dng*, uint8_t dng_width, uint8_t dng_height){
+void collision_check(const unsigned char *dng, uint8_t dng_width, uint8_t dng_height){
     //TODO check collision refactoring + interactivetis
 }
 
@@ -170,13 +170,13 @@ void dungeon_logic_upd(){
     if((joypadCurrent & J_DOWN) && !(joypadPrevious & J_DOWN)){
         switch(player_dir){
             case north:
-                if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+                if(return_value(test_dungeon,15,15,player_x,player_y+1)==0x00||return_value(test_dungeon,15,15,player_x,player_y+1)==0x01){
                     player_y++;
                     update_dng(test_dungeon,15,15);
                 }
             break;
             case east:
-                if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+                if(return_value(test_dungeon,15,15,player_x-1,player_y)==0x00||return_value(test_dungeon,15,15,player_x-1,player_y)==0x01){
                     player_x--;
                     update_dng(test_dungeon,15,15);
                 }
@@ -188,7 +188,7 @@ void dungeon_logic_upd(){
                 }
             break;
             case west:
-                if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+                if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
                     player_x++;
                     update_dng(test_dungeon,15,15);
                 }

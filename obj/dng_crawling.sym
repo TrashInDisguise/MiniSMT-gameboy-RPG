@@ -9,15 +9,15 @@ Symbol Table
     .__.H$L.                                                    =  000000 L
     __mulsuchar                                                    ****** GX
     __muluchar                                                     ****** GX
-  0 _check_l_walls_e                                               00057D GR
-  0 _check_l_walls_n                                               0003B0 GR
-  0 _check_l_walls_s                                               00073D GR
-  0 _check_l_walls_w                                               00090B GR
-  0 _check_m_walls                                                 000045 GR
-  0 _check_r_walls_e                                               000C97 GR
-  0 _check_r_walls_n                                               000ACA GR
-  0 _check_r_walls_s                                               000E57 GR
-  0 _check_r_walls_w                                               001025 GR
+  0 _check_l_walls_e                                               000564 GR
+  0 _check_l_walls_n                                               000397 GR
+  0 _check_l_walls_s                                               000724 GR
+  0 _check_l_walls_w                                               0008F2 GR
+  0 _check_m_walls                                                 00002C GR
+  0 _check_r_walls_e                                               000C7E GR
+  0 _check_r_walls_n                                               000AB1 GR
+  0 _check_r_walls_s                                               000E3E GR
+  0 _check_r_walls_w                                               00100C GR
     _door1_l_bkg                                                   ****** GX
     _door1_left_half_bkg                                           ****** GX
     _door1_left_half_c_bkg                                         ****** GX
@@ -77,7 +77,7 @@ Hexadecimal [24-Bits]
 
 Area Table
 
-   0 _CODE                                      size   11E4   flags    0
+   0 _CODE                                      size   11CB   flags    0
    1 _DATA                                      size      0   flags    0
    2 _INITIALIZED                               size      0   flags    0
    3 _DABS                                      size      0   flags    8

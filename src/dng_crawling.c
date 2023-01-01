@@ -7,7 +7,7 @@
 
 
 unsigned char return_value(const unsigned char *dng, uint8_t width, uint8_t height,uint8_t x ,uint8_t y){
-    if(y*width + x < height*width)
+    if(y < height && x < width)
         return dng[ y*width + x ];
     else
         return NULL;

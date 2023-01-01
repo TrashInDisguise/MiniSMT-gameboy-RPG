@@ -56,63 +56,40 @@
 ; ---------------------------------
 _return_value::
 	push	de
-	ld	d, a
-;src/dng_crawling.c:10: if(y*width + x < height*width)
-	push	de
-	ld	e, d
-	ldhl	sp,	#8
+	ld	e, a
+;src/dng_crawling.c:10: if(y < height && x < width)
+	ldhl	sp,	#6
+	ld	a, (hl-)
+	dec	hl
+	sub	a, (hl)
+	jr	NC, 00102$
+	inc	hl
+	ld	a, (hl)
+	sub	a, e
+	jr	NC, 00102$
+;src/dng_crawling.c:11: return dng[ y*width + x ];
+	inc	hl
 	ld	a, (hl)
 	call	__muluchar
-	pop	de
 	ldhl	sp,	#5
-	ld	a, (hl-)
+	ld	a, (hl)
 	ld	e, #0x00
 	add	a, c
 	ld	c, a
 	ld	a, e
 	adc	a, b
 	ld	b, a
-	push	bc
-	ld	e, d
-	ld	a, (hl)
-	call	__muluchar
-	ld	l, c
-;	spillPairReg hl
-;	spillPairReg hl
-	ld	h, b
-;	spillPairReg hl
-;	spillPairReg hl
-	pop	bc
-	ld	e, h
-	ld	d, b
-	ld	a, c
-	sub	a, l
-	ld	a, b
-	sbc	a, h
-	bit	7, e
-	jr	Z, 00111$
-	bit	7, d
-	jr	NZ, 00112$
-	cp	a, a
-	jr	00112$
-00111$:
-	bit	7, d
-	jr	Z, 00112$
-	scf
-00112$:
-	jr	NC, 00102$
-;src/dng_crawling.c:11: return dng[ y*width + x ];
 	pop	hl
 	push	hl
 	add	hl, bc
 	ld	c, l
 	ld	b, h
 	ld	a, (bc)
-	jr	00104$
+	jr	00105$
 00102$:
 ;src/dng_crawling.c:13: return NULL;
 	xor	a, a
-00104$:
+00105$:
 ;src/dng_crawling.c:14: }
 	inc	sp
 	inc	sp

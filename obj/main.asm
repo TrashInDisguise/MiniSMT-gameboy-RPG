@@ -10,6 +10,7 @@
 ;--------------------------------------------------------
 	.globl _main
 	.globl _dungeon_logic_upd
+	.globl _collision_check
 	.globl _update_dng
 	.globl _init_dungeon
 	.globl _check_r_walls_e
@@ -837,101 +838,110 @@ _update_dng::
 	pop	hl
 	inc	sp
 	jp	(hl)
-;src/main.c:118: void dungeon_logic_upd(){
+;src/main.c:118: void collision_check(const unsigned char *dng, uint8_t dng_width, uint8_t dng_height){
+;	---------------------------------
+; Function collision_check
+; ---------------------------------
+_collision_check::
+;src/main.c:120: }
+	pop	hl
+	inc	sp
+	jp	(hl)
+;src/main.c:122: void dungeon_logic_upd(){
 ;	---------------------------------
 ; Function dungeon_logic_upd
 ; ---------------------------------
 _dungeon_logic_upd::
-;src/main.c:119: joypadPrevious = joypadCurrent;
+;src/main.c:123: joypadPrevious = joypadCurrent;
 	ld	a, (#_joypadCurrent)
 	ld	(#_joypadPrevious),a
-;src/main.c:120: joypadCurrent = joypad();
+;src/main.c:124: joypadCurrent = joypad();
 	call	_joypad
 	ld	hl, #_joypadCurrent
 	ld	(hl), a
-;src/main.c:122: if((joypadCurrent & J_LEFT) && !(joypadPrevious & J_LEFT)){
+;src/main.c:126: if((joypadCurrent & J_LEFT) && !(joypadPrevious & J_LEFT)){
 	bit	1, (hl)
 	jr	Z, 00104$
 	ld	a, (#_joypadPrevious)
 	bit	1, a
 	jr	NZ, 00104$
-;src/main.c:123: player_dir--;
+;src/main.c:127: player_dir--;
 	ld	hl, #_player_dir
 	dec	(hl)
-;src/main.c:124: if (player_dir==255){
+;src/main.c:128: if (player_dir==255){
 	ld	a, (hl)
 	inc	a
 	jr	NZ, 00102$
-;src/main.c:125: player_dir = west;
+;src/main.c:129: player_dir = west;
 	ld	hl, #_player_dir
 	ld	(hl), #0x03
 00102$:
-;src/main.c:127: update_dng(test_dungeon,15,15);
+;src/main.c:131: update_dng(test_dungeon,15,15);
 	ld	a, #0x0f
 	push	af
 	inc	sp
 	ld	a, #0x0f
 	ld	de, #_test_dungeon
 	call	_update_dng
-;src/main.c:128: set_sprite_tile(0,player_dir);
+;src/main.c:132: set_sprite_tile(0,player_dir);
 	ld	hl, #_player_dir
 	ld	c, (hl)
 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
 	ld	hl, #(_shadow_OAM + 2)
 	ld	(hl), c
-;src/main.c:128: set_sprite_tile(0,player_dir);
+;src/main.c:132: set_sprite_tile(0,player_dir);
 00104$:
-;src/main.c:130: if((joypadCurrent & J_RIGHT) && !(joypadPrevious & J_RIGHT)){
+;src/main.c:134: if((joypadCurrent & J_RIGHT) && !(joypadPrevious & J_RIGHT)){
 	ld	a, (#_joypadCurrent)
 	rrca
 	jr	NC, 00109$
 	ld	a, (#_joypadPrevious)
 	rrca
 	jr	C, 00109$
-;src/main.c:131: player_dir++;
+;src/main.c:135: player_dir++;
 	ld	hl, #_player_dir
 	inc	(hl)
-;src/main.c:132: if(player_dir==4){
+;src/main.c:136: if(player_dir==4){
 	ld	a, (hl)
 	sub	a, #0x04
 	jr	NZ, 00107$
-;src/main.c:133: player_dir=north;
+;src/main.c:137: player_dir=north;
 	ld	hl, #_player_dir
 	ld	(hl), #0x00
 00107$:
-;src/main.c:135: update_dng(test_dungeon,15,15);
+;src/main.c:139: update_dng(test_dungeon,15,15);
 	ld	a, #0x0f
 	push	af
 	inc	sp
 	ld	a, #0x0f
 	ld	de, #_test_dungeon
 	call	_update_dng
-;src/main.c:136: set_sprite_tile(0,player_dir);
+;src/main.c:140: set_sprite_tile(0,player_dir);
 	ld	hl, #_player_dir
 	ld	c, (hl)
 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
 	ld	hl, #(_shadow_OAM + 2)
 	ld	(hl), c
-;src/main.c:136: set_sprite_tile(0,player_dir);
+;src/main.c:140: set_sprite_tile(0,player_dir);
 00109$:
-;src/main.c:138: if((joypadCurrent & J_UP) && !(joypadPrevious & J_UP)){
+;src/main.c:142: if((joypadCurrent & J_UP) && !(joypadPrevious & J_UP)){
 	ld	a, (#_joypadCurrent)
 	bit	2, a
 	jp	Z,00129$
 	ld	a, (#_joypadPrevious)
 	bit	2, a
 	jp	NZ,00129$
-;src/main.c:141: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+;src/main.c:145: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
 	ld	hl, #_player_y
 	ld	e, (hl)
-;src/main.c:139: switch(player_dir){
+;src/main.c:143: switch(player_dir){
 	ld	a, (#_player_dir)
 	or	a, a
 	jr	Z, 00111$
-;src/main.c:147: if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
+;src/main.c:151: if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
 	ld	hl, #_player_x
 	ld	c, (hl)
-;src/main.c:139: switch(player_dir){
+;src/main.c:143: switch(player_dir){
 	ld	a, (#_player_dir)
 	dec	a
 	jr	Z, 00115$
@@ -942,9 +952,9 @@ _dungeon_logic_upd::
 	sub	a, #0x03
 	jp	Z,00123$
 	jp	00129$
-;src/main.c:140: case north:
+;src/main.c:144: case north:
 00111$:
-;src/main.c:141: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+;src/main.c:145: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
 	ld	b, e
 	dec	b
 	push	bc
@@ -972,21 +982,21 @@ _dungeon_logic_upd::
 	dec	a
 	jp	NZ,00129$
 00112$:
-;src/main.c:142: player_y--;
+;src/main.c:146: player_y--;
 	ld	hl, #_player_y
 	dec	(hl)
-;src/main.c:143: update_dng(test_dungeon,15,15);
+;src/main.c:147: update_dng(test_dungeon,15,15);
 	ld	a, #0x0f
 	push	af
 	inc	sp
 	ld	a, #0x0f
 	ld	de, #_test_dungeon
 	call	_update_dng
-;src/main.c:145: break;
+;src/main.c:149: break;
 	jp	00129$
-;src/main.c:146: case east:
+;src/main.c:150: case east:
 00115$:
-;src/main.c:147: if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
+;src/main.c:151: if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
 	inc	c
 	ld	a, (#_player_y)
 	push	af
@@ -1016,21 +1026,21 @@ _dungeon_logic_upd::
 	dec	a
 	jp	NZ,00129$
 00116$:
-;src/main.c:148: player_x++;
+;src/main.c:152: player_x++;
 	ld	hl, #_player_x
 	inc	(hl)
-;src/main.c:149: update_dng(test_dungeon,15,15);
+;src/main.c:153: update_dng(test_dungeon,15,15);
 	ld	a, #0x0f
 	push	af
 	inc	sp
 	ld	a, #0x0f
 	ld	de, #_test_dungeon
 	call	_update_dng
-;src/main.c:151: break;
+;src/main.c:155: break;
 	jp	00129$
-;src/main.c:152: case south:
+;src/main.c:156: case south:
 00119$:
-;src/main.c:153: if(return_value(test_dungeon,15,15,player_x,player_y+1)==0x00||return_value(test_dungeon,15,15,player_x,player_y+1)==0x01){
+;src/main.c:157: if(return_value(test_dungeon,15,15,player_x,player_y+1)==0x00||return_value(test_dungeon,15,15,player_x,player_y+1)==0x01){
 	ld	b, e
 	inc	b
 	push	bc
@@ -1058,21 +1068,21 @@ _dungeon_logic_upd::
 	dec	a
 	jr	NZ, 00129$
 00120$:
-;src/main.c:154: player_y++;
+;src/main.c:158: player_y++;
 	ld	hl, #_player_y
 	inc	(hl)
-;src/main.c:155: update_dng(test_dungeon,15,15);
+;src/main.c:159: update_dng(test_dungeon,15,15);
 	ld	a, #0x0f
 	push	af
 	inc	sp
 	ld	a, #0x0f
 	ld	de, #_test_dungeon
 	call	_update_dng
-;src/main.c:157: break;
+;src/main.c:161: break;
 	jr	00129$
-;src/main.c:158: case west:
+;src/main.c:162: case west:
 00123$:
-;src/main.c:159: if(return_value(test_dungeon,15,15,player_x-1,player_y)==0x00||return_value(test_dungeon,15,15,player_x-1,player_y)==0x01){
+;src/main.c:163: if(return_value(test_dungeon,15,15,player_x-1,player_y)==0x00||return_value(test_dungeon,15,15,player_x-1,player_y)==0x01){
 	dec	c
 	ld	a, (#_player_y)
 	push	af
@@ -1102,33 +1112,36 @@ _dungeon_logic_upd::
 	dec	a
 	jr	NZ, 00129$
 00124$:
-;src/main.c:160: player_x--;
+;src/main.c:164: player_x--;
 	ld	hl, #_player_x
 	dec	(hl)
-;src/main.c:161: update_dng(test_dungeon,15,15);
+;src/main.c:165: update_dng(test_dungeon,15,15);
 	ld	a, #0x0f
 	push	af
 	inc	sp
 	ld	a, #0x0f
 	ld	de, #_test_dungeon
 	call	_update_dng
-;src/main.c:164: }
+;src/main.c:168: }
 00129$:
-;src/main.c:166: if((joypadCurrent & J_DOWN) && !(joypadPrevious & J_DOWN)){
+;src/main.c:170: if((joypadCurrent & J_DOWN) && !(joypadPrevious & J_DOWN)){
 	ld	a, (#_joypadCurrent)
 	bit	3, a
 	ret	Z
 	ld	a, (#_joypadPrevious)
 	bit	3, a
 	ret	NZ
-;src/main.c:141: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+;src/main.c:145: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
 	ld	hl, #_player_y
-	ld	b, (hl)
-	dec	b
-;src/main.c:167: switch(player_dir){
+	ld	e, (hl)
+;src/main.c:171: switch(player_dir){
 	ld	a, (#_player_dir)
 	or	a, a
 	jr	Z, 00131$
+;src/main.c:151: if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
+	ld	hl, #_player_x
+	ld	c, (hl)
+;src/main.c:171: switch(player_dir){
 	ld	a, (#_player_dir)
 	dec	a
 	jr	Z, 00135$
@@ -1139,9 +1152,11 @@ _dungeon_logic_upd::
 	sub	a, #0x03
 	jp	Z,00143$
 	ret
-;src/main.c:168: case north:
+;src/main.c:172: case north:
 00131$:
-;src/main.c:169: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+;src/main.c:173: if(return_value(test_dungeon,15,15,player_x,player_y+1)==0x00||return_value(test_dungeon,15,15,player_x,player_y+1)==0x01){
+	ld	b, e
+	inc	b
 	push	bc
 	inc	sp
 	ld	a, (#_player_x)
@@ -1154,7 +1169,7 @@ _dungeon_logic_upd::
 	or	a, a
 	jr	Z, 00132$
 	ld	a, (#_player_y)
-	dec	a
+	inc	a
 	push	af
 	inc	sp
 	ld	a, (#_player_x)
@@ -1167,25 +1182,26 @@ _dungeon_logic_upd::
 	dec	a
 	ret	NZ
 00132$:
-;src/main.c:170: player_y++;
+;src/main.c:174: player_y++;
 	ld	hl, #_player_y
 	inc	(hl)
-;src/main.c:171: update_dng(test_dungeon,15,15);
+;src/main.c:175: update_dng(test_dungeon,15,15);
 	ld	a, #0x0f
 	push	af
 	inc	sp
 	ld	a, #0x0f
 	ld	de, #_test_dungeon
 	call	_update_dng
-;src/main.c:173: break;
+;src/main.c:177: break;
 	ret
-;src/main.c:174: case east:
+;src/main.c:178: case east:
 00135$:
-;src/main.c:175: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
-	push	bc
+;src/main.c:179: if(return_value(test_dungeon,15,15,player_x-1,player_y)==0x00||return_value(test_dungeon,15,15,player_x-1,player_y)==0x01){
+	dec	c
+	ld	a, (#_player_y)
+	push	af
 	inc	sp
-	ld	a, (#_player_x)
-	ld	h, a
+	ld	h, c
 	ld	l, #0x0f
 	push	hl
 	ld	a, #0x0f
@@ -1193,11 +1209,14 @@ _dungeon_logic_upd::
 	call	_return_value
 	or	a, a
 	jr	Z, 00136$
-	ld	a, (#_player_y)
-	dec	a
-	push	af
-	inc	sp
 	ld	a, (#_player_x)
+	dec	a
+	ld	hl, #_player_y
+	ld	h, (hl)
+;	spillPairReg hl
+;	spillPairReg hl
+	push	hl
+	inc	sp
 	ld	h, a
 	ld	l, #0x0f
 	push	hl
@@ -1207,21 +1226,23 @@ _dungeon_logic_upd::
 	dec	a
 	ret	NZ
 00136$:
-;src/main.c:176: player_x--;
+;src/main.c:180: player_x--;
 	ld	hl, #_player_x
 	dec	(hl)
-;src/main.c:177: update_dng(test_dungeon,15,15);
+;src/main.c:181: update_dng(test_dungeon,15,15);
 	ld	a, #0x0f
 	push	af
 	inc	sp
 	ld	a, #0x0f
 	ld	de, #_test_dungeon
 	call	_update_dng
-;src/main.c:179: break;
+;src/main.c:183: break;
 	ret
-;src/main.c:180: case south:
+;src/main.c:184: case south:
 00139$:
-;src/main.c:181: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+;src/main.c:185: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+	ld	b, e
+	dec	b
 	push	bc
 	inc	sp
 	ld	a, (#_player_x)
@@ -1247,25 +1268,26 @@ _dungeon_logic_upd::
 	dec	a
 	ret	NZ
 00140$:
-;src/main.c:182: player_y--;
+;src/main.c:186: player_y--;
 	ld	hl, #_player_y
 	dec	(hl)
-;src/main.c:183: update_dng(test_dungeon,15,15);
+;src/main.c:187: update_dng(test_dungeon,15,15);
 	ld	a, #0x0f
 	push	af
 	inc	sp
 	ld	a, #0x0f
 	ld	de, #_test_dungeon
 	call	_update_dng
-;src/main.c:185: break;
+;src/main.c:189: break;
 	ret
-;src/main.c:186: case west:
+;src/main.c:190: case west:
 00143$:
-;src/main.c:187: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
-	push	bc
+;src/main.c:191: if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
+	inc	c
+	ld	a, (#_player_y)
+	push	af
 	inc	sp
-	ld	a, (#_player_x)
-	ld	h, a
+	ld	h, c
 	ld	l, #0x0f
 	push	hl
 	ld	a, #0x0f
@@ -1273,11 +1295,14 @@ _dungeon_logic_upd::
 	call	_return_value
 	or	a, a
 	jr	Z, 00144$
-	ld	a, (#_player_y)
-	dec	a
-	push	af
-	inc	sp
 	ld	a, (#_player_x)
+	inc	a
+	ld	hl, #_player_y
+	ld	h, (hl)
+;	spillPairReg hl
+;	spillPairReg hl
+	push	hl
+	inc	sp
 	ld	h, a
 	ld	l, #0x0f
 	push	hl
@@ -1287,39 +1312,39 @@ _dungeon_logic_upd::
 	dec	a
 	ret	NZ
 00144$:
-;src/main.c:188: player_x++;
+;src/main.c:192: player_x++;
 	ld	hl, #_player_x
 	inc	(hl)
-;src/main.c:189: update_dng(test_dungeon,15,15);
+;src/main.c:193: update_dng(test_dungeon,15,15);
 	ld	a, #0x0f
 	push	af
 	inc	sp
 	ld	a, #0x0f
 	ld	de, #_test_dungeon
 	call	_update_dng
-;src/main.c:192: }
-;src/main.c:194: }
+;src/main.c:196: }
+;src/main.c:198: }
 	ret
-;src/main.c:196: void main(void)
+;src/main.c:200: void main(void)
 ;	---------------------------------
 ; Function main
 ; ---------------------------------
 _main::
-;src/main.c:199: init_dungeon(test_dungeon, 15, 15);
+;src/main.c:203: init_dungeon(test_dungeon, 15, 15);
 	ld	a, #0x0f
 	push	af
 	inc	sp
 	ld	a, #0x0f
 	ld	de, #_test_dungeon
 	call	_init_dungeon
-;src/main.c:200: update_dng(test_dungeon,15,15);
+;src/main.c:204: update_dng(test_dungeon,15,15);
 	ld	a, #0x0f
 	push	af
 	inc	sp
 	ld	a, #0x0f
 	ld	de, #_test_dungeon
 	call	_update_dng
-;src/main.c:201: set_sprite_data(0,4,news);
+;src/main.c:205: set_sprite_data(0,4,news);
 	ld	de, #_news
 	push	de
 	ld	a, #0x04
@@ -1330,7 +1355,7 @@ _main::
 	inc	sp
 	call	_set_sprite_data
 	add	sp, #4
-;src/main.c:202: set_sprite_tile(0,player_dir);
+;src/main.c:206: set_sprite_tile(0,player_dir);
 	ld	hl, #_player_dir
 	ld	c, (hl)
 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
@@ -1342,17 +1367,17 @@ _main::
 	ld	(hl), #0x10
 	inc	hl
 	ld	(hl), #0x0a
-;src/main.c:204: SHOW_SPRITES;
+;src/main.c:208: SHOW_SPRITES;
 	ldh	a, (_LCDC_REG + 0)
 	or	a, #0x02
 	ldh	(_LCDC_REG + 0), a
-;src/main.c:206: while(1) {
+;src/main.c:210: while(1) {
 00102$:
-;src/main.c:208: dungeon_logic_upd();
+;src/main.c:212: dungeon_logic_upd();
 	call	_dungeon_logic_upd
-;src/main.c:219: wait_vbl_done();
+;src/main.c:223: wait_vbl_done();
 	call	_wait_vbl_done
-;src/main.c:221: }
+;src/main.c:225: }
 	jr	00102$
 	.area _CODE
 	.area _INITIALIZER
