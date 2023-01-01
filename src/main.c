@@ -14,7 +14,7 @@ static enum direction{north,east,south,west};
 //static enum wall_type{none,wall,door};
 static enum direction player_dir = north;
 //static uint8_t dist=0;
-static uint8_t joypadCurrent=0,joypadPrevious=0;
+static uint8_t joypad_current=0,joypad_previous=0;
 
 //0x02 - wall, 0x03 - south door, 0x04 - west door, 0x05 - north door, 0x6 - east door, 0x01 - start
 const unsigned char white_screen[] = {
@@ -120,10 +120,10 @@ void collision_check(const unsigned char *dng, uint8_t dng_width, uint8_t dng_he
 }
 
 void dungeon_logic_upd(){
-    joypadPrevious = joypadCurrent;
-    joypadCurrent = joypad();
+    joypad_previous = joypad_current;
+    joypad_current = joypad();
 
-    if((joypadCurrent & J_LEFT) && !(joypadPrevious & J_LEFT)){
+    if((joypad_current & J_LEFT) && !(joypad_previous & J_LEFT)){
         player_dir--;
         if (player_dir==255){
             player_dir = west;
@@ -131,7 +131,7 @@ void dungeon_logic_upd(){
         update_dng(test_dungeon,15,15);
         set_sprite_tile(0,player_dir);
     }
-    if((joypadCurrent & J_RIGHT) && !(joypadPrevious & J_RIGHT)){
+    if((joypad_current & J_RIGHT) && !(joypad_previous & J_RIGHT)){
         player_dir++;
         if(player_dir==4){
             player_dir=north;
@@ -139,7 +139,7 @@ void dungeon_logic_upd(){
         update_dng(test_dungeon,15,15);
         set_sprite_tile(0,player_dir);
     }
-    if((joypadCurrent & J_UP) && !(joypadPrevious & J_UP)){
+    if((joypad_current & J_UP) && !(joypad_previous & J_UP)){
         switch(player_dir){
             case north:
                 if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
@@ -167,7 +167,7 @@ void dungeon_logic_upd(){
             break;
         }
     }
-    if((joypadCurrent & J_DOWN) && !(joypadPrevious & J_DOWN)){
+    if((joypad_current & J_DOWN) && !(joypad_previous & J_DOWN)){
         switch(player_dir){
             case north:
                 if(return_value(test_dungeon,15,15,player_x,player_y+1)==0x00||return_value(test_dungeon,15,15,player_x,player_y+1)==0x01){
