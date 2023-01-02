@@ -5,12 +5,14 @@
 #include "../res/dng_wip.h"
 #include "../res/walls.h"
 #include "../res/nesw.h"
+#include "../res/UI_sprites.h"
 
 
 static uint8_t player_x=0;
 static uint8_t player_y=0;
 static uint8_t global_state = 1;// 0 - owerworld // 1 - 3d dungeon exploration // 3 - turn based combat // 4 - inventory // 5 - dialog// 6 - interactive scene  
 static enum direction{north,east,south,west};
+static uint16_t *inventory[100] = {};
 //static enum wall_type{none,wall,door};
 static enum direction player_dir = north;
 //static uint8_t dist=0;
@@ -18,6 +20,9 @@ static uint8_t joypad_current=0,joypad_previous=0;
 
 //0x02 - wall, 0x03 - south door, 0x04 - west door, 0x05 - north door, 0x6 - east door, 0x01 - start
 const unsigned char white_screen[] = {
+    0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,
+    0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,
+    0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,
     0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
     0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
     0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
@@ -60,7 +65,8 @@ unsigned char return_value(const unsigned char *dng, uint8_t width, uint8_t heig
 void init_dungeon(const unsigned char *dng,uint8_t dng_width, uint8_t dng_height) {
 
 	// Load player sprite
-    set_bkg_data(0,74,dng_tileset);
+    set_bkg_data(0,75,dng_tileset);
+    set_sprite_data(0,25,UI_tiles);
     //locating player start position
     for(uint8_t i = 0; i < dng_width; i++){
         for(uint8_t j = 0; j < dng_height; j++){
@@ -77,7 +83,7 @@ void init_dungeon(const unsigned char *dng,uint8_t dng_width, uint8_t dng_height
 void update_dng(unsigned char *dng,uint8_t dungeon_width, uint8_t dungeon_hieght){
     uint8_t py = 0;
     uint8_t px = 0;
-    set_bkg_tiles(0,0,20,10,white_screen);
+    set_bkg_tiles(0,0,20,13,white_screen);
     //unsigned char w;
     switch (player_dir){
         case north:
@@ -119,6 +125,90 @@ void collision_check(const unsigned char *dng, uint8_t dng_width, uint8_t dng_he
     //TODO check collision refactoring + interactivetis
 }
 
+void init_dng_UI(){
+    move_sprite(0,80,20);
+    move_sprite(1,80,28);
+    move_sprite(2,88,28);
+    move_sprite(3,88,20);
+    move_sprite(4,64,20);
+    move_sprite(5,104,20);
+
+}
+
+void update_dng_UI (){
+    set_sprite_prop(0, 0x00);
+    set_sprite_prop(1, 0x00);
+    set_sprite_prop(2, 0x00);
+    set_sprite_prop(3, 0x00);
+    //BIG letter
+    switch(player_dir){
+        case 0:            
+            set_sprite_tile(0,1);
+            set_sprite_tile(1,2);
+            set_sprite_tile(2,1);
+            set_sprite_tile(3,2);
+            set_sprite_prop(2, S_FLIPX | S_FLIPY);
+            set_sprite_prop(3, S_FLIPX | S_FLIPY);
+        break;
+
+        case 1:            
+            set_sprite_tile(0,3);
+            set_sprite_tile(1,3);
+            set_sprite_tile(2,4);
+            set_sprite_tile(3,4);
+            set_sprite_prop(2,  S_FLIPY);
+            set_sprite_prop(1,  S_FLIPY);
+        break;
+
+        case 2:
+            set_sprite_tile(0,6);
+            set_sprite_tile(1,5);
+            set_sprite_tile(2,6);
+            set_sprite_tile(3,5);
+            set_sprite_prop(1,  S_FLIPY | S_FLIPX);
+            set_sprite_prop(2,  S_FLIPY | S_FLIPX);
+
+
+        break;
+
+        case 3:
+            set_sprite_tile(0,7);
+            set_sprite_tile(1,8);
+            set_sprite_tile(2,8);
+            set_sprite_tile(3,7);
+            set_sprite_prop(2,  S_FLIPX);
+            set_sprite_prop(3,  S_FLIPX);
+        break;
+    }
+
+    //left small letter
+    switch(player_dir){
+        case 0:            
+            set_sprite_tile(4,12);
+            set_sprite_tile(5,10);
+        break;
+
+        case 1:            
+            set_sprite_tile(4,9);
+            set_sprite_tile(5,11);
+        break;
+
+        case 2:
+
+            set_sprite_tile(4,10);
+            set_sprite_tile(5,12);
+
+        break;
+
+        case 3:
+            set_sprite_tile(4,11);
+            set_sprite_tile(5,9);
+        break;
+    }
+    
+    //moon
+}
+
 void dungeon_logic_upd(){
     joypad_previous = joypad_current;
     joypad_current = joypad();
@@ -129,7 +219,7 @@ void dungeon_logic_upd(){
             player_dir = west;
         }
         update_dng(test_dungeon,15,15);
-        set_sprite_tile(0,player_dir);
+        //set_sprite_tile(0,player_dir);
     }
     if((joypad_current & J_RIGHT) && !(joypad_previous & J_RIGHT)){
         player_dir++;
@@ -137,7 +227,7 @@ void dungeon_logic_upd(){
             player_dir=north;
         }
         update_dng(test_dungeon,15,15);
-        set_sprite_tile(0,player_dir);
+        //set_sprite_tile(0,player_dir);
     }
     if((joypad_current & J_UP) && !(joypad_previous & J_UP)){
         switch(player_dir){
@@ -201,16 +291,23 @@ void main(void)
 {
     
     init_dungeon(test_dungeon, 15, 15);
+    init_dng_UI();
     update_dng(test_dungeon,15,15);
-    set_sprite_data(0,4,news);
-    set_sprite_tile(0,player_dir);
-    move_sprite(0,10,16);
+    set_sprite_data(0,26,UI_tiles);
+    //set_sprite_tile(0,player_dir);
+    //move_sprite(0,10,16);
     SHOW_SPRITES;
     // Loop forever
     while(1) {
         //controller handler
         dungeon_logic_upd();
-      
+        update_dng_UI();
+        
+
+            
+
+
+
         //player_draw(&pl);
         
         

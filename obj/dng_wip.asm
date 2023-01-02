@@ -1226,5 +1226,21 @@ _dng_tileset:
 	.db #0x88	; 136
 	.db #0x08	; 8
 	.db #0x88	; 136
+	.db #0xff	; 255
+	.db #0xff	; 255
+	.db #0xff	; 255
+	.db #0xff	; 255
+	.db #0xff	; 255
+	.db #0xff	; 255
+	.db #0xff	; 255
+	.db #0xff	; 255
+	.db #0xff	; 255
+	.db #0xff	; 255
+	.db #0xff	; 255
+	.db #0xff	; 255
+	.db #0xff	; 255
+	.db #0xff	; 255
+	.db #0xff	; 255
+	.db #0xff	; 255
 	.area _INITIALIZER
 	.area _CABS (ABS)

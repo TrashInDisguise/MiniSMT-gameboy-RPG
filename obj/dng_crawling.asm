@@ -339,23 +339,23 @@ _check_m_walls::
 	inc	hl
 	bit	0, (hl)
 	jr	Z, 00124$
-;src/dng_crawling.c:49: set_bkg_tiles(4,0,6,9,door1_left_half_bkg);
+;src/dng_crawling.c:49: set_bkg_tiles(4,3,6,9,door1_left_half_bkg);
 	ld	de, #_door1_left_half_bkg
 	push	de
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x04
+	ld	hl, #0x304
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	jr	00125$
 00124$:
-;src/dng_crawling.c:51: set_bkg_tiles(4,0,6,9,door1_left_half_c_bkg);
+;src/dng_crawling.c:51: set_bkg_tiles(4,3,6,9,door1_left_half_c_bkg);
 	ld	de, #_door1_left_half_c_bkg
 	push	de
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x04
+	ld	hl, #0x304
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -364,12 +364,12 @@ _check_m_walls::
 	ldhl	sp,	#3
 	bit	0, (hl)
 	jr	Z, 00127$
-;src/dng_crawling.c:54: set_bkg_tiles(10,0,6,9,door1_right_half_bkg);
+;src/dng_crawling.c:54: set_bkg_tiles(10,3,6,9,door1_right_half_bkg);
 	ld	de, #_door1_right_half_bkg
 	push	de
 	ld	hl, #0x906
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x0a
@@ -379,12 +379,12 @@ _check_m_walls::
 	add	sp, #6
 	jp	00173$
 00127$:
-;src/dng_crawling.c:56: set_bkg_tiles(10,0,6,9,door1_right_half_c_bkg);
+;src/dng_crawling.c:56: set_bkg_tiles(10,3,6,9,door1_right_half_c_bkg);
 	ld	de, #_door1_right_half_c_bkg
 	push	de
 	ld	hl, #0x906
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x0a
@@ -398,23 +398,23 @@ _check_m_walls::
 	ldhl	sp,	#2
 	bit	0, (hl)
 	jr	Z, 00130$
-;src/dng_crawling.c:60: set_bkg_tiles(4,0,6,9,wall1_half_bkg);
+;src/dng_crawling.c:60: set_bkg_tiles(4,3,6,9,wall1_half_bkg);
 	ld	de, #_wall1_half_bkg
 	push	de
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x04
+	ld	hl, #0x304
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	jr	00131$
 00130$:
-;src/dng_crawling.c:62: set_bkg_tiles(4,0,6,9,wall1_left_half_c_bkg);
+;src/dng_crawling.c:62: set_bkg_tiles(4,3,6,9,wall1_left_half_c_bkg);
 	ld	de, #_wall1_left_half_c_bkg
 	push	de
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x04
+	ld	hl, #0x304
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -423,12 +423,12 @@ _check_m_walls::
 	ldhl	sp,	#3
 	bit	0, (hl)
 	jr	Z, 00133$
-;src/dng_crawling.c:65: set_bkg_tiles(10,0,6,9,wall1_half_bkg);
+;src/dng_crawling.c:65: set_bkg_tiles(10,3,6,9,wall1_half_bkg);
 	ld	de, #_wall1_half_bkg
 	push	de
 	ld	hl, #0x906
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x0a
@@ -438,12 +438,12 @@ _check_m_walls::
 	add	sp, #6
 	jp	00173$
 00133$:
-;src/dng_crawling.c:67: set_bkg_tiles(10,0,6,9,wall1_right_half_c_bkg);
+;src/dng_crawling.c:67: set_bkg_tiles(10,3,6,9,wall1_right_half_c_bkg);
 	ld	de, #_wall1_right_half_c_bkg
 	push	de
 	ld	hl, #0x906
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x0a
@@ -464,23 +464,23 @@ _check_m_walls::
 	inc	hl
 	bit	0, (hl)
 	jr	Z, 00140$
-;src/dng_crawling.c:74: set_bkg_tiles(6,0,4,9,door2_left_half_bkg);
+;src/dng_crawling.c:74: set_bkg_tiles(6,3,4,9,door2_left_half_bkg);
 	ld	de, #_door2_left_half_bkg
 	push	de
 	ld	hl, #0x904
 	push	hl
-	ld	hl, #0x06
+	ld	hl, #0x306
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	jr	00141$
 00140$:
-;src/dng_crawling.c:76: set_bkg_tiles(6,0,4,9,door2_left_half_c_bkg);
+;src/dng_crawling.c:76: set_bkg_tiles(6,3,4,9,door2_left_half_c_bkg);
 	ld	de, #_door2_left_half_c_bkg
 	push	de
 	ld	hl, #0x904
 	push	hl
-	ld	hl, #0x06
+	ld	hl, #0x306
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -489,12 +489,12 @@ _check_m_walls::
 	ldhl	sp,	#3
 	bit	0, (hl)
 	jr	Z, 00143$
-;src/dng_crawling.c:79: set_bkg_tiles(10,0,4,9,door2_right_half_bkg);
+;src/dng_crawling.c:79: set_bkg_tiles(10,3,4,9,door2_right_half_bkg);
 	ld	de, #_door2_right_half_bkg
 	push	de
 	ld	hl, #0x904
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x0a
@@ -504,12 +504,12 @@ _check_m_walls::
 	add	sp, #6
 	jp	00173$
 00143$:
-;src/dng_crawling.c:82: set_bkg_tiles(10,0,4,9,door2_right_half_c_bkg);
+;src/dng_crawling.c:82: set_bkg_tiles(10,3,4,9,door2_right_half_c_bkg);
 	ld	de, #_door2_right_half_c_bkg
 	push	de
 	ld	hl, #0x904
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x0a
@@ -523,23 +523,23 @@ _check_m_walls::
 	ldhl	sp,	#2
 	bit	0, (hl)
 	jr	Z, 00146$
-;src/dng_crawling.c:86: set_bkg_tiles(6,0,4,9,wall2_half_bkg);
+;src/dng_crawling.c:86: set_bkg_tiles(6,3,4,9,wall2_half_bkg);
 	ld	de, #_wall2_half_bkg
 	push	de
 	ld	hl, #0x904
 	push	hl
-	ld	hl, #0x06
+	ld	hl, #0x306
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	jr	00147$
 00146$:
-;src/dng_crawling.c:88: set_bkg_tiles(6,0,4,9,wall2_left_half_c_bkg);
+;src/dng_crawling.c:88: set_bkg_tiles(6,3,4,9,wall2_left_half_c_bkg);
 	ld	de, #_wall2_left_half_c_bkg
 	push	de
 	ld	hl, #0x904
 	push	hl
-	ld	hl, #0x06
+	ld	hl, #0x306
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -548,12 +548,12 @@ _check_m_walls::
 	ldhl	sp,	#3
 	bit	0, (hl)
 	jr	Z, 00149$
-;src/dng_crawling.c:91: set_bkg_tiles(10,0,4,9,wall2_half_bkg);
+;src/dng_crawling.c:91: set_bkg_tiles(10,3,4,9,wall2_half_bkg);
 	ld	de, #_wall2_half_bkg
 	push	de
 	ld	hl, #0x904
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x0a
@@ -563,12 +563,12 @@ _check_m_walls::
 	add	sp, #6
 	jp	00173$
 00149$:
-;src/dng_crawling.c:93: set_bkg_tiles(10,0,4,9,wall2_right_half_c_bkg);
+;src/dng_crawling.c:93: set_bkg_tiles(10,3,4,9,wall2_right_half_c_bkg);
 	ld	de, #_wall2_right_half_c_bkg
 	push	de
 	ld	hl, #0x904
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x0a
@@ -589,23 +589,23 @@ _check_m_walls::
 	inc	hl
 	bit	0, (hl)
 	jr	Z, 00156$
-;src/dng_crawling.c:101: set_bkg_tiles(7,0,3,9,door3_left_half_bkg);
+;src/dng_crawling.c:101: set_bkg_tiles(7,3,3,9,door3_left_half_bkg);
 	ld	de, #_door3_left_half_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	ld	hl, #0x07
+	ld	hl, #0x307
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	jr	00157$
 00156$:
-;src/dng_crawling.c:103: set_bkg_tiles(7,0,3,9,door3_left_half_c_bkg);
+;src/dng_crawling.c:103: set_bkg_tiles(7,3,3,9,door3_left_half_c_bkg);
 	ld	de, #_door3_left_half_c_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	ld	hl, #0x07
+	ld	hl, #0x307
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -614,12 +614,12 @@ _check_m_walls::
 	ldhl	sp,	#3
 	bit	0, (hl)
 	jr	Z, 00159$
-;src/dng_crawling.c:106: set_bkg_tiles(10,0,3,9,door3_right_half_bkg);
+;src/dng_crawling.c:106: set_bkg_tiles(10,3,3,9,door3_right_half_bkg);
 	ld	de, #_door3_right_half_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x0a
@@ -629,12 +629,12 @@ _check_m_walls::
 	add	sp, #6
 	jr	00173$
 00159$:
-;src/dng_crawling.c:108: set_bkg_tiles(10,0,3,9,door3_right_half_c_bkg);
+;src/dng_crawling.c:108: set_bkg_tiles(10,3,3,9,door3_right_half_c_bkg);
 	ld	de, #_door3_right_half_c_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x0a
@@ -648,23 +648,23 @@ _check_m_walls::
 	ldhl	sp,	#2
 	bit	0, (hl)
 	jr	Z, 00162$
-;src/dng_crawling.c:112: set_bkg_tiles(7,0,3,9,wall3_half_bkg);
+;src/dng_crawling.c:112: set_bkg_tiles(7,3,3,9,wall3_half_bkg);
 	ld	de, #_wall3_half_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	ld	hl, #0x07
+	ld	hl, #0x307
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	jr	00163$
 00162$:
-;src/dng_crawling.c:114: set_bkg_tiles(7,0,3,9,wall3_left_half_c_bkg);
+;src/dng_crawling.c:114: set_bkg_tiles(7,3,3,9,wall3_left_half_c_bkg);
 	ld	de, #_wall3_left_half_c_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	ld	hl, #0x07
+	ld	hl, #0x307
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -673,12 +673,12 @@ _check_m_walls::
 	ldhl	sp,	#3
 	bit	0, (hl)
 	jr	Z, 00165$
-;src/dng_crawling.c:117: set_bkg_tiles(10,0,3,9,wall3_half_bkg);
+;src/dng_crawling.c:117: set_bkg_tiles(10,3,3,9,wall3_half_bkg);
 	ld	de, #_wall3_half_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x0a
@@ -688,12 +688,12 @@ _check_m_walls::
 	add	sp, #6
 	jr	00173$
 00165$:
-;src/dng_crawling.c:119: set_bkg_tiles(10,0,3,9,wall3_right_half_c_bkg);
+;src/dng_crawling.c:119: set_bkg_tiles(10,3,3,9,wall3_right_half_c_bkg);
 	ld	de, #_wall3_right_half_c_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x0a
@@ -752,26 +752,26 @@ _check_l_walls_n::
 ;src/dng_crawling.c:209: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00102$
-;src/dng_crawling.c:210: set_bkg_tiles(6,0,1,9,door3_l_bkg);
+;src/dng_crawling.c:210: set_bkg_tiles(6,3,1,9,door3_l_bkg);
 	push	de
 	ld	hl, #_door3_l_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x06
+	ld	hl, #0x306
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:212: set_bkg_tiles(6,0,1,9,wall3_l_bkg);
+;src/dng_crawling.c:212: set_bkg_tiles(6,3,1,9,wall3_l_bkg);
 	push	de
 	ld	hl, #_wall3_l_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x06
+	ld	hl, #0x306
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -804,26 +804,26 @@ _check_l_walls_n::
 ;src/dng_crawling.c:217: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00105$
-;src/dng_crawling.c:218: set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
+;src/dng_crawling.c:218: set_bkg_tiles(1,3,6,9,nowall_door3_l_bkg);
 	push	de
 	ld	hl, #_nowall_door3_l_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:220: set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
+;src/dng_crawling.c:220: set_bkg_tiles(1,3,6,9,nowall3_l_bkg);
 	push	de
 	ld	hl, #_nowall3_l_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -855,26 +855,26 @@ _check_l_walls_n::
 ;src/dng_crawling.c:226: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00115$
-;src/dng_crawling.c:227: set_bkg_tiles(4,0,2,9,door2_l_bkg);
+;src/dng_crawling.c:227: set_bkg_tiles(4,3,2,9,door2_l_bkg);
 	push	de
 	ld	hl, #_door2_l_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x04
+	ld	hl, #0x304
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:229: set_bkg_tiles(4,0,2,9,wall2_l_bkg);
+;src/dng_crawling.c:229: set_bkg_tiles(4,3,2,9,wall2_l_bkg);
 	push	de
 	ld	hl, #_wall2_l_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x04
+	ld	hl, #0x304
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -907,26 +907,26 @@ _check_l_walls_n::
 ;src/dng_crawling.c:234: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00118$
-;src/dng_crawling.c:235: set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
+;src/dng_crawling.c:235: set_bkg_tiles(1,3,5,9,nowall_door2_l_bkg);
 	push	de
 	ld	hl, #_nowall_door2_l_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:237: set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
+;src/dng_crawling.c:237: set_bkg_tiles(1,3,5,9,nowall2_l_bkg);
 	push	de
 	ld	hl, #_nowall2_l_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -955,12 +955,12 @@ _check_l_walls_n::
 ;src/dng_crawling.c:244: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00128$
-;src/dng_crawling.c:245: set_bkg_tiles(1,0,3,9,door1_l_bkg);
+;src/dng_crawling.c:245: set_bkg_tiles(1,3,3,9,door1_l_bkg);
 	ld	de, #_door1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -970,12 +970,12 @@ _check_l_walls_n::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:247: set_bkg_tiles(1,0,3,9,wall1_l_bkg);
+;src/dng_crawling.c:247: set_bkg_tiles(1,3,3,9,wall1_l_bkg);
 	ld	de, #_wall1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -1006,12 +1006,12 @@ _check_l_walls_n::
 ;src/dng_crawling.c:252: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00131$
-;src/dng_crawling.c:253: set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
+;src/dng_crawling.c:253: set_bkg_tiles(1,3,3,9,nowall_door1_l_bkg);
 	ld	de, #_nowall_door1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -1021,12 +1021,12 @@ _check_l_walls_n::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:255: set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
+;src/dng_crawling.c:255: set_bkg_tiles(1,3,3,9,nowall1_l_bkg);
 	ld	de, #_nowall1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -1081,26 +1081,26 @@ _check_l_walls_e::
 ;src/dng_crawling.c:264: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00102$
-;src/dng_crawling.c:265: set_bkg_tiles(6,0,1,9,door3_l_bkg);
+;src/dng_crawling.c:265: set_bkg_tiles(6,3,1,9,door3_l_bkg);
 	push	de
 	ld	hl, #_door3_l_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x06
+	ld	hl, #0x306
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:267: set_bkg_tiles(6,0,1,9,wall3_l_bkg);
+;src/dng_crawling.c:267: set_bkg_tiles(6,3,1,9,wall3_l_bkg);
 	push	de
 	ld	hl, #_wall3_l_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x06
+	ld	hl, #0x306
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -1135,26 +1135,26 @@ _check_l_walls_e::
 ;src/dng_crawling.c:272: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00105$
-;src/dng_crawling.c:273: set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
+;src/dng_crawling.c:273: set_bkg_tiles(1,3,6,9,nowall_door3_l_bkg);
 	push	de
 	ld	hl, #_nowall_door3_l_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:275: set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
+;src/dng_crawling.c:275: set_bkg_tiles(1,3,6,9,nowall3_l_bkg);
 	push	de
 	ld	hl, #_nowall3_l_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -1182,26 +1182,26 @@ _check_l_walls_e::
 ;src/dng_crawling.c:281: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00115$
-;src/dng_crawling.c:282: set_bkg_tiles(4,0,2,9,door2_l_bkg);
+;src/dng_crawling.c:282: set_bkg_tiles(4,3,2,9,door2_l_bkg);
 	push	de
 	ld	hl, #_door2_l_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x04
+	ld	hl, #0x304
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:284: set_bkg_tiles(4,0,2,9,wall2_l_bkg);
+;src/dng_crawling.c:284: set_bkg_tiles(4,3,2,9,wall2_l_bkg);
 	push	de
 	ld	hl, #_wall2_l_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x04
+	ld	hl, #0x304
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -1234,26 +1234,26 @@ _check_l_walls_e::
 ;src/dng_crawling.c:289: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00118$
-;src/dng_crawling.c:290: set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
+;src/dng_crawling.c:290: set_bkg_tiles(1,3,5,9,nowall_door2_l_bkg);
 	push	de
 	ld	hl, #_nowall_door2_l_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:292: set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
+;src/dng_crawling.c:292: set_bkg_tiles(1,3,5,9,nowall2_l_bkg);
 	push	de
 	ld	hl, #_nowall2_l_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -1282,12 +1282,12 @@ _check_l_walls_e::
 ;src/dng_crawling.c:299: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00128$
-;src/dng_crawling.c:300: set_bkg_tiles(1,0,3,9,door1_l_bkg);
+;src/dng_crawling.c:300: set_bkg_tiles(1,3,3,9,door1_l_bkg);
 	ld	de, #_door1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -1297,12 +1297,12 @@ _check_l_walls_e::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:302: set_bkg_tiles(1,0,3,9,wall1_l_bkg);
+;src/dng_crawling.c:302: set_bkg_tiles(1,3,3,9,wall1_l_bkg);
 	ld	de, #_wall1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -1329,12 +1329,12 @@ _check_l_walls_e::
 ;src/dng_crawling.c:307: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00131$
-;src/dng_crawling.c:308: set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
+;src/dng_crawling.c:308: set_bkg_tiles(1,3,3,9,nowall_door1_l_bkg);
 	ld	de, #_nowall_door1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -1344,12 +1344,12 @@ _check_l_walls_e::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:310: set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
+;src/dng_crawling.c:310: set_bkg_tiles(1,3,3,9,nowall1_l_bkg);
 	ld	de, #_nowall1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -1408,26 +1408,26 @@ _check_l_walls_s::
 ;src/dng_crawling.c:319: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00102$
-;src/dng_crawling.c:320: set_bkg_tiles(6,0,1,9,door3_l_bkg);
+;src/dng_crawling.c:320: set_bkg_tiles(6,3,1,9,door3_l_bkg);
 	push	de
 	ld	hl, #_door3_l_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x06
+	ld	hl, #0x306
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:322: set_bkg_tiles(6,0,1,9,wall3_l_bkg);
+;src/dng_crawling.c:322: set_bkg_tiles(6,3,1,9,wall3_l_bkg);
 	push	de
 	ld	hl, #_wall3_l_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x06
+	ld	hl, #0x306
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -1462,26 +1462,26 @@ _check_l_walls_s::
 ;src/dng_crawling.c:327: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00105$
-;src/dng_crawling.c:328: set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
+;src/dng_crawling.c:328: set_bkg_tiles(1,3,6,9,nowall_door3_l_bkg);
 	push	de
 	ld	hl, #_nowall_door3_l_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:330: set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
+;src/dng_crawling.c:330: set_bkg_tiles(1,3,6,9,nowall3_l_bkg);
 	push	de
 	ld	hl, #_nowall3_l_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -1513,26 +1513,26 @@ _check_l_walls_s::
 ;src/dng_crawling.c:336: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00115$
-;src/dng_crawling.c:337: set_bkg_tiles(4,0,2,9,door2_l_bkg);
+;src/dng_crawling.c:337: set_bkg_tiles(4,3,2,9,door2_l_bkg);
 	push	de
 	ld	hl, #_door2_l_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x04
+	ld	hl, #0x304
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:339: set_bkg_tiles(4,0,2,9,wall2_l_bkg);
+;src/dng_crawling.c:339: set_bkg_tiles(4,3,2,9,wall2_l_bkg);
 	push	de
 	ld	hl, #_wall2_l_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x04
+	ld	hl, #0x304
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -1565,26 +1565,26 @@ _check_l_walls_s::
 ;src/dng_crawling.c:344: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00118$
-;src/dng_crawling.c:345: set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
+;src/dng_crawling.c:345: set_bkg_tiles(1,3,5,9,nowall_door2_l_bkg);
 	push	de
 	ld	hl, #_nowall_door2_l_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:347: set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
+;src/dng_crawling.c:347: set_bkg_tiles(1,3,5,9,nowall2_l_bkg);
 	push	de
 	ld	hl, #_nowall2_l_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -1613,12 +1613,12 @@ _check_l_walls_s::
 ;src/dng_crawling.c:354: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00128$
-;src/dng_crawling.c:355: set_bkg_tiles(1,0,3,9,door1_l_bkg);
+;src/dng_crawling.c:355: set_bkg_tiles(1,3,3,9,door1_l_bkg);
 	ld	de, #_door1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -1628,12 +1628,12 @@ _check_l_walls_s::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:357: set_bkg_tiles(1,0,3,9,wall1_l_bkg);
+;src/dng_crawling.c:357: set_bkg_tiles(1,3,3,9,wall1_l_bkg);
 	ld	de, #_wall1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -1664,12 +1664,12 @@ _check_l_walls_s::
 ;src/dng_crawling.c:362: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00131$
-;src/dng_crawling.c:363: set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
+;src/dng_crawling.c:363: set_bkg_tiles(1,3,3,9,nowall_door1_l_bkg);
 	ld	de, #_nowall_door1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -1679,12 +1679,12 @@ _check_l_walls_s::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:365: set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
+;src/dng_crawling.c:365: set_bkg_tiles(1,3,3,9,nowall1_l_bkg);
 	ld	de, #_nowall1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -1739,26 +1739,26 @@ _check_l_walls_w::
 ;src/dng_crawling.c:374: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00102$
-;src/dng_crawling.c:375: set_bkg_tiles(6,0,1,9,door3_l_bkg);
+;src/dng_crawling.c:375: set_bkg_tiles(6,3,1,9,door3_l_bkg);
 	push	de
 	ld	hl, #_door3_l_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x06
+	ld	hl, #0x306
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:377: set_bkg_tiles(6,0,1,9,wall3_l_bkg);
+;src/dng_crawling.c:377: set_bkg_tiles(6,3,1,9,wall3_l_bkg);
 	push	de
 	ld	hl, #_wall3_l_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x06
+	ld	hl, #0x306
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -1791,26 +1791,26 @@ _check_l_walls_w::
 ;src/dng_crawling.c:382: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00105$
-;src/dng_crawling.c:383: set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
+;src/dng_crawling.c:383: set_bkg_tiles(1,3,6,9,nowall_door3_l_bkg);
 	push	de
 	ld	hl, #_nowall_door3_l_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:385: set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
+;src/dng_crawling.c:385: set_bkg_tiles(1,3,6,9,nowall3_l_bkg);
 	push	de
 	ld	hl, #_nowall3_l_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -1838,26 +1838,26 @@ _check_l_walls_w::
 ;src/dng_crawling.c:391: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00115$
-;src/dng_crawling.c:392: set_bkg_tiles(4,0,2,9,door2_l_bkg);
+;src/dng_crawling.c:392: set_bkg_tiles(4,3,2,9,door2_l_bkg);
 	push	de
 	ld	hl, #_door2_l_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x04
+	ld	hl, #0x304
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:394: set_bkg_tiles(4,0,2,9,wall2_l_bkg);
+;src/dng_crawling.c:394: set_bkg_tiles(4,3,2,9,wall2_l_bkg);
 	push	de
 	ld	hl, #_wall2_l_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x04
+	ld	hl, #0x304
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -1890,26 +1890,26 @@ _check_l_walls_w::
 ;src/dng_crawling.c:399: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00118$
-;src/dng_crawling.c:400: set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
+;src/dng_crawling.c:400: set_bkg_tiles(1,3,5,9,nowall_door2_l_bkg);
 	push	de
 	ld	hl, #_nowall_door2_l_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:402: set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
+;src/dng_crawling.c:402: set_bkg_tiles(1,3,5,9,nowall2_l_bkg);
 	push	de
 	ld	hl, #_nowall2_l_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x01
+	ld	hl, #0x301
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -1938,12 +1938,12 @@ _check_l_walls_w::
 ;src/dng_crawling.c:409: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00128$
-;src/dng_crawling.c:410: set_bkg_tiles(1,0,3,9,door1_l_bkg);
+;src/dng_crawling.c:410: set_bkg_tiles(1,3,3,9,door1_l_bkg);
 	ld	de, #_door1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -1953,12 +1953,12 @@ _check_l_walls_w::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:412: set_bkg_tiles(1,0,3,9,wall1_l_bkg);
+;src/dng_crawling.c:412: set_bkg_tiles(1,3,3,9,wall1_l_bkg);
 	ld	de, #_wall1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -1985,12 +1985,12 @@ _check_l_walls_w::
 ;src/dng_crawling.c:417: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00131$
-;src/dng_crawling.c:418: set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
+;src/dng_crawling.c:418: set_bkg_tiles(1,3,3,9,nowall_door1_l_bkg);
 	ld	de, #_nowall_door1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -2000,12 +2000,12 @@ _check_l_walls_w::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:420: set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
+;src/dng_crawling.c:420: set_bkg_tiles(1,3,3,9,nowall1_l_bkg);
 	ld	de, #_nowall1_l_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x01
@@ -2064,26 +2064,26 @@ _check_r_walls_n::
 ;src/dng_crawling.c:429: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00102$
-;src/dng_crawling.c:430: set_bkg_tiles(13,0,1,9,door3_r_bkg);
+;src/dng_crawling.c:430: set_bkg_tiles(13,3,1,9,door3_r_bkg);
 	push	de
 	ld	hl, #_door3_r_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:432: set_bkg_tiles(13,0,1,9,wall3_r_bkg);
+;src/dng_crawling.c:432: set_bkg_tiles(13,3,1,9,wall3_r_bkg);
 	push	de
 	ld	hl, #_wall3_r_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -2116,26 +2116,26 @@ _check_r_walls_n::
 ;src/dng_crawling.c:437: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00105$
-;src/dng_crawling.c:438: set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
+;src/dng_crawling.c:438: set_bkg_tiles(13,3,6,9,nowall_door3_r_bkg);
 	push	de
 	ld	hl, #_nowall_door3_r_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:440: set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
+;src/dng_crawling.c:440: set_bkg_tiles(13,3,6,9,nowall3_r_bkg);
 	push	de
 	ld	hl, #_nowall3_r_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -2167,26 +2167,26 @@ _check_r_walls_n::
 ;src/dng_crawling.c:446: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00115$
-;src/dng_crawling.c:447: set_bkg_tiles(14,0,2,9,door2_r_bkg);
+;src/dng_crawling.c:447: set_bkg_tiles(14,3,2,9,door2_r_bkg);
 	push	de
 	ld	hl, #_door2_r_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:449: set_bkg_tiles(14,0,2,9,wall2_r_bkg);
+;src/dng_crawling.c:449: set_bkg_tiles(14,3,2,9,wall2_r_bkg);
 	push	de
 	ld	hl, #_wall2_r_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -2219,26 +2219,26 @@ _check_r_walls_n::
 ;src/dng_crawling.c:454: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00118$
-;src/dng_crawling.c:455: set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
+;src/dng_crawling.c:455: set_bkg_tiles(14,3,5,9,nowall_door2_r_bkg);
 	push	de
 	ld	hl, #_nowall_door2_r_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:457: set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
+;src/dng_crawling.c:457: set_bkg_tiles(14,3,5,9,nowall2_r_bkg);
 	push	de
 	ld	hl, #_nowall2_r_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -2267,12 +2267,12 @@ _check_r_walls_n::
 ;src/dng_crawling.c:464: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00128$
-;src/dng_crawling.c:465: set_bkg_tiles(16,0,3,9,door1_r_bkg);
+;src/dng_crawling.c:465: set_bkg_tiles(16,3,3,9,door1_r_bkg);
 	ld	de, #_door1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10
@@ -2282,12 +2282,12 @@ _check_r_walls_n::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:467: set_bkg_tiles(16,0,3,9,wall1_r_bkg);
+;src/dng_crawling.c:467: set_bkg_tiles(16,3,3,9,wall1_r_bkg);
 	ld	de, #_wall1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10
@@ -2318,12 +2318,12 @@ _check_r_walls_n::
 ;src/dng_crawling.c:472: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00131$
-;src/dng_crawling.c:473: set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
+;src/dng_crawling.c:473: set_bkg_tiles(16,3,3,9,nowall_door1_r_bkg);
 	ld	de, #_nowall_door1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10
@@ -2333,12 +2333,12 @@ _check_r_walls_n::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:475: set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
+;src/dng_crawling.c:475: set_bkg_tiles(16,3,3,9,nowall1_r_bkg);
 	ld	de, #_nowall1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10
@@ -2393,26 +2393,26 @@ _check_r_walls_e::
 ;src/dng_crawling.c:484: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00102$
-;src/dng_crawling.c:485: set_bkg_tiles(13,0,1,9,door3_r_bkg);
+;src/dng_crawling.c:485: set_bkg_tiles(13,3,1,9,door3_r_bkg);
 	push	de
 	ld	hl, #_door3_r_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:487: set_bkg_tiles(13,0,1,9,wall3_r_bkg);
+;src/dng_crawling.c:487: set_bkg_tiles(13,3,1,9,wall3_r_bkg);
 	push	de
 	ld	hl, #_wall3_r_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -2447,26 +2447,26 @@ _check_r_walls_e::
 ;src/dng_crawling.c:492: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00105$
-;src/dng_crawling.c:493: set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
+;src/dng_crawling.c:493: set_bkg_tiles(13,3,6,9,nowall_door3_r_bkg);
 	push	de
 	ld	hl, #_nowall_door3_r_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:495: set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
+;src/dng_crawling.c:495: set_bkg_tiles(13,3,6,9,nowall3_r_bkg);
 	push	de
 	ld	hl, #_nowall3_r_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -2494,26 +2494,26 @@ _check_r_walls_e::
 ;src/dng_crawling.c:501: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00115$
-;src/dng_crawling.c:502: set_bkg_tiles(14,0,2,9,door2_r_bkg);
+;src/dng_crawling.c:502: set_bkg_tiles(14,3,2,9,door2_r_bkg);
 	push	de
 	ld	hl, #_door2_r_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:504: set_bkg_tiles(14,0,2,9,wall2_r_bkg);
+;src/dng_crawling.c:504: set_bkg_tiles(14,3,2,9,wall2_r_bkg);
 	push	de
 	ld	hl, #_wall2_r_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -2546,26 +2546,26 @@ _check_r_walls_e::
 ;src/dng_crawling.c:509: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00118$
-;src/dng_crawling.c:510: set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
+;src/dng_crawling.c:510: set_bkg_tiles(14,3,5,9,nowall_door2_r_bkg);
 	push	de
 	ld	hl, #_nowall_door2_r_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:512: set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
+;src/dng_crawling.c:512: set_bkg_tiles(14,3,5,9,nowall2_r_bkg);
 	push	de
 	ld	hl, #_nowall2_r_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -2594,12 +2594,12 @@ _check_r_walls_e::
 ;src/dng_crawling.c:519: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00128$
-;src/dng_crawling.c:520: set_bkg_tiles(16,0,3,9,door1_r_bkg);
+;src/dng_crawling.c:520: set_bkg_tiles(16,3,3,9,door1_r_bkg);
 	ld	de, #_door1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10
@@ -2609,12 +2609,12 @@ _check_r_walls_e::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:522: set_bkg_tiles(16,0,3,9,wall1_r_bkg);
+;src/dng_crawling.c:522: set_bkg_tiles(16,3,3,9,wall1_r_bkg);
 	ld	de, #_wall1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10
@@ -2641,12 +2641,12 @@ _check_r_walls_e::
 ;src/dng_crawling.c:527: if( w == 0x04){
 	sub	a, #0x04
 	jr	NZ, 00131$
-;src/dng_crawling.c:528: set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
+;src/dng_crawling.c:528: set_bkg_tiles(16,3,3,9,nowall_door1_r_bkg);
 	ld	de, #_nowall_door1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10
@@ -2656,12 +2656,12 @@ _check_r_walls_e::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:530: set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
+;src/dng_crawling.c:530: set_bkg_tiles(16,3,3,9,nowall1_r_bkg);
 	ld	de, #_nowall1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10
@@ -2720,26 +2720,26 @@ _check_r_walls_s::
 ;src/dng_crawling.c:539: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00102$
-;src/dng_crawling.c:540: set_bkg_tiles(13,0,1,9,door3_r_bkg);
+;src/dng_crawling.c:540: set_bkg_tiles(13,3,1,9,door3_r_bkg);
 	push	de
 	ld	hl, #_door3_r_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:542: set_bkg_tiles(13,0,1,9,wall3_r_bkg);
+;src/dng_crawling.c:542: set_bkg_tiles(13,3,1,9,wall3_r_bkg);
 	push	de
 	ld	hl, #_wall3_r_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -2774,26 +2774,26 @@ _check_r_walls_s::
 ;src/dng_crawling.c:547: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00105$
-;src/dng_crawling.c:548: set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
+;src/dng_crawling.c:548: set_bkg_tiles(13,3,6,9,nowall_door3_r_bkg);
 	push	de
 	ld	hl, #_nowall_door3_r_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:550: set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
+;src/dng_crawling.c:550: set_bkg_tiles(13,3,6,9,nowall3_r_bkg);
 	push	de
 	ld	hl, #_nowall3_r_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -2825,26 +2825,26 @@ _check_r_walls_s::
 ;src/dng_crawling.c:556: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00115$
-;src/dng_crawling.c:557: set_bkg_tiles(14,0,2,9,door2_r_bkg);
+;src/dng_crawling.c:557: set_bkg_tiles(14,3,2,9,door2_r_bkg);
 	push	de
 	ld	hl, #_door2_r_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:559: set_bkg_tiles(14,0,2,9,wall2_r_bkg);
+;src/dng_crawling.c:559: set_bkg_tiles(14,3,2,9,wall2_r_bkg);
 	push	de
 	ld	hl, #_wall2_r_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -2877,26 +2877,26 @@ _check_r_walls_s::
 ;src/dng_crawling.c:564: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00118$
-;src/dng_crawling.c:565: set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
+;src/dng_crawling.c:565: set_bkg_tiles(14,3,5,9,nowall_door2_r_bkg);
 	push	de
 	ld	hl, #_nowall_door2_r_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:567: set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
+;src/dng_crawling.c:567: set_bkg_tiles(14,3,5,9,nowall2_r_bkg);
 	push	de
 	ld	hl, #_nowall2_r_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -2925,12 +2925,12 @@ _check_r_walls_s::
 ;src/dng_crawling.c:574: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00128$
-;src/dng_crawling.c:575: set_bkg_tiles(16,0,3,9,door1_r_bkg);
+;src/dng_crawling.c:575: set_bkg_tiles(16,3,3,9,door1_r_bkg);
 	ld	de, #_door1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10
@@ -2940,12 +2940,12 @@ _check_r_walls_s::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:577: set_bkg_tiles(16,0,3,9,wall1_r_bkg);
+;src/dng_crawling.c:577: set_bkg_tiles(16,3,3,9,wall1_r_bkg);
 	ld	de, #_wall1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10
@@ -2976,12 +2976,12 @@ _check_r_walls_s::
 ;src/dng_crawling.c:582: if( w == 0x05){
 	sub	a, #0x05
 	jr	NZ, 00131$
-;src/dng_crawling.c:583: set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
+;src/dng_crawling.c:583: set_bkg_tiles(16,3,3,9,nowall_door1_r_bkg);
 	ld	de, #_nowall_door1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10
@@ -2991,12 +2991,12 @@ _check_r_walls_s::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:585: set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
+;src/dng_crawling.c:585: set_bkg_tiles(16,3,3,9,nowall1_r_bkg);
 	ld	de, #_nowall1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10
@@ -3051,26 +3051,26 @@ _check_r_walls_w::
 ;src/dng_crawling.c:594: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00102$
-;src/dng_crawling.c:595: set_bkg_tiles(13,0,1,9,door3_r_bkg);
+;src/dng_crawling.c:595: set_bkg_tiles(13,3,1,9,door3_r_bkg);
 	push	de
 	ld	hl, #_door3_r_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00102$:
-;src/dng_crawling.c:597: set_bkg_tiles(13,0,1,9,wall3_r_bkg);
+;src/dng_crawling.c:597: set_bkg_tiles(13,3,1,9,wall3_r_bkg);
 	push	de
 	ld	hl, #_wall3_r_bkg
 	push	hl
 	ld	hl, #0x901
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -3103,26 +3103,26 @@ _check_r_walls_w::
 ;src/dng_crawling.c:602: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00105$
-;src/dng_crawling.c:603: set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
+;src/dng_crawling.c:603: set_bkg_tiles(13,3,6,9,nowall_door3_r_bkg);
 	push	de
 	ld	hl, #_nowall_door3_r_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00112$
 00105$:
-;src/dng_crawling.c:605: set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
+;src/dng_crawling.c:605: set_bkg_tiles(13,3,6,9,nowall3_r_bkg);
 	push	de
 	ld	hl, #_nowall3_r_bkg
 	push	hl
 	ld	hl, #0x906
 	push	hl
-	ld	hl, #0x0d
+	ld	hl, #0x30d
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -3150,26 +3150,26 @@ _check_r_walls_w::
 ;src/dng_crawling.c:611: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00115$
-;src/dng_crawling.c:612: set_bkg_tiles(14,0,2,9,door2_r_bkg);
+;src/dng_crawling.c:612: set_bkg_tiles(14,3,2,9,door2_r_bkg);
 	push	de
 	ld	hl, #_door2_r_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00115$:
-;src/dng_crawling.c:614: set_bkg_tiles(14,0,2,9,wall2_r_bkg);
+;src/dng_crawling.c:614: set_bkg_tiles(14,3,2,9,wall2_r_bkg);
 	push	de
 	ld	hl, #_wall2_r_bkg
 	push	hl
 	ld	hl, #0x902
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -3202,26 +3202,26 @@ _check_r_walls_w::
 ;src/dng_crawling.c:619: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00118$
-;src/dng_crawling.c:620: set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
+;src/dng_crawling.c:620: set_bkg_tiles(14,3,5,9,nowall_door2_r_bkg);
 	push	de
 	ld	hl, #_nowall_door2_r_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
 	pop	de
 	jr	00125$
 00118$:
-;src/dng_crawling.c:622: set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
+;src/dng_crawling.c:622: set_bkg_tiles(14,3,5,9,nowall2_r_bkg);
 	push	de
 	ld	hl, #_nowall2_r_bkg
 	push	hl
 	ld	hl, #0x905
 	push	hl
-	ld	hl, #0x0e
+	ld	hl, #0x30e
 	push	hl
 	call	_set_bkg_tiles
 	add	sp, #6
@@ -3250,12 +3250,12 @@ _check_r_walls_w::
 ;src/dng_crawling.c:629: if( w == 0x03){
 	sub	a, #0x03
 	jr	NZ, 00128$
-;src/dng_crawling.c:630: set_bkg_tiles(16,0,3,9,door1_r_bkg);
+;src/dng_crawling.c:630: set_bkg_tiles(16,3,3,9,door1_r_bkg);
 	ld	de, #_door1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10
@@ -3265,12 +3265,12 @@ _check_r_walls_w::
 	add	sp, #6
 	jr	00140$
 00128$:
-;src/dng_crawling.c:632: set_bkg_tiles(16,0,3,9,wall1_r_bkg);
+;src/dng_crawling.c:632: set_bkg_tiles(16,3,3,9,wall1_r_bkg);
 	ld	de, #_wall1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10
@@ -3297,12 +3297,12 @@ _check_r_walls_w::
 ;src/dng_crawling.c:637: if( w == 0x06){
 	sub	a, #0x06
 	jr	NZ, 00131$
-;src/dng_crawling.c:638: set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
+;src/dng_crawling.c:638: set_bkg_tiles(16,3,3,9,nowall_door1_r_bkg);
 	ld	de, #_nowall_door1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10
@@ -3312,12 +3312,12 @@ _check_r_walls_w::
 	add	sp, #6
 	jr	00140$
 00131$:
-;src/dng_crawling.c:640: set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
+;src/dng_crawling.c:640: set_bkg_tiles(16,3,3,9,nowall1_r_bkg);
 	ld	de, #_nowall1_r_bkg
 	push	de
 	ld	hl, #0x903
 	push	hl
-	xor	a, a
+	ld	a, #0x03
 	push	af
 	inc	sp
 	ld	a, #0x10

@@ -1226,5 +1226,21 @@
       00049D 88                    1226 	.db #0x88	; 136
       00049E 08                    1227 	.db #0x08	; 8
       00049F 88                    1228 	.db #0x88	; 136
-                                   1229 	.area _INITIALIZER
-                                   1230 	.area _CABS (ABS)
+      0004A0 FF                    1229 	.db #0xff	; 255
+      0004A1 FF                    1230 	.db #0xff	; 255
+      0004A2 FF                    1231 	.db #0xff	; 255
+      0004A3 FF                    1232 	.db #0xff	; 255
+      0004A4 FF                    1233 	.db #0xff	; 255
+      0004A5 FF                    1234 	.db #0xff	; 255
+      0004A6 FF                    1235 	.db #0xff	; 255
+      0004A7 FF                    1236 	.db #0xff	; 255
+      0004A8 FF                    1237 	.db #0xff	; 255
+      0004A9 FF                    1238 	.db #0xff	; 255
+      0004AA FF                    1239 	.db #0xff	; 255
+      0004AB FF                    1240 	.db #0xff	; 255
+      0004AC FF                    1241 	.db #0xff	; 255
+      0004AD FF                    1242 	.db #0xff	; 255
+      0004AE FF                    1243 	.db #0xff	; 255
+      0004AF FF                    1244 	.db #0xff	; 255
+                                   1245 	.area _INITIALIZER
+                                   1246 	.area _CABS (ABS)

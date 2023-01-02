@@ -46,51 +46,51 @@ void check_m_walls(const unsigned char *dng, uint8_t dungeon_width, uint8_t dung
         case 1:
             if(is_door){
                 if(left_is_wall){
-                    set_bkg_tiles(4,0,6,9,door1_left_half_bkg);
+                    set_bkg_tiles(4,3,6,9,door1_left_half_bkg);
                 }else{
-                    set_bkg_tiles(4,0,6,9,door1_left_half_c_bkg);
+                    set_bkg_tiles(4,3,6,9,door1_left_half_c_bkg);
                 }
                 if(right_is_wall){
-                    set_bkg_tiles(10,0,6,9,door1_right_half_bkg);
+                    set_bkg_tiles(10,3,6,9,door1_right_half_bkg);
                 }else{
-                    set_bkg_tiles(10,0,6,9,door1_right_half_c_bkg);
+                    set_bkg_tiles(10,3,6,9,door1_right_half_c_bkg);
                 }
             }else{
                 if(left_is_wall){
-                    set_bkg_tiles(4,0,6,9,wall1_half_bkg);
+                    set_bkg_tiles(4,3,6,9,wall1_half_bkg);
                 }else{
-                    set_bkg_tiles(4,0,6,9,wall1_left_half_c_bkg);
+                    set_bkg_tiles(4,3,6,9,wall1_left_half_c_bkg);
                 }
                 if(right_is_wall){
-                    set_bkg_tiles(10,0,6,9,wall1_half_bkg);
+                    set_bkg_tiles(10,3,6,9,wall1_half_bkg);
                 }else{
-                    set_bkg_tiles(10,0,6,9,wall1_right_half_c_bkg);
+                    set_bkg_tiles(10,3,6,9,wall1_right_half_c_bkg);
                 }
             }
         break;
         case 2:
             if(is_door){
                 if(left_is_wall){
-                    set_bkg_tiles(6,0,4,9,door2_left_half_bkg);
+                    set_bkg_tiles(6,3,4,9,door2_left_half_bkg);
                 }else{
-                    set_bkg_tiles(6,0,4,9,door2_left_half_c_bkg);
+                    set_bkg_tiles(6,3,4,9,door2_left_half_c_bkg);
                 }
                 if(right_is_wall){
-                    set_bkg_tiles(10,0,4,9,door2_right_half_bkg);
+                    set_bkg_tiles(10,3,4,9,door2_right_half_bkg);
                 }else{
 
-                    set_bkg_tiles(10,0,4,9,door2_right_half_c_bkg);
+                    set_bkg_tiles(10,3,4,9,door2_right_half_c_bkg);
                 }
             }else{
                 if(left_is_wall){
-                    set_bkg_tiles(6,0,4,9,wall2_half_bkg);
+                    set_bkg_tiles(6,3,4,9,wall2_half_bkg);
                 }else{
-                    set_bkg_tiles(6,0,4,9,wall2_left_half_c_bkg);
+                    set_bkg_tiles(6,3,4,9,wall2_left_half_c_bkg);
                 }
                 if(right_is_wall){
-                    set_bkg_tiles(10,0,4,9,wall2_half_bkg);
+                    set_bkg_tiles(10,3,4,9,wall2_half_bkg);
                 }else{
-                    set_bkg_tiles(10,0,4,9,wall2_right_half_c_bkg);
+                    set_bkg_tiles(10,3,4,9,wall2_right_half_c_bkg);
                 }
             }
         break;
@@ -98,25 +98,25 @@ void check_m_walls(const unsigned char *dng, uint8_t dungeon_width, uint8_t dung
         case 3:
             if(is_door){
                 if(left_is_wall){
-                    set_bkg_tiles(7,0,3,9,door3_left_half_bkg);
+                    set_bkg_tiles(7,3,3,9,door3_left_half_bkg);
                 }else{
-                    set_bkg_tiles(7,0,3,9,door3_left_half_c_bkg);
+                    set_bkg_tiles(7,3,3,9,door3_left_half_c_bkg);
                 }
                 if(right_is_wall){
-                    set_bkg_tiles(10,0,3,9,door3_right_half_bkg);
+                    set_bkg_tiles(10,3,3,9,door3_right_half_bkg);
                 }else{
-                    set_bkg_tiles(10,0,3,9,door3_right_half_c_bkg);
+                    set_bkg_tiles(10,3,3,9,door3_right_half_c_bkg);
                 }
             }else{
                 if(left_is_wall){
-                    set_bkg_tiles(7,0,3,9,wall3_half_bkg);
+                    set_bkg_tiles(7,3,3,9,wall3_half_bkg);
                 }else{
-                    set_bkg_tiles(7,0,3,9,wall3_left_half_c_bkg);
+                    set_bkg_tiles(7,3,3,9,wall3_left_half_c_bkg);
                 }
                 if(right_is_wall){
-                    set_bkg_tiles(10,0,3,9,wall3_half_bkg);
+                    set_bkg_tiles(10,3,3,9,wall3_half_bkg);
                 }else{
-                    set_bkg_tiles(10,0,3,9,wall3_right_half_c_bkg);
+                    set_bkg_tiles(10,3,3,9,wall3_right_half_c_bkg);
                 }
             }
         break;
@@ -207,34 +207,34 @@ void check_l_walls_n(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-2);
     if(w != 0x00 && w != 0x01){
         if( w == 0x06){
-            set_bkg_tiles(6,0,1,9,door3_l_bkg);
+            set_bkg_tiles(6,3,1,9,door3_l_bkg);
         }else{
-            set_bkg_tiles(6,0,1,9,wall3_l_bkg);
+            set_bkg_tiles(6,3,1,9,wall3_l_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-3);
         if(w != 0x00 && w != 0x01){
             if( w == 0x03){
-                set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
+                set_bkg_tiles(1,3,6,9,nowall_door3_l_bkg);
             }else{
-                set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
+                set_bkg_tiles(1,3,6,9,nowall3_l_bkg);
             }
         }
     }
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-1);
     if(w != 0x00 && w != 0x01){
         if( w == 0x06){
-            set_bkg_tiles(4,0,2,9,door2_l_bkg);
+            set_bkg_tiles(4,3,2,9,door2_l_bkg);
         }else{
-            set_bkg_tiles(4,0,2,9,wall2_l_bkg);
+            set_bkg_tiles(4,3,2,9,wall2_l_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-2);
         if(w != 0x00 && w != 0x01){
             if( w == 0x03){
-                set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
+                set_bkg_tiles(1,3,5,9,nowall_door2_l_bkg);
             }else{
-                set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
+                set_bkg_tiles(1,3,5,9,nowall2_l_bkg);
             }
         }
     }
@@ -242,17 +242,17 @@ void check_l_walls_n(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y);
     if(w!=0x00 && w != 0x01){
         if( w == 0x06){
-            set_bkg_tiles(1,0,3,9,door1_l_bkg);
+            set_bkg_tiles(1,3,3,9,door1_l_bkg);
         }else{
-            set_bkg_tiles(1,0,3,9,wall1_l_bkg);
+            set_bkg_tiles(1,3,3,9,wall1_l_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x03){
-                set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
+                set_bkg_tiles(1,3,3,9,nowall_door1_l_bkg);
             }else{
-                set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
+                set_bkg_tiles(1,3,3,9,nowall1_l_bkg);
             }
         }
     }
@@ -262,34 +262,34 @@ void check_l_walls_e(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x+2, player_y-1);
     if(w != 0x00 && w != 0x01){
         if( w == 0x03){
-            set_bkg_tiles(6,0,1,9,door3_l_bkg);
+            set_bkg_tiles(6,3,1,9,door3_l_bkg);
         }else{
-            set_bkg_tiles(6,0,1,9,wall3_l_bkg);
+            set_bkg_tiles(6,3,1,9,wall3_l_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x+3, player_y-1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x04){
-                set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
+                set_bkg_tiles(1,3,6,9,nowall_door3_l_bkg);
             }else{
-                set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
+                set_bkg_tiles(1,3,6,9,nowall3_l_bkg);
             }
         }
     }
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-1);
     if(w != 0x00 && w != 0x01){
         if( w == 0x03){
-            set_bkg_tiles(4,0,2,9,door2_l_bkg);
+            set_bkg_tiles(4,3,2,9,door2_l_bkg);
         }else{
-            set_bkg_tiles(4,0,2,9,wall2_l_bkg);
+            set_bkg_tiles(4,3,2,9,wall2_l_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x+2, player_y-1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x04){
-                set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
+                set_bkg_tiles(1,3,5,9,nowall_door2_l_bkg);
             }else{
-                set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
+                set_bkg_tiles(1,3,5,9,nowall2_l_bkg);
             }
         }
     }
@@ -297,17 +297,17 @@ void check_l_walls_e(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x, player_y-1);
     if(w!=0x00 && w != 0x01){
         if( w == 0x03){
-            set_bkg_tiles(1,0,3,9,door1_l_bkg);
+            set_bkg_tiles(1,3,3,9,door1_l_bkg);
         }else{
-            set_bkg_tiles(1,0,3,9,wall1_l_bkg);
+            set_bkg_tiles(1,3,3,9,wall1_l_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x04){
-                set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
+                set_bkg_tiles(1,3,3,9,nowall_door1_l_bkg);
             }else{
-                set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
+                set_bkg_tiles(1,3,3,9,nowall1_l_bkg);
             }
         }
     }
@@ -317,34 +317,34 @@ void check_l_walls_s(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+2);
     if(w != 0x00 && w != 0x01){
         if( w == 0x04){
-            set_bkg_tiles(6,0,1,9,door3_l_bkg);
+            set_bkg_tiles(6,3,1,9,door3_l_bkg);
         }else{
-            set_bkg_tiles(6,0,1,9,wall3_l_bkg);
+            set_bkg_tiles(6,3,1,9,wall3_l_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+3);
         if(w != 0x00 && w != 0x01){
             if( w == 0x05){
-                set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
+                set_bkg_tiles(1,3,6,9,nowall_door3_l_bkg);
             }else{
-                set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
+                set_bkg_tiles(1,3,6,9,nowall3_l_bkg);
             }
         }
     }
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+1);
     if(w != 0x00 && w != 0x01){
         if( w == 0x04){
-            set_bkg_tiles(4,0,2,9,door2_l_bkg);
+            set_bkg_tiles(4,3,2,9,door2_l_bkg);
         }else{
-            set_bkg_tiles(4,0,2,9,wall2_l_bkg);
+            set_bkg_tiles(4,3,2,9,wall2_l_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+2);
         if(w != 0x00 && w != 0x01){
             if( w == 0x05){
-                set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
+                set_bkg_tiles(1,3,5,9,nowall_door2_l_bkg);
             }else{
-                set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
+                set_bkg_tiles(1,3,5,9,nowall2_l_bkg);
             }
         }
     }
@@ -352,17 +352,17 @@ void check_l_walls_s(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y);
     if(w!=0x00 && w != 0x01){
         if( w == 0x04){
-            set_bkg_tiles(1,0,3,9,door1_l_bkg);
+            set_bkg_tiles(1,3,3,9,door1_l_bkg);
         }else{
-            set_bkg_tiles(1,0,3,9,wall1_l_bkg);
+            set_bkg_tiles(1,3,3,9,wall1_l_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x05){
-                set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
+                set_bkg_tiles(1,3,3,9,nowall_door1_l_bkg);
             }else{
-                set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
+                set_bkg_tiles(1,3,3,9,nowall1_l_bkg);
             }
         }
     }
@@ -372,34 +372,34 @@ void check_l_walls_w(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x-2, player_y+1);
     if(w != 0x00 && w != 0x01){
         if( w == 0x05){
-            set_bkg_tiles(6,0,1,9,door3_l_bkg);
+            set_bkg_tiles(6,3,1,9,door3_l_bkg);
         }else{
-            set_bkg_tiles(6,0,1,9,wall3_l_bkg);
+            set_bkg_tiles(6,3,1,9,wall3_l_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x-3, player_y+1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x06){
-                set_bkg_tiles(1,0,6,9,nowall_door3_l_bkg);
+                set_bkg_tiles(1,3,6,9,nowall_door3_l_bkg);
             }else{
-                set_bkg_tiles(1,0,6,9,nowall3_l_bkg);
+                set_bkg_tiles(1,3,6,9,nowall3_l_bkg);
             }
         }
     }
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+1);
     if(w != 0x00 && w != 0x01){
         if( w == 0x05){
-            set_bkg_tiles(4,0,2,9,door2_l_bkg);
+            set_bkg_tiles(4,3,2,9,door2_l_bkg);
         }else{
-            set_bkg_tiles(4,0,2,9,wall2_l_bkg);
+            set_bkg_tiles(4,3,2,9,wall2_l_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x-2, player_y+1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x06){
-                set_bkg_tiles(1,0,5,9,nowall_door2_l_bkg);
+                set_bkg_tiles(1,3,5,9,nowall_door2_l_bkg);
             }else{
-                set_bkg_tiles(1,0,5,9,nowall2_l_bkg);
+                set_bkg_tiles(1,3,5,9,nowall2_l_bkg);
             }
         }
     }
@@ -407,17 +407,17 @@ void check_l_walls_w(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x, player_y+1);
     if(w!=0x00 && w != 0x01){
         if( w == 0x05){
-            set_bkg_tiles(1,0,3,9,door1_l_bkg);
+            set_bkg_tiles(1,3,3,9,door1_l_bkg);
         }else{
-            set_bkg_tiles(1,0,3,9,wall1_l_bkg);
+            set_bkg_tiles(1,3,3,9,wall1_l_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x06){
-                set_bkg_tiles(1,0,3,9,nowall_door1_l_bkg);
+                set_bkg_tiles(1,3,3,9,nowall_door1_l_bkg);
             }else{
-                set_bkg_tiles(1,0,3,9,nowall1_l_bkg);
+                set_bkg_tiles(1,3,3,9,nowall1_l_bkg);
             }
         }
     }
@@ -427,34 +427,34 @@ void check_r_walls_n(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-2);
     if(w != 0x00 && w != 0x01){
         if( w == 0x04){
-            set_bkg_tiles(13,0,1,9,door3_r_bkg);
+            set_bkg_tiles(13,3,1,9,door3_r_bkg);
         }else{
-            set_bkg_tiles(13,0,1,9,wall3_r_bkg);
+            set_bkg_tiles(13,3,1,9,wall3_r_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-3);
         if(w != 0x00 && w != 0x01){
             if( w == 0x03){
-                set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
+                set_bkg_tiles(13,3,6,9,nowall_door3_r_bkg);
             }else{
-                set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
+                set_bkg_tiles(13,3,6,9,nowall3_r_bkg);
             }
         }
     }
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-1);
     if(w != 0x00 && w != 0x01){
         if( w == 0x04){
-            set_bkg_tiles(14,0,2,9,door2_r_bkg);
+            set_bkg_tiles(14,3,2,9,door2_r_bkg);
         }else{
-            set_bkg_tiles(14,0,2,9,wall2_r_bkg);
+            set_bkg_tiles(14,3,2,9,wall2_r_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-2);
         if(w != 0x00 && w != 0x01){
             if( w == 0x03){
-                set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
+                set_bkg_tiles(14,3,5,9,nowall_door2_r_bkg);
             }else{
-                set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
+                set_bkg_tiles(14,3,5,9,nowall2_r_bkg);
             }
         }
     }
@@ -462,17 +462,17 @@ void check_r_walls_n(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y);
     if(w!=0x00 && w != 0x01){
         if( w == 0x04){
-            set_bkg_tiles(16,0,3,9,door1_r_bkg);
+            set_bkg_tiles(16,3,3,9,door1_r_bkg);
         }else{
-            set_bkg_tiles(16,0,3,9,wall1_r_bkg);
+            set_bkg_tiles(16,3,3,9,wall1_r_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y-1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x03){
-                set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
+                set_bkg_tiles(16,3,3,9,nowall_door1_r_bkg);
             }else{
-                set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
+                set_bkg_tiles(16,3,3,9,nowall1_r_bkg);
             }
         }
     }
@@ -482,34 +482,34 @@ void check_r_walls_e(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x+2, player_y+1);
     if(w != 0x00 && w != 0x01){
         if( w == 0x05){
-            set_bkg_tiles(13,0,1,9,door3_r_bkg);
+            set_bkg_tiles(13,3,1,9,door3_r_bkg);
         }else{
-            set_bkg_tiles(13,0,1,9,wall3_r_bkg);
+            set_bkg_tiles(13,3,1,9,wall3_r_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x+3, player_y+1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x04){
-                set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
+                set_bkg_tiles(13,3,6,9,nowall_door3_r_bkg);
             }else{
-                set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
+                set_bkg_tiles(13,3,6,9,nowall3_r_bkg);
             }
         }
     }
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+1);
     if(w != 0x00 && w != 0x01){
         if( w == 0x05){
-            set_bkg_tiles(14,0,2,9,door2_r_bkg);
+            set_bkg_tiles(14,3,2,9,door2_r_bkg);
         }else{
-            set_bkg_tiles(14,0,2,9,wall2_r_bkg);
+            set_bkg_tiles(14,3,2,9,wall2_r_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x+2, player_y+1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x04){
-                set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
+                set_bkg_tiles(14,3,5,9,nowall_door2_r_bkg);
             }else{
-                set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
+                set_bkg_tiles(14,3,5,9,nowall2_r_bkg);
             }
         }
     }
@@ -517,17 +517,17 @@ void check_r_walls_e(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x, player_y+1);
     if(w!=0x00 && w != 0x01){
         if( w == 0x05){
-            set_bkg_tiles(16,0,3,9,door1_r_bkg);
+            set_bkg_tiles(16,3,3,9,door1_r_bkg);
         }else{
-            set_bkg_tiles(16,0,3,9,wall1_r_bkg);
+            set_bkg_tiles(16,3,3,9,wall1_r_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x+1, player_y+1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x04){
-                set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
+                set_bkg_tiles(16,3,3,9,nowall_door1_r_bkg);
             }else{
-                set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
+                set_bkg_tiles(16,3,3,9,nowall1_r_bkg);
             }
         }
     }
@@ -537,34 +537,34 @@ void check_r_walls_s(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+2);
     if(w != 0x00 && w != 0x01){
         if( w == 0x06){
-            set_bkg_tiles(13,0,1,9,door3_r_bkg);
+            set_bkg_tiles(13,3,1,9,door3_r_bkg);
         }else{
-            set_bkg_tiles(13,0,1,9,wall3_r_bkg);
+            set_bkg_tiles(13,3,1,9,wall3_r_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+3);
         if(w != 0x00 && w != 0x01){
             if( w == 0x05){
-                set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
+                set_bkg_tiles(13,3,6,9,nowall_door3_r_bkg);
             }else{
-                set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
+                set_bkg_tiles(13,3,6,9,nowall3_r_bkg);
             }
         }
     }
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+1);
     if(w != 0x00 && w != 0x01){
         if( w == 0x06){
-            set_bkg_tiles(14,0,2,9,door2_r_bkg);
+            set_bkg_tiles(14,3,2,9,door2_r_bkg);
         }else{
-            set_bkg_tiles(14,0,2,9,wall2_r_bkg);
+            set_bkg_tiles(14,3,2,9,wall2_r_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+2);
         if(w != 0x00 && w != 0x01){
             if( w == 0x05){
-                set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
+                set_bkg_tiles(14,3,5,9,nowall_door2_r_bkg);
             }else{
-                set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
+                set_bkg_tiles(14,3,5,9,nowall2_r_bkg);
             }
         }
     }
@@ -572,17 +572,17 @@ void check_r_walls_s(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y);
     if(w!=0x00 && w != 0x01){
         if( w == 0x06){
-            set_bkg_tiles(16,0,3,9,door1_r_bkg);
+            set_bkg_tiles(16,3,3,9,door1_r_bkg);
         }else{
-            set_bkg_tiles(16,0,3,9,wall1_r_bkg);
+            set_bkg_tiles(16,3,3,9,wall1_r_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y+1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x05){
-                set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
+                set_bkg_tiles(16,3,3,9,nowall_door1_r_bkg);
             }else{
-                set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
+                set_bkg_tiles(16,3,3,9,nowall1_r_bkg);
             }
         }
     }
@@ -592,34 +592,34 @@ void check_r_walls_w(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     unsigned char w = return_value(dng,dungeon_width,dungeon_hieght,player_x-2, player_y-1);
     if(w != 0x00 && w != 0x01){
         if( w == 0x03){
-            set_bkg_tiles(13,0,1,9,door3_r_bkg);
+            set_bkg_tiles(13,3,1,9,door3_r_bkg);
         }else{
-            set_bkg_tiles(13,0,1,9,wall3_r_bkg);
+            set_bkg_tiles(13,3,1,9,wall3_r_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x-3, player_y-1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x06){
-                set_bkg_tiles(13,0,6,9,nowall_door3_r_bkg);
+                set_bkg_tiles(13,3,6,9,nowall_door3_r_bkg);
             }else{
-                set_bkg_tiles(13,0,6,9,nowall3_r_bkg);
+                set_bkg_tiles(13,3,6,9,nowall3_r_bkg);
             }
         }
     }
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-1);
     if(w != 0x00 && w != 0x01){
         if( w == 0x03){
-            set_bkg_tiles(14,0,2,9,door2_r_bkg);
+            set_bkg_tiles(14,3,2,9,door2_r_bkg);
         }else{
-            set_bkg_tiles(14,0,2,9,wall2_r_bkg);
+            set_bkg_tiles(14,3,2,9,wall2_r_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x-2, player_y-1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x06){
-                set_bkg_tiles(14,0,5,9,nowall_door2_r_bkg);
+                set_bkg_tiles(14,3,5,9,nowall_door2_r_bkg);
             }else{
-                set_bkg_tiles(14,0,5,9,nowall2_r_bkg);
+                set_bkg_tiles(14,3,5,9,nowall2_r_bkg);
             }
         }
     }
@@ -627,17 +627,17 @@ void check_r_walls_w(unsigned char* dng, uint8_t dungeon_width, uint8_t dungeon_
     w = return_value(dng,dungeon_width,dungeon_hieght,player_x, player_y-1);
     if(w!=0x00 && w != 0x01){
         if( w == 0x03){
-            set_bkg_tiles(16,0,3,9,door1_r_bkg);
+            set_bkg_tiles(16,3,3,9,door1_r_bkg);
         }else{
-            set_bkg_tiles(16,0,3,9,wall1_r_bkg);
+            set_bkg_tiles(16,3,3,9,wall1_r_bkg);
         }
     }else{
         w = return_value(dng,dungeon_width,dungeon_hieght,player_x-1, player_y-1);
         if(w != 0x00 && w != 0x01){
             if( w == 0x06){
-                set_bkg_tiles(16,0,3,9,nowall_door1_r_bkg);
+                set_bkg_tiles(16,3,3,9,nowall_door1_r_bkg);
             }else{
-                set_bkg_tiles(16,0,3,9,nowall1_r_bkg);
+                set_bkg_tiles(16,3,3,9,nowall1_r_bkg);
             }
         }
     }

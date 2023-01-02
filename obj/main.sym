@@ -8,10 +8,11 @@ Symbol Table
     .__.CPU.                                                    =  000000 L
     .__.H$L.                                                    =  000000 L
     _LCDC_REG                                                      ****** GX
+    _UI_tiles                                                      ****** GX
     __muluchar                                                     ****** GX
   7 __xinit__global_state                                          000002 R
-  7 __xinit__joypadCurrent                                         000004 R
-  7 __xinit__joypadPrevious                                        000005 R
+  7 __xinit__joypad_current                                        000004 R
+  7 __xinit__joypad_previous                                       000005 R
   7 __xinit__player_dir                                            000003 R
   7 __xinit__player_x                                              000000 R
   7 __xinit__player_y                                              000001 R
@@ -24,16 +25,16 @@ Symbol Table
     _check_r_walls_n                                               ****** GX
     _check_r_walls_s                                               ****** GX
     _check_r_walls_w                                               ****** GX
-  0 _collision_check                                               000365 GR
+  0 _collision_check                                               0003AE GR
     _dng_tileset                                                   ****** GX
-  0 _dungeon_logic_upd                                             000368 GR
+  0 _dungeon_logic_upd                                             0004D8 GR
   2 _global_state                                                  000002 R
+  0 _init_dng_UI                                                   0003B1 GR
   0 _init_dungeon                                                  000000 GR
     _joypad                                                        ****** GX
-  2 _joypadCurrent                                                 000004 R
-  2 _joypadPrevious                                                000005 R
-  0 _main                                                          000631 GR
-    _news                                                          ****** GX
+  2 _joypad_current                                                000004 R
+  2 _joypad_previous                                               000005 R
+  0 _main                                                          00078B GR
   2 _player_dir                                                    000003 R
   2 _player_x                                                      000000 R
   2 _player_y                                                      000001 R
@@ -42,18 +43,18 @@ Symbol Table
     _set_bkg_tiles                                                 ****** GX
     _set_sprite_data                                               ****** GX
     _shadow_OAM                                                    ****** GX
-  0 _test_dungeon                                                  000128 GR
-  0 _update_dng                                                    000209 GR
+  0 _test_dungeon                                                  000171 GR
+  0 _update_dng                                                    000252 GR
+  0 _update_dng_UI                                                 0003E2 GR
     _wait_vbl_done                                                 ****** GX
-  0 _white_screen                                                  000060 GR
-
+  0 _white_screen                                                  00006D GR
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
 Hexadecimal [24-Bits]
 
 Area Table
 
-   0 _CODE                                      size    677   flags    0
+   0 _CODE                                      size    7C4   flags    0
    1 _DATA                                      size      0   flags    0
    2 _INITIALIZED                               size      6   flags    0
    3 _DABS                                      size      0   flags    8
