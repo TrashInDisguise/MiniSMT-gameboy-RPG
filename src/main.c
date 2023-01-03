@@ -12,7 +12,7 @@ static uint8_t player_x=0;
 static uint8_t player_y=0;
 static uint8_t global_state = 1;// 0 - owerworld // 1 - 3d dungeon exploration // 3 - turn based combat // 4 - inventory // 5 - dialog// 6 - interactive scene  
 static enum direction{north,east,south,west};
-static uint16_t *inventory[100] = {};
+static uint16_t *inventory[100] = {NULL};
 //static enum wall_type{none,wall,door};
 static enum direction player_dir = north;
 //static uint8_t dist=0;
@@ -53,14 +53,6 @@ const unsigned char test_dungeon[] =
   0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
   0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
 };
-/*
-unsigned char return_value(const unsigned char *dng, uint8_t width, uint8_t height,uint8_t x ,uint8_t y){
-    if(y*width + x < height*width)
-        return dng[ y*width + x ];
-    else
-        return NULL;
-}
-*/
 
 void init_dungeon(const unsigned char *dng,uint8_t dng_width, uint8_t dng_height) {
 
