@@ -26,17 +26,17 @@ Symbol Table
     _check_r_walls_n                                               ****** GX
     _check_r_walls_s                                               ****** GX
     _check_r_walls_w                                               ****** GX
-  0 _collision_check                                               0003AE GR
+  0 _collision_check                                               0003B3 GR
     _dng_tileset                                                   ****** GX
-  0 _dungeon_logic_upd                                             0004D8 GR
+  0 _dungeon_logic_upd                                             0004DD GR
   2 _global_state                                                  000002 R
-  0 _init_dng_UI                                                   0003B1 GR
+  0 _init_dng_UI                                                   0003B6 GR
   0 _init_dungeon                                                  000000 GR
   2 _inventory                                                     000003 R
     _joypad                                                        ****** GX
   2 _joypad_current                                                0000CC R
   2 _joypad_previous                                               0000CD R
-  0 _main                                                          00078B GR
+  0 _main                                                          000790 GR
   2 _player_dir                                                    0000CB R
   2 _player_x                                                      000000 R
   2 _player_y                                                      000001 R
@@ -47,7 +47,7 @@ Symbol Table
     _shadow_OAM                                                    ****** GX
   0 _test_dungeon                                                  000171 GR
   0 _update_dng                                                    000252 GR
-  0 _update_dng_UI                                                 0003E2 GR
+  0 _update_dng_UI                                                 0003E7 GR
     _wait_vbl_done                                                 ****** GX
   0 _white_screen                                                  00006D GR
 
@@ -57,7 +57,7 @@ Hexadecimal [24-Bits]
 
 Area Table
 
-   0 _CODE                                      size    7C4   flags    0
+   0 _CODE                                      size    7C9   flags    0
    1 _DATA                                      size      0   flags    0
    2 _INITIALIZED                               size     CE   flags    0
    3 _DABS                                      size      0   flags    8

@@ -7,17 +7,18 @@ Symbol Table
     .__.ABS.                                                    =  000000 G
     .__.CPU.                                                    =  000000 L
     .__.H$L.                                                    =  000000 L
-    __mulsuchar                                                    ****** GX
+    __mulschar                                                     ****** GX
     __muluchar                                                     ****** GX
-  0 _check_l_walls_e                                               000574 GR
-  0 _check_l_walls_n                                               0003A3 GR
-  0 _check_l_walls_s                                               000738 GR
-  0 _check_l_walls_w                                               00090A GR
+  0 _check_l_walls                                                 000535 GR
+  0 _check_l_walls_e                                               000A34 GR
+  0 _check_l_walls_n                                               000863 GR
+  0 _check_l_walls_s                                               000BF8 GR
+  0 _check_l_walls_w                                               000DCA GR
   0 _check_m_walls                                                 00002C GR
-  0 _check_r_walls_e                                               000C9E GR
-  0 _check_r_walls_n                                               000ACD GR
-  0 _check_r_walls_s                                               000E62 GR
-  0 _check_r_walls_w                                               001034 GR
+  0 _check_r_walls_e                                               00115E GR
+  0 _check_r_walls_n                                               000F8D GR
+  0 _check_r_walls_s                                               001322 GR
+  0 _check_r_walls_w                                               0014F4 GR
     _door1_l_bkg                                                   ****** GX
     _door1_left_half_bkg                                           ****** GX
     _door1_left_half_c_bkg                                         ****** GX
@@ -57,12 +58,12 @@ Symbol Table
     _wall1_right_half_c_bkg                                        ****** GX
     _wall2_half_bkg                                                ****** GX
     _wall2_l_bkg                                                   ****** GX
-    _wall2_left_half_c_bkg                                         ****** GX
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
 Hexadecimal [24-Bits]
 
 Symbol Table
 
+    _wall2_left_half_c_bkg                                         ****** GX
     _wall2_r_bkg                                                   ****** GX
     _wall2_right_half_c_bkg                                        ****** GX
     _wall3_half_bkg                                                ****** GX
@@ -71,13 +72,12 @@ Symbol Table
     _wall3_r_bkg                                                   ****** GX
     _wall3_right_half_c_bkg                                        ****** GX
 
-
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
 Hexadecimal [24-Bits]
 
 Area Table
 
-   0 _CODE                                      size   11F7   flags    0
+   0 _CODE                                      size   16B7   flags    0
    1 _DATA                                      size      0   flags    0
    2 _INITIALIZED                               size      0   flags    0
    3 _DABS                                      size      0   flags    8

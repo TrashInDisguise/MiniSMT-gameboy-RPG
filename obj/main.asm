@@ -722,15 +722,16 @@ _update_dng::
 	call	_check_r_walls_n
 	pop	de
 	pop	bc
-;src/main.c:85: check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y, 0, -1);
-	ld	hl, #0xff00
-	push	hl
-	ld	a, (#_player_y)
+;src/main.c:85: check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,player_dir);
+	ld	a, (#_player_dir)
 	ld	h, a
-	ld	a, (#_player_x)
+	ld	a, (#_player_y)
 	ld	l, a
 	push	hl
-	ldhl	sp,	#6
+	ld	a, (#_player_x)
+	push	af
+	inc	sp
+	ldhl	sp,	#5
 	ld	a, (hl)
 	push	af
 	inc	sp
@@ -776,16 +777,16 @@ _update_dng::
 	call	_check_r_walls_s
 	pop	de
 	pop	bc
-;src/main.c:93: check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,0,+1);
-	xor	a, a
-	inc	a
-	push	af
-	ld	a, (#_player_y)
+;src/main.c:93: check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,player_dir);
+	ld	a, (#_player_dir)
 	ld	h, a
-	ld	a, (#_player_x)
+	ld	a, (#_player_y)
 	ld	l, a
 	push	hl
-	ldhl	sp,	#6
+	ld	a, (#_player_x)
+	push	af
+	inc	sp
+	ldhl	sp,	#5
 	ld	a, (hl)
 	push	af
 	inc	sp
@@ -831,15 +832,16 @@ _update_dng::
 	call	_check_r_walls_w
 	pop	de
 	pop	bc
-;src/main.c:100: check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,-1,0);
-	ld	hl, #0xff
-	push	hl
-	ld	a, (#_player_y)
+;src/main.c:100: check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,player_dir);
+	ld	a, (#_player_dir)
 	ld	h, a
-	ld	a, (#_player_x)
+	ld	a, (#_player_y)
 	ld	l, a
 	push	hl
-	ldhl	sp,	#6
+	ld	a, (#_player_x)
+	push	af
+	inc	sp
+	ldhl	sp,	#5
 	ld	a, (hl)
 	push	af
 	inc	sp
@@ -885,15 +887,16 @@ _update_dng::
 	call	_check_r_walls_e
 	pop	de
 	pop	bc
-;src/main.c:108: check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,+1,0);
-	ld	hl, #0x01
-	push	hl
-	ld	a, (#_player_y)
+;src/main.c:108: check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,player_dir);
+	ld	a, (#_player_dir)
 	ld	h, a
-	ld	a, (#_player_x)
+	ld	a, (#_player_y)
 	ld	l, a
 	push	hl
-	ldhl	sp,	#6
+	ld	a, (#_player_x)
+	push	af
+	inc	sp
+	ldhl	sp,	#5
 	ld	a, (hl)
 	push	af
 	inc	sp
