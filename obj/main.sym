@@ -17,26 +17,20 @@ Symbol Table
   7 __xinit__player_dir                                            0000CB R
   7 __xinit__player_x                                              000000 R
   7 __xinit__player_y                                              000001 R
-    _check_l_walls_e                                               ****** GX
-    _check_l_walls_n                                               ****** GX
-    _check_l_walls_s                                               ****** GX
-    _check_l_walls_w                                               ****** GX
+    _check_l_walls                                                 ****** GX
     _check_m_walls                                                 ****** GX
-    _check_r_walls_e                                               ****** GX
-    _check_r_walls_n                                               ****** GX
-    _check_r_walls_s                                               ****** GX
-    _check_r_walls_w                                               ****** GX
-  0 _collision_check                                               0003B3 GR
+    _check_r_walls                                                 ****** GX
+  0 _collision_check                                               0003DB GR
     _dng_tileset                                                   ****** GX
-  0 _dungeon_logic_upd                                             0004DD GR
+  0 _dungeon_logic_upd                                             000505 GR
   2 _global_state                                                  000002 R
-  0 _init_dng_UI                                                   0003B6 GR
+  0 _init_dng_UI                                                   0003DE GR
   0 _init_dungeon                                                  000000 GR
   2 _inventory                                                     000003 R
     _joypad                                                        ****** GX
   2 _joypad_current                                                0000CC R
   2 _joypad_previous                                               0000CD R
-  0 _main                                                          000790 GR
+  0 _main                                                          0007B8 GR
   2 _player_dir                                                    0000CB R
   2 _player_x                                                      000000 R
   2 _player_y                                                      000001 R
@@ -47,7 +41,7 @@ Symbol Table
     _shadow_OAM                                                    ****** GX
   0 _test_dungeon                                                  000171 GR
   0 _update_dng                                                    000252 GR
-  0 _update_dng_UI                                                 0003E7 GR
+  0 _update_dng_UI                                                 00040F GR
     _wait_vbl_done                                                 ****** GX
   0 _white_screen                                                  00006D GR
 
@@ -57,7 +51,7 @@ Hexadecimal [24-Bits]
 
 Area Table
 
-   0 _CODE                                      size    7C9   flags    0
+   0 _CODE                                      size    7F1   flags    0
    1 _DATA                                      size      0   flags    0
    2 _INITIALIZED                               size     CE   flags    0
    3 _DABS                                      size      0   flags    8

@@ -76,40 +76,10 @@ void update_dng(unsigned char *dng,uint8_t dungeon_width, uint8_t dungeon_hieght
     uint8_t py = 0;
     uint8_t px = 0;
     set_bkg_tiles(0,0,20,13,white_screen);
-    //unsigned char w;
-    switch (player_dir){
-        case north:
-            check_l_walls_n(dng,dungeon_width,dungeon_hieght,player_x,player_y);
-            //check_l_walls(dng,dungeon_width,dungeon_hieght,player_x, player_y, player_dir);
-            check_r_walls_n(dng,dungeon_width,dungeon_hieght,player_x,player_y);
-            check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,player_dir);
-            
-            SHOW_BKG;
-        break;
-        case south:
-            check_l_walls_s(dng,dungeon_width,dungeon_hieght,player_x,player_y);
-            //check_l_walls(dng,dungeon_width,dungeon_hieght,player_x, player_y, player_dir);
-            check_r_walls_s(dng,dungeon_width,dungeon_hieght,player_x,player_y);
-            check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,player_dir);
-            SHOW_BKG;
-        break;
-        case west:
-            check_l_walls_w(dng,dungeon_width,dungeon_hieght,player_x,player_y);
-            //check_l_walls(dng,dungeon_width,dungeon_hieght,player_x, player_y, player_dir);
-            check_r_walls_w(dng,dungeon_width,dungeon_hieght,player_x,player_y);
-            check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,player_dir);
-            
-            SHOW_BKG;
-        break;
-        case east:
-            //check_l_walls(dng,dungeon_width,dungeon_hieght,player_x, player_y, player_dir);
-            check_l_walls_e(dng,dungeon_width,dungeon_hieght,player_x,player_y);
-            check_r_walls_e(dng,dungeon_width,dungeon_hieght,player_x,player_y);
-            check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,player_dir);
-            
-            SHOW_BKG;
-        break;
-    }
+
+    check_l_walls(dng,dungeon_width,dungeon_hieght,player_x, player_y, player_dir);
+    check_r_walls(dng,dungeon_width,dungeon_hieght,player_x, player_y, player_dir);
+    check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,player_dir);
 
 }
 
