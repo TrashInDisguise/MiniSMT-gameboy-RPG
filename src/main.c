@@ -265,7 +265,7 @@ void main(void)
     // Loop forever
     while(1) {
         //controller handler
-        return_letter(0x2F);
+        //return_letter(0x2F);
         dungeon_logic_upd();
         update_dng_UI();
         
