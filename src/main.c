@@ -6,6 +6,7 @@
 #include "../res/walls.h"
 #include "../res/nesw.h"
 #include "../res/UI_sprites.h"
+#include "../res/font.h"
 
 
 static uint8_t player_x=0;
@@ -250,20 +251,23 @@ void dungeon_logic_upd(){
 }
 
 void main(void)
-{
-    
+{   
+    //set_bkg_data(0,1,return_letter('c'));
+    //pull_letters("abcdefgABCDEFG",14,0);
     init_dungeon(test_dungeon, 15, 15);
     init_dng_UI();
     update_dng(test_dungeon,15,15);
     set_sprite_data(0,26,UI_tiles);
-    //set_sprite_tile(0,player_dir);
-    //move_sprite(0,10,16);
+    set_sprite_tile(0,player_dir);
+    return_letter(0x2F);
+
     SHOW_SPRITES;
     // Loop forever
     while(1) {
         //controller handler
-        dungeon_logic_upd();
-        update_dng_UI();
+        //return_letter(0x2F);
+        //dungeon_logic_upd();
+        //update_dng_UI();
         
 
             

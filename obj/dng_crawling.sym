@@ -11,10 +11,6 @@ Symbol Table
   0 _check_l_walls                                                 000507 GR
   0 _check_m_walls                                                 00002C GR
   0 _check_r_walls                                                 00081E GR
-  0 _check_r_walls_e                                               000D06 GR
-  0 _check_r_walls_n                                               000B35 GR
-  0 _check_r_walls_s                                               000ECA GR
-  0 _check_r_walls_w                                               00109C GR
     _door1_l_bkg                                                   ****** GX
     _door1_left_half_bkg                                           ****** GX
     _door1_left_half_c_bkg                                         ****** GX
@@ -58,15 +54,15 @@ Symbol Table
     _wall2_r_bkg                                                   ****** GX
     _wall2_right_half_c_bkg                                        ****** GX
     _wall3_half_bkg                                                ****** GX
+    _wall3_l_bkg                                                   ****** GX
+    _wall3_left_half_c_bkg                                         ****** GX
+    _wall3_r_bkg                                                   ****** GX
+    _wall3_right_half_c_bkg                                        ****** GX
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    _wall3_l_bkg                                                   ****** GX
-    _wall3_left_half_c_bkg                                         ****** GX
-    _wall3_r_bkg                                                   ****** GX
-    _wall3_right_half_c_bkg                                        ****** GX
 
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
@@ -74,7 +70,7 @@ Hexadecimal [24-Bits]
 
 Area Table
 
-   0 _CODE                                      size   125F   flags    0
+   0 _CODE                                      size    B35   flags    0
    1 _DATA                                      size      0   flags    0
    2 _INITIALIZED                               size      0   flags    0
    3 _DABS                                      size      0   flags    8

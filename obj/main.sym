@@ -20,20 +20,21 @@ Symbol Table
     _check_l_walls                                                 ****** GX
     _check_m_walls                                                 ****** GX
     _check_r_walls                                                 ****** GX
-  0 _collision_check                                               0003DB GR
+  0 _collision_check                                               0002B5 GR
     _dng_tileset                                                   ****** GX
-  0 _dungeon_logic_upd                                             000505 GR
+  0 _dungeon_logic_upd                                             0003DF GR
   2 _global_state                                                  000002 R
-  0 _init_dng_UI                                                   0003DE GR
+  0 _init_dng_UI                                                   0002B8 GR
   0 _init_dungeon                                                  000000 GR
   2 _inventory                                                     000003 R
     _joypad                                                        ****** GX
   2 _joypad_current                                                0000CC R
   2 _joypad_previous                                               0000CD R
-  0 _main                                                          0007B8 GR
+  0 _main                                                          000692 GR
   2 _player_dir                                                    0000CB R
   2 _player_x                                                      000000 R
   2 _player_y                                                      000001 R
+    _return_letter                                                 ****** GX
     _return_value                                                  ****** GX
     _set_bkg_data                                                  ****** GX
     _set_bkg_tiles                                                 ****** GX
@@ -41,17 +42,16 @@ Symbol Table
     _shadow_OAM                                                    ****** GX
   0 _test_dungeon                                                  000171 GR
   0 _update_dng                                                    000252 GR
-  0 _update_dng_UI                                                 00040F GR
+  0 _update_dng_UI                                                 0002E9 GR
     _wait_vbl_done                                                 ****** GX
   0 _white_screen                                                  00006D GR
-
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
 Hexadecimal [24-Bits]
 
 Area Table
 
-   0 _CODE                                      size    7F1   flags    0
+   0 _CODE                                      size    6D2   flags    0
    1 _DATA                                      size      0   flags    0
    2 _INITIALIZED                               size     CE   flags    0
    3 _DABS                                      size      0   flags    8
