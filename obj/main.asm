@@ -1679,6 +1679,23 @@ _main::
 	push	hl
 	call	_set_sprite_data
 	add	sp, #4
+	C$main.c$265$1_0$270	= .
+	.globl	C$main.c$265$1_0$270
+;src/main.c:265: set_bkg_tiles(0,0,16,3,pull_letters("It's dangerous to go alone take this",37,224));    
+	ld	a, #0xe0
+	push	af
+	inc	sp
+	ld	a, #0x25
+	ld	de, #___str_0
+	call	_pull_letters
+	push	bc
+	ld	hl, #0x310
+	push	hl
+	xor	a, a
+	rrca
+	push	af
+	call	_set_bkg_tiles
+	add	sp, #6
 	C$main.c$269$1_0$270	= .
 	.globl	C$main.c$269$1_0$270
 ;src/main.c:269: SHOW_SPRITES;
@@ -1697,24 +1714,15 @@ _main::
 	.globl	C$main.c$275$2_0$271
 ;src/main.c:275: update_dng_UI();
 	call	_update_dng_UI
-	C$main.c$277$2_0$271	= .
-	.globl	C$main.c$277$2_0$271
-;src/main.c:277: pull_letters("It's dangerous to go alone take this",37,224);
-	ld	a, #0xe0
-	push	af
-	inc	sp
-	ld	a, #0x25
-	ld	de, #___str_0
-	call	_pull_letters
-	C$main.c$291$2_0$271	= .
-	.globl	C$main.c$291$2_0$271
-;src/main.c:291: wait_vbl_done();
+	C$main.c$290$2_0$271	= .
+	.globl	C$main.c$290$2_0$271
+;src/main.c:290: wait_vbl_done();
 	call	_wait_vbl_done
-	C$main.c$293$1_0$270	= .
-	.globl	C$main.c$293$1_0$270
-;src/main.c:293: }
-	C$main.c$293$1_0$270	= .
-	.globl	C$main.c$293$1_0$270
+	C$main.c$292$1_0$270	= .
+	.globl	C$main.c$292$1_0$270
+;src/main.c:292: }
+	C$main.c$292$1_0$270	= .
+	.globl	C$main.c$292$1_0$270
 	XG$main$0$0	= .
 	.globl	XG$main$0$0
 	jr	00102$

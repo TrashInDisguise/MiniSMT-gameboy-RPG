@@ -1,7 +1,8 @@
 #include "font.h"
 #include <stdio.h>
 #include <types.h>
-#include <string.h>
+//#include <string.h>
+#include <stdlib.h>
 
 //return one letter
 unsigned char* return_letter(uint8_t letter){
@@ -22,30 +23,31 @@ void load_string(unsigned char *str,uint8_t str_size){
     }
 }
 
-//upload only unique characters from string to VRAM at desired location.
-void pull_letters(unsigned char *str,const uint8_t str_size,const uint8_t vram_adr){
-    uint8_t i,j;
-    uint8_t new_size=1;
-    uint8_t temp=0;
-    unsigned char ustr[128];
-    ustr[0] = str[0];
-
-    for(i=1;i<str_size;i++){
-        for(j=0;j<=new_size;j++){
-            if(str[i]==ustr[j]) {temp++; break;}
+//upload only unique characters from string to VRAM at desired location and output tileset for inputed string
+unsigned char* pull_letters(unsigned char *str,const uint8_t str_size,const uint8_t vram_adr){
+    uint8_t i, j, n;
+    unsigned char unique_list[96];
+    unsigned char tileset[96];
+    unsigned char curr;
+    n = 0;
+    for(i = 0; i < str_size; i++){
+        curr = str[i];
+        for (j = 0; j < n; j++){
+            if (unique_list[j] == curr) break;
         }
-        if(temp==0){
-            new_size++;
-            ustr[new_size]=str[i];
+        if(j == n) unique_list[n++] = curr;
+    }
+    for(i=0; i<n;i++){
+        set_bkg_data(vram_adr+i,1,return_letter(unique_list[i]));
+    }
+    for(i=0;i<str_size;i++){
+        for(j=0;j<n;j++){
+            if(str[i]==unique_list[j]){
+                tileset[i]=vram_adr+j;
+            }
         }
-        temp=0;
     }
-    //for some reason second char is random. //TODO FIX! 
-    set_bkg_data(vram_adr,1,return_letter(ustr[0]));
-    for(i=2; i<new_size;i++){
-        set_bkg_data(vram_adr+i-1,1,return_letter(ustr[i]));
-    }
-   
+    return tileset;
 }
 
 const uint8_t font[96][16] =

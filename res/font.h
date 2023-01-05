@@ -29,7 +29,7 @@ extern const unsigned char font[96][16];
 unsigned char* return_letter(uint8_t letter);
 
 void load_string(unsigned char *str,const uint8_t str_size);
-void pull_letters(unsigned char *str,const uint8_t str_size, const uint8_t vram_adr);
+unsigned char* pull_letters(unsigned char *str,const uint8_t str_size, const uint8_t vram_adr);
 
 
 #endif
