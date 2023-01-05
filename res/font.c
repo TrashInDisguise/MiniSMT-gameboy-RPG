@@ -3,14 +3,13 @@
 #include <types.h>
 #include <string.h>
 
+//return one letter
 unsigned char* return_letter(uint8_t letter){
     return font[letter-32];
 }
 
-
-
-
-void pull_letters(unsigned char *str,uint8_t str_size){
+//upload string to VRAM at 224. Only up to two lines 16 character each.
+void load_string(unsigned char *str,uint8_t str_size){
     uint8_t i;
     if(str_size<33){
         for(i=0; i<str_size;i++){
@@ -23,8 +22,31 @@ void pull_letters(unsigned char *str,uint8_t str_size){
     }
 }
 
+//upload only unique characters from string to VRAM at desired location.
+void pull_letters(unsigned char *str,const uint8_t str_size,const uint8_t vram_adr){
+    uint8_t i,j;
+    uint8_t new_size=1;
+    uint8_t temp=0;
+    unsigned char ustr[128];
+    ustr[0] = str[0];
 
-
+    for(i=1;i<str_size;i++){
+        for(j=0;j<=new_size;j++){
+            if(str[i]==ustr[j]) {temp++; break;}
+        }
+        if(temp==0){
+            new_size++;
+            ustr[new_size]=str[i];
+        }
+        temp=0;
+    }
+    //for some reason second char is random. //TODO FIX! 
+    set_bkg_data(vram_adr,1,return_letter(ustr[0]));
+    for(i=2; i<new_size;i++){
+        set_bkg_data(vram_adr+i-1,1,return_letter(ustr[i]));
+    }
+   
+}
 
 const uint8_t font[96][16] =
     {

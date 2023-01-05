@@ -262,7 +262,7 @@ void main(void)
 
     //charset test------------------
     //set_win_data(224,32,font['!'-32]);
-    pull_letters("It's dangerous to go alone take this",37);
+    
     //------------------------------
 
 
@@ -274,7 +274,7 @@ void main(void)
         dungeon_logic_upd();
         update_dng_UI();
         
-
+pull_letters("It's dangerous to go alone take this",37,224);
             
 
 

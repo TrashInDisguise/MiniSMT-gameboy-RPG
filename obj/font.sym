@@ -7,119 +7,349 @@ Symbol Table
     .__.ABS.                                                    =  000000 G
     .__.CPU.                                                    =  000000 L
     .__.H$L.                                                    =  000000 L
-  0 A$font$102                                                     00001B GR
-  0 A$font$104                                                     00001D GR
-  0 A$font$105                                                     00001E GR
-  0 A$font$106                                                     00001F GR
-  0 A$font$110                                                     000020 GR
-  0 A$font$111                                                     000021 GR
-  0 A$font$112                                                     000023 GR
-  0 A$font$113                                                     000024 GR
-  0 A$font$115                                                     000025 GR
-  0 A$font$116                                                     000026 GR
-  0 A$font$117                                                     000027 GR
-  0 A$font$118                                                     000028 GR
-  0 A$font$119                                                     00002B GR
-  0 A$font$122                                                     00002C GR
-  0 A$font$125                                                     00002D GR
-  0 A$font$126                                                     00002E GR
-  0 A$font$127                                                     00002F GR
-  0 A$font$128                                                     000030 GR
-  0 A$font$129                                                     000032 GR
-  0 A$font$130                                                     000033 GR
-  0 A$font$131                                                     000034 GR
-  0 A$font$134                                                     000036 GR
-  0 A$font$135                                                     000037 GR
-  0 A$font$136                                                     000038 GR
-  0 A$font$137                                                     000039 GR
-  0 A$font$138                                                     00003A GR
-  0 A$font$139                                                     00003D GR
-  0 A$font$140                                                     00003F GR
-  0 A$font$144                                                     000040 GR
-  0 A$font$145                                                     000041 GR
-  0 A$font$150                                                     000043 GR
-  0 A$font$155                                                     000045 GR
-  0 A$font$156                                                     000046 GR
-  0 A$font$157                                                     000048 GR
-  0 A$font$158                                                     000049 GR
-  0 A$font$159                                                     00004A GR
-  0 A$font$160                                                     00004B GR
-  0 A$font$161                                                     00004C GR
-  0 A$font$162                                                     00004D GR
-  0 A$font$163                                                     000050 GR
-  0 A$font$166                                                     000051 GR
-  0 A$font$169                                                     000052 GR
-  0 A$font$170                                                     000053 GR
-  0 A$font$171                                                     000054 GR
-  0 A$font$172                                                     000055 GR
-  0 A$font$173                                                     000057 GR
-  0 A$font$174                                                     000058 GR
-  0 A$font$175                                                     000059 GR
-  0 A$font$178                                                     00005B GR
-  0 A$font$179                                                     00005C GR
-  0 A$font$180                                                     00005D GR
+  0 A$font$103                                                     00001B GR
+  0 A$font$105                                                     00001D GR
+  0 A$font$106                                                     00001E GR
+  0 A$font$107                                                     00001F GR
+  0 A$font$111                                                     000020 GR
+  0 A$font$112                                                     000021 GR
+  0 A$font$113                                                     000023 GR
+  0 A$font$114                                                     000024 GR
+  0 A$font$116                                                     000025 GR
+  0 A$font$117                                                     000026 GR
+  0 A$font$118                                                     000027 GR
+  0 A$font$119                                                     000028 GR
+  0 A$font$120                                                     00002B GR
+  0 A$font$123                                                     00002C GR
+  0 A$font$126                                                     00002D GR
+  0 A$font$127                                                     00002E GR
+  0 A$font$128                                                     00002F GR
+  0 A$font$129                                                     000030 GR
+  0 A$font$130                                                     000032 GR
+  0 A$font$131                                                     000033 GR
+  0 A$font$132                                                     000034 GR
+  0 A$font$135                                                     000036 GR
+  0 A$font$136                                                     000037 GR
+  0 A$font$137                                                     000038 GR
+  0 A$font$138                                                     000039 GR
+  0 A$font$139                                                     00003A GR
+  0 A$font$140                                                     00003D GR
+  0 A$font$141                                                     00003F GR
+  0 A$font$145                                                     000040 GR
+  0 A$font$146                                                     000041 GR
+  0 A$font$151                                                     000043 GR
+  0 A$font$156                                                     000045 GR
+  0 A$font$157                                                     000046 GR
+  0 A$font$158                                                     000048 GR
+  0 A$font$159                                                     000049 GR
+  0 A$font$160                                                     00004A GR
+  0 A$font$161                                                     00004B GR
+  0 A$font$162                                                     00004C GR
+  0 A$font$163                                                     00004D GR
+  0 A$font$164                                                     000050 GR
+  0 A$font$167                                                     000051 GR
+  0 A$font$170                                                     000052 GR
+  0 A$font$171                                                     000053 GR
+  0 A$font$172                                                     000054 GR
+  0 A$font$173                                                     000055 GR
+  0 A$font$174                                                     000057 GR
+  0 A$font$175                                                     000058 GR
+  0 A$font$176                                                     000059 GR
+  0 A$font$179                                                     00005B GR
+  0 A$font$180                                                     00005C GR
+  0 A$font$181                                                     00005D GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-  0 A$font$181                                                     00005E GR
-  0 A$font$182                                                     00005F GR
-  0 A$font$183                                                     000062 GR
-  0 A$font$184                                                     000064 GR
-  0 A$font$188                                                     000065 GR
-  0 A$font$189                                                     000066 GR
-  0 A$font$190                                                     000067 GR
-  0 A$font$191                                                     000069 GR
-  0 A$font$199                                                     00006B GR
-  0 A$font$55                                                      000000 GR
-  0 A$font$59                                                      000001 GR
-  0 A$font$60                                                      000004 GR
-  0 A$font$61                                                      000006 GR
-  0 A$font$62                                                      000007 GR
-  0 A$font$63                                                      000009 GR
-  0 A$font$66                                                      00000A GR
-  0 A$font$67                                                      00000B GR
-  0 A$font$68                                                      00000D GR
-  0 A$font$69                                                      00000E GR
-  0 A$font$70                                                      00000F GR
-  0 A$font$71                                                      000010 GR
-  0 A$font$72                                                      000011 GR
-  0 A$font$73                                                      000012 GR
-  0 A$font$74                                                      000013 GR
-  0 A$font$75                                                      000014 GR
-  0 A$font$83                                                      000015 GR
-  0 A$font$96                                                      000016 GR
-  0 A$font$97                                                      000017 GR
-  0 A$font$98                                                      000019 GR
-  0 C$font.c$13$1_0$120                                         =  000016 GR
-  0 C$font.c$15$1_0$120                                         =  000016 GR
-  0 C$font.c$16$1_0$120                                         =  00001B GR
-  0 C$font.c$16$3_0$122                                         =  000040 GR
-  0 C$font.c$17$4_0$123                                         =  000020 GR
-  0 C$font.c$20$1_0$120                                         =  000043 GR
-  0 C$font.c$20$3_0$125                                         =  000065 GR
-  0 C$font.c$21$4_0$126                                         =  000045 GR
-  0 C$font.c$24$1_0$120                                         =  00006B GR
-  0 C$font.c$6$0_0$118                                          =  000000 GR
-  0 C$font.c$7$1_0$118                                          =  000001 GR
-  0 C$font.c$8$1_0$118                                          =  000015 GR
-  0 G$font$0_0$0                                                =  00006C GR
-  0 G$pull_letters$0$0                                          =  000016 GR
+  0 A$font$182                                                     00005E GR
+  0 A$font$183                                                     00005F GR
+  0 A$font$184                                                     000062 GR
+  0 A$font$185                                                     000064 GR
+  0 A$font$189                                                     000065 GR
+  0 A$font$190                                                     000066 GR
+  0 A$font$191                                                     000067 GR
+  0 A$font$192                                                     000069 GR
+  0 A$font$200                                                     00006B GR
+  0 A$font$210                                                     00006C GR
+  0 A$font$211                                                     00006E GR
+  0 A$font$212                                                     000070 GR
+  0 A$font$213                                                     000073 GR
+  0 A$font$214                                                     000074 GR
+  0 A$font$215                                                     000075 GR
+  0 A$font$216                                                     000076 GR
+  0 A$font$217                                                     000077 GR
+  0 A$font$218                                                     000078 GR
+  0 A$font$219                                                     000079 GR
+  0 A$font$223                                                     00007A GR
+  0 A$font$224                                                     00007D GR
+  0 A$font$228                                                     00007E GR
+  0 A$font$229                                                     00007F GR
+  0 A$font$230                                                     000080 GR
+  0 A$font$231                                                     000081 GR
+  0 A$font$232                                                     000082 GR
+  0 A$font$233                                                     000083 GR
+  0 A$font$234                                                     000084 GR
+  0 A$font$235                                                     000085 GR
+  0 A$font$236                                                     000087 GR
+  0 A$font$240                                                     000088 GR
+  0 A$font$241                                                     00008B GR
+  0 A$font$242                                                     00008C GR
+  0 A$font$243                                                     00008E GR
+  0 A$font$244                                                     00008F GR
+  0 A$font$246                                                     000091 GR
+  0 A$font$247                                                     000094 GR
+  0 A$font$248                                                     000095 GR
+  0 A$font$249                                                     000096 GR
+  0 A$font$250                                                     000099 GR
+  0 A$font$251                                                     00009A GR
+  0 A$font$252                                                     00009B GR
+  0 A$font$256                                                     00009E GR
+  0 A$font$257                                                     00009F GR
+  0 A$font$258                                                     0000A0 GR
+  0 A$font$259                                                     0000A1 GR
+  0 A$font$260                                                     0000A2 GR
+  0 A$font$261                                                     0000A5 GR
+  0 A$font$262                                                     0000A6 GR
+  0 A$font$263                                                     0000A7 GR
+  0 A$font$264                                                     0000A9 GR
+  0 A$font$265                                                     0000AA GR
+  0 A$font$266                                                     0000AB GR
+  0 A$font$267                                                     0000AC GR
+  0 A$font$268                                                     0000AF GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$font$269                                                     0000B0 GR
+  0 A$font$270                                                     0000B1 GR
+  0 A$font$271                                                     0000B2 GR
+  0 A$font$272                                                     0000B3 GR
+  0 A$font$273                                                     0000B6 GR
+  0 A$font$274                                                     0000B7 GR
+  0 A$font$275                                                     0000B8 GR
+  0 A$font$276                                                     0000B9 GR
+  0 A$font$277                                                     0000BA GR
+  0 A$font$278                                                     0000BB GR
+  0 A$font$279                                                     0000BC GR
+  0 A$font$280                                                     0000BD GR
+  0 A$font$281                                                     0000BE GR
+  0 A$font$286                                                     0000C0 GR
+  0 A$font$287                                                     0000C3 GR
+  0 A$font$288                                                     0000C4 GR
+  0 A$font$289                                                     0000C5 GR
+  0 A$font$290                                                     0000C6 GR
+  0 A$font$291                                                     0000C7 GR
+  0 A$font$292                                                     0000C8 GR
+  0 A$font$293                                                     0000C9 GR
+  0 A$font$294                                                     0000CA GR
+  0 A$font$295                                                     0000CC GR
+  0 A$font$296                                                     0000CF GR
+  0 A$font$297                                                     0000D0 GR
+  0 A$font$298                                                     0000D1 GR
+  0 A$font$299                                                     0000D2 GR
+  0 A$font$300                                                     0000D3 GR
+  0 A$font$301                                                     0000D4 GR
+  0 A$font$302                                                     0000D6 GR
+  0 A$font$303                                                     0000D9 GR
+  0 A$font$304                                                     0000DA GR
+  0 A$font$305                                                     0000DB GR
+  0 A$font$310                                                     0000DD GR
+  0 A$font$311                                                     0000DE GR
+  0 A$font$312                                                     0000E1 GR
+  0 A$font$313                                                     0000E2 GR
+  0 A$font$314                                                     0000E3 GR
+  0 A$font$315                                                     0000E4 GR
+  0 A$font$320                                                     0000E6 GR
+  0 A$font$321                                                     0000E9 GR
+  0 A$font$322                                                     0000EA GR
+  0 A$font$323                                                     0000EB GR
+  0 A$font$324                                                     0000EC GR
+  0 A$font$328                                                     0000EE GR
+  0 A$font$329                                                     0000EF GR
+  0 A$font$333                                                     0000F0 GR
+  0 A$font$334                                                     0000F1 GR
+  0 A$font$335                                                     0000F4 GR
+  0 A$font$336                                                     0000F5 GR
+  0 A$font$337                                                     0000F6 GR
+  0 A$font$338                                                     0000F7 GR
+  0 A$font$339                                                     0000F8 GR
+  0 A$font$340                                                     0000FB GR
+  0 A$font$341                                                     0000FC GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$font$342                                                     0000FD GR
+  0 A$font$343                                                     0000FF GR
+  0 A$font$344                                                     000100 GR
+  0 A$font$345                                                     000101 GR
+  0 A$font$346                                                     000102 GR
+  0 A$font$347                                                     000105 GR
+  0 A$font$348                                                     000106 GR
+  0 A$font$349                                                     000107 GR
+  0 A$font$350                                                     000108 GR
+  0 A$font$351                                                     000109 GR
+  0 A$font$352                                                     00010C GR
+  0 A$font$353                                                     00010D GR
+  0 A$font$354                                                     00010E GR
+  0 A$font$355                                                     00010F GR
+  0 A$font$356                                                     000110 GR
+  0 A$font$357                                                     000111 GR
+  0 A$font$358                                                     000112 GR
+  0 A$font$359                                                     000113 GR
+  0 A$font$360                                                     000114 GR
+  0 A$font$361                                                     000115 GR
+  0 A$font$362                                                     000116 GR
+  0 A$font$363                                                     000117 GR
+  0 A$font$364                                                     000118 GR
+  0 A$font$365                                                     000119 GR
+  0 A$font$370                                                     00011A GR
+  0 A$font$371                                                     00011D GR
+  0 A$font$375                                                     00011E GR
+  0 A$font$376                                                     00011F GR
+  0 A$font$377                                                     000120 GR
+  0 A$font$378                                                     000121 GR
+  0 A$font$379                                                     000122 GR
+  0 A$font$381                                                     000125 GR
+  0 A$font$382                                                     000128 GR
+  0 A$font$383                                                     000129 GR
+  0 A$font$387                                                     00012A GR
+  0 A$font$388                                                     00012C GR
+  0 A$font$389                                                     00012D GR
+  0 A$font$390                                                     00012E GR
+  0 A$font$391                                                     00012F GR
+  0 A$font$392                                                     000132 GR
+  0 A$font$393                                                     000133 GR
+  0 A$font$394                                                     000134 GR
+  0 A$font$395                                                     000135 GR
+  0 A$font$396                                                     000136 GR
+  0 A$font$397                                                     000138 GR
+  0 A$font$398                                                     000139 GR
+  0 A$font$399                                                     00013A GR
+  0 A$font$400                                                     00013D GR
+  0 A$font$401                                                     00013E GR
+  0 A$font$402                                                     00013F GR
+  0 A$font$403                                                     000140 GR
+  0 A$font$404                                                     000141 GR
+  0 A$font$405                                                     000144 GR
+  0 A$font$409                                                     000146 GR
+  0 A$font$411                                                     000148 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 5
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$font$412                                                     000149 GR
+  0 A$font$413                                                     00014A GR
+  0 A$font$417                                                     00014C GR
+  0 A$font$418                                                     00014D GR
+  0 A$font$419                                                     00014F GR
+  0 A$font$420                                                     000152 GR
+  0 A$font$421                                                     000153 GR
+  0 A$font$422                                                     000154 GR
+  0 A$font$423                                                     000155 GR
+  0 A$font$424                                                     000156 GR
+  0 A$font$425                                                     000157 GR
+  0 A$font$426                                                     00015A GR
+  0 A$font$427                                                     00015B GR
+  0 A$font$428                                                     00015C GR
+  0 A$font$429                                                     00015D GR
+  0 A$font$430                                                     000160 GR
+  0 A$font$431                                                     000161 GR
+  0 A$font$432                                                     000162 GR
+  0 A$font$433                                                     000163 GR
+  0 A$font$434                                                     000164 GR
+  0 A$font$435                                                     000165 GR
+  0 A$font$438                                                     000167 GR
+  0 A$font$439                                                     000168 GR
+  0 A$font$440                                                     000169 GR
+  0 A$font$441                                                     00016A GR
+  0 A$font$442                                                     00016B GR
+  0 A$font$443                                                     00016E GR
+  0 A$font$447                                                     000170 GR
+  0 A$font$448                                                     000171 GR
+  0 A$font$453                                                     000173 GR
+  0 A$font$454                                                     000175 GR
+  0 A$font$455                                                     000177 GR
+  0 A$font$456                                                     000178 GR
+  0 A$font$457                                                     000179 GR
+  0 A$font$56                                                      000000 GR
+  0 A$font$60                                                      000001 GR
+  0 A$font$61                                                      000004 GR
+  0 A$font$62                                                      000006 GR
+  0 A$font$63                                                      000007 GR
+  0 A$font$64                                                      000009 GR
+  0 A$font$67                                                      00000A GR
+  0 A$font$68                                                      00000B GR
+  0 A$font$69                                                      00000D GR
+  0 A$font$70                                                      00000E GR
+  0 A$font$71                                                      00000F GR
+  0 A$font$72                                                      000010 GR
+  0 A$font$73                                                      000011 GR
+  0 A$font$74                                                      000012 GR
+  0 A$font$75                                                      000013 GR
+  0 A$font$76                                                      000014 GR
+  0 A$font$84                                                      000015 GR
+  0 A$font$97                                                      000016 GR
+  0 A$font$98                                                      000017 GR
+  0 A$font$99                                                      000019 GR
+  0 C$font.c$12$1_0$121                                         =  000016 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 6
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 C$font.c$14$1_0$121                                         =  000016 GR
+  0 C$font.c$15$1_0$121                                         =  00001B GR
+  0 C$font.c$15$3_0$123                                         =  000040 GR
+  0 C$font.c$16$4_0$124                                         =  000020 GR
+  0 C$font.c$19$1_0$121                                         =  000043 GR
+  0 C$font.c$19$3_0$126                                         =  000065 GR
+  0 C$font.c$20$4_0$127                                         =  000045 GR
+  0 C$font.c$23$1_0$121                                         =  00006B GR
+  0 C$font.c$26$1_0$129                                         =  00006C GR
+  0 C$font.c$29$2_0$129                                         =  00007A GR
+  0 C$font.c$31$1_0$129                                         =  00007E GR
+  0 C$font.c$33$2_0$129                                         =  000088 GR
+  0 C$font.c$33$2_0$130                                         =  00011E GR
+  0 C$font.c$34$2_0$129                                         =  00009E GR
+  0 C$font.c$34$4_0$132                                         =  0000DD GR
+  0 C$font.c$35$5_0$133                                         =  0000C0 GR
+  0 C$font.c$37$3_0$131                                         =  0000E6 GR
+  0 C$font.c$38$4_0$135                                         =  0000EE GR
+  0 C$font.c$39$4_0$135                                         =  0000F0 GR
+  0 C$font.c$41$3_0$131                                         =  00011A GR
+  0 C$font.c$43$1_0$129                                         =  00012A GR
+  0 C$font.c$44$2_0$129                                         =  000146 GR
+  0 C$font.c$44$2_0$136                                         =  000170 GR
+  0 C$font.c$45$3_0$137                                         =  00014C GR
+  0 C$font.c$48$2_0$129                                         =  000173 GR
+  0 C$font.c$7$0_0$119                                          =  000000 GR
+  0 C$font.c$8$1_0$119                                          =  000001 GR
+  0 C$font.c$9$1_0$119                                          =  000015 GR
+  0 G$font$0_0$0                                                =  00017A GR
+  0 G$load_string$0$0                                           =  000016 GR
+  0 G$pull_letters$0$0                                          =  00006C GR
   0 G$return_letter$0$0                                         =  000000 GR
-  0 XG$pull_letters$0$0                                         =  00006B GR
+  0 XG$load_string$0$0                                          =  00006B GR
   0 XG$return_letter$0$0                                        =  000015 GR
-  0 _font                                                          00006C GR
-  0 _pull_letters                                                  000016 GR
+  0 _font                                                          00017A GR
+  0 _load_string                                                   000016 GR
+  0 _pull_letters                                                  00006C GR
   0 _return_letter                                                 000000 GR
     _set_bkg_data                                                  ****** GX
 
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 7
 Hexadecimal [24-Bits]
 
 Area Table
 
-   0 _CODE                                      size    66C   flags    0
+   0 _CODE                                      size    77A   flags    0
    1 _DATA                                      size      0   flags    0
    2 _INITIALIZED                               size      0   flags    0
    3 _DABS                                      size      0   flags    8

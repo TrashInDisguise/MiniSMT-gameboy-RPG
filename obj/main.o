@@ -1,6 +1,6 @@
 ;!FILE obj/main.asm
 XL3
-H 9 areas 33F global symbols
+H 9 areas 342 global symbols
 M main
 O -msm83
 S _set_sprite_data Ref000000
@@ -19,8 +19,7 @@ S _wait_vbl_done Ref000000
 S _UI_tiles Ref000000
 S _set_bkg_tiles Ref000000
 S _pull_letters Ref000000
-A _CODE size 6F8 flags 0 addr 0
-S A$main$1692 Def0006C4
+A _CODE size 6FC flags 0 addr 0
 S A$main$1656 Def000695
 S A$main$1629 Def00068B
 S A$main$1593 Def00065B
@@ -41,14 +40,14 @@ S A$main$1197 Def000485
 S A$main$1188 Def000474
 S A$main$1098 Def00040A
 S A$main$1089 Def000402
-S C$main.c$274$2_0$270 Def0006C8
-S C$main.c$244$3_0$263 Def000653
-S C$main.c$205$3_0$257 Def0004AC
-S C$main.c$191$2_0$254 Def000420
-S C$main.c$177$1_0$251 Def0003DF
-S C$main.c$168$2_0$142 Def0003D4
-S C$main.c$159$2_0$142 Def0003C8
-S A$main$1693 Def0006C6
+S C$main.c$293$1_0$270 Def0006D5
+S C$main.c$291$2_0$271 Def0006D2
+S C$main.c$257$1_0$270 Def000692
+S C$main.c$234$3_0$264 Def0005D8
+S C$main.c$204$3_0$258 Def0004A9
+S C$main.c$202$4_0$259 Def00049D
+S C$main.c$190$2_0$255 Def00041C
+S C$main.c$183$2_0$253 Def0003FB
 S A$main$1657 Def000696
 S A$main$1594 Def00065D
 S A$main$1576 Def000650
@@ -68,14 +67,14 @@ S A$main$1099 Def00040D
 S A$main$120 Def000024
 S A$main$111 Def000017
 S A$main$102 Def00000A
-S C$main.c$275$2_0$270 Def0006CB
-S C$main.c$245$3_0$263 Def000654
-S C$main.c$241$4_0$266 Def000643
-S C$main.c$227$3_0$263 Def00059A
-S C$main.c$219$4_0$261 Def00055C
-S C$main.c$206$3_0$257 Def0004AC
-S C$main.c$178$1_0$251 Def0003DF
-S C$main.c$60$1_0$110 Def000017
+S C$main.c$274$2_0$271 Def0006C0
+S C$main.c$258$1_0$270 Def00069E
+S C$main.c$244$3_0$264 Def000653
+S C$main.c$205$3_0$258 Def0004AC
+S C$main.c$191$2_0$255 Def000420
+S C$main.c$177$1_0$252 Def0003DF
+S C$main.c$168$2_0$143 Def0003D4
+S C$main.c$159$2_0$143 Def0003C8
 S A$main$1685 Def0006BA
 S A$main$1676 Def0006AD
 S A$main$1667 Def0006A1
@@ -92,16 +91,16 @@ S A$main$1199 Def000489
 S A$main$130 Def00002D
 S A$main$112 Def00001A
 S A$main$103 Def00000D
-S C$main.c$260$1_0$269 Def0006AD
-S C$main.c$246$3_0$263 Def000654
-S C$main.c$242$4_0$266 Def000647
-S C$main.c$228$3_0$263 Def00059A
-S C$main.c$216$3_0$257 Def00052C
-S C$main.c$197$1_0$251 Def000436
-S C$main.c$186$2_0$252 Def000404
-S C$main.c$184$3_0$253 Def0003FF
-S C$main.c$179$1_0$251 Def0003E5
-S C$main.c$70$1_0$110 Def000062
+S C$main.c$275$2_0$271 Def0006C3
+S C$main.c$259$1_0$270 Def0006A1
+S C$main.c$245$3_0$264 Def000654
+S C$main.c$241$4_0$267 Def000643
+S C$main.c$227$3_0$264 Def00059A
+S C$main.c$219$4_0$262 Def00055C
+S C$main.c$206$3_0$258 Def0004AC
+S C$main.c$178$1_0$252 Def0003DF
+S C$main.c$60$1_0$111 Def000017
+S A$main$1695 Def0006C0
 S A$main$1686 Def0006BC
 S A$main$1677 Def0006B0
 S A$main$1668 Def0006A3
@@ -117,15 +116,18 @@ S A$main$131 Def00002E
 S A$main$122 Def000026
 S A$main$113 Def00001B
 S A$main$104 Def00000E
-S C$main.c$238$3_0$263 Def000615
-S C$main.c$235$4_0$265 Def000605
-S C$main.c$217$3_0$257 Def00052E
-S C$main.c$194$2_0$254 Def00042A
-S C$main.c$192$3_0$255 Def000425
-S C$main.c$189$1_0$251 Def000410
+S C$main.c$269$1_0$270 Def0006BA
+S C$main.c$246$3_0$264 Def000654
+S C$main.c$242$4_0$267 Def000647
+S C$main.c$228$3_0$264 Def00059A
+S C$main.c$216$3_0$258 Def00052C
+S C$main.c$197$1_0$252 Def000436
+S C$main.c$186$2_0$253 Def000404
+S C$main.c$184$3_0$254 Def0003FF
+S C$main.c$179$1_0$252 Def0003E5
 S XG$update_dng_UI$0$0 Def0003DE
-S C$main.c$62$1_0$110 Def000024
-S A$main$1687 Def0006BF
+S C$main.c$70$1_0$111 Def000062
+S A$main$1687 Def0006BE
 S A$main$1678 Def0006B1
 S A$main$1669 Def0006A4
 S A$main$1597 Def000663
@@ -138,12 +140,14 @@ S A$main$132 Def00002F
 S A$main$123 Def000027
 S A$main$114 Def00001E
 S A$main$105 Def000011
-S C$main.c$271$1_0$269 Def0006C8
-S C$main.c$239$3_0$263 Def000616
-S C$main.c$236$4_0$265 Def000609
-S C$main.c$218$3_0$257 Def00052E
-S C$main.c$72$1_0$110 Def000068
-S C$main.c$63$1_0$110 Def00002C
+S C$main.c$277$2_0$271 Def0006C6
+S C$main.c$238$3_0$264 Def000615
+S C$main.c$235$4_0$266 Def000605
+S C$main.c$217$3_0$258 Def00052E
+S C$main.c$194$2_0$255 Def00042A
+S C$main.c$192$3_0$256 Def000425
+S C$main.c$189$1_0$252 Def000410
+S C$main.c$62$1_0$111 Def000024
 S _main Def000692
 S A$main$1679 Def0006B4
 S A$main$1598 Def000666
@@ -155,10 +159,11 @@ S A$main$133 Def000032
 S A$main$124 Def000029
 S A$main$115 Def00001F
 S A$main$106 Def000012
-S C$main.c$229$4_0$264 Def0005C7
-S C$main.c$207$4_0$259 Def0004DB
-S C$main.c$62$2_0$111 Def00005F
-S C$main.c$56$0_0$110 Def000000
+S C$main.c$239$3_0$264 Def000616
+S C$main.c$236$4_0$266 Def000609
+S C$main.c$218$3_0$258 Def00052E
+S C$main.c$72$1_0$111 Def000068
+S C$main.c$63$1_0$111 Def00002C
 S A$main$1599 Def000667
 S A$main$710 Def00025F
 S A$main$161 Def000050
@@ -168,8 +173,10 @@ S A$main$134 Def000034
 S A$main$125 Def00002A
 S A$main$116 Def000022
 S A$main$107 Def000015
-S C$main.c$255$1_0$269 Def000692
-S C$main.c$208$4_0$259 Def0004DF
+S C$main.c$229$4_0$265 Def0005C7
+S C$main.c$62$2_0$112 Def00005F
+S C$main.c$56$0_0$111 Def000000
+S A$main$1699 Def0006C3
 S A$main$900 Def000336
 S A$main$720 Def00026B
 S A$main$711 Def000262
@@ -177,7 +184,6 @@ S A$main$702 Def000253
 S A$main$162 Def000051
 S A$main$153 Def000047
 S A$main$135 Def000035
-S C$main.c$265$1_0$269 Def0006BA
 S A$main$910 Def00033A
 S A$main$811 Def0002C3
 S A$main$730 Def00027A
@@ -189,9 +195,6 @@ S A$main$172 Def000058
 S A$main$163 Def000052
 S A$main$154 Def000048
 S A$main$136 Def000036
-S C$main.c$293$1_0$269 Def0006D1
-S C$main.c$257$1_0$269 Def000692
-S C$main.c$247$4_0$267 Def000681
 S _collision_check Def0002B5
 S A$main$920 Def000351
 S A$main$911 Def00033D
@@ -207,11 +210,7 @@ S A$main$191 Def000064
 S A$main$173 Def00005B
 S A$main$155 Def00004A
 S A$main$137 Def000037
-S C$main.c$258$1_0$269 Def00069E
-S C$main.c$248$4_0$267 Def000685
-S C$main.c$198$2_0$256 Def000454
-S C$main.c$85$1_0$120 Def0002B5
-S C$main.c$59$1_0$110 Def00000A
+S C$main.c$247$4_0$268 Def000681
 S A$main$921 Def000353
 S A$main$912 Def00033F
 S A$main$831 Def0002DE
@@ -226,9 +225,10 @@ S A$main$156 Def00004B
 S A$main$147 Def000040
 S A$main$138 Def000038
 S A$main$129 Def00002C
-S C$main.c$259$1_0$269 Def0006A1
-S C$main.c$80$1_0$117 Def000280
-S C$main.c$63$4_0$113 Def00005C
+S C$main.c$248$4_0$268 Def000685
+S C$main.c$198$2_0$257 Def000454
+S C$main.c$85$1_0$121 Def0002B5
+S C$main.c$59$1_0$111 Def00000A
 S A$main$922 Def000356
 S A$main$913 Def000342
 S A$main$904 Def000338
@@ -243,9 +243,8 @@ S A$main$706 Def00025B
 S A$main$184 Def00005F
 S A$main$157 Def00004C
 S A$main$148 Def000041
-S C$main.c$269$1_0$269 Def0006C2
-S C$main.c$87$1_0$120 Def0002B5
-S C$main.c$81$1_0$117 Def00029B
+S C$main.c$80$1_0$118 Def000280
+S C$main.c$63$4_0$114 Def00005C
 S A$main$941 Def00036E
 S A$main$932 Def00035A
 S A$main$914 Def000344
@@ -265,7 +264,8 @@ S A$main$185 Def000060
 S A$main$167 Def000054
 S A$main$158 Def00004D
 S A$main$149 Def000043
-S C$main.c$199$3_0$257 Def00046A
+S C$main.c$87$1_0$121 Def0002B5
+S C$main.c$81$1_0$118 Def00029B
 S A$main$960 Def000389
 S A$main$942 Def000371
 S A$main$933 Def00035D
@@ -283,9 +283,7 @@ S A$main$717 Def000266
 S A$main$708 Def00025D
 S A$main$168 Def000057
 S A$main$159 Def00004E
-S C$main.c$83$1_0$117 Def0002B2
-S C$main.c$74$1_0$117 Def000252
-S C$main.c$64$5_0$114 Def000040
+S C$main.c$199$3_0$258 Def00046A
 S A$main$961 Def00038C
 S A$main$943 Def000373
 S A$main$934 Def00035F
@@ -304,7 +302,9 @@ S A$main$718 Def000267
 S A$main$709 Def00025E
 S A$main$196 Def000068
 S A$main$178 Def00005C
-S C$main.c$89$1_0$121 Def0002B8
+S C$main.c$83$1_0$118 Def0002B2
+S C$main.c$74$1_0$118 Def000252
+S C$main.c$64$5_0$115 Def000040
 S A$main$980 Def0003A4
 S A$main$944 Def000376
 S A$main$935 Def000362
@@ -326,7 +326,7 @@ S A$main$728 Def000278
 S A$main$719 Def00026A
 S A$main$197 Def00006A
 S A$main$179 Def00005D
-S C$main.c$97$3_0$121 Def0002E8
+S C$main.c$89$1_0$122 Def0002B8
 S A$main$981 Def0003A7
 S A$main$963 Def00038E
 S A$main$954 Def00037A
@@ -343,9 +343,8 @@ S A$main$747 Def000290
 S A$main$738 Def000281
 S A$main$729 Def000279
 S A$main$198 Def00006B
-S XG$main$0$0 Def0006D1
-S C$main.c$77$1_0$117 Def000253
-S C$main.c$65$6_0$115 Def000054
+S XG$main$0$0 Def0006D5
+S C$main.c$97$3_0$122 Def0002E8
 S A$main$982 Def0003A9
 S A$main$964 Def000391
 S A$main$955 Def00037D
@@ -360,7 +359,8 @@ S A$main$766 Def0002A9
 S A$main$748 Def000292
 S A$main$739 Def000282
 S A$main$199 Def00006C
-S C$main.c$66$6_0$115 Def000058
+S C$main.c$77$1_0$118 Def000253
+S C$main.c$65$6_0$116 Def000054
 S A$main$992 Def0003B3
 S A$main$983 Def0003AB
 S A$main$974 Def000398
@@ -375,7 +375,7 @@ S A$main$776 Def0002B3
 S A$main$767 Def0002AB
 S A$main$758 Def00029B
 S A$main$749 Def000293
-S C$main.c$79$1_0$117 Def000265
+S C$main.c$66$6_0$116 Def000058
 S A$main$993 Def0003B6
 S A$main$984 Def0003AE
 S A$main$975 Def00039B
@@ -388,6 +388,7 @@ S A$main$876 Def000309
 S A$main$777 Def0002B4
 S A$main$768 Def0002AC
 S A$main$759 Def00029E
+S C$main.c$79$1_0$118 Def000265
 S A$main$994 Def0003B8
 S A$main$985 Def0003B0
 S A$main$976 Def00039C
@@ -428,20 +429,19 @@ S _init_dungeon Def000000
 S _dungeon_logic_upd Def0003DF
 S _init_dng_UI Def0002B8
 S G$update_dng_UI$0$0 Def0002E9
-S Fmain$__str_0$0_0$0 Def0006D3
+S Fmain$__str_0$0_0$0 Def0006D7
 S G$update_dng$0$0 Def000252
 S _test_dungeon Def000171
 S XG$dungeon_logic_upd$0$0 Def000691
 S A$main$1200 Def00048A
 S A$main$1020 Def0003CE
-S C$main.c$101$3_0$121 Def0002E8
 S G$test_dungeon$0_0$0 Def000171
 S A$main$1300 Def000504
 S A$main$1201 Def00048C
 S A$main$1120 Def000423
 S A$main$1021 Def0003D1
 S A$main$1012 Def0003C8
-S C$main.c$110$2_0$141 Def00031A
+S C$main.c$101$3_0$122 Def0002E8
 S A$main$1310 Def000516
 S A$main$1301 Def000507
 S A$main$1220 Def0004A3
@@ -449,7 +449,7 @@ S A$main$1211 Def000499
 S A$main$1202 Def00048D
 S A$main$1130 Def00042A
 S A$main$1031 Def0003D4
-S C$main.c$200$1_0$251 Def000578
+S C$main.c$110$2_0$142 Def00031A
 S A$main$1500 Def0005F5
 S A$main$1410 Def000585
 S A$main$1311 Def000519
@@ -463,8 +463,7 @@ S A$main$1113 Def00041C
 S A$main$1104 Def000410
 S A$main$1032 Def0003D7
 S A$main$1005 Def0003BE
-S C$main.c$150$1_0$140 Def000398
-S C$main.c$103$3_0$140 Def0002E9
+S C$main.c$200$1_0$252 Def000578
 S XG$init_dng_UI$0$0 Def0002E8
 S A$main$1600 Def000669
 S A$main$1501 Def0005F6
@@ -480,6 +479,8 @@ S A$main$1114 Def00041F
 S A$main$1105 Def000413
 S A$main$1033 Def0003D9
 S A$main$1006 Def0003C1
+S C$main.c$150$1_0$141 Def000398
+S C$main.c$103$3_0$141 Def0002E9
 S A$main$1610 Def000676
 S A$main$1601 Def00066C
 S A$main$1520 Def00060B
@@ -502,7 +503,6 @@ S A$main$1070 Def0003EE
 S A$main$1034 Def0003DC
 S A$main$1025 Def0003D3
 S A$main$1007 Def0003C3
-S A$main$1701 Def0006C8
 S A$main$1620 Def000681
 S A$main$1611 Def000677
 S A$main$1602 Def00066D
@@ -530,6 +530,7 @@ S A$main$1107 Def000416
 S A$main$1071 Def0003F0
 S A$main$1008 Def0003C6
 S _update_dng_UI Def0002E9
+S A$main$1720 Def0006D5
 S A$main$1630 Def00068E
 S A$main$1621 Def000684
 S A$main$1612 Def000679
@@ -562,10 +563,8 @@ S A$main$1063 Def0003E5
 S A$main$1045 Def0003DE
 S A$main$1018 Def0003C9
 S G$main$0$0 Def000692
-S C$main.c$223$1_0$251 Def00056C
-S C$main.c$172$1_0$140 Def0003DE
-S C$main.c$151$2_0$142 Def0003B3
-S C$main.c$109$1_0$140 Def0002FD
+S A$main$1712 Def0006D2
+S A$main$1703 Def0006C6
 S A$main$1613 Def00067C
 S A$main$1550 Def00062F
 S A$main$1541 Def00061D
@@ -598,12 +597,11 @@ S A$main$1082 Def0003FB
 S A$main$1073 Def0003F5
 S A$main$1064 Def0003E8
 S A$main$1019 Def0003CC
-S C$main.c$251$1_0$251 Def000691
-S C$main.c$220$4_0$261 Def000560
-S C$main.c$206$1_0$251 Def000582
-S C$main.c$161$2_0$142 Def0003C9
-S C$main.c$126$2_0$141 Def000358
-S C$main.c$117$2_0$141 Def000338
+S C$main.c$223$1_0$252 Def00056C
+S C$main.c$172$1_0$141 Def0003DE
+S C$main.c$151$2_0$143 Def0003B3
+S C$main.c$109$1_0$141 Def0002FD
+S A$main$1704 Def0006C8
 S A$main$1641 Def000691
 S A$main$1614 Def00067F
 S A$main$1560 Def000641
@@ -639,11 +637,15 @@ S A$main$1155 Def00044D
 S A$main$1119 Def000421
 S A$main$1083 Def0003FC
 S A$main$1065 Def0003EB
-S C$main.c$225$1_0$251 Def00056C
-S C$main.c$213$4_0$260 Def00051C
-S C$main.c$147$1_0$140 Def000398
+S C$main.c$260$1_0$270 Def0006AD
+S C$main.c$251$1_0$252 Def000691
+S C$main.c$220$4_0$262 Def000560
+S C$main.c$206$1_0$252 Def000582
+S C$main.c$161$2_0$143 Def0003C9
+S C$main.c$126$2_0$142 Def000358
+S C$main.c$117$2_0$142 Def000338
 S _update_dng Def000252
-S A$main$1705 Def0006CB
+S A$main$1705 Def0006C9
 S A$main$1615 Def000680
 S A$main$1606 Def000671
 S A$main$1561 Def000642
@@ -674,15 +676,10 @@ S A$main$1183 Def00046C
 S A$main$1165 Def000454
 S A$main$1156 Def00044E
 S A$main$1084 Def0003FD
-S C$main.c$253$1_0$251 Def000691
-S C$main.c$214$4_0$260 Def000520
-S C$main.c$200$3_0$257 Def00046A
-S C$main.c$181$1_0$251 Def0003EC
-S C$main.c$175$1_0$140 Def0003DE
-S C$main.c$154$2_0$142 Def0003BD
-S C$main.c$137$2_0$141 Def000378
-S C$main.c$128$2_0$141 Def00035A
-S C$main.c$119$2_0$141 Def00033A
+S C$main.c$225$1_0$252 Def00056C
+S C$main.c$213$4_0$261 Def00051C
+S C$main.c$147$1_0$141 Def000398
+S A$main$1706 Def0006CA
 S A$main$1670 Def0006A5
 S A$main$1625 Def000685
 S A$main$1607 Def000672
@@ -711,9 +708,18 @@ S A$main$1184 Def00046D
 S A$main$1166 Def000457
 S A$main$1094 Def000404
 S A$main$1058 Def0003DF
-S C$main.c$240$3_0$263 Def000616
-S C$main.c$210$3_0$257 Def0004EB
+S C$main.c$271$1_0$270 Def0006C0
+S C$main.c$253$1_0$252 Def000691
+S C$main.c$214$4_0$261 Def000520
+S C$main.c$200$3_0$258 Def00046A
+S C$main.c$181$1_0$252 Def0003EC
+S C$main.c$175$1_0$141 Def0003DE
+S C$main.c$154$2_0$143 Def0003BD
+S C$main.c$137$2_0$142 Def000378
+S C$main.c$128$2_0$142 Def00035A
+S C$main.c$119$2_0$142 Def00033A
 S G$collision_check$0$0 Def0002B5
+S A$main$1707 Def0006CC
 S A$main$1680 Def0006B5
 S A$main$1671 Def0006A7
 S A$main$1626 Def000687
@@ -746,12 +752,10 @@ S A$main$1149 Def000446
 S A$main$1095 Def000406
 S A$main$1077 Def0003F7
 S A$main$1059 Def0003E2
-S C$main.c$232$3_0$263 Def0005D7
-S C$main.c$230$4_0$264 Def0005CB
-S C$main.c$211$3_0$257 Def0004EE
-S C$main.c$156$2_0$142 Def0003BE
-S C$main.c$139$2_0$141 Def00037A
-S A$main$1717 Def0006D1
+S C$main.c$240$3_0$264 Def000616
+S C$main.c$210$3_0$258 Def0004EB
+S C$main.c$207$4_0$260 Def0004DB
+S A$main$1708 Def0006CF
 S A$main$1681 Def0006B8
 S A$main$1672 Def0006AA
 S A$main$1663 Def00069E
@@ -784,14 +788,13 @@ S A$main$1168 Def00045A
 S A$main$1096 Def000407
 S A$main$1078 Def0003FA
 S A$main$1069 Def0003EC
-S C$main.c$233$3_0$263 Def0005D8
-S C$main.c$226$2_0$262 Def000586
-S C$main.c$212$3_0$257 Def0004EE
-S C$main.c$201$4_0$258 Def000499
-S C$main.c$182$2_0$252 Def0003F7
-S C$main.c$166$2_0$142 Def0003D3
-S A$main$1709 Def0006CE
-S A$main$1691 Def0006C2
+S C$main.c$255$1_0$270 Def000692
+S C$main.c$232$3_0$264 Def0005D7
+S C$main.c$230$4_0$265 Def0005CB
+S C$main.c$211$3_0$258 Def0004EE
+S C$main.c$208$4_0$260 Def0004DF
+S C$main.c$156$2_0$143 Def0003BE
+S C$main.c$139$2_0$142 Def00037A
 S A$main$1655 Def000694
 S A$main$1628 Def000689
 S A$main$1592 Def00065A
@@ -815,12 +818,12 @@ S A$main$1187 Def000472
 S A$main$1169 Def00045D
 S A$main$1097 Def000408
 S A$main$1088 Def0003FF
-S C$main.c$291$2_0$270 Def0006CE
-S C$main.c$234$3_0$263 Def0005D8
-S C$main.c$204$3_0$257 Def0004A9
-S C$main.c$202$4_0$258 Def00049D
-S C$main.c$190$2_0$254 Def00041C
-S C$main.c$183$2_0$252 Def0003FB
+S C$main.c$233$3_0$264 Def0005D8
+S C$main.c$226$2_0$263 Def000586
+S C$main.c$212$3_0$258 Def0004EE
+S C$main.c$201$4_0$259 Def000499
+S C$main.c$182$2_0$253 Def0003F7
+S C$main.c$166$2_0$143 Def0003D3
 A _DATA size 0 flags 0 addr 0
 A _INITIALIZED size CE flags 0 addr 0
 S Fmain$joypad_previous$0_0$0 Def0000CD
@@ -1265,21 +1268,21 @@ T 9F 06 00 B8 02 3E 0F F5 33 3E 0F 11 71 01 CD
 R 00 00 00 00 00 03 00 00 00 0C 00 00
 T AB 06 00 52 02 11 00 00 D5 21 00 1A E5 CD 00 00
 R 00 00 00 00 00 03 00 00 02 06 0D 00 02 0E 00 00
-T B8 06 00 E8 04 3E 25 11 D3 06 CD 00 00 F0
-R 00 00 00 00 00 08 00 00 02 0B 0F 00
-T C3 06 00 00 00 00 F6 02 E0 00 00 00
-R 00 00 00 00 0B 03 09 00 0B 09 09 00
-T C8 06 00
+T B8 06 00 E8 04 F0 00 00 00 F6 02 E0 00 00 00
+R 00 00 00 00 0B 06 09 00 0B 0C 09 00
+T C0 06 00
 R 00 00 00 00
-T C8 06 00 CD DF 03 CD E9 02 CD 00 00 18 F5
-R 00 00 00 00 00 04 00 00 00 07 00 00 02 0A 0C 00
-T D3 06 00
+T C0 06 00 CD DF 03 CD E9 02 3E E0 F5 33 3E 25 11
+R 00 00 00 00 00 04 00 00 00 07 00 00
+T CD 06 00 D7 06 CD 00 00 CD 00 00 18 E9
+R 00 00 00 00 00 03 00 00 02 06 0F 00 02 09 0C 00
+T D7 06 00
 R 00 00 00 00
-T D3 06 00 49 74 27 73 20 64 61 6E 67 65 72 6F 75
+T D7 06 00 49 74 27 73 20 64 61 6E 67 65 72 6F 75
 R 00 00 00 00
-T E0 06 00 73 20 74 6F 20 67 6F 20 61 6C 6F 6E 65
+T E4 06 00 73 20 74 6F 20 67 6F 20 61 6C 6F 6E 65
 R 00 00 00 00
-T ED 06 00 20 74 61 6B 65 20 74 68 69 73 00
+T F1 06 00 20 74 61 6B 65 20 74 68 69 73 00
 R 00 00 00 00
 T 00 00 00
 R 00 00 07 00

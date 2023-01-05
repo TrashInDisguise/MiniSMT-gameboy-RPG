@@ -81,8 +81,8 @@
                                      81 	.area _CODE
                            000000    82 	G$init_dungeon$0$0	= .
                                      83 	.globl	G$init_dungeon$0$0
-                           000000    84 	C$main.c$56$0_0$110	= .
-                                     85 	.globl	C$main.c$56$0_0$110
+                           000000    84 	C$main.c$56$0_0$111	= .
+                                     85 	.globl	C$main.c$56$0_0$111
                                      86 ;src/main.c:56: void init_dungeon(const unsigned char *dng,uint8_t dng_width, uint8_t dng_height) {
                                      87 ;	---------------------------------
                                      88 ; Function init_dungeon
@@ -96,8 +96,8 @@
       000007 2B               [ 8]   96 	dec	hl
       000008 2B               [ 8]   97 	dec	hl
       000009 77               [ 8]   98 	ld	(hl), a
-                           00000A    99 	C$main.c$59$1_0$110	= .
-                                    100 	.globl	C$main.c$59$1_0$110
+                           00000A    99 	C$main.c$59$1_0$111	= .
+                                    100 	.globl	C$main.c$59$1_0$111
                                     101 ;src/main.c:59: set_bkg_data(0,75,dng_tileset);
       00000A 11r00r00         [12]  102 	ld	de, #_dng_tileset
       00000D D5               [16]  103 	push	de
@@ -105,8 +105,8 @@
       000011 E5               [16]  105 	push	hl
       000012 CDr00r00         [24]  106 	call	_set_bkg_data
       000015 E8 04            [16]  107 	add	sp, #4
-                           000017   108 	C$main.c$60$1_0$110	= .
-                                    109 	.globl	C$main.c$60$1_0$110
+                           000017   108 	C$main.c$60$1_0$111	= .
+                                    109 	.globl	C$main.c$60$1_0$111
                                     110 ;src/main.c:60: set_sprite_data(0,25,UI_tiles);
       000017 11r00r00         [12]  111 	ld	de, #_UI_tiles
       00001A D5               [16]  112 	push	de
@@ -114,8 +114,8 @@
       00001E E5               [16]  114 	push	hl
       00001F CDr00r00         [24]  115 	call	_set_sprite_data
       000022 E8 04            [16]  116 	add	sp, #4
-                           000024   117 	C$main.c$62$1_0$110	= .
-                                    118 	.globl	C$main.c$62$1_0$110
+                           000024   117 	C$main.c$62$1_0$111	= .
+                                    118 	.globl	C$main.c$62$1_0$111
                                     119 ;src/main.c:62: for(uint8_t i = 0; i < dng_width; i++){
       000024 06 00            [ 8]  120 	ld	b, #0x00
       000026                        121 00109$:
@@ -123,8 +123,8 @@
       000027 F8 02            [12]  123 	ldhl	sp,	#2
       000029 96               [ 8]  124 	sub	a, (hl)
       00002A 30 36            [12]  125 	jr	NC, 00104$
-                           00002C   126 	C$main.c$63$1_0$110	= .
-                                    127 	.globl	C$main.c$63$1_0$110
+                           00002C   126 	C$main.c$63$1_0$111	= .
+                                    127 	.globl	C$main.c$63$1_0$111
                                     128 ;src/main.c:63: for(uint8_t j = 0; j < dng_height; j++){
       00002C C5               [16]  129 	push	bc
       00002D 5E               [ 8]  130 	ld	e, (hl)
@@ -141,8 +141,8 @@
       00003B F8 07            [12]  141 	ldhl	sp,	#7
       00003D 96               [ 8]  142 	sub	a, (hl)
       00003E 30 1F            [12]  143 	jr	NC, 00110$
-                           000040   144 	C$main.c$64$5_0$114	= .
-                                    145 	.globl	C$main.c$64$5_0$114
+                           000040   144 	C$main.c$64$5_0$115	= .
+                                    145 	.globl	C$main.c$64$5_0$115
                                     146 ;src/main.c:64: if(dng[i*dng_width+j]==0x01){
       000040 59               [ 4]  147 	ld	e, c
       000041 16 00            [ 8]  148 	ld	d, #0x00
@@ -161,37 +161,37 @@
       000050 1A               [ 8]  161 	ld	a, (de)
       000051 3D               [ 4]  162 	dec	a
       000052 20 08            [12]  163 	jr	NZ, 00107$
-                           000054   164 	C$main.c$65$6_0$115	= .
-                                    165 	.globl	C$main.c$65$6_0$115
+                           000054   164 	C$main.c$65$6_0$116	= .
+                                    165 	.globl	C$main.c$65$6_0$116
                                     166 ;src/main.c:65: player_x = j;
       000054 21r00r00         [12]  167 	ld	hl, #_player_x
       000057 71               [ 8]  168 	ld	(hl), c
-                           000058   169 	C$main.c$66$6_0$115	= .
-                                    170 	.globl	C$main.c$66$6_0$115
+                           000058   169 	C$main.c$66$6_0$116	= .
+                                    170 	.globl	C$main.c$66$6_0$116
                                     171 ;src/main.c:66: player_y = i;
       000058 21r01r00         [12]  172 	ld	hl, #_player_y
       00005B 70               [ 8]  173 	ld	(hl), b
       00005C                        174 00107$:
-                           00005C   175 	C$main.c$63$4_0$113	= .
-                                    176 	.globl	C$main.c$63$4_0$113
+                           00005C   175 	C$main.c$63$4_0$114	= .
+                                    176 	.globl	C$main.c$63$4_0$114
                                     177 ;src/main.c:63: for(uint8_t j = 0; j < dng_height; j++){
       00005C 0C               [ 4]  178 	inc	c
       00005D 18 DB            [12]  179 	jr	00106$
       00005F                        180 00110$:
-                           00005F   181 	C$main.c$62$2_0$111	= .
-                                    182 	.globl	C$main.c$62$2_0$111
+                           00005F   181 	C$main.c$62$2_0$112	= .
+                                    182 	.globl	C$main.c$62$2_0$112
                                     183 ;src/main.c:62: for(uint8_t i = 0; i < dng_width; i++){
       00005F 04               [ 4]  184 	inc	b
       000060 18 C4            [12]  185 	jr	00109$
       000062                        186 00104$:
-                           000062   187 	C$main.c$70$1_0$110	= .
-                                    188 	.globl	C$main.c$70$1_0$110
+                           000062   187 	C$main.c$70$1_0$111	= .
+                                    188 	.globl	C$main.c$70$1_0$111
                                     189 ;src/main.c:70: SHOW_BKG;
       000062 F0r00            [12]  190 	ldh	a, (_LCDC_REG + 0)
       000064 F6 01            [ 8]  191 	or	a, #0x01
       000066 E0r00            [12]  192 	ldh	(_LCDC_REG + 0), a
-                           000068   193 	C$main.c$72$1_0$110	= .
-                                    194 	.globl	C$main.c$72$1_0$110
+                           000068   193 	C$main.c$72$1_0$111	= .
+                                    194 	.globl	C$main.c$72$1_0$111
                                     195 ;src/main.c:72: }
       000068 E8 05            [16]  196 	add	sp, #5
       00006A E1               [12]  197 	pop	hl
@@ -688,16 +688,16 @@
       000251 00                     688 	.db #0x00	; 0
                            000252   689 	G$update_dng$0$0	= .
                                     690 	.globl	G$update_dng$0$0
-                           000252   691 	C$main.c$74$1_0$117	= .
-                                    692 	.globl	C$main.c$74$1_0$117
+                           000252   691 	C$main.c$74$1_0$118	= .
+                                    692 	.globl	C$main.c$74$1_0$118
                                     693 ;src/main.c:74: void update_dng(unsigned char *dng,uint8_t dungeon_width, uint8_t dungeon_hieght){
                                     694 ;	---------------------------------
                                     695 ; Function update_dng
                                     696 ; ---------------------------------
       000252                        697 _update_dng::
       000252 4F               [ 4]  698 	ld	c, a
-                           000253   699 	C$main.c$77$1_0$117	= .
-                                    700 	.globl	C$main.c$77$1_0$117
+                           000253   699 	C$main.c$77$1_0$118	= .
+                                    700 	.globl	C$main.c$77$1_0$118
                                     701 ;src/main.c:77: set_bkg_tiles(0,0,20,13,white_screen);
       000253 D5               [16]  702 	push	de
       000254 21r6Dr00         [12]  703 	ld	hl, #_white_screen
@@ -710,8 +710,8 @@
       00025F CDr00r00         [24]  710 	call	_set_bkg_tiles
       000262 E8 06            [16]  711 	add	sp, #6
       000264 D1               [12]  712 	pop	de
-                           000265   713 	C$main.c$79$1_0$117	= .
-                                    714 	.globl	C$main.c$79$1_0$117
+                           000265   713 	C$main.c$79$1_0$118	= .
+                                    714 	.globl	C$main.c$79$1_0$118
                                     715 ;src/main.c:79: check_l_walls(dng,dungeon_width,dungeon_hieght,player_x, player_y, player_dir);
       000265 C5               [16]  716 	push	bc
       000266 D5               [16]  717 	push	de
@@ -731,8 +731,8 @@
       00027B CDr00r00         [24]  731 	call	_check_l_walls
       00027E D1               [12]  732 	pop	de
       00027F C1               [12]  733 	pop	bc
-                           000280   734 	C$main.c$80$1_0$117	= .
-                                    735 	.globl	C$main.c$80$1_0$117
+                           000280   734 	C$main.c$80$1_0$118	= .
+                                    735 	.globl	C$main.c$80$1_0$118
                                     736 ;src/main.c:80: check_r_walls(dng,dungeon_width,dungeon_hieght,player_x, player_y, player_dir);
       000280 C5               [16]  737 	push	bc
       000281 D5               [16]  738 	push	de
@@ -752,8 +752,8 @@
       000296 CDr00r00         [24]  752 	call	_check_r_walls
       000299 D1               [12]  753 	pop	de
       00029A C1               [12]  754 	pop	bc
-                           00029B   755 	C$main.c$81$1_0$117	= .
-                                    756 	.globl	C$main.c$81$1_0$117
+                           00029B   755 	C$main.c$81$1_0$118	= .
+                                    756 	.globl	C$main.c$81$1_0$118
                                     757 ;src/main.c:81: check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,player_dir);
       00029B FArCBr00         [16]  758 	ld	a, (#_player_dir)
       00029E 67               [ 4]  759 	ld	h, a
@@ -769,31 +769,31 @@
       0002AD 33               [ 8]  769 	inc	sp
       0002AE 79               [ 4]  770 	ld	a, c
       0002AF CDr00r00         [24]  771 	call	_check_m_walls
-                           0002B2   772 	C$main.c$83$1_0$117	= .
-                                    773 	.globl	C$main.c$83$1_0$117
+                           0002B2   772 	C$main.c$83$1_0$118	= .
+                                    773 	.globl	C$main.c$83$1_0$118
                                     774 ;src/main.c:83: }
       0002B2 E1               [12]  775 	pop	hl
       0002B3 33               [ 8]  776 	inc	sp
       0002B4 E9               [ 4]  777 	jp	(hl)
                            0002B5   778 	G$collision_check$0$0	= .
                                     779 	.globl	G$collision_check$0$0
-                           0002B5   780 	C$main.c$85$1_0$120	= .
-                                    781 	.globl	C$main.c$85$1_0$120
+                           0002B5   780 	C$main.c$85$1_0$121	= .
+                                    781 	.globl	C$main.c$85$1_0$121
                                     782 ;src/main.c:85: void collision_check(const unsigned char *dng, uint8_t dng_width, uint8_t dng_height){
                                     783 ;	---------------------------------
                                     784 ; Function collision_check
                                     785 ; ---------------------------------
       0002B5                        786 _collision_check::
-                           0002B5   787 	C$main.c$87$1_0$120	= .
-                                    788 	.globl	C$main.c$87$1_0$120
+                           0002B5   787 	C$main.c$87$1_0$121	= .
+                                    788 	.globl	C$main.c$87$1_0$121
                                     789 ;src/main.c:87: }
       0002B5 E1               [12]  790 	pop	hl
       0002B6 33               [ 8]  791 	inc	sp
       0002B7 E9               [ 4]  792 	jp	(hl)
                            0002B8   793 	G$init_dng_UI$0$0	= .
                                     794 	.globl	G$init_dng_UI$0$0
-                           0002B8   795 	C$main.c$89$1_0$121	= .
-                                    796 	.globl	C$main.c$89$1_0$121
+                           0002B8   795 	C$main.c$89$1_0$122	= .
+                                    796 	.globl	C$main.c$89$1_0$122
                                     797 ;src/main.c:89: void init_dng_UI(){
                                     798 ;	---------------------------------
                                     799 ; Function init_dng_UI
@@ -835,21 +835,21 @@
       0002E3 3E 14            [ 8]  835 	ld	a, #0x14
       0002E5 22               [ 8]  836 	ld	(hl+), a
       0002E6 36 68            [12]  837 	ld	(hl), #0x68
-                           0002E8   838 	C$main.c$97$3_0$121	= .
-                                    839 	.globl	C$main.c$97$3_0$121
+                           0002E8   838 	C$main.c$97$3_0$122	= .
+                                    839 	.globl	C$main.c$97$3_0$122
                                     840 ;src/main.c:97: move_sprite(5,104,20);
-                           0002E8   841 	C$main.c$101$3_0$121	= .
-                                    842 	.globl	C$main.c$101$3_0$121
+                           0002E8   841 	C$main.c$101$3_0$122	= .
+                                    842 	.globl	C$main.c$101$3_0$122
                                     843 ;src/main.c:101: }
-                           0002E8   844 	C$main.c$101$3_0$121	= .
-                                    845 	.globl	C$main.c$101$3_0$121
+                           0002E8   844 	C$main.c$101$3_0$122	= .
+                                    845 	.globl	C$main.c$101$3_0$122
                            0002E8   846 	XG$init_dng_UI$0$0	= .
                                     847 	.globl	XG$init_dng_UI$0$0
       0002E8 C9               [16]  848 	ret
                            0002E9   849 	G$update_dng_UI$0$0	= .
                                     850 	.globl	G$update_dng_UI$0$0
-                           0002E9   851 	C$main.c$103$3_0$140	= .
-                                    852 	.globl	C$main.c$103$3_0$140
+                           0002E9   851 	C$main.c$103$3_0$141	= .
+                                    852 	.globl	C$main.c$103$3_0$141
                                     853 ;src/main.c:103: void update_dng_UI (){
                                     854 ;	---------------------------------
                                     855 ; Function update_dng_UI
@@ -864,8 +864,8 @@
       0002F6 36 00            [12]  864 	ld	(hl), #0x00
       0002F8 21r0Fr00         [12]  865 	ld	hl, #(_shadow_OAM + 15)
       0002FB 36 00            [12]  866 	ld	(hl), #0x00
-                           0002FD   867 	C$main.c$109$1_0$140	= .
-                                    868 	.globl	C$main.c$109$1_0$140
+                           0002FD   867 	C$main.c$109$1_0$141	= .
+                                    868 	.globl	C$main.c$109$1_0$141
                                     869 ;src/main.c:109: switch(player_dir){
       0002FD FArCBr00         [16]  870 	ld	a, (#_player_dir)
       000300 B7               [ 4]  871 	or	a, a
@@ -880,8 +880,8 @@
       000313 D6 03            [ 8]  880 	sub	a, #0x03
       000315 28 63            [12]  881 	jr	Z, 00104$
       000317 C3r98r03         [16]  882 	jp	00105$
-                           00031A   883 	C$main.c$110$2_0$141	= .
-                                    884 	.globl	C$main.c$110$2_0$141
+                           00031A   883 	C$main.c$110$2_0$142	= .
+                                    884 	.globl	C$main.c$110$2_0$142
                                     885 ;src/main.c:110: case 0:            
       00031A                        886 00101$:
                                     887 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
@@ -898,12 +898,12 @@
       000331 36 60            [12]  898 	ld	(hl), #0x60
       000333 21r0Fr00         [12]  899 	ld	hl, #(_shadow_OAM + 15)
       000336 36 60            [12]  900 	ld	(hl), #0x60
-                           000338   901 	C$main.c$117$2_0$141	= .
-                                    902 	.globl	C$main.c$117$2_0$141
+                           000338   901 	C$main.c$117$2_0$142	= .
+                                    902 	.globl	C$main.c$117$2_0$142
                                     903 ;src/main.c:117: break;
       000338 18 5E            [12]  904 	jr	00105$
-                           00033A   905 	C$main.c$119$2_0$141	= .
-                                    906 	.globl	C$main.c$119$2_0$141
+                           00033A   905 	C$main.c$119$2_0$142	= .
+                                    906 	.globl	C$main.c$119$2_0$142
                                     907 ;src/main.c:119: case 1:            
       00033A                        908 00102$:
                                     909 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
@@ -920,12 +920,12 @@
       000351 36 40            [12]  920 	ld	(hl), #0x40
       000353 21r07r00         [12]  921 	ld	hl, #(_shadow_OAM + 7)
       000356 36 40            [12]  922 	ld	(hl), #0x40
-                           000358   923 	C$main.c$126$2_0$141	= .
-                                    924 	.globl	C$main.c$126$2_0$141
+                           000358   923 	C$main.c$126$2_0$142	= .
+                                    924 	.globl	C$main.c$126$2_0$142
                                     925 ;src/main.c:126: break;
       000358 18 3E            [12]  926 	jr	00105$
-                           00035A   927 	C$main.c$128$2_0$141	= .
-                                    928 	.globl	C$main.c$128$2_0$141
+                           00035A   927 	C$main.c$128$2_0$142	= .
+                                    928 	.globl	C$main.c$128$2_0$142
                                     929 ;src/main.c:128: case 2:
       00035A                        930 00103$:
                                     931 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
@@ -942,12 +942,12 @@
       000371 36 60            [12]  942 	ld	(hl), #0x60
       000373 21r0Br00         [12]  943 	ld	hl, #(_shadow_OAM + 11)
       000376 36 60            [12]  944 	ld	(hl), #0x60
-                           000378   945 	C$main.c$137$2_0$141	= .
-                                    946 	.globl	C$main.c$137$2_0$141
+                           000378   945 	C$main.c$137$2_0$142	= .
+                                    946 	.globl	C$main.c$137$2_0$142
                                     947 ;src/main.c:137: break;
       000378 18 1E            [12]  948 	jr	00105$
-                           00037A   949 	C$main.c$139$2_0$141	= .
-                                    950 	.globl	C$main.c$139$2_0$141
+                           00037A   949 	C$main.c$139$2_0$142	= .
+                                    950 	.globl	C$main.c$139$2_0$142
                                     951 ;src/main.c:139: case 3:
       00037A                        952 00104$:
                                     953 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
@@ -964,12 +964,12 @@
       000391 36 20            [12]  964 	ld	(hl), #0x20
       000393 21r0Fr00         [12]  965 	ld	hl, #(_shadow_OAM + 15)
       000396 36 20            [12]  966 	ld	(hl), #0x20
-                           000398   967 	C$main.c$147$1_0$140	= .
-                                    968 	.globl	C$main.c$147$1_0$140
+                           000398   967 	C$main.c$147$1_0$141	= .
+                                    968 	.globl	C$main.c$147$1_0$141
                                     969 ;src/main.c:147: }
       000398                        970 00105$:
-                           000398   971 	C$main.c$150$1_0$140	= .
-                                    972 	.globl	C$main.c$150$1_0$140
+                           000398   971 	C$main.c$150$1_0$141	= .
+                                    972 	.globl	C$main.c$150$1_0$141
                                     973 ;src/main.c:150: switch(player_dir){
       000398 FArCBr00         [16]  974 	ld	a, (#_player_dir)
       00039B B7               [ 4]  975 	or	a, a
@@ -984,8 +984,8 @@
       0003AE D6 03            [ 8]  984 	sub	a, #0x03
       0003B0 28 22            [12]  985 	jr	Z, 00109$
       0003B2 C9               [16]  986 	ret
-                           0003B3   987 	C$main.c$151$2_0$142	= .
-                                    988 	.globl	C$main.c$151$2_0$142
+                           0003B3   987 	C$main.c$151$2_0$143	= .
+                                    988 	.globl	C$main.c$151$2_0$143
                                     989 ;src/main.c:151: case 0:            
       0003B3                        990 00106$:
                                     991 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
@@ -993,12 +993,12 @@
       0003B6 36 0C            [12]  993 	ld	(hl), #0x0c
       0003B8 21r16r00         [12]  994 	ld	hl, #(_shadow_OAM + 22)
       0003BB 36 0A            [12]  995 	ld	(hl), #0x0a
-                           0003BD   996 	C$main.c$154$2_0$142	= .
-                                    997 	.globl	C$main.c$154$2_0$142
+                           0003BD   996 	C$main.c$154$2_0$143	= .
+                                    997 	.globl	C$main.c$154$2_0$143
                                     998 ;src/main.c:154: break;
       0003BD C9               [16]  999 	ret
-                           0003BE  1000 	C$main.c$156$2_0$142	= .
-                                   1001 	.globl	C$main.c$156$2_0$142
+                           0003BE  1000 	C$main.c$156$2_0$143	= .
+                                   1001 	.globl	C$main.c$156$2_0$143
                                    1002 ;src/main.c:156: case 1:            
       0003BE                       1003 00107$:
                                    1004 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
@@ -1006,12 +1006,12 @@
       0003C1 36 09            [12] 1006 	ld	(hl), #0x09
       0003C3 21r16r00         [12] 1007 	ld	hl, #(_shadow_OAM + 22)
       0003C6 36 0B            [12] 1008 	ld	(hl), #0x0b
-                           0003C8  1009 	C$main.c$159$2_0$142	= .
-                                   1010 	.globl	C$main.c$159$2_0$142
+                           0003C8  1009 	C$main.c$159$2_0$143	= .
+                                   1010 	.globl	C$main.c$159$2_0$143
                                    1011 ;src/main.c:159: break;
       0003C8 C9               [16] 1012 	ret
-                           0003C9  1013 	C$main.c$161$2_0$142	= .
-                                   1014 	.globl	C$main.c$161$2_0$142
+                           0003C9  1013 	C$main.c$161$2_0$143	= .
+                                   1014 	.globl	C$main.c$161$2_0$143
                                    1015 ;src/main.c:161: case 2:
       0003C9                       1016 00108$:
                                    1017 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
@@ -1019,12 +1019,12 @@
       0003CC 36 0A            [12] 1019 	ld	(hl), #0x0a
       0003CE 21r16r00         [12] 1020 	ld	hl, #(_shadow_OAM + 22)
       0003D1 36 0C            [12] 1021 	ld	(hl), #0x0c
-                           0003D3  1022 	C$main.c$166$2_0$142	= .
-                                   1023 	.globl	C$main.c$166$2_0$142
+                           0003D3  1022 	C$main.c$166$2_0$143	= .
+                                   1023 	.globl	C$main.c$166$2_0$143
                                    1024 ;src/main.c:166: break;
       0003D3 C9               [16] 1025 	ret
-                           0003D4  1026 	C$main.c$168$2_0$142	= .
-                                   1027 	.globl	C$main.c$168$2_0$142
+                           0003D4  1026 	C$main.c$168$2_0$143	= .
+                                   1027 	.globl	C$main.c$168$2_0$143
                                    1028 ;src/main.c:168: case 3:
       0003D4                       1029 00109$:
                                    1030 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
@@ -1032,64 +1032,64 @@
       0003D7 36 0B            [12] 1032 	ld	(hl), #0x0b
       0003D9 21r16r00         [12] 1033 	ld	hl, #(_shadow_OAM + 22)
       0003DC 36 09            [12] 1034 	ld	(hl), #0x09
-                           0003DE  1035 	C$main.c$172$1_0$140	= .
-                                   1036 	.globl	C$main.c$172$1_0$140
+                           0003DE  1035 	C$main.c$172$1_0$141	= .
+                                   1036 	.globl	C$main.c$172$1_0$141
                                    1037 ;src/main.c:172: }
-                           0003DE  1038 	C$main.c$175$1_0$140	= .
-                                   1039 	.globl	C$main.c$175$1_0$140
+                           0003DE  1038 	C$main.c$175$1_0$141	= .
+                                   1039 	.globl	C$main.c$175$1_0$141
                                    1040 ;src/main.c:175: }
-                           0003DE  1041 	C$main.c$175$1_0$140	= .
-                                   1042 	.globl	C$main.c$175$1_0$140
+                           0003DE  1041 	C$main.c$175$1_0$141	= .
+                                   1042 	.globl	C$main.c$175$1_0$141
                            0003DE  1043 	XG$update_dng_UI$0$0	= .
                                    1044 	.globl	XG$update_dng_UI$0$0
       0003DE C9               [16] 1045 	ret
                            0003DF  1046 	G$dungeon_logic_upd$0$0	= .
                                    1047 	.globl	G$dungeon_logic_upd$0$0
-                           0003DF  1048 	C$main.c$177$1_0$251	= .
-                                   1049 	.globl	C$main.c$177$1_0$251
+                           0003DF  1048 	C$main.c$177$1_0$252	= .
+                                   1049 	.globl	C$main.c$177$1_0$252
                                    1050 ;src/main.c:177: void dungeon_logic_upd(){
                                    1051 ;	---------------------------------
                                    1052 ; Function dungeon_logic_upd
                                    1053 ; ---------------------------------
       0003DF                       1054 _dungeon_logic_upd::
-                           0003DF  1055 	C$main.c$178$1_0$251	= .
-                                   1056 	.globl	C$main.c$178$1_0$251
+                           0003DF  1055 	C$main.c$178$1_0$252	= .
+                                   1056 	.globl	C$main.c$178$1_0$252
                                    1057 ;src/main.c:178: joypad_previous = joypad_current;
       0003DF FArCCr00         [16] 1058 	ld	a, (#_joypad_current)
       0003E2 EArCDr00         [16] 1059 	ld	(#_joypad_previous),a
-                           0003E5  1060 	C$main.c$179$1_0$251	= .
-                                   1061 	.globl	C$main.c$179$1_0$251
+                           0003E5  1060 	C$main.c$179$1_0$252	= .
+                                   1061 	.globl	C$main.c$179$1_0$252
                                    1062 ;src/main.c:179: joypad_current = joypad();
       0003E5 CDr00r00         [24] 1063 	call	_joypad
       0003E8 21rCCr00         [12] 1064 	ld	hl, #_joypad_current
       0003EB 77               [ 8] 1065 	ld	(hl), a
-                           0003EC  1066 	C$main.c$181$1_0$251	= .
-                                   1067 	.globl	C$main.c$181$1_0$251
+                           0003EC  1066 	C$main.c$181$1_0$252	= .
+                                   1067 	.globl	C$main.c$181$1_0$252
                                    1068 ;src/main.c:181: if((joypad_current & J_LEFT) && !(joypad_previous & J_LEFT)){
       0003EC CB 4E            [12] 1069 	bit	1, (hl)
       0003EE 28 20            [12] 1070 	jr	Z, 00104$
       0003F0 FArCDr00         [16] 1071 	ld	a, (#_joypad_previous)
       0003F3 CB 4F            [ 8] 1072 	bit	1, a
       0003F5 20 19            [12] 1073 	jr	NZ, 00104$
-                           0003F7  1074 	C$main.c$182$2_0$252	= .
-                                   1075 	.globl	C$main.c$182$2_0$252
+                           0003F7  1074 	C$main.c$182$2_0$253	= .
+                                   1075 	.globl	C$main.c$182$2_0$253
                                    1076 ;src/main.c:182: player_dir--;
       0003F7 21rCBr00         [12] 1077 	ld	hl, #_player_dir
       0003FA 35               [12] 1078 	dec	(hl)
-                           0003FB  1079 	C$main.c$183$2_0$252	= .
-                                   1080 	.globl	C$main.c$183$2_0$252
+                           0003FB  1079 	C$main.c$183$2_0$253	= .
+                                   1080 	.globl	C$main.c$183$2_0$253
                                    1081 ;src/main.c:183: if (player_dir==255){
       0003FB 7E               [ 8] 1082 	ld	a, (hl)
       0003FC 3C               [ 4] 1083 	inc	a
       0003FD 20 05            [12] 1084 	jr	NZ, 00102$
-                           0003FF  1085 	C$main.c$184$3_0$253	= .
-                                   1086 	.globl	C$main.c$184$3_0$253
+                           0003FF  1085 	C$main.c$184$3_0$254	= .
+                                   1086 	.globl	C$main.c$184$3_0$254
                                    1087 ;src/main.c:184: player_dir = west;
       0003FF 21rCBr00         [12] 1088 	ld	hl, #_player_dir
       000402 36 03            [12] 1089 	ld	(hl), #0x03
       000404                       1090 00102$:
-                           000404  1091 	C$main.c$186$2_0$252	= .
-                                   1092 	.globl	C$main.c$186$2_0$252
+                           000404  1091 	C$main.c$186$2_0$253	= .
+                                   1092 	.globl	C$main.c$186$2_0$253
                                    1093 ;src/main.c:186: update_dng(test_dungeon,15,15);
       000404 3E 0F            [ 8] 1094 	ld	a, #0x0f
       000406 F5               [16] 1095 	push	af
@@ -1098,8 +1098,8 @@
       00040A 11r71r01         [12] 1098 	ld	de, #_test_dungeon
       00040D CDr52r02         [24] 1099 	call	_update_dng
       000410                       1100 00104$:
-                           000410  1101 	C$main.c$189$1_0$251	= .
-                                   1102 	.globl	C$main.c$189$1_0$251
+                           000410  1101 	C$main.c$189$1_0$252	= .
+                                   1102 	.globl	C$main.c$189$1_0$252
                                    1103 ;src/main.c:189: if((joypad_current & J_RIGHT) && !(joypad_previous & J_RIGHT)){
       000410 FArCCr00         [16] 1104 	ld	a, (#_joypad_current)
       000413 0F               [ 4] 1105 	rrca
@@ -1107,25 +1107,25 @@
       000416 FArCDr00         [16] 1107 	ld	a, (#_joypad_previous)
       000419 0F               [ 4] 1108 	rrca
       00041A 38 1A            [12] 1109 	jr	C, 00109$
-                           00041C  1110 	C$main.c$190$2_0$254	= .
-                                   1111 	.globl	C$main.c$190$2_0$254
+                           00041C  1110 	C$main.c$190$2_0$255	= .
+                                   1111 	.globl	C$main.c$190$2_0$255
                                    1112 ;src/main.c:190: player_dir++;
       00041C 21rCBr00         [12] 1113 	ld	hl, #_player_dir
       00041F 34               [12] 1114 	inc	(hl)
-                           000420  1115 	C$main.c$191$2_0$254	= .
-                                   1116 	.globl	C$main.c$191$2_0$254
+                           000420  1115 	C$main.c$191$2_0$255	= .
+                                   1116 	.globl	C$main.c$191$2_0$255
                                    1117 ;src/main.c:191: if(player_dir==4){
       000420 7E               [ 8] 1118 	ld	a, (hl)
       000421 D6 04            [ 8] 1119 	sub	a, #0x04
       000423 20 05            [12] 1120 	jr	NZ, 00107$
-                           000425  1121 	C$main.c$192$3_0$255	= .
-                                   1122 	.globl	C$main.c$192$3_0$255
+                           000425  1121 	C$main.c$192$3_0$256	= .
+                                   1122 	.globl	C$main.c$192$3_0$256
                                    1123 ;src/main.c:192: player_dir=north;
       000425 21rCBr00         [12] 1124 	ld	hl, #_player_dir
       000428 36 00            [12] 1125 	ld	(hl), #0x00
       00042A                       1126 00107$:
-                           00042A  1127 	C$main.c$194$2_0$254	= .
-                                   1128 	.globl	C$main.c$194$2_0$254
+                           00042A  1127 	C$main.c$194$2_0$255	= .
+                                   1128 	.globl	C$main.c$194$2_0$255
                                    1129 ;src/main.c:194: update_dng(test_dungeon,15,15);
       00042A 3E 0F            [ 8] 1130 	ld	a, #0x0f
       00042C F5               [16] 1131 	push	af
@@ -1134,8 +1134,8 @@
       000430 11r71r01         [12] 1134 	ld	de, #_test_dungeon
       000433 CDr52r02         [24] 1135 	call	_update_dng
       000436                       1136 00109$:
-                           000436  1137 	C$main.c$197$1_0$251	= .
-                                   1138 	.globl	C$main.c$197$1_0$251
+                           000436  1137 	C$main.c$197$1_0$252	= .
+                                   1138 	.globl	C$main.c$197$1_0$252
                                    1139 ;src/main.c:197: if((joypad_current & J_UP) && !(joypad_previous & J_UP)){
       000436 FArCCr00         [16] 1140 	ld	a, (#_joypad_current)
       000439 CB 57            [ 8] 1141 	bit	2, a
@@ -1143,24 +1143,24 @@
       00043E FArCDr00         [16] 1143 	ld	a, (#_joypad_previous)
       000441 CB 57            [ 8] 1144 	bit	2, a
       000443 C2r6Cr05         [16] 1145 	jp	NZ,00129$
-                           000446  1146 	C$main.c$200$1_0$251	= .
-                                   1147 	.globl	C$main.c$200$1_0$251
+                           000446  1146 	C$main.c$200$1_0$252	= .
+                                   1147 	.globl	C$main.c$200$1_0$252
                                    1148 ;src/main.c:200: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
       000446 21r01r00         [12] 1149 	ld	hl, #_player_y
       000449 5E               [ 8] 1150 	ld	e, (hl)
-                           00044A  1151 	C$main.c$198$2_0$256	= .
-                                   1152 	.globl	C$main.c$198$2_0$256
+                           00044A  1151 	C$main.c$198$2_0$257	= .
+                                   1152 	.globl	C$main.c$198$2_0$257
                                    1153 ;src/main.c:198: switch(player_dir){
       00044A FArCBr00         [16] 1154 	ld	a, (#_player_dir)
       00044D B7               [ 4] 1155 	or	a, a
       00044E 28 1A            [12] 1156 	jr	Z, 00111$
-                           000450  1157 	C$main.c$206$1_0$251	= .
-                                   1158 	.globl	C$main.c$206$1_0$251
+                           000450  1157 	C$main.c$206$1_0$252	= .
+                                   1158 	.globl	C$main.c$206$1_0$252
                                    1159 ;src/main.c:206: if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
       000450 21r00r00         [12] 1160 	ld	hl, #_player_x
       000453 4E               [ 8] 1161 	ld	c, (hl)
-                           000454  1162 	C$main.c$198$2_0$256	= .
-                                   1163 	.globl	C$main.c$198$2_0$256
+                           000454  1162 	C$main.c$198$2_0$257	= .
+                                   1163 	.globl	C$main.c$198$2_0$257
                                    1164 ;src/main.c:198: switch(player_dir){
       000454 FArCBr00         [16] 1165 	ld	a, (#_player_dir)
       000457 3D               [ 4] 1166 	dec	a
@@ -1171,12 +1171,12 @@
       000462 D6 03            [ 8] 1171 	sub	a, #0x03
       000464 CAr2Er05         [16] 1172 	jp	Z,00123$
       000467 C3r6Cr05         [16] 1173 	jp	00129$
-                           00046A  1174 	C$main.c$199$3_0$257	= .
-                                   1175 	.globl	C$main.c$199$3_0$257
+                           00046A  1174 	C$main.c$199$3_0$258	= .
+                                   1175 	.globl	C$main.c$199$3_0$258
                                    1176 ;src/main.c:199: case north:
       00046A                       1177 00111$:
-                           00046A  1178 	C$main.c$200$3_0$257	= .
-                                   1179 	.globl	C$main.c$200$3_0$257
+                           00046A  1178 	C$main.c$200$3_0$258	= .
+                                   1179 	.globl	C$main.c$200$3_0$258
                                    1180 ;src/main.c:200: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
       00046A 43               [ 4] 1181 	ld	b, e
       00046B 05               [ 4] 1182 	dec	b
@@ -1205,13 +1205,13 @@
       000495 3D               [ 4] 1205 	dec	a
       000496 C2r6Cr05         [16] 1206 	jp	NZ,00129$
       000499                       1207 00112$:
-                           000499  1208 	C$main.c$201$4_0$258	= .
-                                   1209 	.globl	C$main.c$201$4_0$258
+                           000499  1208 	C$main.c$201$4_0$259	= .
+                                   1209 	.globl	C$main.c$201$4_0$259
                                    1210 ;src/main.c:201: player_y--;
       000499 21r01r00         [12] 1211 	ld	hl, #_player_y
       00049C 35               [12] 1212 	dec	(hl)
-                           00049D  1213 	C$main.c$202$4_0$258	= .
-                                   1214 	.globl	C$main.c$202$4_0$258
+                           00049D  1213 	C$main.c$202$4_0$259	= .
+                                   1214 	.globl	C$main.c$202$4_0$259
                                    1215 ;src/main.c:202: update_dng(test_dungeon,15,15);
       00049D 3E 0F            [ 8] 1216 	ld	a, #0x0f
       00049F F5               [16] 1217 	push	af
@@ -1219,16 +1219,16 @@
       0004A1 3E 0F            [ 8] 1219 	ld	a, #0x0f
       0004A3 11r71r01         [12] 1220 	ld	de, #_test_dungeon
       0004A6 CDr52r02         [24] 1221 	call	_update_dng
-                           0004A9  1222 	C$main.c$204$3_0$257	= .
-                                   1223 	.globl	C$main.c$204$3_0$257
+                           0004A9  1222 	C$main.c$204$3_0$258	= .
+                                   1223 	.globl	C$main.c$204$3_0$258
                                    1224 ;src/main.c:204: break;
       0004A9 C3r6Cr05         [16] 1225 	jp	00129$
-                           0004AC  1226 	C$main.c$205$3_0$257	= .
-                                   1227 	.globl	C$main.c$205$3_0$257
+                           0004AC  1226 	C$main.c$205$3_0$258	= .
+                                   1227 	.globl	C$main.c$205$3_0$258
                                    1228 ;src/main.c:205: case east:
       0004AC                       1229 00115$:
-                           0004AC  1230 	C$main.c$206$3_0$257	= .
-                                   1231 	.globl	C$main.c$206$3_0$257
+                           0004AC  1230 	C$main.c$206$3_0$258	= .
+                                   1231 	.globl	C$main.c$206$3_0$258
                                    1232 ;src/main.c:206: if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
       0004AC 0C               [ 4] 1233 	inc	c
       0004AD FAr01r00         [16] 1234 	ld	a, (#_player_y)
@@ -1259,13 +1259,13 @@
       0004D7 3D               [ 4] 1259 	dec	a
       0004D8 C2r6Cr05         [16] 1260 	jp	NZ,00129$
       0004DB                       1261 00116$:
-                           0004DB  1262 	C$main.c$207$4_0$259	= .
-                                   1263 	.globl	C$main.c$207$4_0$259
+                           0004DB  1262 	C$main.c$207$4_0$260	= .
+                                   1263 	.globl	C$main.c$207$4_0$260
                                    1264 ;src/main.c:207: player_x++;
       0004DB 21r00r00         [12] 1265 	ld	hl, #_player_x
       0004DE 34               [12] 1266 	inc	(hl)
-                           0004DF  1267 	C$main.c$208$4_0$259	= .
-                                   1268 	.globl	C$main.c$208$4_0$259
+                           0004DF  1267 	C$main.c$208$4_0$260	= .
+                                   1268 	.globl	C$main.c$208$4_0$260
                                    1269 ;src/main.c:208: update_dng(test_dungeon,15,15);
       0004DF 3E 0F            [ 8] 1270 	ld	a, #0x0f
       0004E1 F5               [16] 1271 	push	af
@@ -1273,16 +1273,16 @@
       0004E3 3E 0F            [ 8] 1273 	ld	a, #0x0f
       0004E5 11r71r01         [12] 1274 	ld	de, #_test_dungeon
       0004E8 CDr52r02         [24] 1275 	call	_update_dng
-                           0004EB  1276 	C$main.c$210$3_0$257	= .
-                                   1277 	.globl	C$main.c$210$3_0$257
+                           0004EB  1276 	C$main.c$210$3_0$258	= .
+                                   1277 	.globl	C$main.c$210$3_0$258
                                    1278 ;src/main.c:210: break;
       0004EB C3r6Cr05         [16] 1279 	jp	00129$
-                           0004EE  1280 	C$main.c$211$3_0$257	= .
-                                   1281 	.globl	C$main.c$211$3_0$257
+                           0004EE  1280 	C$main.c$211$3_0$258	= .
+                                   1281 	.globl	C$main.c$211$3_0$258
                                    1282 ;src/main.c:211: case south:
       0004EE                       1283 00119$:
-                           0004EE  1284 	C$main.c$212$3_0$257	= .
-                                   1285 	.globl	C$main.c$212$3_0$257
+                           0004EE  1284 	C$main.c$212$3_0$258	= .
+                                   1285 	.globl	C$main.c$212$3_0$258
                                    1286 ;src/main.c:212: if(return_value(test_dungeon,15,15,player_x,player_y+1)==0x00||return_value(test_dungeon,15,15,player_x,player_y+1)==0x01){
       0004EE 43               [ 4] 1287 	ld	b, e
       0004EF 04               [ 4] 1288 	inc	b
@@ -1311,13 +1311,13 @@
       000519 3D               [ 4] 1311 	dec	a
       00051A 20 50            [12] 1312 	jr	NZ, 00129$
       00051C                       1313 00120$:
-                           00051C  1314 	C$main.c$213$4_0$260	= .
-                                   1315 	.globl	C$main.c$213$4_0$260
+                           00051C  1314 	C$main.c$213$4_0$261	= .
+                                   1315 	.globl	C$main.c$213$4_0$261
                                    1316 ;src/main.c:213: player_y++;
       00051C 21r01r00         [12] 1317 	ld	hl, #_player_y
       00051F 34               [12] 1318 	inc	(hl)
-                           000520  1319 	C$main.c$214$4_0$260	= .
-                                   1320 	.globl	C$main.c$214$4_0$260
+                           000520  1319 	C$main.c$214$4_0$261	= .
+                                   1320 	.globl	C$main.c$214$4_0$261
                                    1321 ;src/main.c:214: update_dng(test_dungeon,15,15);
       000520 3E 0F            [ 8] 1322 	ld	a, #0x0f
       000522 F5               [16] 1323 	push	af
@@ -1325,16 +1325,16 @@
       000524 3E 0F            [ 8] 1325 	ld	a, #0x0f
       000526 11r71r01         [12] 1326 	ld	de, #_test_dungeon
       000529 CDr52r02         [24] 1327 	call	_update_dng
-                           00052C  1328 	C$main.c$216$3_0$257	= .
-                                   1329 	.globl	C$main.c$216$3_0$257
+                           00052C  1328 	C$main.c$216$3_0$258	= .
+                                   1329 	.globl	C$main.c$216$3_0$258
                                    1330 ;src/main.c:216: break;
       00052C 18 3E            [12] 1331 	jr	00129$
-                           00052E  1332 	C$main.c$217$3_0$257	= .
-                                   1333 	.globl	C$main.c$217$3_0$257
+                           00052E  1332 	C$main.c$217$3_0$258	= .
+                                   1333 	.globl	C$main.c$217$3_0$258
                                    1334 ;src/main.c:217: case west:
       00052E                       1335 00123$:
-                           00052E  1336 	C$main.c$218$3_0$257	= .
-                                   1337 	.globl	C$main.c$218$3_0$257
+                           00052E  1336 	C$main.c$218$3_0$258	= .
+                                   1337 	.globl	C$main.c$218$3_0$258
                                    1338 ;src/main.c:218: if(return_value(test_dungeon,15,15,player_x-1,player_y)==0x00||return_value(test_dungeon,15,15,player_x-1,player_y)==0x01){
       00052E 0D               [ 4] 1339 	dec	c
       00052F FAr01r00         [16] 1340 	ld	a, (#_player_y)
@@ -1365,13 +1365,13 @@
       000559 3D               [ 4] 1365 	dec	a
       00055A 20 10            [12] 1366 	jr	NZ, 00129$
       00055C                       1367 00124$:
-                           00055C  1368 	C$main.c$219$4_0$261	= .
-                                   1369 	.globl	C$main.c$219$4_0$261
+                           00055C  1368 	C$main.c$219$4_0$262	= .
+                                   1369 	.globl	C$main.c$219$4_0$262
                                    1370 ;src/main.c:219: player_x--;
       00055C 21r00r00         [12] 1371 	ld	hl, #_player_x
       00055F 35               [12] 1372 	dec	(hl)
-                           000560  1373 	C$main.c$220$4_0$261	= .
-                                   1374 	.globl	C$main.c$220$4_0$261
+                           000560  1373 	C$main.c$220$4_0$262	= .
+                                   1374 	.globl	C$main.c$220$4_0$262
                                    1375 ;src/main.c:220: update_dng(test_dungeon,15,15);
       000560 3E 0F            [ 8] 1376 	ld	a, #0x0f
       000562 F5               [16] 1377 	push	af
@@ -1379,12 +1379,12 @@
       000564 3E 0F            [ 8] 1379 	ld	a, #0x0f
       000566 11r71r01         [12] 1380 	ld	de, #_test_dungeon
       000569 CDr52r02         [24] 1381 	call	_update_dng
-                           00056C  1382 	C$main.c$223$1_0$251	= .
-                                   1383 	.globl	C$main.c$223$1_0$251
+                           00056C  1382 	C$main.c$223$1_0$252	= .
+                                   1383 	.globl	C$main.c$223$1_0$252
                                    1384 ;src/main.c:223: }
       00056C                       1385 00129$:
-                           00056C  1386 	C$main.c$225$1_0$251	= .
-                                   1387 	.globl	C$main.c$225$1_0$251
+                           00056C  1386 	C$main.c$225$1_0$252	= .
+                                   1387 	.globl	C$main.c$225$1_0$252
                                    1388 ;src/main.c:225: if((joypad_current & J_DOWN) && !(joypad_previous & J_DOWN)){
       00056C FArCCr00         [16] 1389 	ld	a, (#_joypad_current)
       00056F CB 5F            [ 8] 1390 	bit	3, a
@@ -1392,24 +1392,24 @@
       000572 FArCDr00         [16] 1392 	ld	a, (#_joypad_previous)
       000575 CB 5F            [ 8] 1393 	bit	3, a
       000577 C0               [20] 1394 	ret	NZ
-                           000578  1395 	C$main.c$200$1_0$251	= .
-                                   1396 	.globl	C$main.c$200$1_0$251
+                           000578  1395 	C$main.c$200$1_0$252	= .
+                                   1396 	.globl	C$main.c$200$1_0$252
                                    1397 ;src/main.c:200: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
       000578 21r01r00         [12] 1398 	ld	hl, #_player_y
       00057B 5E               [ 8] 1399 	ld	e, (hl)
-                           00057C  1400 	C$main.c$226$2_0$262	= .
-                                   1401 	.globl	C$main.c$226$2_0$262
+                           00057C  1400 	C$main.c$226$2_0$263	= .
+                                   1401 	.globl	C$main.c$226$2_0$263
                                    1402 ;src/main.c:226: switch(player_dir){
       00057C FArCBr00         [16] 1403 	ld	a, (#_player_dir)
       00057F B7               [ 4] 1404 	or	a, a
       000580 28 18            [12] 1405 	jr	Z, 00131$
-                           000582  1406 	C$main.c$206$1_0$251	= .
-                                   1407 	.globl	C$main.c$206$1_0$251
+                           000582  1406 	C$main.c$206$1_0$252	= .
+                                   1407 	.globl	C$main.c$206$1_0$252
                                    1408 ;src/main.c:206: if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
       000582 21r00r00         [12] 1409 	ld	hl, #_player_x
       000585 4E               [ 8] 1410 	ld	c, (hl)
-                           000586  1411 	C$main.c$226$2_0$262	= .
-                                   1412 	.globl	C$main.c$226$2_0$262
+                           000586  1411 	C$main.c$226$2_0$263	= .
+                                   1412 	.globl	C$main.c$226$2_0$263
                                    1413 ;src/main.c:226: switch(player_dir){
       000586 FArCBr00         [16] 1414 	ld	a, (#_player_dir)
       000589 3D               [ 4] 1415 	dec	a
@@ -1420,12 +1420,12 @@
       000594 D6 03            [ 8] 1420 	sub	a, #0x03
       000596 CAr54r06         [16] 1421 	jp	Z,00143$
       000599 C9               [16] 1422 	ret
-                           00059A  1423 	C$main.c$227$3_0$263	= .
-                                   1424 	.globl	C$main.c$227$3_0$263
+                           00059A  1423 	C$main.c$227$3_0$264	= .
+                                   1424 	.globl	C$main.c$227$3_0$264
                                    1425 ;src/main.c:227: case north:
       00059A                       1426 00131$:
-                           00059A  1427 	C$main.c$228$3_0$263	= .
-                                   1428 	.globl	C$main.c$228$3_0$263
+                           00059A  1427 	C$main.c$228$3_0$264	= .
+                                   1428 	.globl	C$main.c$228$3_0$264
                                    1429 ;src/main.c:228: if(return_value(test_dungeon,15,15,player_x,player_y+1)==0x00||return_value(test_dungeon,15,15,player_x,player_y+1)==0x01){
       00059A 43               [ 4] 1430 	ld	b, e
       00059B 04               [ 4] 1431 	inc	b
@@ -1454,13 +1454,13 @@
       0005C5 3D               [ 4] 1454 	dec	a
       0005C6 C0               [20] 1455 	ret	NZ
       0005C7                       1456 00132$:
-                           0005C7  1457 	C$main.c$229$4_0$264	= .
-                                   1458 	.globl	C$main.c$229$4_0$264
+                           0005C7  1457 	C$main.c$229$4_0$265	= .
+                                   1458 	.globl	C$main.c$229$4_0$265
                                    1459 ;src/main.c:229: player_y++;
       0005C7 21r01r00         [12] 1460 	ld	hl, #_player_y
       0005CA 34               [12] 1461 	inc	(hl)
-                           0005CB  1462 	C$main.c$230$4_0$264	= .
-                                   1463 	.globl	C$main.c$230$4_0$264
+                           0005CB  1462 	C$main.c$230$4_0$265	= .
+                                   1463 	.globl	C$main.c$230$4_0$265
                                    1464 ;src/main.c:230: update_dng(test_dungeon,15,15);
       0005CB 3E 0F            [ 8] 1465 	ld	a, #0x0f
       0005CD F5               [16] 1466 	push	af
@@ -1468,16 +1468,16 @@
       0005CF 3E 0F            [ 8] 1468 	ld	a, #0x0f
       0005D1 11r71r01         [12] 1469 	ld	de, #_test_dungeon
       0005D4 CDr52r02         [24] 1470 	call	_update_dng
-                           0005D7  1471 	C$main.c$232$3_0$263	= .
-                                   1472 	.globl	C$main.c$232$3_0$263
+                           0005D7  1471 	C$main.c$232$3_0$264	= .
+                                   1472 	.globl	C$main.c$232$3_0$264
                                    1473 ;src/main.c:232: break;
       0005D7 C9               [16] 1474 	ret
-                           0005D8  1475 	C$main.c$233$3_0$263	= .
-                                   1476 	.globl	C$main.c$233$3_0$263
+                           0005D8  1475 	C$main.c$233$3_0$264	= .
+                                   1476 	.globl	C$main.c$233$3_0$264
                                    1477 ;src/main.c:233: case east:
       0005D8                       1478 00135$:
-                           0005D8  1479 	C$main.c$234$3_0$263	= .
-                                   1480 	.globl	C$main.c$234$3_0$263
+                           0005D8  1479 	C$main.c$234$3_0$264	= .
+                                   1480 	.globl	C$main.c$234$3_0$264
                                    1481 ;src/main.c:234: if(return_value(test_dungeon,15,15,player_x-1,player_y)==0x00||return_value(test_dungeon,15,15,player_x-1,player_y)==0x01){
       0005D8 0D               [ 4] 1482 	dec	c
       0005D9 FAr01r00         [16] 1483 	ld	a, (#_player_y)
@@ -1508,13 +1508,13 @@
       000603 3D               [ 4] 1508 	dec	a
       000604 C0               [20] 1509 	ret	NZ
       000605                       1510 00136$:
-                           000605  1511 	C$main.c$235$4_0$265	= .
-                                   1512 	.globl	C$main.c$235$4_0$265
+                           000605  1511 	C$main.c$235$4_0$266	= .
+                                   1512 	.globl	C$main.c$235$4_0$266
                                    1513 ;src/main.c:235: player_x--;
       000605 21r00r00         [12] 1514 	ld	hl, #_player_x
       000608 35               [12] 1515 	dec	(hl)
-                           000609  1516 	C$main.c$236$4_0$265	= .
-                                   1517 	.globl	C$main.c$236$4_0$265
+                           000609  1516 	C$main.c$236$4_0$266	= .
+                                   1517 	.globl	C$main.c$236$4_0$266
                                    1518 ;src/main.c:236: update_dng(test_dungeon,15,15);
       000609 3E 0F            [ 8] 1519 	ld	a, #0x0f
       00060B F5               [16] 1520 	push	af
@@ -1522,16 +1522,16 @@
       00060D 3E 0F            [ 8] 1522 	ld	a, #0x0f
       00060F 11r71r01         [12] 1523 	ld	de, #_test_dungeon
       000612 CDr52r02         [24] 1524 	call	_update_dng
-                           000615  1525 	C$main.c$238$3_0$263	= .
-                                   1526 	.globl	C$main.c$238$3_0$263
+                           000615  1525 	C$main.c$238$3_0$264	= .
+                                   1526 	.globl	C$main.c$238$3_0$264
                                    1527 ;src/main.c:238: break;
       000615 C9               [16] 1528 	ret
-                           000616  1529 	C$main.c$239$3_0$263	= .
-                                   1530 	.globl	C$main.c$239$3_0$263
+                           000616  1529 	C$main.c$239$3_0$264	= .
+                                   1530 	.globl	C$main.c$239$3_0$264
                                    1531 ;src/main.c:239: case south:
       000616                       1532 00139$:
-                           000616  1533 	C$main.c$240$3_0$263	= .
-                                   1534 	.globl	C$main.c$240$3_0$263
+                           000616  1533 	C$main.c$240$3_0$264	= .
+                                   1534 	.globl	C$main.c$240$3_0$264
                                    1535 ;src/main.c:240: if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
       000616 43               [ 4] 1536 	ld	b, e
       000617 05               [ 4] 1537 	dec	b
@@ -1560,13 +1560,13 @@
       000641 3D               [ 4] 1560 	dec	a
       000642 C0               [20] 1561 	ret	NZ
       000643                       1562 00140$:
-                           000643  1563 	C$main.c$241$4_0$266	= .
-                                   1564 	.globl	C$main.c$241$4_0$266
+                           000643  1563 	C$main.c$241$4_0$267	= .
+                                   1564 	.globl	C$main.c$241$4_0$267
                                    1565 ;src/main.c:241: player_y--;
       000643 21r01r00         [12] 1566 	ld	hl, #_player_y
       000646 35               [12] 1567 	dec	(hl)
-                           000647  1568 	C$main.c$242$4_0$266	= .
-                                   1569 	.globl	C$main.c$242$4_0$266
+                           000647  1568 	C$main.c$242$4_0$267	= .
+                                   1569 	.globl	C$main.c$242$4_0$267
                                    1570 ;src/main.c:242: update_dng(test_dungeon,15,15);
       000647 3E 0F            [ 8] 1571 	ld	a, #0x0f
       000649 F5               [16] 1572 	push	af
@@ -1574,16 +1574,16 @@
       00064B 3E 0F            [ 8] 1574 	ld	a, #0x0f
       00064D 11r71r01         [12] 1575 	ld	de, #_test_dungeon
       000650 CDr52r02         [24] 1576 	call	_update_dng
-                           000653  1577 	C$main.c$244$3_0$263	= .
-                                   1578 	.globl	C$main.c$244$3_0$263
+                           000653  1577 	C$main.c$244$3_0$264	= .
+                                   1578 	.globl	C$main.c$244$3_0$264
                                    1579 ;src/main.c:244: break;
       000653 C9               [16] 1580 	ret
-                           000654  1581 	C$main.c$245$3_0$263	= .
-                                   1582 	.globl	C$main.c$245$3_0$263
+                           000654  1581 	C$main.c$245$3_0$264	= .
+                                   1582 	.globl	C$main.c$245$3_0$264
                                    1583 ;src/main.c:245: case west:
       000654                       1584 00143$:
-                           000654  1585 	C$main.c$246$3_0$263	= .
-                                   1586 	.globl	C$main.c$246$3_0$263
+                           000654  1585 	C$main.c$246$3_0$264	= .
+                                   1586 	.globl	C$main.c$246$3_0$264
                                    1587 ;src/main.c:246: if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
       000654 0C               [ 4] 1588 	inc	c
       000655 FAr01r00         [16] 1589 	ld	a, (#_player_y)
@@ -1614,13 +1614,13 @@
       00067F 3D               [ 4] 1614 	dec	a
       000680 C0               [20] 1615 	ret	NZ
       000681                       1616 00144$:
-                           000681  1617 	C$main.c$247$4_0$267	= .
-                                   1618 	.globl	C$main.c$247$4_0$267
+                           000681  1617 	C$main.c$247$4_0$268	= .
+                                   1618 	.globl	C$main.c$247$4_0$268
                                    1619 ;src/main.c:247: player_x++;
       000681 21r00r00         [12] 1620 	ld	hl, #_player_x
       000684 34               [12] 1621 	inc	(hl)
-                           000685  1622 	C$main.c$248$4_0$267	= .
-                                   1623 	.globl	C$main.c$248$4_0$267
+                           000685  1622 	C$main.c$248$4_0$268	= .
+                                   1623 	.globl	C$main.c$248$4_0$268
                                    1624 ;src/main.c:248: update_dng(test_dungeon,15,15);
       000685 3E 0F            [ 8] 1625 	ld	a, #0x0f
       000687 F5               [16] 1626 	push	af
@@ -1628,28 +1628,28 @@
       000689 3E 0F            [ 8] 1628 	ld	a, #0x0f
       00068B 11r71r01         [12] 1629 	ld	de, #_test_dungeon
       00068E CDr52r02         [24] 1630 	call	_update_dng
-                           000691  1631 	C$main.c$251$1_0$251	= .
-                                   1632 	.globl	C$main.c$251$1_0$251
+                           000691  1631 	C$main.c$251$1_0$252	= .
+                                   1632 	.globl	C$main.c$251$1_0$252
                                    1633 ;src/main.c:251: }
-                           000691  1634 	C$main.c$253$1_0$251	= .
-                                   1635 	.globl	C$main.c$253$1_0$251
+                           000691  1634 	C$main.c$253$1_0$252	= .
+                                   1635 	.globl	C$main.c$253$1_0$252
                                    1636 ;src/main.c:253: }
-                           000691  1637 	C$main.c$253$1_0$251	= .
-                                   1638 	.globl	C$main.c$253$1_0$251
+                           000691  1637 	C$main.c$253$1_0$252	= .
+                                   1638 	.globl	C$main.c$253$1_0$252
                            000691  1639 	XG$dungeon_logic_upd$0$0	= .
                                    1640 	.globl	XG$dungeon_logic_upd$0$0
       000691 C9               [16] 1641 	ret
                            000692  1642 	G$main$0$0	= .
                                    1643 	.globl	G$main$0$0
-                           000692  1644 	C$main.c$255$1_0$269	= .
-                                   1645 	.globl	C$main.c$255$1_0$269
+                           000692  1644 	C$main.c$255$1_0$270	= .
+                                   1645 	.globl	C$main.c$255$1_0$270
                                    1646 ;src/main.c:255: void main(void)
                                    1647 ;	---------------------------------
                                    1648 ; Function main
                                    1649 ; ---------------------------------
       000692                       1650 _main::
-                           000692  1651 	C$main.c$257$1_0$269	= .
-                                   1652 	.globl	C$main.c$257$1_0$269
+                           000692  1651 	C$main.c$257$1_0$270	= .
+                                   1652 	.globl	C$main.c$257$1_0$270
                                    1653 ;src/main.c:257: init_dungeon(test_dungeon, 15, 15);
       000692 3E 0F            [ 8] 1654 	ld	a, #0x0f
       000694 F5               [16] 1655 	push	af
@@ -1657,12 +1657,12 @@
       000696 3E 0F            [ 8] 1657 	ld	a, #0x0f
       000698 11r71r01         [12] 1658 	ld	de, #_test_dungeon
       00069B CDr00r00         [24] 1659 	call	_init_dungeon
-                           00069E  1660 	C$main.c$258$1_0$269	= .
-                                   1661 	.globl	C$main.c$258$1_0$269
+                           00069E  1660 	C$main.c$258$1_0$270	= .
+                                   1661 	.globl	C$main.c$258$1_0$270
                                    1662 ;src/main.c:258: init_dng_UI();
       00069E CDrB8r02         [24] 1663 	call	_init_dng_UI
-                           0006A1  1664 	C$main.c$259$1_0$269	= .
-                                   1665 	.globl	C$main.c$259$1_0$269
+                           0006A1  1664 	C$main.c$259$1_0$270	= .
+                                   1665 	.globl	C$main.c$259$1_0$270
                                    1666 ;src/main.c:259: update_dng(test_dungeon,15,15);
       0006A1 3E 0F            [ 8] 1667 	ld	a, #0x0f
       0006A3 F5               [16] 1668 	push	af
@@ -1670,8 +1670,8 @@
       0006A5 3E 0F            [ 8] 1670 	ld	a, #0x0f
       0006A7 11r71r01         [12] 1671 	ld	de, #_test_dungeon
       0006AA CDr52r02         [24] 1672 	call	_update_dng
-                           0006AD  1673 	C$main.c$260$1_0$269	= .
-                                   1674 	.globl	C$main.c$260$1_0$269
+                           0006AD  1673 	C$main.c$260$1_0$270	= .
+                                   1674 	.globl	C$main.c$260$1_0$270
                                    1675 ;src/main.c:260: set_sprite_data(0,26,UI_tiles);
       0006AD 11r00r00         [12] 1676 	ld	de, #_UI_tiles
       0006B0 D5               [16] 1677 	push	de
@@ -1679,270 +1679,273 @@
       0006B4 E5               [16] 1679 	push	hl
       0006B5 CDr00r00         [24] 1680 	call	_set_sprite_data
       0006B8 E8 04            [16] 1681 	add	sp, #4
-                           0006BA  1682 	C$main.c$265$1_0$269	= .
-                                   1683 	.globl	C$main.c$265$1_0$269
-                                   1684 ;src/main.c:265: pull_letters("It's dangerous to go alone take this",37);
-      0006BA 3E 25            [ 8] 1685 	ld	a, #0x25
-      0006BC 11rD3r06         [12] 1686 	ld	de, #___str_0
-      0006BF CDr00r00         [24] 1687 	call	_pull_letters
-                           0006C2  1688 	C$main.c$269$1_0$269	= .
-                                   1689 	.globl	C$main.c$269$1_0$269
-                                   1690 ;src/main.c:269: SHOW_SPRITES;
-      0006C2 F0r00            [12] 1691 	ldh	a, (_LCDC_REG + 0)
-      0006C4 F6 02            [ 8] 1692 	or	a, #0x02
-      0006C6 E0r00            [12] 1693 	ldh	(_LCDC_REG + 0), a
-                           0006C8  1694 	C$main.c$271$1_0$269	= .
-                                   1695 	.globl	C$main.c$271$1_0$269
-                                   1696 ;src/main.c:271: while(1) {
-      0006C8                       1697 00102$:
-                           0006C8  1698 	C$main.c$274$2_0$270	= .
-                                   1699 	.globl	C$main.c$274$2_0$270
-                                   1700 ;src/main.c:274: dungeon_logic_upd();
-      0006C8 CDrDFr03         [24] 1701 	call	_dungeon_logic_upd
-                           0006CB  1702 	C$main.c$275$2_0$270	= .
-                                   1703 	.globl	C$main.c$275$2_0$270
-                                   1704 ;src/main.c:275: update_dng_UI();
-      0006CB CDrE9r02         [24] 1705 	call	_update_dng_UI
-                           0006CE  1706 	C$main.c$291$2_0$270	= .
-                                   1707 	.globl	C$main.c$291$2_0$270
-                                   1708 ;src/main.c:291: wait_vbl_done();
-      0006CE CDr00r00         [24] 1709 	call	_wait_vbl_done
-                           0006D1  1710 	C$main.c$293$1_0$269	= .
-                                   1711 	.globl	C$main.c$293$1_0$269
-                                   1712 ;src/main.c:293: }
-                           0006D1  1713 	C$main.c$293$1_0$269	= .
-                                   1714 	.globl	C$main.c$293$1_0$269
-                           0006D1  1715 	XG$main$0$0	= .
-                                   1716 	.globl	XG$main$0$0
-      0006D1 18 F5            [12] 1717 	jr	00102$
-                           0006D3  1718 Fmain$__str_0$0_0$0 == .
-      0006D3                       1719 ___str_0:
-      0006D3 49 74 27 73 20 64 61  1720 	.ascii "It's dangerous to go alone take this"
+                           0006BA  1682 	C$main.c$269$1_0$270	= .
+                                   1683 	.globl	C$main.c$269$1_0$270
+                                   1684 ;src/main.c:269: SHOW_SPRITES;
+      0006BA F0r00            [12] 1685 	ldh	a, (_LCDC_REG + 0)
+      0006BC F6 02            [ 8] 1686 	or	a, #0x02
+      0006BE E0r00            [12] 1687 	ldh	(_LCDC_REG + 0), a
+                           0006C0  1688 	C$main.c$271$1_0$270	= .
+                                   1689 	.globl	C$main.c$271$1_0$270
+                                   1690 ;src/main.c:271: while(1) {
+      0006C0                       1691 00102$:
+                           0006C0  1692 	C$main.c$274$2_0$271	= .
+                                   1693 	.globl	C$main.c$274$2_0$271
+                                   1694 ;src/main.c:274: dungeon_logic_upd();
+      0006C0 CDrDFr03         [24] 1695 	call	_dungeon_logic_upd
+                           0006C3  1696 	C$main.c$275$2_0$271	= .
+                                   1697 	.globl	C$main.c$275$2_0$271
+                                   1698 ;src/main.c:275: update_dng_UI();
+      0006C3 CDrE9r02         [24] 1699 	call	_update_dng_UI
+                           0006C6  1700 	C$main.c$277$2_0$271	= .
+                                   1701 	.globl	C$main.c$277$2_0$271
+                                   1702 ;src/main.c:277: pull_letters("It's dangerous to go alone take this",37,224);
+      0006C6 3E E0            [ 8] 1703 	ld	a, #0xe0
+      0006C8 F5               [16] 1704 	push	af
+      0006C9 33               [ 8] 1705 	inc	sp
+      0006CA 3E 25            [ 8] 1706 	ld	a, #0x25
+      0006CC 11rD7r06         [12] 1707 	ld	de, #___str_0
+      0006CF CDr00r00         [24] 1708 	call	_pull_letters
+                           0006D2  1709 	C$main.c$291$2_0$271	= .
+                                   1710 	.globl	C$main.c$291$2_0$271
+                                   1711 ;src/main.c:291: wait_vbl_done();
+      0006D2 CDr00r00         [24] 1712 	call	_wait_vbl_done
+                           0006D5  1713 	C$main.c$293$1_0$270	= .
+                                   1714 	.globl	C$main.c$293$1_0$270
+                                   1715 ;src/main.c:293: }
+                           0006D5  1716 	C$main.c$293$1_0$270	= .
+                                   1717 	.globl	C$main.c$293$1_0$270
+                           0006D5  1718 	XG$main$0$0	= .
+                                   1719 	.globl	XG$main$0$0
+      0006D5 18 E9            [12] 1720 	jr	00102$
+                           0006D7  1721 Fmain$__str_0$0_0$0 == .
+      0006D7                       1722 ___str_0:
+      0006D7 49 74 27 73 20 64 61  1723 	.ascii "It's dangerous to go alone take this"
              6E 67 65 72 6F 75 73
              20 74 6F 20 67 6F 20
              61 6C 6F 6E 65 20 74
              61 6B 65 20 74 68 69
              73
-      0006F7 00                    1721 	.db 0x00
-                                   1722 	.area _CODE
-                                   1723 	.area _INITIALIZER
-                           000000  1724 Fmain$__xinit_player_x$0_0$0 == .
-      000000                       1725 __xinit__player_x:
-      000000 00                    1726 	.db #0x00	; 0
-                           000001  1727 Fmain$__xinit_player_y$0_0$0 == .
-      000001                       1728 __xinit__player_y:
-      000001 00                    1729 	.db #0x00	; 0
-                           000002  1730 Fmain$__xinit_global_state$0_0$0 == .
-      000002                       1731 __xinit__global_state:
-      000002 01                    1732 	.db #0x01	; 1
-                           000003  1733 Fmain$__xinit_inventory$0_0$0 == .
-      000003                       1734 __xinit__inventory:
-      000003 00 00                 1735 	.dw #0x0000
-      000005 00                    1736 	.db 0x00
-      000006 00                    1737 	.db 0x00
-      000007 00                    1738 	.db 0x00
-      000008 00                    1739 	.db 0x00
-      000009 00                    1740 	.db 0x00
-      00000A 00                    1741 	.db 0x00
-      00000B 00                    1742 	.db 0x00
-      00000C 00                    1743 	.db 0x00
-      00000D 00                    1744 	.db 0x00
-      00000E 00                    1745 	.db 0x00
-      00000F 00                    1746 	.db 0x00
-      000010 00                    1747 	.db 0x00
-      000011 00                    1748 	.db 0x00
-      000012 00                    1749 	.db 0x00
-      000013 00                    1750 	.db 0x00
-      000014 00                    1751 	.db 0x00
-      000015 00                    1752 	.db 0x00
-      000016 00                    1753 	.db 0x00
-      000017 00                    1754 	.db 0x00
-      000018 00                    1755 	.db 0x00
-      000019 00                    1756 	.db 0x00
-      00001A 00                    1757 	.db 0x00
-      00001B 00                    1758 	.db 0x00
-      00001C 00                    1759 	.db 0x00
-      00001D 00                    1760 	.db 0x00
-      00001E 00                    1761 	.db 0x00
-      00001F 00                    1762 	.db 0x00
-      000020 00                    1763 	.db 0x00
-      000021 00                    1764 	.db 0x00
-      000022 00                    1765 	.db 0x00
-      000023 00                    1766 	.db 0x00
-      000024 00                    1767 	.db 0x00
-      000025 00                    1768 	.db 0x00
-      000026 00                    1769 	.db 0x00
-      000027 00                    1770 	.db 0x00
-      000028 00                    1771 	.db 0x00
-      000029 00                    1772 	.db 0x00
-      00002A 00                    1773 	.db 0x00
-      00002B 00                    1774 	.db 0x00
-      00002C 00                    1775 	.db 0x00
-      00002D 00                    1776 	.db 0x00
-      00002E 00                    1777 	.db 0x00
-      00002F 00                    1778 	.db 0x00
-      000030 00                    1779 	.db 0x00
-      000031 00                    1780 	.db 0x00
-      000032 00                    1781 	.db 0x00
-      000033 00                    1782 	.db 0x00
-      000034 00                    1783 	.db 0x00
-      000035 00                    1784 	.db 0x00
-      000036 00                    1785 	.db 0x00
-      000037 00                    1786 	.db 0x00
-      000038 00                    1787 	.db 0x00
-      000039 00                    1788 	.db 0x00
-      00003A 00                    1789 	.db 0x00
-      00003B 00                    1790 	.db 0x00
-      00003C 00                    1791 	.db 0x00
-      00003D 00                    1792 	.db 0x00
-      00003E 00                    1793 	.db 0x00
-      00003F 00                    1794 	.db 0x00
-      000040 00                    1795 	.db 0x00
-      000041 00                    1796 	.db 0x00
-      000042 00                    1797 	.db 0x00
-      000043 00                    1798 	.db 0x00
-      000044 00                    1799 	.db 0x00
-      000045 00                    1800 	.db 0x00
-      000046 00                    1801 	.db 0x00
-      000047 00                    1802 	.db 0x00
-      000048 00                    1803 	.db 0x00
-      000049 00                    1804 	.db 0x00
-      00004A 00                    1805 	.db 0x00
-      00004B 00                    1806 	.db 0x00
-      00004C 00                    1807 	.db 0x00
-      00004D 00                    1808 	.db 0x00
-      00004E 00                    1809 	.db 0x00
-      00004F 00                    1810 	.db 0x00
-      000050 00                    1811 	.db 0x00
-      000051 00                    1812 	.db 0x00
-      000052 00                    1813 	.db 0x00
-      000053 00                    1814 	.db 0x00
-      000054 00                    1815 	.db 0x00
-      000055 00                    1816 	.db 0x00
-      000056 00                    1817 	.db 0x00
-      000057 00                    1818 	.db 0x00
-      000058 00                    1819 	.db 0x00
-      000059 00                    1820 	.db 0x00
-      00005A 00                    1821 	.db 0x00
-      00005B 00                    1822 	.db 0x00
-      00005C 00                    1823 	.db 0x00
-      00005D 00                    1824 	.db 0x00
-      00005E 00                    1825 	.db 0x00
-      00005F 00                    1826 	.db 0x00
-      000060 00                    1827 	.db 0x00
-      000061 00                    1828 	.db 0x00
-      000062 00                    1829 	.db 0x00
-      000063 00                    1830 	.db 0x00
-      000064 00                    1831 	.db 0x00
-      000065 00                    1832 	.db 0x00
-      000066 00                    1833 	.db 0x00
-      000067 00                    1834 	.db 0x00
-      000068 00                    1835 	.db 0x00
-      000069 00                    1836 	.db 0x00
-      00006A 00                    1837 	.db 0x00
-      00006B 00                    1838 	.db 0x00
-      00006C 00                    1839 	.db 0x00
-      00006D 00                    1840 	.db 0x00
-      00006E 00                    1841 	.db 0x00
-      00006F 00                    1842 	.db 0x00
-      000070 00                    1843 	.db 0x00
-      000071 00                    1844 	.db 0x00
-      000072 00                    1845 	.db 0x00
-      000073 00                    1846 	.db 0x00
-      000074 00                    1847 	.db 0x00
-      000075 00                    1848 	.db 0x00
-      000076 00                    1849 	.db 0x00
-      000077 00                    1850 	.db 0x00
-      000078 00                    1851 	.db 0x00
-      000079 00                    1852 	.db 0x00
-      00007A 00                    1853 	.db 0x00
-      00007B 00                    1854 	.db 0x00
-      00007C 00                    1855 	.db 0x00
-      00007D 00                    1856 	.db 0x00
-      00007E 00                    1857 	.db 0x00
-      00007F 00                    1858 	.db 0x00
-      000080 00                    1859 	.db 0x00
-      000081 00                    1860 	.db 0x00
-      000082 00                    1861 	.db 0x00
-      000083 00                    1862 	.db 0x00
-      000084 00                    1863 	.db 0x00
-      000085 00                    1864 	.db 0x00
-      000086 00                    1865 	.db 0x00
-      000087 00                    1866 	.db 0x00
-      000088 00                    1867 	.db 0x00
-      000089 00                    1868 	.db 0x00
-      00008A 00                    1869 	.db 0x00
-      00008B 00                    1870 	.db 0x00
-      00008C 00                    1871 	.db 0x00
-      00008D 00                    1872 	.db 0x00
-      00008E 00                    1873 	.db 0x00
-      00008F 00                    1874 	.db 0x00
-      000090 00                    1875 	.db 0x00
-      000091 00                    1876 	.db 0x00
-      000092 00                    1877 	.db 0x00
-      000093 00                    1878 	.db 0x00
-      000094 00                    1879 	.db 0x00
-      000095 00                    1880 	.db 0x00
-      000096 00                    1881 	.db 0x00
-      000097 00                    1882 	.db 0x00
-      000098 00                    1883 	.db 0x00
-      000099 00                    1884 	.db 0x00
-      00009A 00                    1885 	.db 0x00
-      00009B 00                    1886 	.db 0x00
-      00009C 00                    1887 	.db 0x00
-      00009D 00                    1888 	.db 0x00
-      00009E 00                    1889 	.db 0x00
-      00009F 00                    1890 	.db 0x00
-      0000A0 00                    1891 	.db 0x00
-      0000A1 00                    1892 	.db 0x00
-      0000A2 00                    1893 	.db 0x00
-      0000A3 00                    1894 	.db 0x00
-      0000A4 00                    1895 	.db 0x00
-      0000A5 00                    1896 	.db 0x00
-      0000A6 00                    1897 	.db 0x00
-      0000A7 00                    1898 	.db 0x00
-      0000A8 00                    1899 	.db 0x00
-      0000A9 00                    1900 	.db 0x00
-      0000AA 00                    1901 	.db 0x00
-      0000AB 00                    1902 	.db 0x00
-      0000AC 00                    1903 	.db 0x00
-      0000AD 00                    1904 	.db 0x00
-      0000AE 00                    1905 	.db 0x00
-      0000AF 00                    1906 	.db 0x00
-      0000B0 00                    1907 	.db 0x00
-      0000B1 00                    1908 	.db 0x00
-      0000B2 00                    1909 	.db 0x00
-      0000B3 00                    1910 	.db 0x00
-      0000B4 00                    1911 	.db 0x00
-      0000B5 00                    1912 	.db 0x00
-      0000B6 00                    1913 	.db 0x00
-      0000B7 00                    1914 	.db 0x00
-      0000B8 00                    1915 	.db 0x00
-      0000B9 00                    1916 	.db 0x00
-      0000BA 00                    1917 	.db 0x00
-      0000BB 00                    1918 	.db 0x00
-      0000BC 00                    1919 	.db 0x00
-      0000BD 00                    1920 	.db 0x00
-      0000BE 00                    1921 	.db 0x00
-      0000BF 00                    1922 	.db 0x00
-      0000C0 00                    1923 	.db 0x00
-      0000C1 00                    1924 	.db 0x00
-      0000C2 00                    1925 	.db 0x00
-      0000C3 00                    1926 	.db 0x00
-      0000C4 00                    1927 	.db 0x00
-      0000C5 00                    1928 	.db 0x00
-      0000C6 00                    1929 	.db 0x00
-      0000C7 00                    1930 	.db 0x00
-      0000C8 00                    1931 	.db 0x00
-      0000C9 00                    1932 	.db 0x00
-      0000CA 00                    1933 	.db 0x00
-                           0000CB  1934 Fmain$__xinit_player_dir$0_0$0 == .
-      0000CB                       1935 __xinit__player_dir:
-      0000CB 00                    1936 	.db #0x00	; 0
-                           0000CC  1937 Fmain$__xinit_joypad_current$0_0$0 == .
-      0000CC                       1938 __xinit__joypad_current:
-      0000CC 00                    1939 	.db #0x00	; 0
-                           0000CD  1940 Fmain$__xinit_joypad_previous$0_0$0 == .
-      0000CD                       1941 __xinit__joypad_previous:
-      0000CD 00                    1942 	.db #0x00	; 0
-                                   1943 	.area _CABS (ABS)
+      0006FB 00                    1724 	.db 0x00
+                                   1725 	.area _CODE
+                                   1726 	.area _INITIALIZER
+                           000000  1727 Fmain$__xinit_player_x$0_0$0 == .
+      000000                       1728 __xinit__player_x:
+      000000 00                    1729 	.db #0x00	; 0
+                           000001  1730 Fmain$__xinit_player_y$0_0$0 == .
+      000001                       1731 __xinit__player_y:
+      000001 00                    1732 	.db #0x00	; 0
+                           000002  1733 Fmain$__xinit_global_state$0_0$0 == .
+      000002                       1734 __xinit__global_state:
+      000002 01                    1735 	.db #0x01	; 1
+                           000003  1736 Fmain$__xinit_inventory$0_0$0 == .
+      000003                       1737 __xinit__inventory:
+      000003 00 00                 1738 	.dw #0x0000
+      000005 00                    1739 	.db 0x00
+      000006 00                    1740 	.db 0x00
+      000007 00                    1741 	.db 0x00
+      000008 00                    1742 	.db 0x00
+      000009 00                    1743 	.db 0x00
+      00000A 00                    1744 	.db 0x00
+      00000B 00                    1745 	.db 0x00
+      00000C 00                    1746 	.db 0x00
+      00000D 00                    1747 	.db 0x00
+      00000E 00                    1748 	.db 0x00
+      00000F 00                    1749 	.db 0x00
+      000010 00                    1750 	.db 0x00
+      000011 00                    1751 	.db 0x00
+      000012 00                    1752 	.db 0x00
+      000013 00                    1753 	.db 0x00
+      000014 00                    1754 	.db 0x00
+      000015 00                    1755 	.db 0x00
+      000016 00                    1756 	.db 0x00
+      000017 00                    1757 	.db 0x00
+      000018 00                    1758 	.db 0x00
+      000019 00                    1759 	.db 0x00
+      00001A 00                    1760 	.db 0x00
+      00001B 00                    1761 	.db 0x00
+      00001C 00                    1762 	.db 0x00
+      00001D 00                    1763 	.db 0x00
+      00001E 00                    1764 	.db 0x00
+      00001F 00                    1765 	.db 0x00
+      000020 00                    1766 	.db 0x00
+      000021 00                    1767 	.db 0x00
+      000022 00                    1768 	.db 0x00
+      000023 00                    1769 	.db 0x00
+      000024 00                    1770 	.db 0x00
+      000025 00                    1771 	.db 0x00
+      000026 00                    1772 	.db 0x00
+      000027 00                    1773 	.db 0x00
+      000028 00                    1774 	.db 0x00
+      000029 00                    1775 	.db 0x00
+      00002A 00                    1776 	.db 0x00
+      00002B 00                    1777 	.db 0x00
+      00002C 00                    1778 	.db 0x00
+      00002D 00                    1779 	.db 0x00
+      00002E 00                    1780 	.db 0x00
+      00002F 00                    1781 	.db 0x00
+      000030 00                    1782 	.db 0x00
+      000031 00                    1783 	.db 0x00
+      000032 00                    1784 	.db 0x00
+      000033 00                    1785 	.db 0x00
+      000034 00                    1786 	.db 0x00
+      000035 00                    1787 	.db 0x00
+      000036 00                    1788 	.db 0x00
+      000037 00                    1789 	.db 0x00
+      000038 00                    1790 	.db 0x00
+      000039 00                    1791 	.db 0x00
+      00003A 00                    1792 	.db 0x00
+      00003B 00                    1793 	.db 0x00
+      00003C 00                    1794 	.db 0x00
+      00003D 00                    1795 	.db 0x00
+      00003E 00                    1796 	.db 0x00
+      00003F 00                    1797 	.db 0x00
+      000040 00                    1798 	.db 0x00
+      000041 00                    1799 	.db 0x00
+      000042 00                    1800 	.db 0x00
+      000043 00                    1801 	.db 0x00
+      000044 00                    1802 	.db 0x00
+      000045 00                    1803 	.db 0x00
+      000046 00                    1804 	.db 0x00
+      000047 00                    1805 	.db 0x00
+      000048 00                    1806 	.db 0x00
+      000049 00                    1807 	.db 0x00
+      00004A 00                    1808 	.db 0x00
+      00004B 00                    1809 	.db 0x00
+      00004C 00                    1810 	.db 0x00
+      00004D 00                    1811 	.db 0x00
+      00004E 00                    1812 	.db 0x00
+      00004F 00                    1813 	.db 0x00
+      000050 00                    1814 	.db 0x00
+      000051 00                    1815 	.db 0x00
+      000052 00                    1816 	.db 0x00
+      000053 00                    1817 	.db 0x00
+      000054 00                    1818 	.db 0x00
+      000055 00                    1819 	.db 0x00
+      000056 00                    1820 	.db 0x00
+      000057 00                    1821 	.db 0x00
+      000058 00                    1822 	.db 0x00
+      000059 00                    1823 	.db 0x00
+      00005A 00                    1824 	.db 0x00
+      00005B 00                    1825 	.db 0x00
+      00005C 00                    1826 	.db 0x00
+      00005D 00                    1827 	.db 0x00
+      00005E 00                    1828 	.db 0x00
+      00005F 00                    1829 	.db 0x00
+      000060 00                    1830 	.db 0x00
+      000061 00                    1831 	.db 0x00
+      000062 00                    1832 	.db 0x00
+      000063 00                    1833 	.db 0x00
+      000064 00                    1834 	.db 0x00
+      000065 00                    1835 	.db 0x00
+      000066 00                    1836 	.db 0x00
+      000067 00                    1837 	.db 0x00
+      000068 00                    1838 	.db 0x00
+      000069 00                    1839 	.db 0x00
+      00006A 00                    1840 	.db 0x00
+      00006B 00                    1841 	.db 0x00
+      00006C 00                    1842 	.db 0x00
+      00006D 00                    1843 	.db 0x00
+      00006E 00                    1844 	.db 0x00
+      00006F 00                    1845 	.db 0x00
+      000070 00                    1846 	.db 0x00
+      000071 00                    1847 	.db 0x00
+      000072 00                    1848 	.db 0x00
+      000073 00                    1849 	.db 0x00
+      000074 00                    1850 	.db 0x00
+      000075 00                    1851 	.db 0x00
+      000076 00                    1852 	.db 0x00
+      000077 00                    1853 	.db 0x00
+      000078 00                    1854 	.db 0x00
+      000079 00                    1855 	.db 0x00
+      00007A 00                    1856 	.db 0x00
+      00007B 00                    1857 	.db 0x00
+      00007C 00                    1858 	.db 0x00
+      00007D 00                    1859 	.db 0x00
+      00007E 00                    1860 	.db 0x00
+      00007F 00                    1861 	.db 0x00
+      000080 00                    1862 	.db 0x00
+      000081 00                    1863 	.db 0x00
+      000082 00                    1864 	.db 0x00
+      000083 00                    1865 	.db 0x00
+      000084 00                    1866 	.db 0x00
+      000085 00                    1867 	.db 0x00
+      000086 00                    1868 	.db 0x00
+      000087 00                    1869 	.db 0x00
+      000088 00                    1870 	.db 0x00
+      000089 00                    1871 	.db 0x00
+      00008A 00                    1872 	.db 0x00
+      00008B 00                    1873 	.db 0x00
+      00008C 00                    1874 	.db 0x00
+      00008D 00                    1875 	.db 0x00
+      00008E 00                    1876 	.db 0x00
+      00008F 00                    1877 	.db 0x00
+      000090 00                    1878 	.db 0x00
+      000091 00                    1879 	.db 0x00
+      000092 00                    1880 	.db 0x00
+      000093 00                    1881 	.db 0x00
+      000094 00                    1882 	.db 0x00
+      000095 00                    1883 	.db 0x00
+      000096 00                    1884 	.db 0x00
+      000097 00                    1885 	.db 0x00
+      000098 00                    1886 	.db 0x00
+      000099 00                    1887 	.db 0x00
+      00009A 00                    1888 	.db 0x00
+      00009B 00                    1889 	.db 0x00
+      00009C 00                    1890 	.db 0x00
+      00009D 00                    1891 	.db 0x00
+      00009E 00                    1892 	.db 0x00
+      00009F 00                    1893 	.db 0x00
+      0000A0 00                    1894 	.db 0x00
+      0000A1 00                    1895 	.db 0x00
+      0000A2 00                    1896 	.db 0x00
+      0000A3 00                    1897 	.db 0x00
+      0000A4 00                    1898 	.db 0x00
+      0000A5 00                    1899 	.db 0x00
+      0000A6 00                    1900 	.db 0x00
+      0000A7 00                    1901 	.db 0x00
+      0000A8 00                    1902 	.db 0x00
+      0000A9 00                    1903 	.db 0x00
+      0000AA 00                    1904 	.db 0x00
+      0000AB 00                    1905 	.db 0x00
+      0000AC 00                    1906 	.db 0x00
+      0000AD 00                    1907 	.db 0x00
+      0000AE 00                    1908 	.db 0x00
+      0000AF 00                    1909 	.db 0x00
+      0000B0 00                    1910 	.db 0x00
+      0000B1 00                    1911 	.db 0x00
+      0000B2 00                    1912 	.db 0x00
+      0000B3 00                    1913 	.db 0x00
+      0000B4 00                    1914 	.db 0x00
+      0000B5 00                    1915 	.db 0x00
+      0000B6 00                    1916 	.db 0x00
+      0000B7 00                    1917 	.db 0x00
+      0000B8 00                    1918 	.db 0x00
+      0000B9 00                    1919 	.db 0x00
+      0000BA 00                    1920 	.db 0x00
+      0000BB 00                    1921 	.db 0x00
+      0000BC 00                    1922 	.db 0x00
+      0000BD 00                    1923 	.db 0x00
+      0000BE 00                    1924 	.db 0x00
+      0000BF 00                    1925 	.db 0x00
+      0000C0 00                    1926 	.db 0x00
+      0000C1 00                    1927 	.db 0x00
+      0000C2 00                    1928 	.db 0x00
+      0000C3 00                    1929 	.db 0x00
+      0000C4 00                    1930 	.db 0x00
+      0000C5 00                    1931 	.db 0x00
+      0000C6 00                    1932 	.db 0x00
+      0000C7 00                    1933 	.db 0x00
+      0000C8 00                    1934 	.db 0x00
+      0000C9 00                    1935 	.db 0x00
+      0000CA 00                    1936 	.db 0x00
+                           0000CB  1937 Fmain$__xinit_player_dir$0_0$0 == .
+      0000CB                       1938 __xinit__player_dir:
+      0000CB 00                    1939 	.db #0x00	; 0
+                           0000CC  1940 Fmain$__xinit_joypad_current$0_0$0 == .
+      0000CC                       1941 __xinit__joypad_current:
+      0000CC 00                    1942 	.db #0x00	; 0
+                           0000CD  1943 Fmain$__xinit_joypad_previous$0_0$0 == .
+      0000CD                       1944 __xinit__joypad_previous:
+      0000CD 00                    1945 	.db #0x00	; 0
+                                   1946 	.area _CABS (ABS)
