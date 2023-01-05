@@ -24,9 +24,10 @@
 #define __FONT_H__
 #include <stdint.h>
 #include <gb/gb.h>
-extern const unsigned char font[];
-//unsigned char* return_letter(uint8_t letter);
-void pull_letters(unsigned char *str,uint8_t str_size,uint8_t mem_region);
+#define DLG_WIN_MEM_ADR 224
+extern const unsigned char font[96][16];
+unsigned char* return_letter(uint8_t letter);
+void pull_letters(unsigned char *str,uint8_t str_size);
 
 
 #endif

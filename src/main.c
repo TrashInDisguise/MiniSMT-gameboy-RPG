@@ -4,7 +4,6 @@
 #include "dng_crawling.h"
 #include "../res/dng_wip.h"
 #include "../res/walls.h"
-#include "../res/nesw.h"
 #include "../res/UI_sprites.h"
 #include "../res/font.h"
 
@@ -12,14 +11,12 @@
 static uint8_t player_x=0;
 static uint8_t player_y=0;
 static uint8_t global_state = 1;// 0 - owerworld // 1 - 3d dungeon exploration // 3 - turn based combat // 4 - inventory // 5 - dialog// 6 - interactive scene  
+
 static enum direction{north,east,south,west};
 static uint16_t *inventory[100] = {NULL};
-//static enum wall_type{none,wall,door};
 static enum direction player_dir = north;
-//static uint8_t dist=0;
 static uint8_t joypad_current=0,joypad_previous=0;
 
-//0x02 - wall, 0x03 - south door, 0x04 - west door, 0x05 - north door, 0x6 - east door, 0x01 - start
 const unsigned char white_screen[] = {
     0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,
     0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,0x4a,
@@ -36,6 +33,7 @@ const unsigned char white_screen[] = {
     0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
 
 };
+//0x02 - wall, 0x03 - south door, 0x04 - west door, 0x05 - north door, 0x6 - east door, 0x01 - start
 const unsigned char test_dungeon[] =
 {
   0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
@@ -89,12 +87,16 @@ void collision_check(const unsigned char *dng, uint8_t dng_width, uint8_t dng_he
 }
 
 void init_dng_UI(){
+    //big letters
     move_sprite(0,80,20);
     move_sprite(1,80,28);
     move_sprite(2,88,28);
     move_sprite(3,88,20);
+    //small letters
     move_sprite(4,64,20);
     move_sprite(5,104,20);
+    //moon
+
 
 }
 
@@ -252,20 +254,23 @@ void dungeon_logic_upd(){
 
 void main(void)
 {   
-    //set_bkg_data(0,1,return_letter('c'));
-    //pull_letters("abcdefgABCDEFG",14,0);
     init_dungeon(test_dungeon, 15, 15);
     init_dng_UI();
     update_dng(test_dungeon,15,15);
     set_sprite_data(0,26,UI_tiles);
-    set_sprite_tile(0,player_dir);
-    //return_letter(0x2F);
+    //set_sprite_tile(0,player_dir);
+
+    //charset test------------------
+    //set_win_data(224,32,font['!'-32]);
+    pull_letters("It's dangerous to go alone take this",37);
+    //------------------------------
+
 
     SHOW_SPRITES;
     // Loop forever
     while(1) {
         //controller handler
-        //return_letter(0x2F);
+        
         dungeon_logic_upd();
         update_dng_UI();
         

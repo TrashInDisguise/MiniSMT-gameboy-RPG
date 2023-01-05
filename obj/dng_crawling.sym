@@ -7,9 +7,2222 @@ Symbol Table
     .__.ABS.                                                    =  000000 G
     .__.CPU.                                                    =  000000 L
     .__.H$L.                                                    =  000000 L
+  0 A$dng_crawling$100                                             000026 GR
+  0 A$dng_crawling$1000                                            0003B1 GR
+  0 A$dng_crawling$1005                                            0003B3 GR
+  0 A$dng_crawling$1006                                            0003B5 GR
+  0 A$dng_crawling$1007                                            0003B7 GR
+  0 A$dng_crawling$101                                             000027 GR
+  0 A$dng_crawling$1011                                            0003B9 GR
+  0 A$dng_crawling$1012                                            0003BC GR
+  0 A$dng_crawling$1013                                            0003BD GR
+  0 A$dng_crawling$1014                                            0003C0 GR
+  0 A$dng_crawling$1015                                            0003C1 GR
+  0 A$dng_crawling$1016                                            0003C3 GR
+  0 A$dng_crawling$1017                                            0003C4 GR
+  0 A$dng_crawling$1018                                            0003C5 GR
+  0 A$dng_crawling$1019                                            0003C7 GR
+  0 A$dng_crawling$102                                             000028 GR
+  0 A$dng_crawling$1020                                            0003C8 GR
+  0 A$dng_crawling$1021                                            0003C9 GR
+  0 A$dng_crawling$1022                                            0003CC GR
+  0 A$dng_crawling$1023                                            0003CE GR
+  0 A$dng_crawling$1028                                            0003D1 GR
+  0 A$dng_crawling$1029                                            0003D4 GR
+  0 A$dng_crawling$103                                             000029 GR
+  0 A$dng_crawling$1030                                            0003D5 GR
+  0 A$dng_crawling$1031                                            0003D8 GR
+  0 A$dng_crawling$1032                                            0003D9 GR
+  0 A$dng_crawling$1033                                            0003DB GR
+  0 A$dng_crawling$1034                                            0003DC GR
+  0 A$dng_crawling$1035                                            0003DD GR
+  0 A$dng_crawling$1036                                            0003DF GR
+  0 A$dng_crawling$1037                                            0003E0 GR
+  0 A$dng_crawling$1038                                            0003E1 GR
+  0 A$dng_crawling$1039                                            0003E4 GR
+  0 A$dng_crawling$104                                             00002B GR
+  0 A$dng_crawling$1040                                            0003E6 GR
+  0 A$dng_crawling$1045                                            0003E9 GR
+  0 A$dng_crawling$1046                                            0003EB GR
+  0 A$dng_crawling$1050                                            0003ED GR
+  0 A$dng_crawling$1051                                            0003F0 GR
+  0 A$dng_crawling$1052                                            0003F1 GR
+  0 A$dng_crawling$1053                                            0003F4 GR
+  0 A$dng_crawling$1054                                            0003F5 GR
+  0 A$dng_crawling$1055                                            0003F8 GR
+  0 A$dng_crawling$1056                                            0003F9 GR
+  0 A$dng_crawling$1057                                            0003FC GR
+  0 A$dng_crawling$1058                                            0003FE GR
+  0 A$dng_crawling$1063                                            000400 GR
+  0 A$dng_crawling$1064                                            000403 GR
+  0 A$dng_crawling$1065                                            000404 GR
+  0 A$dng_crawling$1066                                            000407 GR
+  0 A$dng_crawling$1067                                            000408 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$1068                                            00040B GR
+  0 A$dng_crawling$1069                                            00040C GR
+  0 A$dng_crawling$1070                                            00040F GR
+  0 A$dng_crawling$1075                                            000411 GR
+  0 A$dng_crawling$1076                                            000413 GR
+  0 A$dng_crawling$1077                                            000415 GR
+  0 A$dng_crawling$1081                                            000417 GR
+  0 A$dng_crawling$1082                                            00041A GR
+  0 A$dng_crawling$1083                                            00041B GR
+  0 A$dng_crawling$1084                                            00041E GR
+  0 A$dng_crawling$1085                                            00041F GR
+  0 A$dng_crawling$1086                                            000421 GR
+  0 A$dng_crawling$1087                                            000422 GR
+  0 A$dng_crawling$1088                                            000423 GR
+  0 A$dng_crawling$1089                                            000425 GR
+  0 A$dng_crawling$1090                                            000426 GR
+  0 A$dng_crawling$1091                                            000427 GR
+  0 A$dng_crawling$1092                                            00042A GR
+  0 A$dng_crawling$1093                                            00042C GR
+  0 A$dng_crawling$1098                                            00042F GR
+  0 A$dng_crawling$1099                                            000432 GR
+  0 A$dng_crawling$1100                                            000433 GR
+  0 A$dng_crawling$1101                                            000436 GR
+  0 A$dng_crawling$1102                                            000437 GR
+  0 A$dng_crawling$1103                                            000439 GR
+  0 A$dng_crawling$1104                                            00043A GR
+  0 A$dng_crawling$1105                                            00043B GR
+  0 A$dng_crawling$1106                                            00043D GR
+  0 A$dng_crawling$1107                                            00043E GR
+  0 A$dng_crawling$1108                                            00043F GR
+  0 A$dng_crawling$1109                                            000442 GR
+  0 A$dng_crawling$1113                                            000444 GR
+  0 A$dng_crawling$1121                                            000447 GR
+  0 A$dng_crawling$1122                                            000449 GR
+  0 A$dng_crawling$1126                                            00044B GR
+  0 A$dng_crawling$1127                                            00044D GR
+  0 A$dng_crawling$1131                                            00044F GR
+  0 A$dng_crawling$1132                                            000452 GR
+  0 A$dng_crawling$1133                                            000453 GR
+  0 A$dng_crawling$1134                                            000456 GR
+  0 A$dng_crawling$1135                                            000457 GR
+  0 A$dng_crawling$1136                                            00045A GR
+  0 A$dng_crawling$1137                                            00045B GR
+  0 A$dng_crawling$1138                                            00045E GR
+  0 A$dng_crawling$1139                                            000460 GR
+  0 A$dng_crawling$114                                             00002C GR
+  0 A$dng_crawling$1144                                            000462 GR
+  0 A$dng_crawling$1145                                            000465 GR
+  0 A$dng_crawling$1146                                            000466 GR
+  0 A$dng_crawling$1147                                            000469 GR
+  0 A$dng_crawling$1148                                            00046A GR
+  0 A$dng_crawling$1149                                            00046D GR
+  0 A$dng_crawling$115                                             00002E GR
+  0 A$dng_crawling$1150                                            00046E GR
+  0 A$dng_crawling$1151                                            000471 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$1156                                            000473 GR
+  0 A$dng_crawling$1157                                            000475 GR
+  0 A$dng_crawling$1158                                            000477 GR
+  0 A$dng_crawling$116                                             000030 GR
+  0 A$dng_crawling$1162                                            000479 GR
+  0 A$dng_crawling$1163                                            00047C GR
+  0 A$dng_crawling$1164                                            00047D GR
+  0 A$dng_crawling$1165                                            000480 GR
+  0 A$dng_crawling$1166                                            000481 GR
+  0 A$dng_crawling$1167                                            000483 GR
+  0 A$dng_crawling$1168                                            000484 GR
+  0 A$dng_crawling$1169                                            000485 GR
+  0 A$dng_crawling$117                                             000031 GR
+  0 A$dng_crawling$1170                                            000487 GR
+  0 A$dng_crawling$1171                                            000488 GR
+  0 A$dng_crawling$1172                                            000489 GR
+  0 A$dng_crawling$1173                                            00048C GR
+  0 A$dng_crawling$1174                                            00048E GR
+  0 A$dng_crawling$1179                                            000490 GR
+  0 A$dng_crawling$118                                             000032 GR
+  0 A$dng_crawling$1180                                            000493 GR
+  0 A$dng_crawling$1181                                            000494 GR
+  0 A$dng_crawling$1182                                            000497 GR
+  0 A$dng_crawling$1183                                            000498 GR
+  0 A$dng_crawling$1184                                            00049A GR
+  0 A$dng_crawling$1185                                            00049B GR
+  0 A$dng_crawling$1186                                            00049C GR
+  0 A$dng_crawling$1187                                            00049E GR
+  0 A$dng_crawling$1188                                            00049F GR
+  0 A$dng_crawling$1189                                            0004A0 GR
+  0 A$dng_crawling$119                                             000033 GR
+  0 A$dng_crawling$1190                                            0004A3 GR
+  0 A$dng_crawling$1191                                            0004A5 GR
+  0 A$dng_crawling$1196                                            0004A7 GR
+  0 A$dng_crawling$1197                                            0004A9 GR
+  0 A$dng_crawling$120                                             000034 GR
+  0 A$dng_crawling$1201                                            0004AB GR
+  0 A$dng_crawling$1202                                            0004AE GR
+  0 A$dng_crawling$1203                                            0004AF GR
+  0 A$dng_crawling$1204                                            0004B2 GR
+  0 A$dng_crawling$1205                                            0004B3 GR
+  0 A$dng_crawling$1206                                            0004B6 GR
+  0 A$dng_crawling$1207                                            0004B7 GR
+  0 A$dng_crawling$1208                                            0004BA GR
+  0 A$dng_crawling$1209                                            0004BC GR
+  0 A$dng_crawling$121                                             000035 GR
+  0 A$dng_crawling$1214                                            0004BE GR
+  0 A$dng_crawling$1215                                            0004C1 GR
+  0 A$dng_crawling$1216                                            0004C2 GR
+  0 A$dng_crawling$1217                                            0004C5 GR
+  0 A$dng_crawling$1218                                            0004C6 GR
+  0 A$dng_crawling$1219                                            0004C9 GR
+  0 A$dng_crawling$1220                                            0004CA GR
+  0 A$dng_crawling$1221                                            0004CD GR
+  0 A$dng_crawling$1226                                            0004CF GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$1227                                            0004D1 GR
+  0 A$dng_crawling$1228                                            0004D3 GR
+  0 A$dng_crawling$1232                                            0004D5 GR
+  0 A$dng_crawling$1233                                            0004D8 GR
+  0 A$dng_crawling$1234                                            0004D9 GR
+  0 A$dng_crawling$1235                                            0004DC GR
+  0 A$dng_crawling$1236                                            0004DD GR
+  0 A$dng_crawling$1237                                            0004DF GR
+  0 A$dng_crawling$1238                                            0004E0 GR
+  0 A$dng_crawling$1239                                            0004E1 GR
+  0 A$dng_crawling$1240                                            0004E3 GR
+  0 A$dng_crawling$1241                                            0004E4 GR
+  0 A$dng_crawling$1242                                            0004E5 GR
+  0 A$dng_crawling$1243                                            0004E8 GR
+  0 A$dng_crawling$1244                                            0004EA GR
+  0 A$dng_crawling$1249                                            0004EC GR
+  0 A$dng_crawling$125                                             000036 GR
+  0 A$dng_crawling$1250                                            0004EF GR
+  0 A$dng_crawling$1251                                            0004F0 GR
+  0 A$dng_crawling$1252                                            0004F3 GR
+  0 A$dng_crawling$1253                                            0004F4 GR
+  0 A$dng_crawling$1254                                            0004F6 GR
+  0 A$dng_crawling$1255                                            0004F7 GR
+  0 A$dng_crawling$1256                                            0004F8 GR
+  0 A$dng_crawling$1257                                            0004FA GR
+  0 A$dng_crawling$1258                                            0004FB GR
+  0 A$dng_crawling$1259                                            0004FC GR
+  0 A$dng_crawling$1260                                            0004FF GR
+  0 A$dng_crawling$1268                                            000501 GR
+  0 A$dng_crawling$1269                                            000503 GR
+  0 A$dng_crawling$1270                                            000504 GR
+  0 A$dng_crawling$1271                                            000506 GR
+  0 A$dng_crawling$1281                                            000507 GR
+  0 A$dng_crawling$1282                                            000509 GR
+  0 A$dng_crawling$1283                                            00050B GR
+  0 A$dng_crawling$1284                                            00050C GR
+  0 A$dng_crawling$1285                                            00050D GR
+  0 A$dng_crawling$1286                                            00050E GR
+  0 A$dng_crawling$1287                                            00050F GR
+  0 A$dng_crawling$1288                                            000510 GR
+  0 A$dng_crawling$1292                                            000511 GR
+  0 A$dng_crawling$1293                                            000513 GR
+  0 A$dng_crawling$1294                                            000514 GR
+  0 A$dng_crawling$1295                                            000515 GR
+  0 A$dng_crawling$1296                                            000516 GR
+  0 A$dng_crawling$1297                                            000517 GR
+  0 A$dng_crawling$1298                                            000518 GR
+  0 A$dng_crawling$1302                                            000519 GR
+  0 A$dng_crawling$1303                                            00051A GR
+  0 A$dng_crawling$1307                                            00051B GR
+  0 A$dng_crawling$1308                                            00051C GR
+  0 A$dng_crawling$1309                                            00051D GR
+  0 A$dng_crawling$1313                                            00051E GR
+  0 A$dng_crawling$1314                                            000520 GR
+  0 A$dng_crawling$1315                                            000521 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 5
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$1316                                            000523 GR
+  0 A$dng_crawling$1317                                            000524 GR
+  0 A$dng_crawling$1318                                            000526 GR
+  0 A$dng_crawling$1319                                            000527 GR
+  0 A$dng_crawling$132                                             000038 GR
+  0 A$dng_crawling$1320                                            000529 GR
+  0 A$dng_crawling$1324                                            00052A GR
+  0 A$dng_crawling$1325                                            00052C GR
+  0 A$dng_crawling$1326                                            00052D GR
+  0 A$dng_crawling$1327                                            00052E GR
+  0 A$dng_crawling$1328                                            000530 GR
+  0 A$dng_crawling$1329                                            000532 GR
+  0 A$dng_crawling$133                                             000039 GR
+  0 A$dng_crawling$1330                                            000533 GR
+  0 A$dng_crawling$1331                                            000534 GR
+  0 A$dng_crawling$1332                                            000536 GR
+  0 A$dng_crawling$1333                                            000538 GR
+  0 A$dng_crawling$1334                                            000539 GR
+  0 A$dng_crawling$1335                                            00053B GR
+  0 A$dng_crawling$1336                                            00053E GR
+  0 A$dng_crawling$1337                                            000540 GR
+  0 A$dng_crawling$1338                                            000541 GR
+  0 A$dng_crawling$1339                                            000543 GR
+  0 A$dng_crawling$134                                             00003A GR
+  0 A$dng_crawling$1340                                            000546 GR
+  0 A$dng_crawling$1345                                            000549 GR
+  0 A$dng_crawling$1346                                            00054B GR
+  0 A$dng_crawling$1351                                            00054D GR
+  0 A$dng_crawling$1352                                            00054F GR
+  0 A$dng_crawling$1353                                            000550 GR
+  0 A$dng_crawling$1354                                            000552 GR
+  0 A$dng_crawling$1355                                            000553 GR
+  0 A$dng_crawling$1356                                            000554 GR
+  0 A$dng_crawling$1357                                            000555 GR
+  0 A$dng_crawling$1358                                            000556 GR
+  0 A$dng_crawling$1359                                            000557 GR
+  0 A$dng_crawling$1360                                            00055A GR
+  0 A$dng_crawling$1361                                            00055B GR
+  0 A$dng_crawling$1362                                            00055C GR
+  0 A$dng_crawling$1363                                            00055D GR
+  0 A$dng_crawling$1364                                            00055E GR
+  0 A$dng_crawling$1365                                            000560 GR
+  0 A$dng_crawling$1366                                            000561 GR
+  0 A$dng_crawling$1367                                            000562 GR
+  0 A$dng_crawling$1368                                            000563 GR
+  0 A$dng_crawling$1369                                            000564 GR
+  0 A$dng_crawling$1370                                            000565 GR
+  0 A$dng_crawling$1371                                            000566 GR
+  0 A$dng_crawling$1372                                            000568 GR
+  0 A$dng_crawling$1373                                            000569 GR
+  0 A$dng_crawling$1374                                            00056A GR
+  0 A$dng_crawling$1375                                            00056B GR
+  0 A$dng_crawling$1376                                            00056D GR
+  0 A$dng_crawling$1377                                            00056E GR
+  0 A$dng_crawling$1378                                            00056F GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 6
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$1379                                            000570 GR
+  0 A$dng_crawling$1380                                            000571 GR
+  0 A$dng_crawling$1381                                            000573 GR
+  0 A$dng_crawling$1382                                            000574 GR
+  0 A$dng_crawling$1383                                            000575 GR
+  0 A$dng_crawling$1384                                            000576 GR
+  0 A$dng_crawling$1385                                            000577 GR
+  0 A$dng_crawling$1386                                            000578 GR
+  0 A$dng_crawling$1387                                            000579 GR
+  0 A$dng_crawling$1388                                            00057B GR
+  0 A$dng_crawling$1389                                            00057C GR
+  0 A$dng_crawling$1390                                            00057D GR
+  0 A$dng_crawling$1391                                            00057E GR
+  0 A$dng_crawling$1392                                            000580 GR
+  0 A$dng_crawling$1393                                            000581 GR
+  0 A$dng_crawling$1394                                            000582 GR
+  0 A$dng_crawling$1395                                            000583 GR
+  0 A$dng_crawling$1396                                            000584 GR
+  0 A$dng_crawling$1397                                            000587 GR
+  0 A$dng_crawling$1398                                            000588 GR
+  0 A$dng_crawling$1399                                            00058A GR
+  0 A$dng_crawling$1400                                            00058B GR
+  0 A$dng_crawling$1401                                            00058C GR
+  0 A$dng_crawling$1402                                            00058D GR
+  0 A$dng_crawling$1406                                            00058E GR
+  0 A$dng_crawling$1407                                            000590 GR
+  0 A$dng_crawling$1408                                            000591 GR
+  0 A$dng_crawling$1409                                            000592 GR
+  0 A$dng_crawling$141                                             00003C GR
+  0 A$dng_crawling$1410                                            000594 GR
+  0 A$dng_crawling$1411                                            000596 GR
+  0 A$dng_crawling$1415                                            000598 GR
+  0 A$dng_crawling$1419                                            00059A GR
+  0 A$dng_crawling$142                                             00003D GR
+  0 A$dng_crawling$1420                                            00059C GR
+  0 A$dng_crawling$1421                                            00059D GR
+  0 A$dng_crawling$1425                                            00059F GR
+  0 A$dng_crawling$1430                                            0005A2 GR
+  0 A$dng_crawling$1435                                            0005A4 GR
+  0 A$dng_crawling$1436                                            0005A5 GR
+  0 A$dng_crawling$1437                                            0005A6 GR
+  0 A$dng_crawling$1438                                            0005A7 GR
+  0 A$dng_crawling$1439                                            0005A8 GR
+  0 A$dng_crawling$1440                                            0005A9 GR
+  0 A$dng_crawling$1441                                            0005AC GR
+  0 A$dng_crawling$1442                                            0005AD GR
+  0 A$dng_crawling$1443                                            0005AE GR
+  0 A$dng_crawling$1444                                            0005AF GR
+  0 A$dng_crawling$1445                                            0005B0 GR
+  0 A$dng_crawling$1446                                            0005B2 GR
+  0 A$dng_crawling$1447                                            0005B3 GR
+  0 A$dng_crawling$1448                                            0005B4 GR
+  0 A$dng_crawling$1449                                            0005B6 GR
+  0 A$dng_crawling$1450                                            0005B7 GR
+  0 A$dng_crawling$1451                                            0005B8 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 7
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$1452                                            0005B9 GR
+  0 A$dng_crawling$1453                                            0005BA GR
+  0 A$dng_crawling$1454                                            0005BB GR
+  0 A$dng_crawling$1455                                            0005BC GR
+  0 A$dng_crawling$1456                                            0005BD GR
+  0 A$dng_crawling$1457                                            0005BE GR
+  0 A$dng_crawling$1458                                            0005C0 GR
+  0 A$dng_crawling$1459                                            0005C1 GR
+  0 A$dng_crawling$146                                             00003E GR
+  0 A$dng_crawling$1460                                            0005C2 GR
+  0 A$dng_crawling$1461                                            0005C3 GR
+  0 A$dng_crawling$1462                                            0005C5 GR
+  0 A$dng_crawling$1463                                            0005C6 GR
+  0 A$dng_crawling$1464                                            0005C7 GR
+  0 A$dng_crawling$1465                                            0005C8 GR
+  0 A$dng_crawling$1466                                            0005C9 GR
+  0 A$dng_crawling$1467                                            0005CC GR
+  0 A$dng_crawling$1468                                            0005CD GR
+  0 A$dng_crawling$1469                                            0005CE GR
+  0 A$dng_crawling$147                                             00003F GR
+  0 A$dng_crawling$1473                                            0005CF GR
+  0 A$dng_crawling$1474                                            0005D0 GR
+  0 A$dng_crawling$1475                                            0005D1 GR
+  0 A$dng_crawling$1476                                            0005D3 GR
+  0 A$dng_crawling$1477                                            0005D5 GR
+  0 A$dng_crawling$148                                             000040 GR
+  0 A$dng_crawling$1481                                            0005D7 GR
+  0 A$dng_crawling$1485                                            0005D9 GR
+  0 A$dng_crawling$1486                                            0005DB GR
+  0 A$dng_crawling$1487                                            0005DC GR
+  0 A$dng_crawling$149                                             000041 GR
+  0 A$dng_crawling$1491                                            0005DE GR
+  0 A$dng_crawling$1496                                            0005E0 GR
+  0 A$dng_crawling$1501                                            0005E2 GR
+  0 A$dng_crawling$1502                                            0005E3 GR
+  0 A$dng_crawling$1503                                            0005E4 GR
+  0 A$dng_crawling$1504                                            0005E5 GR
+  0 A$dng_crawling$1505                                            0005E6 GR
+  0 A$dng_crawling$1506                                            0005E7 GR
+  0 A$dng_crawling$1507                                            0005EA GR
+  0 A$dng_crawling$1508                                            0005EB GR
+  0 A$dng_crawling$1509                                            0005EC GR
+  0 A$dng_crawling$1510                                            0005ED GR
+  0 A$dng_crawling$1511                                            0005EE GR
+  0 A$dng_crawling$1512                                            0005F0 GR
+  0 A$dng_crawling$1513                                            0005F1 GR
+  0 A$dng_crawling$1514                                            0005F2 GR
+  0 A$dng_crawling$1515                                            0005F4 GR
+  0 A$dng_crawling$1516                                            0005F5 GR
+  0 A$dng_crawling$1517                                            0005F6 GR
+  0 A$dng_crawling$1518                                            0005F7 GR
+  0 A$dng_crawling$1519                                            0005F8 GR
+  0 A$dng_crawling$1520                                            0005F9 GR
+  0 A$dng_crawling$1521                                            0005FA GR
+  0 A$dng_crawling$1522                                            0005FB GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 8
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$1523                                            0005FC GR
+  0 A$dng_crawling$1524                                            0005FE GR
+  0 A$dng_crawling$1525                                            0005FF GR
+  0 A$dng_crawling$1526                                            000600 GR
+  0 A$dng_crawling$1527                                            000601 GR
+  0 A$dng_crawling$1528                                            000603 GR
+  0 A$dng_crawling$1529                                            000604 GR
+  0 A$dng_crawling$153                                             000043 GR
+  0 A$dng_crawling$1530                                            000605 GR
+  0 A$dng_crawling$1531                                            000606 GR
+  0 A$dng_crawling$1532                                            000607 GR
+  0 A$dng_crawling$1533                                            00060A GR
+  0 A$dng_crawling$1534                                            00060B GR
+  0 A$dng_crawling$1535                                            00060C GR
+  0 A$dng_crawling$1539                                            00060D GR
+  0 A$dng_crawling$154                                             000045 GR
+  0 A$dng_crawling$1540                                            00060E GR
+  0 A$dng_crawling$1541                                            00060F GR
+  0 A$dng_crawling$1542                                            000611 GR
+  0 A$dng_crawling$1543                                            000613 GR
+  0 A$dng_crawling$1547                                            000615 GR
+  0 A$dng_crawling$155                                             000046 GR
+  0 A$dng_crawling$1551                                            000617 GR
+  0 A$dng_crawling$1552                                            000619 GR
+  0 A$dng_crawling$1553                                            00061A GR
+  0 A$dng_crawling$1557                                            00061C GR
+  0 A$dng_crawling$156                                             000047 GR
+  0 A$dng_crawling$1562                                            00061E GR
+  0 A$dng_crawling$1567                                            000620 GR
+  0 A$dng_crawling$1568                                            000621 GR
+  0 A$dng_crawling$1569                                            000622 GR
+  0 A$dng_crawling$157                                             000049 GR
+  0 A$dng_crawling$1570                                            000623 GR
+  0 A$dng_crawling$1571                                            000624 GR
+  0 A$dng_crawling$1572                                            000625 GR
+  0 A$dng_crawling$1573                                            000628 GR
+  0 A$dng_crawling$1574                                            000629 GR
+  0 A$dng_crawling$1575                                            00062A GR
+  0 A$dng_crawling$1576                                            00062B GR
+  0 A$dng_crawling$1577                                            00062C GR
+  0 A$dng_crawling$1578                                            00062E GR
+  0 A$dng_crawling$1579                                            00062F GR
+  0 A$dng_crawling$158                                             00004B GR
+  0 A$dng_crawling$1580                                            000630 GR
+  0 A$dng_crawling$1581                                            000632 GR
+  0 A$dng_crawling$1582                                            000633 GR
+  0 A$dng_crawling$1583                                            000634 GR
+  0 A$dng_crawling$1584                                            000635 GR
+  0 A$dng_crawling$1585                                            000636 GR
+  0 A$dng_crawling$1586                                            000637 GR
+  0 A$dng_crawling$1587                                            000638 GR
+  0 A$dng_crawling$1588                                            000639 GR
+  0 A$dng_crawling$1589                                            00063A GR
+  0 A$dng_crawling$1590                                            00063C GR
+  0 A$dng_crawling$1591                                            00063D GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 9
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$1592                                            00063E GR
+  0 A$dng_crawling$1593                                            00063F GR
+  0 A$dng_crawling$1594                                            000641 GR
+  0 A$dng_crawling$1595                                            000642 GR
+  0 A$dng_crawling$1596                                            000643 GR
+  0 A$dng_crawling$1597                                            000644 GR
+  0 A$dng_crawling$1598                                            000645 GR
+  0 A$dng_crawling$1599                                            000648 GR
+  0 A$dng_crawling$160                                             00004C GR
+  0 A$dng_crawling$1600                                            000649 GR
+  0 A$dng_crawling$1601                                            00064A GR
+  0 A$dng_crawling$1605                                            00064B GR
+  0 A$dng_crawling$1606                                            00064C GR
+  0 A$dng_crawling$1607                                            00064D GR
+  0 A$dng_crawling$1608                                            00064F GR
+  0 A$dng_crawling$1609                                            000651 GR
+  0 A$dng_crawling$161                                             00004E GR
+  0 A$dng_crawling$1613                                            000653 GR
+  0 A$dng_crawling$1617                                            000655 GR
+  0 A$dng_crawling$1618                                            000657 GR
+  0 A$dng_crawling$1619                                            000658 GR
+  0 A$dng_crawling$162                                             00004F GR
+  0 A$dng_crawling$1624                                            00065A GR
+  0 A$dng_crawling$1625                                            00065C GR
+  0 A$dng_crawling$1627                                            00065E GR
+  0 A$dng_crawling$1628                                            000660 GR
+  0 A$dng_crawling$1629                                            000661 GR
+  0 A$dng_crawling$163                                             000051 GR
+  0 A$dng_crawling$1630                                            000663 GR
+  0 A$dng_crawling$1631                                            000664 GR
+  0 A$dng_crawling$1632                                            000666 GR
+  0 A$dng_crawling$1633                                            000667 GR
+  0 A$dng_crawling$1634                                            000669 GR
+  0 A$dng_crawling$1635                                            00066A GR
+  0 A$dng_crawling$1636                                            00066B GR
+  0 A$dng_crawling$164                                             000052 GR
+  0 A$dng_crawling$1640                                            00066E GR
+  0 A$dng_crawling$1641                                            000670 GR
+  0 A$dng_crawling$1642                                            000671 GR
+  0 A$dng_crawling$1643                                            000672 GR
+  0 A$dng_crawling$1644                                            000673 GR
+  0 A$dng_crawling$1645                                            000674 GR
+  0 A$dng_crawling$1646                                            000675 GR
+  0 A$dng_crawling$1647                                            000678 GR
+  0 A$dng_crawling$1648                                            000679 GR
+  0 A$dng_crawling$1649                                            00067A GR
+  0 A$dng_crawling$165                                             000054 GR
+  0 A$dng_crawling$1650                                            00067B GR
+  0 A$dng_crawling$1651                                            00067C GR
+  0 A$dng_crawling$1652                                            00067E GR
+  0 A$dng_crawling$1653                                            00067F GR
+  0 A$dng_crawling$1654                                            000680 GR
+  0 A$dng_crawling$1655                                            000681 GR
+  0 A$dng_crawling$1656                                            000683 GR
+  0 A$dng_crawling$1657                                            000684 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 10
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$1658                                            000685 GR
+  0 A$dng_crawling$1659                                            000686 GR
+  0 A$dng_crawling$166                                             000056 GR
+  0 A$dng_crawling$1660                                            000687 GR
+  0 A$dng_crawling$1661                                            000688 GR
+  0 A$dng_crawling$1662                                            000689 GR
+  0 A$dng_crawling$1666                                            00068A GR
+  0 A$dng_crawling$1667                                            00068C GR
+  0 A$dng_crawling$1668                                            00068D GR
+  0 A$dng_crawling$1669                                            00068F GR
+  0 A$dng_crawling$167                                             000058 GR
+  0 A$dng_crawling$1670                                            000691 GR
+  0 A$dng_crawling$1671                                            000693 GR
+  0 A$dng_crawling$1673                                            000694 GR
+  0 A$dng_crawling$1674                                            000696 GR
+  0 A$dng_crawling$1678                                            000697 GR
+  0 A$dng_crawling$1679                                            000699 GR
+  0 A$dng_crawling$1680                                            00069A GR
+  0 A$dng_crawling$1681                                            00069B GR
+  0 A$dng_crawling$1682                                            00069D GR
+  0 A$dng_crawling$1683                                            00069F GR
+  0 A$dng_crawling$1685                                            0006A0 GR
+  0 A$dng_crawling$1689                                            0006A2 GR
+  0 A$dng_crawling$169                                             000059 GR
+  0 A$dng_crawling$1690                                            0006A3 GR
+  0 A$dng_crawling$1691                                            0006A4 GR
+  0 A$dng_crawling$1692                                            0006A5 GR
+  0 A$dng_crawling$1693                                            0006A6 GR
+  0 A$dng_crawling$1694                                            0006A9 GR
+  0 A$dng_crawling$1695                                            0006AA GR
+  0 A$dng_crawling$1696                                            0006AB GR
+  0 A$dng_crawling$170                                             00005B GR
+  0 A$dng_crawling$1700                                            0006AE GR
+  0 A$dng_crawling$1701                                            0006B0 GR
+  0 A$dng_crawling$1702                                            0006B1 GR
+  0 A$dng_crawling$1703                                            0006B2 GR
+  0 A$dng_crawling$1704                                            0006B4 GR
+  0 A$dng_crawling$1705                                            0006B6 GR
+  0 A$dng_crawling$1706                                            0006B7 GR
+  0 A$dng_crawling$1707                                            0006B9 GR
+  0 A$dng_crawling$1708                                            0006BA GR
+  0 A$dng_crawling$1709                                            0006BC GR
+  0 A$dng_crawling$171                                             00005C GR
+  0 A$dng_crawling$1710                                            0006BF GR
+  0 A$dng_crawling$1711                                            0006C0 GR
+  0 A$dng_crawling$1712                                            0006C3 GR
+  0 A$dng_crawling$1713                                            0006C4 GR
+  0 A$dng_crawling$1714                                            0006C7 GR
+  0 A$dng_crawling$1715                                            0006C8 GR
+  0 A$dng_crawling$1716                                            0006CB GR
+  0 A$dng_crawling$1717                                            0006CD GR
+  0 A$dng_crawling$1719                                            0006CF GR
+  0 A$dng_crawling$172                                             00005E GR
+  0 A$dng_crawling$1720                                            0006D2 GR
+  0 A$dng_crawling$1721                                            0006D3 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 11
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$1722                                            0006D6 GR
+  0 A$dng_crawling$1723                                            0006D7 GR
+  0 A$dng_crawling$1724                                            0006DA GR
+  0 A$dng_crawling$1725                                            0006DB GR
+  0 A$dng_crawling$1726                                            0006DE GR
+  0 A$dng_crawling$173                                             00005F GR
+  0 A$dng_crawling$1731                                            0006E0 GR
+  0 A$dng_crawling$1732                                            0006E2 GR
+  0 A$dng_crawling$1733                                            0006E3 GR
+  0 A$dng_crawling$1734                                            0006E4 GR
+  0 A$dng_crawling$1735                                            0006E6 GR
+  0 A$dng_crawling$1736                                            0006E8 GR
+  0 A$dng_crawling$1737                                            0006E9 GR
+  0 A$dng_crawling$1738                                            0006EA GR
+  0 A$dng_crawling$1739                                            0006EB GR
+  0 A$dng_crawling$174                                             000061 GR
+  0 A$dng_crawling$1740                                            0006EC GR
+  0 A$dng_crawling$1741                                            0006ED GR
+  0 A$dng_crawling$1742                                            0006EF GR
+  0 A$dng_crawling$1743                                            0006F0 GR
+  0 A$dng_crawling$1744                                            0006F1 GR
+  0 A$dng_crawling$1745                                            0006F3 GR
+  0 A$dng_crawling$1746                                            0006F6 GR
+  0 A$dng_crawling$1747                                            0006F7 GR
+  0 A$dng_crawling$1748                                            0006FA GR
+  0 A$dng_crawling$1749                                            0006FB GR
+  0 A$dng_crawling$175                                             000063 GR
+  0 A$dng_crawling$1750                                            0006FE GR
+  0 A$dng_crawling$1751                                            0006FF GR
+  0 A$dng_crawling$1752                                            000702 GR
+  0 A$dng_crawling$1753                                            000704 GR
+  0 A$dng_crawling$1755                                            000706 GR
+  0 A$dng_crawling$1756                                            000709 GR
+  0 A$dng_crawling$1757                                            00070A GR
+  0 A$dng_crawling$1758                                            00070D GR
+  0 A$dng_crawling$1759                                            00070E GR
+  0 A$dng_crawling$176                                             000065 GR
+  0 A$dng_crawling$1760                                            000711 GR
+  0 A$dng_crawling$1761                                            000712 GR
+  0 A$dng_crawling$1762                                            000715 GR
+  0 A$dng_crawling$1767                                            000717 GR
+  0 A$dng_crawling$1768                                            000719 GR
+  0 A$dng_crawling$1769                                            00071A GR
+  0 A$dng_crawling$1770                                            00071B GR
+  0 A$dng_crawling$1771                                            00071E GR
+  0 A$dng_crawling$1772                                            000720 GR
+  0 A$dng_crawling$1773                                            000721 GR
+  0 A$dng_crawling$1774                                            000722 GR
+  0 A$dng_crawling$1775                                            000723 GR
+  0 A$dng_crawling$1776                                            000724 GR
+  0 A$dng_crawling$1777                                            000725 GR
+  0 A$dng_crawling$1778                                            000727 GR
+  0 A$dng_crawling$1779                                            000728 GR
+  0 A$dng_crawling$178                                             000066 GR
+  0 A$dng_crawling$1780                                            000729 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 12
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$1781                                            00072B GR
+  0 A$dng_crawling$1782                                            00072E GR
+  0 A$dng_crawling$1783                                            00072F GR
+  0 A$dng_crawling$1784                                            000732 GR
+  0 A$dng_crawling$1785                                            000733 GR
+  0 A$dng_crawling$1786                                            000736 GR
+  0 A$dng_crawling$1787                                            000737 GR
+  0 A$dng_crawling$1788                                            00073A GR
+  0 A$dng_crawling$1789                                            00073C GR
+  0 A$dng_crawling$179                                             000068 GR
+  0 A$dng_crawling$1791                                            00073F GR
+  0 A$dng_crawling$1792                                            000742 GR
+  0 A$dng_crawling$1793                                            000743 GR
+  0 A$dng_crawling$1794                                            000746 GR
+  0 A$dng_crawling$1795                                            000747 GR
+  0 A$dng_crawling$1796                                            00074A GR
+  0 A$dng_crawling$1797                                            00074B GR
+  0 A$dng_crawling$1798                                            00074E GR
+  0 A$dng_crawling$1799                                            000750 GR
+  0 A$dng_crawling$1804                                            000753 GR
+  0 A$dng_crawling$1805                                            000755 GR
+  0 A$dng_crawling$1806                                            000756 GR
+  0 A$dng_crawling$1807                                            000757 GR
+  0 A$dng_crawling$1808                                            00075A GR
+  0 A$dng_crawling$1809                                            00075C GR
+  0 A$dng_crawling$1810                                            00075D GR
+  0 A$dng_crawling$1811                                            00075E GR
+  0 A$dng_crawling$1812                                            00075F GR
+  0 A$dng_crawling$1813                                            000760 GR
+  0 A$dng_crawling$1814                                            000761 GR
+  0 A$dng_crawling$1815                                            000762 GR
+  0 A$dng_crawling$1816                                            000765 GR
+  0 A$dng_crawling$1817                                            000766 GR
+  0 A$dng_crawling$1818                                            000767 GR
+  0 A$dng_crawling$1819                                            000768 GR
+  0 A$dng_crawling$1820                                            000769 GR
+  0 A$dng_crawling$1821                                            00076A GR
+  0 A$dng_crawling$1822                                            00076C GR
+  0 A$dng_crawling$1823                                            00076D GR
+  0 A$dng_crawling$1824                                            00076E GR
+  0 A$dng_crawling$1825                                            000771 GR
+  0 A$dng_crawling$1826                                            000772 GR
+  0 A$dng_crawling$183                                             000069 GR
+  0 A$dng_crawling$1830                                            000775 GR
+  0 A$dng_crawling$1831                                            000777 GR
+  0 A$dng_crawling$1832                                            000778 GR
+  0 A$dng_crawling$1833                                            000779 GR
+  0 A$dng_crawling$1834                                            00077B GR
+  0 A$dng_crawling$1835                                            00077D GR
+  0 A$dng_crawling$1836                                            00077E GR
+  0 A$dng_crawling$1837                                            000780 GR
+  0 A$dng_crawling$1838                                            000781 GR
+  0 A$dng_crawling$1839                                            000783 GR
+  0 A$dng_crawling$184                                             00006B GR
+  0 A$dng_crawling$1840                                            000784 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 13
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$1841                                            000787 GR
+  0 A$dng_crawling$1842                                            000788 GR
+  0 A$dng_crawling$1843                                            00078B GR
+  0 A$dng_crawling$1844                                            00078C GR
+  0 A$dng_crawling$1845                                            00078F GR
+  0 A$dng_crawling$1846                                            000790 GR
+  0 A$dng_crawling$1847                                            000793 GR
+  0 A$dng_crawling$1848                                            000795 GR
+  0 A$dng_crawling$1849                                            000796 GR
+  0 A$dng_crawling$185                                             00006C GR
+  0 A$dng_crawling$1851                                            000798 GR
+  0 A$dng_crawling$1852                                            000799 GR
+  0 A$dng_crawling$1853                                            00079C GR
+  0 A$dng_crawling$1854                                            00079D GR
+  0 A$dng_crawling$1855                                            0007A0 GR
+  0 A$dng_crawling$1856                                            0007A1 GR
+  0 A$dng_crawling$1857                                            0007A4 GR
+  0 A$dng_crawling$1858                                            0007A5 GR
+  0 A$dng_crawling$1859                                            0007A8 GR
+  0 A$dng_crawling$186                                             00006D GR
+  0 A$dng_crawling$1860                                            0007AA GR
+  0 A$dng_crawling$1865                                            0007AB GR
+  0 A$dng_crawling$1866                                            0007AD GR
+  0 A$dng_crawling$1867                                            0007AE GR
+  0 A$dng_crawling$1868                                            0007AF GR
+  0 A$dng_crawling$1869                                            0007B1 GR
+  0 A$dng_crawling$187                                             00006E GR
+  0 A$dng_crawling$1870                                            0007B2 GR
+  0 A$dng_crawling$1871                                            0007B3 GR
+  0 A$dng_crawling$1872                                            0007B5 GR
+  0 A$dng_crawling$1873                                            0007B6 GR
+  0 A$dng_crawling$1874                                            0007B7 GR
+  0 A$dng_crawling$1875                                            0007B9 GR
+  0 A$dng_crawling$1876                                            0007BA GR
+  0 A$dng_crawling$1877                                            0007BD GR
+  0 A$dng_crawling$1878                                            0007BE GR
+  0 A$dng_crawling$1879                                            0007C1 GR
+  0 A$dng_crawling$1880                                            0007C2 GR
+  0 A$dng_crawling$1881                                            0007C5 GR
+  0 A$dng_crawling$1882                                            0007C6 GR
+  0 A$dng_crawling$1883                                            0007C9 GR
+  0 A$dng_crawling$1884                                            0007CB GR
+  0 A$dng_crawling$1885                                            0007CC GR
+  0 A$dng_crawling$1887                                            0007CE GR
+  0 A$dng_crawling$1888                                            0007CF GR
+  0 A$dng_crawling$1889                                            0007D2 GR
+  0 A$dng_crawling$1890                                            0007D3 GR
+  0 A$dng_crawling$1891                                            0007D6 GR
+  0 A$dng_crawling$1892                                            0007D7 GR
+  0 A$dng_crawling$1893                                            0007DA GR
+  0 A$dng_crawling$1894                                            0007DB GR
+  0 A$dng_crawling$1895                                            0007DE GR
+  0 A$dng_crawling$1896                                            0007E0 GR
+  0 A$dng_crawling$1901                                            0007E1 GR
+  0 A$dng_crawling$1902                                            0007E3 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 14
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$1903                                            0007E4 GR
+  0 A$dng_crawling$1904                                            0007E5 GR
+  0 A$dng_crawling$1905                                            0007E8 GR
+  0 A$dng_crawling$1906                                            0007E9 GR
+  0 A$dng_crawling$1907                                            0007EA GR
+  0 A$dng_crawling$1908                                            0007EC GR
+  0 A$dng_crawling$1909                                            0007ED GR
+  0 A$dng_crawling$191                                             000070 GR
+  0 A$dng_crawling$1910                                            0007EE GR
+  0 A$dng_crawling$1911                                            0007F0 GR
+  0 A$dng_crawling$1912                                            0007F3 GR
+  0 A$dng_crawling$1913                                            0007F4 GR
+  0 A$dng_crawling$1914                                            0007F7 GR
+  0 A$dng_crawling$1915                                            0007F8 GR
+  0 A$dng_crawling$1916                                            0007FB GR
+  0 A$dng_crawling$1917                                            0007FC GR
+  0 A$dng_crawling$1918                                            0007FF GR
+  0 A$dng_crawling$1919                                            000801 GR
+  0 A$dng_crawling$192                                             000071 GR
+  0 A$dng_crawling$1921                                            000804 GR
+  0 A$dng_crawling$1922                                            000807 GR
+  0 A$dng_crawling$1923                                            000808 GR
+  0 A$dng_crawling$1924                                            00080B GR
+  0 A$dng_crawling$1925                                            00080C GR
+  0 A$dng_crawling$1926                                            00080F GR
+  0 A$dng_crawling$1927                                            000810 GR
+  0 A$dng_crawling$1928                                            000813 GR
+  0 A$dng_crawling$1929                                            000815 GR
+  0 A$dng_crawling$193                                             000072 GR
+  0 A$dng_crawling$1934                                            000818 GR
+  0 A$dng_crawling$1935                                            00081A GR
+  0 A$dng_crawling$1936                                            00081B GR
+  0 A$dng_crawling$1937                                            00081D GR
+  0 A$dng_crawling$194                                             000073 GR
+  0 A$dng_crawling$1947                                            00081E GR
+  0 A$dng_crawling$1948                                            000820 GR
+  0 A$dng_crawling$1949                                            000822 GR
+  0 A$dng_crawling$1950                                            000823 GR
+  0 A$dng_crawling$1951                                            000824 GR
+  0 A$dng_crawling$1952                                            000825 GR
+  0 A$dng_crawling$1953                                            000826 GR
+  0 A$dng_crawling$1954                                            000827 GR
+  0 A$dng_crawling$1958                                            000828 GR
+  0 A$dng_crawling$1959                                            00082A GR
+  0 A$dng_crawling$1960                                            00082B GR
+  0 A$dng_crawling$1961                                            00082C GR
+  0 A$dng_crawling$1962                                            00082D GR
+  0 A$dng_crawling$1963                                            00082E GR
+  0 A$dng_crawling$1964                                            00082F GR
+  0 A$dng_crawling$1968                                            000830 GR
+  0 A$dng_crawling$1969                                            000831 GR
+  0 A$dng_crawling$1973                                            000832 GR
+  0 A$dng_crawling$1974                                            000833 GR
+  0 A$dng_crawling$1975                                            000834 GR
+  0 A$dng_crawling$1979                                            000835 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 15
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$198                                             000074 GR
+  0 A$dng_crawling$1980                                            000837 GR
+  0 A$dng_crawling$1981                                            000838 GR
+  0 A$dng_crawling$1982                                            00083A GR
+  0 A$dng_crawling$1983                                            00083B GR
+  0 A$dng_crawling$1984                                            00083D GR
+  0 A$dng_crawling$1985                                            00083E GR
+  0 A$dng_crawling$1986                                            000840 GR
+  0 A$dng_crawling$199                                             000076 GR
+  0 A$dng_crawling$1990                                            000841 GR
+  0 A$dng_crawling$1991                                            000843 GR
+  0 A$dng_crawling$1992                                            000844 GR
+  0 A$dng_crawling$1993                                            000845 GR
+  0 A$dng_crawling$1994                                            000847 GR
+  0 A$dng_crawling$1995                                            000849 GR
+  0 A$dng_crawling$1996                                            00084A GR
+  0 A$dng_crawling$1997                                            00084B GR
+  0 A$dng_crawling$1998                                            00084D GR
+  0 A$dng_crawling$1999                                            00084F GR
+  0 A$dng_crawling$200                                             000077 GR
+  0 A$dng_crawling$2000                                            000850 GR
+  0 A$dng_crawling$2001                                            000852 GR
+  0 A$dng_crawling$2002                                            000855 GR
+  0 A$dng_crawling$2003                                            000857 GR
+  0 A$dng_crawling$2004                                            000858 GR
+  0 A$dng_crawling$2005                                            00085A GR
+  0 A$dng_crawling$2006                                            00085D GR
+  0 A$dng_crawling$201                                             000078 GR
+  0 A$dng_crawling$2011                                            000860 GR
+  0 A$dng_crawling$2012                                            000862 GR
+  0 A$dng_crawling$2017                                            000864 GR
+  0 A$dng_crawling$2018                                            000866 GR
+  0 A$dng_crawling$2019                                            000867 GR
+  0 A$dng_crawling$2020                                            000869 GR
+  0 A$dng_crawling$2021                                            00086A GR
+  0 A$dng_crawling$2022                                            00086B GR
+  0 A$dng_crawling$2023                                            00086C GR
+  0 A$dng_crawling$2024                                            00086D GR
+  0 A$dng_crawling$2025                                            00086E GR
+  0 A$dng_crawling$2026                                            000871 GR
+  0 A$dng_crawling$2027                                            000872 GR
+  0 A$dng_crawling$2028                                            000873 GR
+  0 A$dng_crawling$2029                                            000874 GR
+  0 A$dng_crawling$2030                                            000875 GR
+  0 A$dng_crawling$2031                                            000877 GR
+  0 A$dng_crawling$2032                                            000878 GR
+  0 A$dng_crawling$2033                                            000879 GR
+  0 A$dng_crawling$2034                                            00087A GR
+  0 A$dng_crawling$2035                                            00087B GR
+  0 A$dng_crawling$2036                                            00087C GR
+  0 A$dng_crawling$2037                                            00087D GR
+  0 A$dng_crawling$2038                                            00087F GR
+  0 A$dng_crawling$2039                                            000880 GR
+  0 A$dng_crawling$2040                                            000881 GR
+  0 A$dng_crawling$2041                                            000882 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 16
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$2042                                            000884 GR
+  0 A$dng_crawling$2043                                            000885 GR
+  0 A$dng_crawling$2044                                            000886 GR
+  0 A$dng_crawling$2045                                            000887 GR
+  0 A$dng_crawling$2046                                            000888 GR
+  0 A$dng_crawling$2047                                            00088A GR
+  0 A$dng_crawling$2048                                            00088B GR
+  0 A$dng_crawling$2049                                            00088C GR
+  0 A$dng_crawling$205                                             00007A GR
+  0 A$dng_crawling$2050                                            00088D GR
+  0 A$dng_crawling$2051                                            00088E GR
+  0 A$dng_crawling$2052                                            00088F GR
+  0 A$dng_crawling$2053                                            000890 GR
+  0 A$dng_crawling$2054                                            000892 GR
+  0 A$dng_crawling$2055                                            000893 GR
+  0 A$dng_crawling$2056                                            000894 GR
+  0 A$dng_crawling$2057                                            000895 GR
+  0 A$dng_crawling$2058                                            000897 GR
+  0 A$dng_crawling$2059                                            000898 GR
+  0 A$dng_crawling$206                                             00007C GR
+  0 A$dng_crawling$2060                                            000899 GR
+  0 A$dng_crawling$2061                                            00089A GR
+  0 A$dng_crawling$2062                                            00089B GR
+  0 A$dng_crawling$2063                                            00089E GR
+  0 A$dng_crawling$2064                                            00089F GR
+  0 A$dng_crawling$2065                                            0008A1 GR
+  0 A$dng_crawling$2066                                            0008A2 GR
+  0 A$dng_crawling$2067                                            0008A3 GR
+  0 A$dng_crawling$2068                                            0008A4 GR
+  0 A$dng_crawling$207                                             00007D GR
+  0 A$dng_crawling$2072                                            0008A5 GR
+  0 A$dng_crawling$2073                                            0008A7 GR
+  0 A$dng_crawling$2074                                            0008A8 GR
+  0 A$dng_crawling$2075                                            0008A9 GR
+  0 A$dng_crawling$2076                                            0008AB GR
+  0 A$dng_crawling$2077                                            0008AD GR
+  0 A$dng_crawling$208                                             00007E GR
+  0 A$dng_crawling$2081                                            0008AF GR
+  0 A$dng_crawling$2085                                            0008B1 GR
+  0 A$dng_crawling$2086                                            0008B3 GR
+  0 A$dng_crawling$2087                                            0008B4 GR
+  0 A$dng_crawling$209                                             00007F GR
+  0 A$dng_crawling$2091                                            0008B6 GR
+  0 A$dng_crawling$2096                                            0008B9 GR
+  0 A$dng_crawling$2101                                            0008BB GR
+  0 A$dng_crawling$2102                                            0008BC GR
+  0 A$dng_crawling$2103                                            0008BD GR
+  0 A$dng_crawling$2104                                            0008BE GR
+  0 A$dng_crawling$2105                                            0008BF GR
+  0 A$dng_crawling$2106                                            0008C0 GR
+  0 A$dng_crawling$2107                                            0008C3 GR
+  0 A$dng_crawling$2108                                            0008C4 GR
+  0 A$dng_crawling$2109                                            0008C5 GR
+  0 A$dng_crawling$2110                                            0008C6 GR
+  0 A$dng_crawling$2111                                            0008C7 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 17
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$2112                                            0008C9 GR
+  0 A$dng_crawling$2113                                            0008CA GR
+  0 A$dng_crawling$2114                                            0008CB GR
+  0 A$dng_crawling$2115                                            0008CD GR
+  0 A$dng_crawling$2116                                            0008CE GR
+  0 A$dng_crawling$2117                                            0008CF GR
+  0 A$dng_crawling$2118                                            0008D0 GR
+  0 A$dng_crawling$2119                                            0008D1 GR
+  0 A$dng_crawling$2120                                            0008D2 GR
+  0 A$dng_crawling$2121                                            0008D3 GR
+  0 A$dng_crawling$2122                                            0008D4 GR
+  0 A$dng_crawling$2123                                            0008D5 GR
+  0 A$dng_crawling$2124                                            0008D7 GR
+  0 A$dng_crawling$2125                                            0008D8 GR
+  0 A$dng_crawling$2126                                            0008D9 GR
+  0 A$dng_crawling$2127                                            0008DA GR
+  0 A$dng_crawling$2128                                            0008DC GR
+  0 A$dng_crawling$2129                                            0008DD GR
+  0 A$dng_crawling$213                                             000081 GR
+  0 A$dng_crawling$2130                                            0008DE GR
+  0 A$dng_crawling$2131                                            0008DF GR
+  0 A$dng_crawling$2132                                            0008E0 GR
+  0 A$dng_crawling$2133                                            0008E3 GR
+  0 A$dng_crawling$2134                                            0008E4 GR
+  0 A$dng_crawling$2135                                            0008E5 GR
+  0 A$dng_crawling$2139                                            0008E6 GR
+  0 A$dng_crawling$214                                             000082 GR
+  0 A$dng_crawling$2140                                            0008E7 GR
+  0 A$dng_crawling$2141                                            0008E8 GR
+  0 A$dng_crawling$2142                                            0008EA GR
+  0 A$dng_crawling$2143                                            0008EC GR
+  0 A$dng_crawling$2147                                            0008EE GR
+  0 A$dng_crawling$215                                             000083 GR
+  0 A$dng_crawling$2151                                            0008F0 GR
+  0 A$dng_crawling$2152                                            0008F2 GR
+  0 A$dng_crawling$2153                                            0008F3 GR
+  0 A$dng_crawling$2157                                            0008F5 GR
+  0 A$dng_crawling$216                                             000084 GR
+  0 A$dng_crawling$2162                                            0008F7 GR
+  0 A$dng_crawling$2167                                            0008F9 GR
+  0 A$dng_crawling$2168                                            0008FA GR
+  0 A$dng_crawling$2169                                            0008FB GR
+  0 A$dng_crawling$2170                                            0008FC GR
+  0 A$dng_crawling$2171                                            0008FD GR
+  0 A$dng_crawling$2172                                            0008FE GR
+  0 A$dng_crawling$2173                                            000901 GR
+  0 A$dng_crawling$2174                                            000902 GR
+  0 A$dng_crawling$2175                                            000903 GR
+  0 A$dng_crawling$2176                                            000904 GR
+  0 A$dng_crawling$2177                                            000905 GR
+  0 A$dng_crawling$2178                                            000907 GR
+  0 A$dng_crawling$2179                                            000908 GR
+  0 A$dng_crawling$2180                                            000909 GR
+  0 A$dng_crawling$2181                                            00090B GR
+  0 A$dng_crawling$2182                                            00090C GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 18
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$2183                                            00090D GR
+  0 A$dng_crawling$2184                                            00090E GR
+  0 A$dng_crawling$2185                                            00090F GR
+  0 A$dng_crawling$2186                                            000910 GR
+  0 A$dng_crawling$2187                                            000911 GR
+  0 A$dng_crawling$2188                                            000912 GR
+  0 A$dng_crawling$2189                                            000913 GR
+  0 A$dng_crawling$2190                                            000915 GR
+  0 A$dng_crawling$2191                                            000916 GR
+  0 A$dng_crawling$2192                                            000917 GR
+  0 A$dng_crawling$2193                                            000918 GR
+  0 A$dng_crawling$2194                                            00091A GR
+  0 A$dng_crawling$2195                                            00091B GR
+  0 A$dng_crawling$2196                                            00091C GR
+  0 A$dng_crawling$2197                                            00091D GR
+  0 A$dng_crawling$2198                                            00091E GR
+  0 A$dng_crawling$2199                                            000921 GR
+  0 A$dng_crawling$220                                             000085 GR
+  0 A$dng_crawling$2200                                            000922 GR
+  0 A$dng_crawling$2201                                            000923 GR
+  0 A$dng_crawling$2205                                            000924 GR
+  0 A$dng_crawling$2206                                            000925 GR
+  0 A$dng_crawling$2207                                            000926 GR
+  0 A$dng_crawling$2208                                            000928 GR
+  0 A$dng_crawling$2209                                            00092A GR
+  0 A$dng_crawling$221                                             000087 GR
+  0 A$dng_crawling$2213                                            00092C GR
+  0 A$dng_crawling$2217                                            00092E GR
+  0 A$dng_crawling$2218                                            000930 GR
+  0 A$dng_crawling$2219                                            000931 GR
+  0 A$dng_crawling$222                                             000088 GR
+  0 A$dng_crawling$2223                                            000933 GR
+  0 A$dng_crawling$2228                                            000935 GR
+  0 A$dng_crawling$223                                             000089 GR
+  0 A$dng_crawling$2233                                            000937 GR
+  0 A$dng_crawling$2234                                            000938 GR
+  0 A$dng_crawling$2235                                            000939 GR
+  0 A$dng_crawling$2236                                            00093A GR
+  0 A$dng_crawling$2237                                            00093B GR
+  0 A$dng_crawling$2238                                            00093C GR
+  0 A$dng_crawling$2239                                            00093F GR
+  0 A$dng_crawling$224                                             00008C GR
+  0 A$dng_crawling$2240                                            000940 GR
+  0 A$dng_crawling$2241                                            000941 GR
+  0 A$dng_crawling$2242                                            000942 GR
+  0 A$dng_crawling$2243                                            000943 GR
+  0 A$dng_crawling$2244                                            000945 GR
+  0 A$dng_crawling$2245                                            000946 GR
+  0 A$dng_crawling$2246                                            000947 GR
+  0 A$dng_crawling$2247                                            000949 GR
+  0 A$dng_crawling$2248                                            00094A GR
+  0 A$dng_crawling$2249                                            00094B GR
+  0 A$dng_crawling$225                                             00008D GR
+  0 A$dng_crawling$2250                                            00094C GR
+  0 A$dng_crawling$2251                                            00094D GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 19
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$2252                                            00094E GR
+  0 A$dng_crawling$2253                                            00094F GR
+  0 A$dng_crawling$2254                                            000950 GR
+  0 A$dng_crawling$2255                                            000951 GR
+  0 A$dng_crawling$2256                                            000953 GR
+  0 A$dng_crawling$2257                                            000954 GR
+  0 A$dng_crawling$2258                                            000955 GR
+  0 A$dng_crawling$2259                                            000956 GR
+  0 A$dng_crawling$226                                             00008E GR
+  0 A$dng_crawling$2260                                            000958 GR
+  0 A$dng_crawling$2261                                            000959 GR
+  0 A$dng_crawling$2262                                            00095A GR
+  0 A$dng_crawling$2263                                            00095B GR
+  0 A$dng_crawling$2264                                            00095C GR
+  0 A$dng_crawling$2265                                            00095F GR
+  0 A$dng_crawling$2266                                            000960 GR
+  0 A$dng_crawling$2267                                            000961 GR
+  0 A$dng_crawling$227                                             00008F GR
+  0 A$dng_crawling$2271                                            000962 GR
+  0 A$dng_crawling$2272                                            000963 GR
+  0 A$dng_crawling$2273                                            000964 GR
+  0 A$dng_crawling$2274                                            000966 GR
+  0 A$dng_crawling$2275                                            000968 GR
+  0 A$dng_crawling$2279                                            00096A GR
+  0 A$dng_crawling$228                                             000092 GR
+  0 A$dng_crawling$2283                                            00096C GR
+  0 A$dng_crawling$2284                                            00096E GR
+  0 A$dng_crawling$2285                                            00096F GR
+  0 A$dng_crawling$229                                             000093 GR
+  0 A$dng_crawling$2290                                            000971 GR
+  0 A$dng_crawling$2291                                            000973 GR
+  0 A$dng_crawling$2293                                            000975 GR
+  0 A$dng_crawling$2294                                            000977 GR
+  0 A$dng_crawling$2295                                            000978 GR
+  0 A$dng_crawling$2296                                            00097A GR
+  0 A$dng_crawling$2297                                            00097B GR
+  0 A$dng_crawling$2298                                            00097D GR
+  0 A$dng_crawling$2299                                            00097E GR
+  0 A$dng_crawling$230                                             000094 GR
+  0 A$dng_crawling$2300                                            000980 GR
+  0 A$dng_crawling$2301                                            000981 GR
+  0 A$dng_crawling$2302                                            000982 GR
+  0 A$dng_crawling$2306                                            000985 GR
+  0 A$dng_crawling$2307                                            000987 GR
+  0 A$dng_crawling$2308                                            000988 GR
+  0 A$dng_crawling$2309                                            000989 GR
+  0 A$dng_crawling$231                                             000095 GR
+  0 A$dng_crawling$2310                                            00098A GR
+  0 A$dng_crawling$2311                                            00098B GR
+  0 A$dng_crawling$2312                                            00098C GR
+  0 A$dng_crawling$2313                                            00098F GR
+  0 A$dng_crawling$2314                                            000990 GR
+  0 A$dng_crawling$2315                                            000991 GR
+  0 A$dng_crawling$2316                                            000992 GR
+  0 A$dng_crawling$2317                                            000993 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 20
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$2318                                            000995 GR
+  0 A$dng_crawling$2319                                            000996 GR
+  0 A$dng_crawling$232                                             000098 GR
+  0 A$dng_crawling$2320                                            000997 GR
+  0 A$dng_crawling$2321                                            000998 GR
+  0 A$dng_crawling$2322                                            00099A GR
+  0 A$dng_crawling$2323                                            00099B GR
+  0 A$dng_crawling$2324                                            00099C GR
+  0 A$dng_crawling$2325                                            00099D GR
+  0 A$dng_crawling$2326                                            00099E GR
+  0 A$dng_crawling$2327                                            00099F GR
+  0 A$dng_crawling$2328                                            0009A0 GR
+  0 A$dng_crawling$2332                                            0009A1 GR
+  0 A$dng_crawling$2333                                            0009A3 GR
+  0 A$dng_crawling$2334                                            0009A4 GR
+  0 A$dng_crawling$2335                                            0009A6 GR
+  0 A$dng_crawling$2336                                            0009A8 GR
+  0 A$dng_crawling$2337                                            0009AA GR
+  0 A$dng_crawling$2339                                            0009AB GR
+  0 A$dng_crawling$2340                                            0009AD GR
+  0 A$dng_crawling$2344                                            0009AE GR
+  0 A$dng_crawling$2345                                            0009B0 GR
+  0 A$dng_crawling$2346                                            0009B1 GR
+  0 A$dng_crawling$2347                                            0009B2 GR
+  0 A$dng_crawling$2348                                            0009B4 GR
+  0 A$dng_crawling$2349                                            0009B6 GR
+  0 A$dng_crawling$2351                                            0009B7 GR
+  0 A$dng_crawling$2355                                            0009B9 GR
+  0 A$dng_crawling$2356                                            0009BA GR
+  0 A$dng_crawling$2357                                            0009BB GR
+  0 A$dng_crawling$2358                                            0009BC GR
+  0 A$dng_crawling$2359                                            0009BD GR
+  0 A$dng_crawling$2360                                            0009C0 GR
+  0 A$dng_crawling$2361                                            0009C1 GR
+  0 A$dng_crawling$2362                                            0009C2 GR
+  0 A$dng_crawling$2366                                            0009C5 GR
+  0 A$dng_crawling$2367                                            0009C7 GR
+  0 A$dng_crawling$2368                                            0009C8 GR
+  0 A$dng_crawling$2369                                            0009C9 GR
+  0 A$dng_crawling$2370                                            0009CB GR
+  0 A$dng_crawling$2371                                            0009CD GR
+  0 A$dng_crawling$2372                                            0009CE GR
+  0 A$dng_crawling$2373                                            0009D0 GR
+  0 A$dng_crawling$2374                                            0009D1 GR
+  0 A$dng_crawling$2375                                            0009D3 GR
+  0 A$dng_crawling$2376                                            0009D6 GR
+  0 A$dng_crawling$2377                                            0009D7 GR
+  0 A$dng_crawling$2378                                            0009DA GR
+  0 A$dng_crawling$2379                                            0009DB GR
+  0 A$dng_crawling$2380                                            0009DE GR
+  0 A$dng_crawling$2381                                            0009DF GR
+  0 A$dng_crawling$2382                                            0009E2 GR
+  0 A$dng_crawling$2383                                            0009E4 GR
+  0 A$dng_crawling$2385                                            0009E6 GR
+  0 A$dng_crawling$2386                                            0009E9 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 21
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$2387                                            0009EA GR
+  0 A$dng_crawling$2388                                            0009ED GR
+  0 A$dng_crawling$2389                                            0009EE GR
+  0 A$dng_crawling$2390                                            0009F1 GR
+  0 A$dng_crawling$2391                                            0009F2 GR
+  0 A$dng_crawling$2392                                            0009F5 GR
+  0 A$dng_crawling$2397                                            0009F7 GR
+  0 A$dng_crawling$2398                                            0009F9 GR
+  0 A$dng_crawling$2399                                            0009FA GR
+  0 A$dng_crawling$240                                             00009B GR
+  0 A$dng_crawling$2400                                            0009FB GR
+  0 A$dng_crawling$2401                                            0009FD GR
+  0 A$dng_crawling$2402                                            0009FF GR
+  0 A$dng_crawling$2403                                            000A00 GR
+  0 A$dng_crawling$2404                                            000A01 GR
+  0 A$dng_crawling$2405                                            000A02 GR
+  0 A$dng_crawling$2406                                            000A03 GR
+  0 A$dng_crawling$2407                                            000A04 GR
+  0 A$dng_crawling$2408                                            000A06 GR
+  0 A$dng_crawling$2409                                            000A07 GR
+  0 A$dng_crawling$241                                             00009D GR
+  0 A$dng_crawling$2410                                            000A08 GR
+  0 A$dng_crawling$2411                                            000A0A GR
+  0 A$dng_crawling$2412                                            000A0D GR
+  0 A$dng_crawling$2413                                            000A0E GR
+  0 A$dng_crawling$2414                                            000A11 GR
+  0 A$dng_crawling$2415                                            000A12 GR
+  0 A$dng_crawling$2416                                            000A15 GR
+  0 A$dng_crawling$2417                                            000A16 GR
+  0 A$dng_crawling$2418                                            000A19 GR
+  0 A$dng_crawling$2419                                            000A1B GR
+  0 A$dng_crawling$242                                             00009F GR
+  0 A$dng_crawling$2421                                            000A1D GR
+  0 A$dng_crawling$2422                                            000A20 GR
+  0 A$dng_crawling$2423                                            000A21 GR
+  0 A$dng_crawling$2424                                            000A24 GR
+  0 A$dng_crawling$2425                                            000A25 GR
+  0 A$dng_crawling$2426                                            000A28 GR
+  0 A$dng_crawling$2427                                            000A29 GR
+  0 A$dng_crawling$2428                                            000A2C GR
+  0 A$dng_crawling$2433                                            000A2E GR
+  0 A$dng_crawling$2434                                            000A30 GR
+  0 A$dng_crawling$2435                                            000A31 GR
+  0 A$dng_crawling$2436                                            000A32 GR
+  0 A$dng_crawling$2437                                            000A35 GR
+  0 A$dng_crawling$2438                                            000A37 GR
+  0 A$dng_crawling$2439                                            000A38 GR
+  0 A$dng_crawling$2440                                            000A39 GR
+  0 A$dng_crawling$2441                                            000A3A GR
+  0 A$dng_crawling$2442                                            000A3B GR
+  0 A$dng_crawling$2443                                            000A3C GR
+  0 A$dng_crawling$2444                                            000A3E GR
+  0 A$dng_crawling$2445                                            000A3F GR
+  0 A$dng_crawling$2446                                            000A40 GR
+  0 A$dng_crawling$2447                                            000A42 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 22
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$2448                                            000A45 GR
+  0 A$dng_crawling$2449                                            000A46 GR
+  0 A$dng_crawling$2450                                            000A49 GR
+  0 A$dng_crawling$2451                                            000A4A GR
+  0 A$dng_crawling$2452                                            000A4D GR
+  0 A$dng_crawling$2453                                            000A4E GR
+  0 A$dng_crawling$2454                                            000A51 GR
+  0 A$dng_crawling$2455                                            000A53 GR
+  0 A$dng_crawling$2457                                            000A56 GR
+  0 A$dng_crawling$2458                                            000A59 GR
+  0 A$dng_crawling$2459                                            000A5A GR
+  0 A$dng_crawling$2460                                            000A5D GR
+  0 A$dng_crawling$2461                                            000A5E GR
+  0 A$dng_crawling$2462                                            000A61 GR
+  0 A$dng_crawling$2463                                            000A62 GR
+  0 A$dng_crawling$2464                                            000A65 GR
+  0 A$dng_crawling$2465                                            000A67 GR
+  0 A$dng_crawling$247                                             0000A0 GR
+  0 A$dng_crawling$2470                                            000A6A GR
+  0 A$dng_crawling$2471                                            000A6C GR
+  0 A$dng_crawling$2472                                            000A6D GR
+  0 A$dng_crawling$2473                                            000A6E GR
+  0 A$dng_crawling$2474                                            000A71 GR
+  0 A$dng_crawling$2475                                            000A73 GR
+  0 A$dng_crawling$2476                                            000A74 GR
+  0 A$dng_crawling$2477                                            000A75 GR
+  0 A$dng_crawling$2478                                            000A76 GR
+  0 A$dng_crawling$2479                                            000A77 GR
+  0 A$dng_crawling$248                                             0000A2 GR
+  0 A$dng_crawling$2480                                            000A78 GR
+  0 A$dng_crawling$2481                                            000A79 GR
+  0 A$dng_crawling$2482                                            000A7C GR
+  0 A$dng_crawling$2483                                            000A7D GR
+  0 A$dng_crawling$2484                                            000A7E GR
+  0 A$dng_crawling$2485                                            000A7F GR
+  0 A$dng_crawling$2486                                            000A80 GR
+  0 A$dng_crawling$2487                                            000A81 GR
+  0 A$dng_crawling$2488                                            000A83 GR
+  0 A$dng_crawling$2489                                            000A84 GR
+  0 A$dng_crawling$249                                             0000A3 GR
+  0 A$dng_crawling$2490                                            000A85 GR
+  0 A$dng_crawling$2491                                            000A88 GR
+  0 A$dng_crawling$2492                                            000A89 GR
+  0 A$dng_crawling$2496                                            000A8C GR
+  0 A$dng_crawling$2497                                            000A8E GR
+  0 A$dng_crawling$2498                                            000A8F GR
+  0 A$dng_crawling$2499                                            000A90 GR
+  0 A$dng_crawling$250                                             0000A4 GR
+  0 A$dng_crawling$2500                                            000A92 GR
+  0 A$dng_crawling$2501                                            000A94 GR
+  0 A$dng_crawling$2502                                            000A95 GR
+  0 A$dng_crawling$2503                                            000A97 GR
+  0 A$dng_crawling$2504                                            000A98 GR
+  0 A$dng_crawling$2505                                            000A9A GR
+  0 A$dng_crawling$2506                                            000A9B GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 23
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$2507                                            000A9E GR
+  0 A$dng_crawling$2508                                            000A9F GR
+  0 A$dng_crawling$2509                                            000AA2 GR
+  0 A$dng_crawling$251                                             0000A5 GR
+  0 A$dng_crawling$2510                                            000AA3 GR
+  0 A$dng_crawling$2511                                            000AA6 GR
+  0 A$dng_crawling$2512                                            000AA7 GR
+  0 A$dng_crawling$2513                                            000AAA GR
+  0 A$dng_crawling$2514                                            000AAC GR
+  0 A$dng_crawling$2515                                            000AAD GR
+  0 A$dng_crawling$2517                                            000AAF GR
+  0 A$dng_crawling$2518                                            000AB0 GR
+  0 A$dng_crawling$2519                                            000AB3 GR
+  0 A$dng_crawling$252                                             0000A6 GR
+  0 A$dng_crawling$2520                                            000AB4 GR
+  0 A$dng_crawling$2521                                            000AB7 GR
+  0 A$dng_crawling$2522                                            000AB8 GR
+  0 A$dng_crawling$2523                                            000ABB GR
+  0 A$dng_crawling$2524                                            000ABC GR
+  0 A$dng_crawling$2525                                            000ABF GR
+  0 A$dng_crawling$2526                                            000AC1 GR
+  0 A$dng_crawling$253                                             0000A7 GR
+  0 A$dng_crawling$2531                                            000AC2 GR
+  0 A$dng_crawling$2532                                            000AC4 GR
+  0 A$dng_crawling$2533                                            000AC5 GR
+  0 A$dng_crawling$2534                                            000AC6 GR
+  0 A$dng_crawling$2535                                            000AC8 GR
+  0 A$dng_crawling$2536                                            000AC9 GR
+  0 A$dng_crawling$2537                                            000ACA GR
+  0 A$dng_crawling$2538                                            000ACC GR
+  0 A$dng_crawling$2539                                            000ACD GR
+  0 A$dng_crawling$254                                             0000A8 GR
+  0 A$dng_crawling$2540                                            000ACE GR
+  0 A$dng_crawling$2541                                            000AD0 GR
+  0 A$dng_crawling$2542                                            000AD1 GR
+  0 A$dng_crawling$2543                                            000AD4 GR
+  0 A$dng_crawling$2544                                            000AD5 GR
+  0 A$dng_crawling$2545                                            000AD8 GR
+  0 A$dng_crawling$2546                                            000AD9 GR
+  0 A$dng_crawling$2547                                            000ADC GR
+  0 A$dng_crawling$2548                                            000ADD GR
+  0 A$dng_crawling$2549                                            000AE0 GR
+  0 A$dng_crawling$255                                             0000A9 GR
+  0 A$dng_crawling$2550                                            000AE2 GR
+  0 A$dng_crawling$2551                                            000AE3 GR
+  0 A$dng_crawling$2553                                            000AE5 GR
+  0 A$dng_crawling$2554                                            000AE6 GR
+  0 A$dng_crawling$2555                                            000AE9 GR
+  0 A$dng_crawling$2556                                            000AEA GR
+  0 A$dng_crawling$2557                                            000AED GR
+  0 A$dng_crawling$2558                                            000AEE GR
+  0 A$dng_crawling$2559                                            000AF1 GR
+  0 A$dng_crawling$256                                             0000AA GR
+  0 A$dng_crawling$2560                                            000AF2 GR
+  0 A$dng_crawling$2561                                            000AF5 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 24
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$2562                                            000AF7 GR
+  0 A$dng_crawling$2567                                            000AF8 GR
+  0 A$dng_crawling$2568                                            000AFA GR
+  0 A$dng_crawling$2569                                            000AFB GR
+  0 A$dng_crawling$257                                             0000AB GR
+  0 A$dng_crawling$2570                                            000AFC GR
+  0 A$dng_crawling$2571                                            000AFF GR
+  0 A$dng_crawling$2572                                            000B00 GR
+  0 A$dng_crawling$2573                                            000B01 GR
+  0 A$dng_crawling$2574                                            000B03 GR
+  0 A$dng_crawling$2575                                            000B04 GR
+  0 A$dng_crawling$2576                                            000B05 GR
+  0 A$dng_crawling$2577                                            000B07 GR
+  0 A$dng_crawling$2578                                            000B0A GR
+  0 A$dng_crawling$2579                                            000B0B GR
+  0 A$dng_crawling$258                                             0000AC GR
+  0 A$dng_crawling$2580                                            000B0E GR
+  0 A$dng_crawling$2581                                            000B0F GR
+  0 A$dng_crawling$2582                                            000B12 GR
+  0 A$dng_crawling$2583                                            000B13 GR
+  0 A$dng_crawling$2584                                            000B16 GR
+  0 A$dng_crawling$2585                                            000B18 GR
+  0 A$dng_crawling$2587                                            000B1B GR
+  0 A$dng_crawling$2588                                            000B1E GR
+  0 A$dng_crawling$2589                                            000B1F GR
+  0 A$dng_crawling$259                                             0000AE GR
+  0 A$dng_crawling$2590                                            000B22 GR
+  0 A$dng_crawling$2591                                            000B23 GR
+  0 A$dng_crawling$2592                                            000B26 GR
+  0 A$dng_crawling$2593                                            000B27 GR
+  0 A$dng_crawling$2594                                            000B2A GR
+  0 A$dng_crawling$2595                                            000B2C GR
+  0 A$dng_crawling$260                                             0000AF GR
+  0 A$dng_crawling$2600                                            000B2F GR
+  0 A$dng_crawling$2601                                            000B31 GR
+  0 A$dng_crawling$2602                                            000B32 GR
+  0 A$dng_crawling$2603                                            000B34 GR
+  0 A$dng_crawling$261                                             0000B0 GR
+  0 A$dng_crawling$262                                             0000B1 GR
+  0 A$dng_crawling$263                                             0000B2 GR
+  0 A$dng_crawling$264                                             0000B5 GR
+  0 A$dng_crawling$265                                             0000B6 GR
+  0 A$dng_crawling$269                                             0000B7 GR
+  0 A$dng_crawling$270                                             0000B8 GR
+  0 A$dng_crawling$271                                             0000B9 GR
+  0 A$dng_crawling$272                                             0000BB GR
+  0 A$dng_crawling$273                                             0000BC GR
+  0 A$dng_crawling$277                                             0000BE GR
+  0 A$dng_crawling$278                                             0000C0 GR
+  0 A$dng_crawling$279                                             0000C1 GR
+  0 A$dng_crawling$280                                             0000C3 GR
+  0 A$dng_crawling$284                                             0000C4 GR
+  0 A$dng_crawling$289                                             0000C6 GR
+  0 A$dng_crawling$290                                             0000C7 GR
+  0 A$dng_crawling$291                                             0000C9 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 25
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$292                                             0000CA GR
+  0 A$dng_crawling$293                                             0000CC GR
+  0 A$dng_crawling$294                                             0000CD GR
+  0 A$dng_crawling$299                                             0000CF GR
+  0 A$dng_crawling$300                                             0000D1 GR
+  0 A$dng_crawling$301                                             0000D2 GR
+  0 A$dng_crawling$302                                             0000D4 GR
+  0 A$dng_crawling$303                                             0000D5 GR
+  0 A$dng_crawling$304                                             0000D6 GR
+  0 A$dng_crawling$305                                             0000D7 GR
+  0 A$dng_crawling$306                                             0000D8 GR
+  0 A$dng_crawling$307                                             0000D9 GR
+  0 A$dng_crawling$308                                             0000DA GR
+  0 A$dng_crawling$309                                             0000DC GR
+  0 A$dng_crawling$310                                             0000DD GR
+  0 A$dng_crawling$311                                             0000DE GR
+  0 A$dng_crawling$312                                             0000DF GR
+  0 A$dng_crawling$313                                             0000E1 GR
+  0 A$dng_crawling$314                                             0000E2 GR
+  0 A$dng_crawling$315                                             0000E3 GR
+  0 A$dng_crawling$316                                             0000E4 GR
+  0 A$dng_crawling$317                                             0000E6 GR
+  0 A$dng_crawling$318                                             0000E7 GR
+  0 A$dng_crawling$319                                             0000E8 GR
+  0 A$dng_crawling$320                                             0000E9 GR
+  0 A$dng_crawling$321                                             0000EA GR
+  0 A$dng_crawling$322                                             0000ED GR
+  0 A$dng_crawling$323                                             0000EE GR
+  0 A$dng_crawling$324                                             0000EF GR
+  0 A$dng_crawling$325                                             0000F1 GR
+  0 A$dng_crawling$329                                             0000F2 GR
+  0 A$dng_crawling$330                                             0000F3 GR
+  0 A$dng_crawling$331                                             0000F4 GR
+  0 A$dng_crawling$332                                             0000F5 GR
+  0 A$dng_crawling$333                                             0000F6 GR
+  0 A$dng_crawling$334                                             0000F8 GR
+  0 A$dng_crawling$335                                             0000F9 GR
+  0 A$dng_crawling$336                                             0000FA GR
+  0 A$dng_crawling$337                                             0000FB GR
+  0 A$dng_crawling$338                                             0000FD GR
+  0 A$dng_crawling$339                                             0000FE GR
+  0 A$dng_crawling$340                                             0000FF GR
+  0 A$dng_crawling$341                                             000100 GR
+  0 A$dng_crawling$342                                             000102 GR
+  0 A$dng_crawling$343                                             000103 GR
+  0 A$dng_crawling$344                                             000104 GR
+  0 A$dng_crawling$345                                             000105 GR
+  0 A$dng_crawling$346                                             000106 GR
+  0 A$dng_crawling$347                                             000109 GR
+  0 A$dng_crawling$348                                             00010A GR
+  0 A$dng_crawling$349                                             00010B GR
+  0 A$dng_crawling$350                                             00010D GR
+  0 A$dng_crawling$354                                             00010E GR
+  0 A$dng_crawling$362                                             000111 GR
+  0 A$dng_crawling$363                                             000113 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 26
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$368                                             000114 GR
+  0 A$dng_crawling$369                                             000116 GR
+  0 A$dng_crawling$370                                             000117 GR
+  0 A$dng_crawling$371                                             000118 GR
+  0 A$dng_crawling$372                                             000119 GR
+  0 A$dng_crawling$373                                             00011A GR
+  0 A$dng_crawling$376                                             00011B GR
+  0 A$dng_crawling$377                                             00011C GR
+  0 A$dng_crawling$378                                             00011D GR
+  0 A$dng_crawling$379                                             00011E GR
+  0 A$dng_crawling$380                                             00011F GR
+  0 A$dng_crawling$381                                             000121 GR
+  0 A$dng_crawling$382                                             000122 GR
+  0 A$dng_crawling$383                                             000123 GR
+  0 A$dng_crawling$384                                             000124 GR
+  0 A$dng_crawling$385                                             000126 GR
+  0 A$dng_crawling$386                                             000127 GR
+  0 A$dng_crawling$387                                             000128 GR
+  0 A$dng_crawling$388                                             000129 GR
+  0 A$dng_crawling$389                                             00012A GR
+  0 A$dng_crawling$390                                             00012D GR
+  0 A$dng_crawling$391                                             00012E GR
+  0 A$dng_crawling$395                                             00012F GR
+  0 A$dng_crawling$396                                             000130 GR
+  0 A$dng_crawling$397                                             000131 GR
+  0 A$dng_crawling$398                                             000133 GR
+  0 A$dng_crawling$399                                             000134 GR
+  0 A$dng_crawling$403                                             000136 GR
+  0 A$dng_crawling$404                                             000138 GR
+  0 A$dng_crawling$408                                             000139 GR
+  0 A$dng_crawling$413                                             00013B GR
+  0 A$dng_crawling$414                                             00013C GR
+  0 A$dng_crawling$415                                             00013D GR
+  0 A$dng_crawling$416                                             00013F GR
+  0 A$dng_crawling$417                                             000140 GR
+  0 A$dng_crawling$422                                             000142 GR
+  0 A$dng_crawling$423                                             000144 GR
+  0 A$dng_crawling$424                                             000145 GR
+  0 A$dng_crawling$425                                             000147 GR
+  0 A$dng_crawling$426                                             000148 GR
+  0 A$dng_crawling$427                                             000149 GR
+  0 A$dng_crawling$428                                             00014A GR
+  0 A$dng_crawling$429                                             00014B GR
+  0 A$dng_crawling$430                                             00014D GR
+  0 A$dng_crawling$431                                             00014E GR
+  0 A$dng_crawling$432                                             00014F GR
+  0 A$dng_crawling$433                                             000150 GR
+  0 A$dng_crawling$434                                             000151 GR
+  0 A$dng_crawling$435                                             000152 GR
+  0 A$dng_crawling$436                                             000154 GR
+  0 A$dng_crawling$437                                             000155 GR
+  0 A$dng_crawling$438                                             000156 GR
+  0 A$dng_crawling$439                                             000157 GR
+  0 A$dng_crawling$440                                             000159 GR
+  0 A$dng_crawling$441                                             00015A GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 27
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$442                                             00015B GR
+  0 A$dng_crawling$443                                             00015C GR
+  0 A$dng_crawling$444                                             00015D GR
+  0 A$dng_crawling$445                                             000160 GR
+  0 A$dng_crawling$446                                             000161 GR
+  0 A$dng_crawling$447                                             000162 GR
+  0 A$dng_crawling$448                                             000164 GR
+  0 A$dng_crawling$452                                             000165 GR
+  0 A$dng_crawling$453                                             000166 GR
+  0 A$dng_crawling$454                                             000167 GR
+  0 A$dng_crawling$455                                             000169 GR
+  0 A$dng_crawling$456                                             00016A GR
+  0 A$dng_crawling$457                                             00016B GR
+  0 A$dng_crawling$458                                             00016C GR
+  0 A$dng_crawling$459                                             00016D GR
+  0 A$dng_crawling$460                                             00016E GR
+  0 A$dng_crawling$461                                             000170 GR
+  0 A$dng_crawling$462                                             000171 GR
+  0 A$dng_crawling$463                                             000172 GR
+  0 A$dng_crawling$464                                             000173 GR
+  0 A$dng_crawling$465                                             000175 GR
+  0 A$dng_crawling$466                                             000176 GR
+  0 A$dng_crawling$467                                             000177 GR
+  0 A$dng_crawling$468                                             000178 GR
+  0 A$dng_crawling$469                                             000179 GR
+  0 A$dng_crawling$470                                             00017C GR
+  0 A$dng_crawling$471                                             00017D GR
+  0 A$dng_crawling$472                                             00017E GR
+  0 A$dng_crawling$473                                             000180 GR
+  0 A$dng_crawling$477                                             000181 GR
+  0 A$dng_crawling$485                                             000184 GR
+  0 A$dng_crawling$486                                             000186 GR
+  0 A$dng_crawling$491                                             000187 GR
+  0 A$dng_crawling$492                                             000189 GR
+  0 A$dng_crawling$493                                             00018A GR
+  0 A$dng_crawling$494                                             00018B GR
+  0 A$dng_crawling$495                                             00018C GR
+  0 A$dng_crawling$496                                             00018D GR
+  0 A$dng_crawling$497                                             00018E GR
+  0 A$dng_crawling$498                                             00018F GR
+  0 A$dng_crawling$499                                             000190 GR
+  0 A$dng_crawling$500                                             000191 GR
+  0 A$dng_crawling$501                                             000192 GR
+  0 A$dng_crawling$502                                             000193 GR
+  0 A$dng_crawling$503                                             000195 GR
+  0 A$dng_crawling$504                                             000196 GR
+  0 A$dng_crawling$505                                             000197 GR
+  0 A$dng_crawling$506                                             000198 GR
+  0 A$dng_crawling$507                                             000199 GR
+  0 A$dng_crawling$508                                             00019C GR
+  0 A$dng_crawling$509                                             00019D GR
+  0 A$dng_crawling$513                                             00019E GR
+  0 A$dng_crawling$514                                             00019F GR
+  0 A$dng_crawling$515                                             0001A0 GR
+  0 A$dng_crawling$516                                             0001A2 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 28
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$517                                             0001A3 GR
+  0 A$dng_crawling$521                                             0001A5 GR
+  0 A$dng_crawling$522                                             0001A7 GR
+  0 A$dng_crawling$526                                             0001A8 GR
+  0 A$dng_crawling$531                                             0001AA GR
+  0 A$dng_crawling$532                                             0001AB GR
+  0 A$dng_crawling$533                                             0001AC GR
+  0 A$dng_crawling$534                                             0001AE GR
+  0 A$dng_crawling$535                                             0001AF GR
+  0 A$dng_crawling$540                                             0001B1 GR
+  0 A$dng_crawling$541                                             0001B3 GR
+  0 A$dng_crawling$542                                             0001B4 GR
+  0 A$dng_crawling$543                                             0001B6 GR
+  0 A$dng_crawling$544                                             0001B7 GR
+  0 A$dng_crawling$545                                             0001B8 GR
+  0 A$dng_crawling$546                                             0001B9 GR
+  0 A$dng_crawling$547                                             0001BA GR
+  0 A$dng_crawling$548                                             0001BB GR
+  0 A$dng_crawling$549                                             0001BC GR
+  0 A$dng_crawling$550                                             0001BE GR
+  0 A$dng_crawling$551                                             0001BF GR
+  0 A$dng_crawling$552                                             0001C0 GR
+  0 A$dng_crawling$553                                             0001C1 GR
+  0 A$dng_crawling$554                                             0001C3 GR
+  0 A$dng_crawling$555                                             0001C4 GR
+  0 A$dng_crawling$556                                             0001C5 GR
+  0 A$dng_crawling$557                                             0001C6 GR
+  0 A$dng_crawling$558                                             0001C8 GR
+  0 A$dng_crawling$559                                             0001C9 GR
+  0 A$dng_crawling$56                                              000000 GR
+  0 A$dng_crawling$560                                             0001CA GR
+  0 A$dng_crawling$561                                             0001CB GR
+  0 A$dng_crawling$562                                             0001CC GR
+  0 A$dng_crawling$563                                             0001CF GR
+  0 A$dng_crawling$564                                             0001D0 GR
+  0 A$dng_crawling$565                                             0001D1 GR
+  0 A$dng_crawling$566                                             0001D3 GR
+  0 A$dng_crawling$57                                              000001 GR
+  0 A$dng_crawling$570                                             0001D4 GR
+  0 A$dng_crawling$571                                             0001D5 GR
+  0 A$dng_crawling$572                                             0001D6 GR
+  0 A$dng_crawling$573                                             0001D7 GR
+  0 A$dng_crawling$574                                             0001D8 GR
+  0 A$dng_crawling$575                                             0001DA GR
+  0 A$dng_crawling$576                                             0001DB GR
+  0 A$dng_crawling$577                                             0001DC GR
+  0 A$dng_crawling$578                                             0001DD GR
+  0 A$dng_crawling$579                                             0001DF GR
+  0 A$dng_crawling$580                                             0001E0 GR
+  0 A$dng_crawling$581                                             0001E1 GR
+  0 A$dng_crawling$582                                             0001E2 GR
+  0 A$dng_crawling$583                                             0001E4 GR
+  0 A$dng_crawling$584                                             0001E5 GR
+  0 A$dng_crawling$585                                             0001E6 GR
+  0 A$dng_crawling$586                                             0001E7 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 29
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$587                                             0001E8 GR
+  0 A$dng_crawling$588                                             0001EB GR
+  0 A$dng_crawling$589                                             0001EC GR
+  0 A$dng_crawling$590                                             0001ED GR
+  0 A$dng_crawling$591                                             0001EF GR
+  0 A$dng_crawling$595                                             0001F0 GR
+  0 A$dng_crawling$603                                             0001F2 GR
+  0 A$dng_crawling$604                                             0001F4 GR
+  0 A$dng_crawling$609                                             0001F5 GR
+  0 A$dng_crawling$61                                              000002 GR
+  0 A$dng_crawling$610                                             0001F7 GR
+  0 A$dng_crawling$611                                             0001F8 GR
+  0 A$dng_crawling$612                                             0001F9 GR
+  0 A$dng_crawling$613                                             0001FA GR
+  0 A$dng_crawling$614                                             0001FB GR
+  0 A$dng_crawling$617                                             0001FC GR
+  0 A$dng_crawling$618                                             0001FD GR
+  0 A$dng_crawling$619                                             0001FE GR
+  0 A$dng_crawling$62                                              000004 GR
+  0 A$dng_crawling$620                                             0001FF GR
+  0 A$dng_crawling$621                                             000200 GR
+  0 A$dng_crawling$622                                             000202 GR
+  0 A$dng_crawling$623                                             000203 GR
+  0 A$dng_crawling$624                                             000204 GR
+  0 A$dng_crawling$625                                             000205 GR
+  0 A$dng_crawling$626                                             000207 GR
+  0 A$dng_crawling$627                                             000208 GR
+  0 A$dng_crawling$628                                             000209 GR
+  0 A$dng_crawling$629                                             00020A GR
+  0 A$dng_crawling$63                                              000005 GR
+  0 A$dng_crawling$630                                             00020B GR
+  0 A$dng_crawling$631                                             00020E GR
+  0 A$dng_crawling$632                                             00020F GR
+  0 A$dng_crawling$636                                             000210 GR
+  0 A$dng_crawling$637                                             000211 GR
+  0 A$dng_crawling$638                                             000212 GR
+  0 A$dng_crawling$639                                             000214 GR
+  0 A$dng_crawling$64                                              000006 GR
+  0 A$dng_crawling$640                                             000215 GR
+  0 A$dng_crawling$644                                             000217 GR
+  0 A$dng_crawling$645                                             000219 GR
+  0 A$dng_crawling$649                                             00021A GR
+  0 A$dng_crawling$65                                              000007 GR
+  0 A$dng_crawling$654                                             00021C GR
+  0 A$dng_crawling$655                                             00021D GR
+  0 A$dng_crawling$656                                             00021E GR
+  0 A$dng_crawling$657                                             000220 GR
+  0 A$dng_crawling$658                                             000221 GR
+  0 A$dng_crawling$66                                              000009 GR
+  0 A$dng_crawling$663                                             000223 GR
+  0 A$dng_crawling$664                                             000225 GR
+  0 A$dng_crawling$665                                             000226 GR
+  0 A$dng_crawling$666                                             000228 GR
+  0 A$dng_crawling$667                                             000229 GR
+  0 A$dng_crawling$668                                             00022A GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 30
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$669                                             00022B GR
+  0 A$dng_crawling$67                                              00000A GR
+  0 A$dng_crawling$670                                             00022C GR
+  0 A$dng_crawling$671                                             00022E GR
+  0 A$dng_crawling$672                                             00022F GR
+  0 A$dng_crawling$673                                             000230 GR
+  0 A$dng_crawling$674                                             000231 GR
+  0 A$dng_crawling$675                                             000232 GR
+  0 A$dng_crawling$676                                             000233 GR
+  0 A$dng_crawling$677                                             000235 GR
+  0 A$dng_crawling$678                                             000236 GR
+  0 A$dng_crawling$679                                             000237 GR
+  0 A$dng_crawling$68                                              00000B GR
+  0 A$dng_crawling$680                                             000238 GR
+  0 A$dng_crawling$681                                             00023A GR
+  0 A$dng_crawling$682                                             00023B GR
+  0 A$dng_crawling$683                                             00023C GR
+  0 A$dng_crawling$684                                             00023D GR
+  0 A$dng_crawling$685                                             00023E GR
+  0 A$dng_crawling$686                                             000241 GR
+  0 A$dng_crawling$687                                             000242 GR
+  0 A$dng_crawling$688                                             000243 GR
+  0 A$dng_crawling$689                                             000245 GR
+  0 A$dng_crawling$69                                              00000C GR
+  0 A$dng_crawling$693                                             000246 GR
+  0 A$dng_crawling$694                                             000247 GR
+  0 A$dng_crawling$695                                             000248 GR
+  0 A$dng_crawling$696                                             00024A GR
+  0 A$dng_crawling$697                                             00024B GR
+  0 A$dng_crawling$698                                             00024C GR
+  0 A$dng_crawling$699                                             00024D GR
+  0 A$dng_crawling$700                                             00024E GR
+  0 A$dng_crawling$701                                             00024F GR
+  0 A$dng_crawling$702                                             000251 GR
+  0 A$dng_crawling$703                                             000252 GR
+  0 A$dng_crawling$704                                             000253 GR
+  0 A$dng_crawling$705                                             000254 GR
+  0 A$dng_crawling$706                                             000256 GR
+  0 A$dng_crawling$707                                             000257 GR
+  0 A$dng_crawling$708                                             000258 GR
+  0 A$dng_crawling$709                                             000259 GR
+  0 A$dng_crawling$710                                             00025A GR
+  0 A$dng_crawling$711                                             00025D GR
+  0 A$dng_crawling$712                                             00025E GR
+  0 A$dng_crawling$713                                             00025F GR
+  0 A$dng_crawling$714                                             000261 GR
+  0 A$dng_crawling$722                                             000262 GR
+  0 A$dng_crawling$723                                             000263 GR
+  0 A$dng_crawling$724                                             000265 GR
+  0 A$dng_crawling$725                                             000267 GR
+  0 A$dng_crawling$726                                             000269 GR
+  0 A$dng_crawling$727                                             00026A GR
+  0 A$dng_crawling$728                                             00026B GR
+  0 A$dng_crawling$73                                              00000E GR
+  0 A$dng_crawling$730                                             00026D GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 31
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$731                                             00026E GR
+  0 A$dng_crawling$732                                             000270 GR
+  0 A$dng_crawling$733                                             000272 GR
+  0 A$dng_crawling$734                                             000274 GR
+  0 A$dng_crawling$735                                             000275 GR
+  0 A$dng_crawling$736                                             000276 GR
+  0 A$dng_crawling$738                                             000278 GR
+  0 A$dng_crawling$739                                             000279 GR
+  0 A$dng_crawling$74                                              00000F GR
+  0 A$dng_crawling$740                                             00027B GR
+  0 A$dng_crawling$741                                             00027D GR
+  0 A$dng_crawling$742                                             00027F GR
+  0 A$dng_crawling$743                                             000280 GR
+  0 A$dng_crawling$744                                             000281 GR
+  0 A$dng_crawling$746                                             000283 GR
+  0 A$dng_crawling$747                                             000284 GR
+  0 A$dng_crawling$748                                             000286 GR
+  0 A$dng_crawling$749                                             000288 GR
+  0 A$dng_crawling$75                                              000010 GR
+  0 A$dng_crawling$750                                             00028A GR
+  0 A$dng_crawling$751                                             00028B GR
+  0 A$dng_crawling$752                                             00028C GR
+  0 A$dng_crawling$757                                             00028E GR
+  0 A$dng_crawling$758                                             000290 GR
+  0 A$dng_crawling$76                                              000013 GR
+  0 A$dng_crawling$763                                             000292 GR
+  0 A$dng_crawling$768                                             000294 GR
+  0 A$dng_crawling$769                                             000296 GR
+  0 A$dng_crawling$77                                              000015 GR
+  0 A$dng_crawling$770                                             000297 GR
+  0 A$dng_crawling$771                                             000298 GR
+  0 A$dng_crawling$772                                             00029A GR
+  0 A$dng_crawling$773                                             00029B GR
+  0 A$dng_crawling$774                                             00029C GR
+  0 A$dng_crawling$778                                             00029E GR
+  0 A$dng_crawling$78                                              000016 GR
+  0 A$dng_crawling$783                                             0002A0 GR
+  0 A$dng_crawling$784                                             0002A2 GR
+  0 A$dng_crawling$785                                             0002A3 GR
+  0 A$dng_crawling$786                                             0002A4 GR
+  0 A$dng_crawling$787                                             0002A6 GR
+  0 A$dng_crawling$788                                             0002A7 GR
+  0 A$dng_crawling$789                                             0002A8 GR
+  0 A$dng_crawling$79                                              000018 GR
+  0 A$dng_crawling$793                                             0002AA GR
+  0 A$dng_crawling$794                                             0002AC GR
+  0 A$dng_crawling$799                                             0002AE GR
+  0 A$dng_crawling$80                                              000019 GR
+  0 A$dng_crawling$800                                             0002B0 GR
+  0 A$dng_crawling$801                                             0002B1 GR
+  0 A$dng_crawling$802                                             0002B2 GR
+  0 A$dng_crawling$803                                             0002B4 GR
+  0 A$dng_crawling$804                                             0002B6 GR
+  0 A$dng_crawling$805                                             0002B7 GR
+  0 A$dng_crawling$806                                             0002B9 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 32
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$807                                             0002BC GR
+  0 A$dng_crawling$808                                             0002BE GR
+  0 A$dng_crawling$809                                             0002BF GR
+  0 A$dng_crawling$81                                              00001A GR
+  0 A$dng_crawling$810                                             0002C1 GR
+  0 A$dng_crawling$811                                             0002C4 GR
+  0 A$dng_crawling$819                                             0002C7 GR
+  0 A$dng_crawling$82                                              00001B GR
+  0 A$dng_crawling$820                                             0002C9 GR
+  0 A$dng_crawling$824                                             0002CB GR
+  0 A$dng_crawling$825                                             0002CD GR
+  0 A$dng_crawling$829                                             0002CF GR
+  0 A$dng_crawling$83                                              00001C GR
+  0 A$dng_crawling$830                                             0002D2 GR
+  0 A$dng_crawling$831                                             0002D3 GR
+  0 A$dng_crawling$832                                             0002D6 GR
+  0 A$dng_crawling$833                                             0002D7 GR
+  0 A$dng_crawling$834                                             0002DA GR
+  0 A$dng_crawling$835                                             0002DB GR
+  0 A$dng_crawling$836                                             0002DE GR
+  0 A$dng_crawling$837                                             0002E0 GR
+  0 A$dng_crawling$84                                              00001D GR
+  0 A$dng_crawling$842                                             0002E2 GR
+  0 A$dng_crawling$843                                             0002E5 GR
+  0 A$dng_crawling$844                                             0002E6 GR
+  0 A$dng_crawling$845                                             0002E9 GR
+  0 A$dng_crawling$846                                             0002EA GR
+  0 A$dng_crawling$847                                             0002ED GR
+  0 A$dng_crawling$848                                             0002EE GR
+  0 A$dng_crawling$849                                             0002F1 GR
+  0 A$dng_crawling$85                                              00001E GR
+  0 A$dng_crawling$854                                             0002F3 GR
+  0 A$dng_crawling$855                                             0002F5 GR
+  0 A$dng_crawling$856                                             0002F7 GR
+  0 A$dng_crawling$86                                              00001F GR
+  0 A$dng_crawling$860                                             0002F9 GR
+  0 A$dng_crawling$861                                             0002FC GR
+  0 A$dng_crawling$862                                             0002FD GR
+  0 A$dng_crawling$863                                             000300 GR
+  0 A$dng_crawling$864                                             000301 GR
+  0 A$dng_crawling$865                                             000303 GR
+  0 A$dng_crawling$866                                             000304 GR
+  0 A$dng_crawling$867                                             000305 GR
+  0 A$dng_crawling$868                                             000307 GR
+  0 A$dng_crawling$869                                             000308 GR
+  0 A$dng_crawling$87                                              000020 GR
+  0 A$dng_crawling$870                                             000309 GR
+  0 A$dng_crawling$871                                             00030C GR
+  0 A$dng_crawling$872                                             00030E GR
+  0 A$dng_crawling$877                                             000311 GR
+  0 A$dng_crawling$878                                             000314 GR
+  0 A$dng_crawling$879                                             000315 GR
+  0 A$dng_crawling$88                                              000021 GR
+  0 A$dng_crawling$880                                             000318 GR
+  0 A$dng_crawling$881                                             000319 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 33
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$882                                             00031B GR
+  0 A$dng_crawling$883                                             00031C GR
+  0 A$dng_crawling$884                                             00031D GR
+  0 A$dng_crawling$885                                             00031F GR
+  0 A$dng_crawling$886                                             000320 GR
+  0 A$dng_crawling$887                                             000321 GR
+  0 A$dng_crawling$888                                             000324 GR
+  0 A$dng_crawling$889                                             000326 GR
+  0 A$dng_crawling$89                                              000022 GR
+  0 A$dng_crawling$894                                             000329 GR
+  0 A$dng_crawling$895                                             00032B GR
+  0 A$dng_crawling$899                                             00032D GR
+  0 A$dng_crawling$90                                              000023 GR
+  0 A$dng_crawling$900                                             000330 GR
+  0 A$dng_crawling$901                                             000331 GR
+  0 A$dng_crawling$902                                             000334 GR
+  0 A$dng_crawling$903                                             000335 GR
+  0 A$dng_crawling$904                                             000338 GR
+  0 A$dng_crawling$905                                             000339 GR
+  0 A$dng_crawling$906                                             00033C GR
+  0 A$dng_crawling$907                                             00033E GR
+  0 A$dng_crawling$912                                             000340 GR
+  0 A$dng_crawling$913                                             000343 GR
+  0 A$dng_crawling$914                                             000344 GR
+  0 A$dng_crawling$915                                             000347 GR
+  0 A$dng_crawling$916                                             000348 GR
+  0 A$dng_crawling$917                                             00034B GR
+  0 A$dng_crawling$918                                             00034C GR
+  0 A$dng_crawling$919                                             00034F GR
+  0 A$dng_crawling$924                                             000351 GR
+  0 A$dng_crawling$925                                             000353 GR
+  0 A$dng_crawling$926                                             000355 GR
+  0 A$dng_crawling$930                                             000357 GR
+  0 A$dng_crawling$931                                             00035A GR
+  0 A$dng_crawling$932                                             00035B GR
+  0 A$dng_crawling$933                                             00035E GR
+  0 A$dng_crawling$934                                             00035F GR
+  0 A$dng_crawling$935                                             000361 GR
+  0 A$dng_crawling$936                                             000362 GR
+  0 A$dng_crawling$937                                             000363 GR
+  0 A$dng_crawling$938                                             000365 GR
+  0 A$dng_crawling$939                                             000366 GR
+  0 A$dng_crawling$940                                             000367 GR
+  0 A$dng_crawling$941                                             00036A GR
+  0 A$dng_crawling$942                                             00036C GR
+  0 A$dng_crawling$947                                             00036F GR
+  0 A$dng_crawling$948                                             000372 GR
+  0 A$dng_crawling$949                                             000373 GR
+  0 A$dng_crawling$95                                              000025 GR
+  0 A$dng_crawling$950                                             000376 GR
+  0 A$dng_crawling$951                                             000377 GR
+  0 A$dng_crawling$952                                             000379 GR
+  0 A$dng_crawling$953                                             00037A GR
+  0 A$dng_crawling$954                                             00037B GR
+  0 A$dng_crawling$955                                             00037D GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 34
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$dng_crawling$956                                             00037E GR
+  0 A$dng_crawling$957                                             00037F GR
+  0 A$dng_crawling$958                                             000382 GR
+  0 A$dng_crawling$962                                             000384 GR
+  0 A$dng_crawling$970                                             000387 GR
+  0 A$dng_crawling$971                                             000389 GR
+  0 A$dng_crawling$975                                             00038B GR
+  0 A$dng_crawling$976                                             00038D GR
+  0 A$dng_crawling$980                                             00038F GR
+  0 A$dng_crawling$981                                             000392 GR
+  0 A$dng_crawling$982                                             000393 GR
+  0 A$dng_crawling$983                                             000396 GR
+  0 A$dng_crawling$984                                             000397 GR
+  0 A$dng_crawling$985                                             00039A GR
+  0 A$dng_crawling$986                                             00039B GR
+  0 A$dng_crawling$987                                             00039E GR
+  0 A$dng_crawling$988                                             0003A0 GR
+  0 A$dng_crawling$993                                             0003A2 GR
+  0 A$dng_crawling$994                                             0003A5 GR
+  0 A$dng_crawling$995                                             0003A6 GR
+  0 A$dng_crawling$996                                             0003A9 GR
+  0 A$dng_crawling$997                                             0003AA GR
+  0 A$dng_crawling$998                                             0003AD GR
+  0 A$dng_crawling$999                                             0003AE GR
+  0 C$dng_crawling.c$10$1_0$99                                  =  000002 GR
+  0 C$dng_crawling.c$101$4_0$124                                =  000311 GR
+  0 C$dng_crawling.c$104$3_0$125                                =  000329 GR
+  0 C$dng_crawling.c$105$4_0$126                                =  00032D GR
+  0 C$dng_crawling.c$107$4_0$127                                =  000340 GR
+  0 C$dng_crawling.c$109$3_0$125                                =  000351 GR
+  0 C$dng_crawling.c$11$1_0$99                                  =  00000E GR
+  0 C$dng_crawling.c$110$4_0$128                                =  000357 GR
+  0 C$dng_crawling.c$112$4_0$129                                =  00036F GR
+  0 C$dng_crawling.c$115$2_0$119                                =  000384 GR
+  0 C$dng_crawling.c$116$2_0$119                                =  000387 GR
+  0 C$dng_crawling.c$117$2_0$119                                =  000387 GR
+  0 C$dng_crawling.c$118$3_0$130                                =  00038B GR
+  0 C$dng_crawling.c$119$4_0$131                                =  00038F GR
+  0 C$dng_crawling.c$121$4_0$132                                =  0003A2 GR
+  0 C$dng_crawling.c$123$3_0$130                                =  0003B3 GR
+  0 C$dng_crawling.c$124$4_0$133                                =  0003B9 GR
+  0 C$dng_crawling.c$127$4_0$134                                =  0003D1 GR
+  0 C$dng_crawling.c$13$1_0$99                                  =  000025 GR
+  0 C$dng_crawling.c$130$3_0$135                                =  0003E9 GR
+  0 C$dng_crawling.c$131$4_0$136                                =  0003ED GR
+  0 C$dng_crawling.c$133$4_0$137                                =  000400 GR
+  0 C$dng_crawling.c$135$3_0$135                                =  000411 GR
+  0 C$dng_crawling.c$136$4_0$138                                =  000417 GR
+  0 C$dng_crawling.c$138$4_0$139                                =  00042F GR
+  0 C$dng_crawling.c$14$1_0$99                                  =  000026 GR
+  0 C$dng_crawling.c$141$2_0$119                                =  000444 GR
+  0 C$dng_crawling.c$143$2_0$119                                =  000447 GR
+  0 C$dng_crawling.c$144$2_0$119                                =  000447 GR
+  0 C$dng_crawling.c$145$3_0$140                                =  00044B GR
+  0 C$dng_crawling.c$146$4_0$141                                =  00044F GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 35
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 C$dng_crawling.c$148$4_0$142                                =  000462 GR
+  0 C$dng_crawling.c$150$3_0$140                                =  000473 GR
+  0 C$dng_crawling.c$151$4_0$143                                =  000479 GR
+  0 C$dng_crawling.c$153$4_0$144                                =  000490 GR
+  0 C$dng_crawling.c$156$3_0$145                                =  0004A7 GR
+  0 C$dng_crawling.c$157$4_0$146                                =  0004AB GR
+  0 C$dng_crawling.c$159$4_0$147                                =  0004BE GR
+  0 C$dng_crawling.c$16$1_0$101                                 =  00002C GR
+  0 C$dng_crawling.c$161$3_0$145                                =  0004CF GR
+  0 C$dng_crawling.c$162$4_0$148                                =  0004D5 GR
+  0 C$dng_crawling.c$164$4_0$149                                =  0004EC GR
+  0 C$dng_crawling.c$168$1_0$101                                =  000501 GR
+  0 C$dng_crawling.c$169$1_0$101                                =  000501 GR
+  0 C$dng_crawling.c$171$1_0$151                                =  000507 GR
+  0 C$dng_crawling.c$172$2_0$151                                =  000511 GR
+  0 C$dng_crawling.c$173$2_0$151                                =  000519 GR
+  0 C$dng_crawling.c$174$2_0$151                                =  00051B GR
+  0 C$dng_crawling.c$176$1_0$151                                =  00052A GR
+  0 C$dng_crawling.c$178$2_0$151                                =  000549 GR
+  0 C$dng_crawling.c$178$3_0$153                                =  00058E GR
+  0 C$dng_crawling.c$179$2_0$151                                =  00051E GR
+  0 C$dng_crawling.c$179$4_0$154                                =  00054D GR
+  0 C$dng_crawling.c$181$2_0$152                                =  000598 GR
+  0 C$dng_crawling.c$182$2_0$152                                =  00059A GR
+  0 C$dng_crawling.c$183$2_0$152                                =  00059F GR
+  0 C$dng_crawling.c$185$2_0$151                                =  0005A2 GR
+  0 C$dng_crawling.c$185$3_0$155                                =  0005CF GR
+  0 C$dng_crawling.c$186$4_0$156                                =  0005A4 GR
+  0 C$dng_crawling.c$188$2_0$152                                =  0005D7 GR
+  0 C$dng_crawling.c$189$2_0$152                                =  0005D9 GR
+  0 C$dng_crawling.c$19$2_0$101                                 =  000036 GR
+  0 C$dng_crawling.c$190$2_0$152                                =  0005DE GR
+  0 C$dng_crawling.c$192$2_0$151                                =  0005E0 GR
+  0 C$dng_crawling.c$192$3_0$157                                =  00060D GR
+  0 C$dng_crawling.c$193$4_0$158                                =  0005E2 GR
+  0 C$dng_crawling.c$195$2_0$152                                =  000615 GR
+  0 C$dng_crawling.c$196$2_0$152                                =  000617 GR
+  0 C$dng_crawling.c$197$2_0$152                                =  00061C GR
+  0 C$dng_crawling.c$199$2_0$151                                =  00061E GR
+  0 C$dng_crawling.c$199$3_0$159                                =  00064B GR
+  0 C$dng_crawling.c$20$2_0$101                                 =  000038 GR
+  0 C$dng_crawling.c$200$4_0$160                                =  000620 GR
+  0 C$dng_crawling.c$202$2_0$152                                =  000653 GR
+  0 C$dng_crawling.c$203$2_0$152                                =  000655 GR
+  0 C$dng_crawling.c$206$2_0$151                                =  00065A GR
+  0 C$dng_crawling.c$207$3_0$162                                =  0006A2 GR
+  0 C$dng_crawling.c$209$2_0$151                                =  00068A GR
+  0 C$dng_crawling.c$209$4_0$163                                =  0006AE GR
+  0 C$dng_crawling.c$21$2_0$101                                 =  000038 GR
+  0 C$dng_crawling.c$210$2_0$151                                =  000697 GR
+  0 C$dng_crawling.c$210$4_0$163                                =  0006E0 GR
+  0 C$dng_crawling.c$211$4_0$163                                =  000717 GR
+  0 C$dng_crawling.c$213$4_0$164                                =  000753 GR
+  0 C$dng_crawling.c$214$5_0$165                                =  000775 GR
+  0 C$dng_crawling.c$215$5_0$165                                =  0007AB GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 36
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 C$dng_crawling.c$216$5_0$165                                =  0007E1 GR
+  0 C$dng_crawling.c$22$2_0$101                                 =  00003C GR
+  0 C$dng_crawling.c$221$2_0$151                                =  000818 GR
+  0 C$dng_crawling.c$223$2_0$167                                =  00081E GR
+  0 C$dng_crawling.c$224$2_0$167                                =  000828 GR
+  0 C$dng_crawling.c$225$2_0$167                                =  000830 GR
+  0 C$dng_crawling.c$226$2_0$167                                =  000832 GR
+  0 C$dng_crawling.c$228$1_0$167                                =  000841 GR
+  0 C$dng_crawling.c$23$2_0$101                                 =  00003C GR
+  0 C$dng_crawling.c$230$2_0$167                                =  000860 GR
+  0 C$dng_crawling.c$230$3_0$169                                =  0008A5 GR
+  0 C$dng_crawling.c$231$2_0$167                                =  000835 GR
+  0 C$dng_crawling.c$231$4_0$170                                =  000864 GR
+  0 C$dng_crawling.c$233$2_0$168                                =  0008AF GR
+  0 C$dng_crawling.c$234$2_0$168                                =  0008B1 GR
+  0 C$dng_crawling.c$235$2_0$168                                =  0008B6 GR
+  0 C$dng_crawling.c$237$2_0$167                                =  0008B9 GR
+  0 C$dng_crawling.c$237$3_0$171                                =  0008E6 GR
+  0 C$dng_crawling.c$238$4_0$172                                =  0008BB GR
+  0 C$dng_crawling.c$24$2_0$101                                 =  00003E GR
+  0 C$dng_crawling.c$240$2_0$168                                =  0008EE GR
+  0 C$dng_crawling.c$241$2_0$168                                =  0008F0 GR
+  0 C$dng_crawling.c$242$2_0$168                                =  0008F5 GR
+  0 C$dng_crawling.c$244$2_0$167                                =  0008F7 GR
+  0 C$dng_crawling.c$244$3_0$173                                =  000924 GR
+  0 C$dng_crawling.c$245$4_0$174                                =  0008F9 GR
+  0 C$dng_crawling.c$247$2_0$168                                =  00092C GR
+  0 C$dng_crawling.c$248$2_0$168                                =  00092E GR
+  0 C$dng_crawling.c$249$2_0$168                                =  000933 GR
+  0 C$dng_crawling.c$251$2_0$167                                =  000935 GR
+  0 C$dng_crawling.c$251$3_0$175                                =  000962 GR
+  0 C$dng_crawling.c$252$4_0$176                                =  000937 GR
+  0 C$dng_crawling.c$254$2_0$168                                =  00096A GR
+  0 C$dng_crawling.c$255$2_0$168                                =  00096C GR
+  0 C$dng_crawling.c$258$2_0$167                                =  000971 GR
+  0 C$dng_crawling.c$259$3_0$178                                =  0009B9 GR
+  0 C$dng_crawling.c$26$1_0$101                                 =  000085 GR
+  0 C$dng_crawling.c$261$2_0$167                                =  0009A1 GR
+  0 C$dng_crawling.c$261$4_0$179                                =  0009C5 GR
+  0 C$dng_crawling.c$262$2_0$167                                =  0009AE GR
+  0 C$dng_crawling.c$262$4_0$179                                =  0009F7 GR
+  0 C$dng_crawling.c$263$4_0$179                                =  000A2E GR
+  0 C$dng_crawling.c$265$4_0$180                                =  000A6A GR
+  0 C$dng_crawling.c$266$5_0$181                                =  000A8C GR
+  0 C$dng_crawling.c$267$5_0$181                                =  000AC2 GR
+  0 C$dng_crawling.c$268$5_0$181                                =  000AF8 GR
+  0 C$dng_crawling.c$27$2_0$102                                 =  00009B GR
+  0 C$dng_crawling.c$273$2_0$167                                =  000B2F GR
+  0 C$dng_crawling.c$28$3_0$103                                 =  0000C6 GR
+  0 C$dng_crawling.c$29$4_0$104                                 =  0000A0 GR
+  0 C$dng_crawling.c$30$4_0$104                                 =  0000B7 GR
+  0 C$dng_crawling.c$31$5_0$105                                 =  0000BE GR
+  0 C$dng_crawling.c$32$5_0$105                                 =  0000C4 GR
+  0 C$dng_crawling.c$35$1_0$101                                 =  000069 GR
+  0 C$dng_crawling.c$35$2_0$102                                 =  0000CF GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 37
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 C$dng_crawling.c$36$1_0$101                                 =  000070 GR
+  0 C$dng_crawling.c$36$2_0$102                                 =  0000F2 GR
+  0 C$dng_crawling.c$38$2_0$102                                 =  00010E GR
+  0 C$dng_crawling.c$39$2_0$102                                 =  000111 GR
+  0 C$dng_crawling.c$40$3_0$106                                 =  00013B GR
+  0 C$dng_crawling.c$41$4_0$107                                 =  000114 GR
+  0 C$dng_crawling.c$42$4_0$107                                 =  00012F GR
+  0 C$dng_crawling.c$43$5_0$108                                 =  000136 GR
+  0 C$dng_crawling.c$44$5_0$108                                 =  000139 GR
+  0 C$dng_crawling.c$47$1_0$101                                 =  00007A GR
+  0 C$dng_crawling.c$47$2_0$102                                 =  000142 GR
+  0 C$dng_crawling.c$48$1_0$101                                 =  000081 GR
+  0 C$dng_crawling.c$48$2_0$102                                 =  000165 GR
+  0 C$dng_crawling.c$49$2_0$102                                 =  000181 GR
+  0 C$dng_crawling.c$50$2_0$102                                 =  000184 GR
+  0 C$dng_crawling.c$51$3_0$109                                 =  0001AA GR
+  0 C$dng_crawling.c$52$4_0$110                                 =  000187 GR
+  0 C$dng_crawling.c$53$4_0$110                                 =  00019E GR
+  0 C$dng_crawling.c$54$5_0$111                                 =  0001A5 GR
+  0 C$dng_crawling.c$55$5_0$111                                 =  0001A8 GR
+  0 C$dng_crawling.c$58$2_0$102                                 =  0001B1 GR
+  0 C$dng_crawling.c$59$2_0$102                                 =  0001D4 GR
+  0 C$dng_crawling.c$60$2_0$102                                 =  0001F0 GR
+  0 C$dng_crawling.c$61$2_0$102                                 =  0001F2 GR
+  0 C$dng_crawling.c$62$3_0$112                                 =  00021C GR
+  0 C$dng_crawling.c$63$4_0$113                                 =  0001F5 GR
+  0 C$dng_crawling.c$64$4_0$113                                 =  000210 GR
+  0 C$dng_crawling.c$65$5_0$114                                 =  000217 GR
+  0 C$dng_crawling.c$66$5_0$114                                 =  00021A GR
+  0 C$dng_crawling.c$69$2_0$102                                 =  000223 GR
+  0 C$dng_crawling.c$70$2_0$102                                 =  000246 GR
+  0 C$dng_crawling.c$72$1_0$101                                 =  000262 GR
+  0 C$dng_crawling.c$76$1_0$101                                 =  000262 GR
+  0 C$dng_crawling.c$78$2_0$115                                 =  00028E GR
+  0 C$dng_crawling.c$81$2_0$116                                 =  000292 GR
+  0 C$dng_crawling.c$83$1_0$101                                 =  000294 GR
+  0 C$dng_crawling.c$84$2_0$117                                 =  00029E GR
+  0 C$dng_crawling.c$86$1_0$101                                 =  0002A0 GR
+  0 C$dng_crawling.c$87$2_0$118                                 =  0002AA GR
+  0 C$dng_crawling.c$9$0_0$99                                   =  000000 GR
+  0 C$dng_crawling.c$90$1_0$101                                 =  0002AE GR
+  0 C$dng_crawling.c$91$2_0$119                                 =  0002C7 GR
+  0 C$dng_crawling.c$92$2_0$119                                 =  0002C7 GR
+  0 C$dng_crawling.c$93$3_0$120                                 =  0002CB GR
+  0 C$dng_crawling.c$94$4_0$121                                 =  0002CF GR
+  0 C$dng_crawling.c$96$4_0$122                                 =  0002E2 GR
+  0 C$dng_crawling.c$98$3_0$120                                 =  0002F3 GR
+  0 C$dng_crawling.c$99$4_0$123                                 =  0002F9 GR
+  0 G$check_l_walls$0$0                                         =  000507 GR
+  0 G$check_m_walls$0$0                                         =  00002C GR
+  0 G$check_r_walls$0$0                                         =  00081E GR
+  0 G$return_value$0$0                                          =  000000 GR
     __muluchar                                                     ****** GX
   0 _check_l_walls                                                 000507 GR
   0 _check_m_walls                                                 00002C GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 38
+Hexadecimal [24-Bits]
+
+Symbol Table
+
   0 _check_r_walls                                                 00081E GR
     _door1_l_bkg                                                   ****** GX
     _door1_left_half_bkg                                           ****** GX
@@ -58,14 +2271,9 @@ Symbol Table
     _wall3_left_half_c_bkg                                         ****** GX
     _wall3_r_bkg                                                   ****** GX
     _wall3_right_half_c_bkg                                        ****** GX
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
-Hexadecimal [24-Bits]
-
-Symbol Table
 
 
-
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                 Page 39
 Hexadecimal [24-Bits]
 
 Area Table
