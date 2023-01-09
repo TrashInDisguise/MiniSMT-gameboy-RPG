@@ -1,20 +1,28 @@
 #include <gb/gb.h>
+#include <rand.h>
 #include <stdint.h>
 #include <stdio.h>
 #include "dng_crawling.h"
 #include "../res/dng_wip.h"
 #include "../res/walls.h"
 #include "../res/UI_sprites.h"
+#include "../res/dragon_tileset.h"
 #include "../res/font.h"
 
 
+
+static uint8_t global_state = 1;// 0 - owerworld // 1 - 3d dungeon exploration // 2 - turn based combat // 3 - inventory // 4 - dialog// 5 - interactive scene  
+static uint8_t encounter_counter = 0;
+static uint8_t encounter_timer = 0;
+//player variables
+static enum direction{north,east,south,west};
 static uint8_t player_x=0;
 static uint8_t player_y=0;
-static uint8_t global_state = 1;// 0 - owerworld // 1 - 3d dungeon exploration // 3 - turn based combat // 4 - inventory // 5 - dialog// 6 - interactive scene  
 
-static enum direction{north,east,south,west};
-static uint16_t *inventory[100] = {NULL};
+static uint8_t inventory[100] = {NULL};//every entry contains id of an item
+
 static enum direction player_dir = north;
+//system
 static uint8_t joypad_current=0,joypad_previous=0;
 
 const unsigned char white_screen[] = {
@@ -54,10 +62,15 @@ const unsigned char test_dungeon[] =
 };
 
 void init_dungeon(const unsigned char *dng,uint8_t dng_width, uint8_t dng_height) {
+    //init variables for combat
+    initrand(sys_time);
+    encounter_counter = rand() % 15 + 5;
+    encounter_timer = 0;// increments with every move throught the dungeon. Then it equales to encounteer_counter battle starts
 
-	// Load player sprite
+	// Load walls' and UI's tiles
     set_bkg_data(0,75,dng_tileset);
     set_sprite_data(0,25,UI_tiles);
+    
     //locating player start position
     for(uint8_t i = 0; i < dng_width; i++){
         for(uint8_t j = 0; j < dng_height; j++){
@@ -96,6 +109,10 @@ void init_dng_UI(){
     move_sprite(4,64,20);
     move_sprite(5,104,20);
     //moon
+    move_sprite(6,144,20);
+    move_sprite(7,144,28);
+    move_sprite(8,152,20);
+    move_sprite(9,152,28);
 
 
 }
@@ -172,6 +189,15 @@ void update_dng_UI (){
     }
     
     //moon
+    set_sprite_tile(6, 14);
+    set_sprite_tile(7, 14);
+    set_sprite_prop(7,S_FLIPY);
+    set_sprite_tile(8, 13);
+    set_sprite_prop(8,S_FLIPX);
+    set_sprite_tile(9, 13);
+    set_sprite_prop(9,S_FLIPX | S_FLIPY);
+
+
 }
 
 void dungeon_logic_upd(){
@@ -221,6 +247,7 @@ void dungeon_logic_upd(){
                 }
             break;
         }
+        encounter_timer++;
     }
     if((joypad_current & J_DOWN) && !(joypad_previous & J_DOWN)){
         switch(player_dir){
@@ -249,6 +276,43 @@ void dungeon_logic_upd(){
                 }
             break;
         }
+        encounter_timer++;
+    }
+    if(encounter_counter==encounter_timer){
+        global_state = 2;
+    }
+}
+
+void state_switcher(uint8_t t){
+    switch(t){
+        case 0://overworld//big change
+        break;
+
+        case 1://3d dungeon exploration//big change
+        break;
+
+        case 2://turn-based combat
+            //test data--------------------------
+
+
+            
+            //-----------------------------------
+
+
+
+
+        break;
+
+        case 3://inventory
+        break;
+
+        case 4://dialog
+        break;
+
+        case 5://interactive scene
+        break;
+
+
     }
 }
 
@@ -262,9 +326,10 @@ void main(void)
 
     //charset test------------------
     //set_win_data(224,32,font['!'-32]);
-    set_bkg_tiles(0,0,16,3,pull_letters("It's dangerous to go alone take this",37,224));    
+    //set_bkg_tiles(0,0,16,3,pull_letters("It's dangerous to go alone take this",37,224));    
     //------------------------------
-
+    //set_sprite_data(26,8,dragon_tileset);
+    state_switcher(2);
 
     SHOW_SPRITES;
     // Loop forever
@@ -276,9 +341,6 @@ void main(void)
         
             
 
-
-
-        //player_draw(&pl);
         
         
     
