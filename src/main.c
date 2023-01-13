@@ -8,6 +8,7 @@
 #include "../res/UI_sprites.h"
 #include "../res/dragon_tileset.h"
 #include "../res/font.h"
+#include "enemies.h"
 
 
 
@@ -326,9 +327,13 @@ void state_switcher(uint8_t t){
 void main(void)
 {   
     init_dungeon(test_dungeon, 15, 15);
-    init_dng_UI();
+    //init_dng_UI();
     update_dng(test_dungeon,15,15);
-    set_sprite_data(0,26,UI_tiles);
+    //set_sprite_data(0,26,UI_tiles);
+    load_enemy(0,0);
+    load_enemy(1,1);
+    load_enemy(0,2);
+    
     //set_sprite_tile(0,player_dir);
 
     //charset test------------------
@@ -336,7 +341,7 @@ void main(void)
     //set_bkg_tiles(0,0,16,3,pull_letters("It's dangerous to go alone take this",37,224));    
     //------------------------------
     //state test--------------------
-    state_switcher(2);
+    //state_switcher(2);
     //------------------------------
     
     SHOW_SPRITES;
@@ -345,7 +350,7 @@ void main(void)
         //controller handler
         
         dungeon_logic_upd();
-        update_dng_UI();
+        //update_dng_UI();
         
             
 
