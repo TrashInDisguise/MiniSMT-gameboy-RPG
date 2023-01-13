@@ -18,6 +18,12 @@ static uint8_t encounter_timer = 0;
 static enum direction{north,east,south,west};
 static uint8_t player_x=0;
 static uint8_t player_y=0;
+//player stats
+static uint8_t p_str=0;
+static uint8_t p_int=0;
+static uint8_t p_agi=0;
+static uint8_t p_con=0;
+static uint8_t p_luk=0;
 
 static uint8_t inventory[100] = {NULL};//every entry contains id of an item
 
@@ -203,7 +209,7 @@ void update_dng_UI (){
 void dungeon_logic_upd(){
     joypad_previous = joypad_current;
     joypad_current = joypad();
-
+    //turning left
     if((joypad_current & J_LEFT) && !(joypad_previous & J_LEFT)){
         player_dir--;
         if (player_dir==255){
@@ -212,6 +218,7 @@ void dungeon_logic_upd(){
         update_dng(test_dungeon,15,15);
         //set_sprite_tile(0,player_dir);
     }
+    //turning right
     if((joypad_current & J_RIGHT) && !(joypad_previous & J_RIGHT)){
         player_dir++;
         if(player_dir==4){
@@ -328,9 +335,10 @@ void main(void)
     //set_win_data(224,32,font['!'-32]);
     //set_bkg_tiles(0,0,16,3,pull_letters("It's dangerous to go alone take this",37,224));    
     //------------------------------
-    //set_sprite_data(26,8,dragon_tileset);
+    //state test--------------------
     state_switcher(2);
-
+    //------------------------------
+    
     SHOW_SPRITES;
     // Loop forever
     while(1) {
