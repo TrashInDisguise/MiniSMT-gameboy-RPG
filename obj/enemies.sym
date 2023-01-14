@@ -1,0 +1,383 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =  002710 L
+    .__.ABS.                                                    =  000000 G
+    .__.CPU.                                                    =  000000 L
+    .__.H$L.                                                    =  000000 L
+  0 A$enemies$102                                                  000025 GR
+  0 A$enemies$103                                                  000027 GR
+  0 A$enemies$107                                                  000029 GR
+  0 A$enemies$115                                                  00002B GR
+  0 A$enemies$116                                                  00002D GR
+  0 A$enemies$120                                                  00002F GR
+  0 A$enemies$128                                                  000031 GR
+  0 A$enemies$129                                                  000033 GR
+  0 A$enemies$134                                                  000035 GR
+  0 A$enemies$135                                                  000037 GR
+  0 A$enemies$136                                                  000038 GR
+  0 A$enemies$137                                                  000039 GR
+  0 A$enemies$138                                                  00003A GR
+  0 A$enemies$139                                                  00003B GR
+  0 A$enemies$140                                                  00003C GR
+  0 A$enemies$141                                                  00003D GR
+  0 A$enemies$142                                                  000040 GR
+  0 A$enemies$143                                                  000041 GR
+  0 A$enemies$144                                                  000042 GR
+  0 A$enemies$145                                                  000043 GR
+  0 A$enemies$146                                                  000045 GR
+  0 A$enemies$151                                                  000047 GR
+  0 A$enemies$152                                                  000049 GR
+  0 A$enemies$153                                                  00004A GR
+  0 A$enemies$154                                                  00004C GR
+  0 A$enemies$155                                                  00004D GR
+  0 A$enemies$156                                                  00004E GR
+  0 A$enemies$157                                                  00004F GR
+  0 A$enemies$158                                                  000050 GR
+  0 A$enemies$161                                                  000051 GR
+  0 A$enemies$164                                                  000053 GR
+  0 A$enemies$165                                                  000054 GR
+  0 A$enemies$166                                                  000055 GR
+  0 A$enemies$167                                                  000056 GR
+  0 A$enemies$168                                                  000057 GR
+  0 A$enemies$169                                                  000058 GR
+  0 A$enemies$170                                                  00005A GR
+  0 A$enemies$171                                                  00005B GR
+  0 A$enemies$172                                                  00005C GR
+  0 A$enemies$173                                                  00005E GR
+  0 A$enemies$174                                                  000060 GR
+  0 A$enemies$175                                                  000061 GR
+  0 A$enemies$176                                                  000062 GR
+  0 A$enemies$177                                                  000063 GR
+  0 A$enemies$178                                                  000064 GR
+  0 A$enemies$179                                                  000065 GR
+  0 A$enemies$180                                                  000066 GR
+  0 A$enemies$181                                                  000067 GR
+  0 A$enemies$182                                                  000068 GR
+  0 A$enemies$183                                                  000069 GR
+  0 A$enemies$184                                                  00006B GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$enemies$185                                                  00006C GR
+  0 A$enemies$186                                                  00006D GR
+  0 A$enemies$187                                                  00006F GR
+  0 A$enemies$188                                                  000071 GR
+  0 A$enemies$189                                                  000072 GR
+  0 A$enemies$190                                                  000073 GR
+  0 A$enemies$191                                                  000075 GR
+  0 A$enemies$192                                                  000076 GR
+  0 A$enemies$193                                                  000077 GR
+  0 A$enemies$194                                                  000078 GR
+  0 A$enemies$195                                                  000079 GR
+  0 A$enemies$198                                                  00007B GR
+  0 A$enemies$199                                                  00007C GR
+  0 A$enemies$200                                                  00007D GR
+  0 A$enemies$201                                                  00007E GR
+  0 A$enemies$202                                                  00007F GR
+  0 A$enemies$203                                                  000082 GR
+  0 A$enemies$207                                                  000084 GR
+  0 A$enemies$208                                                  000086 GR
+  0 A$enemies$209                                                  000087 GR
+  0 A$enemies$210                                                  000088 GR
+  0 A$enemies$211                                                  00008A GR
+  0 A$enemies$215                                                  00008C GR
+  0 A$enemies$220                                                  00008E GR
+  0 A$enemies$221                                                  00008F GR
+  0 A$enemies$222                                                  000091 GR
+  0 A$enemies$224                                                  000092 GR
+  0 A$enemies$225                                                  000093 GR
+  0 A$enemies$226                                                  000095 GR
+  0 A$enemies$228                                                  000096 GR
+  0 A$enemies$231                                                  000097 GR
+  0 A$enemies$234                                                  000099 GR
+  0 A$enemies$235                                                  00009A GR
+  0 A$enemies$236                                                  00009B GR
+  0 A$enemies$237                                                  00009C GR
+  0 A$enemies$238                                                  00009D GR
+  0 A$enemies$239                                                  0000A0 GR
+  0 A$enemies$240                                                  0000A1 GR
+  0 A$enemies$241                                                  0000A2 GR
+  0 A$enemies$243                                                  0000A3 GR
+  0 A$enemies$244                                                  0000A4 GR
+  0 A$enemies$245                                                  0000A5 GR
+  0 A$enemies$246                                                  0000A6 GR
+  0 A$enemies$247                                                  0000A7 GR
+  0 A$enemies$248                                                  0000A9 GR
+  0 A$enemies$249                                                  0000AA GR
+  0 A$enemies$250                                                  0000AB GR
+  0 A$enemies$251                                                  0000AD GR
+  0 A$enemies$253                                                  0000AE GR
+  0 A$enemies$254                                                  0000B1 GR
+  0 A$enemies$256                                                  0000B2 GR
+  0 A$enemies$257                                                  0000B4 GR
+  0 A$enemies$258                                                  0000B5 GR
+  0 A$enemies$259                                                  0000B6 GR
+  0 A$enemies$260                                                  0000B7 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$enemies$261                                                  0000B9 GR
+  0 A$enemies$262                                                  0000BA GR
+  0 A$enemies$266                                                  0000BB GR
+  0 A$enemies$267                                                  0000BC GR
+  0 A$enemies$268                                                  0000BD GR
+  0 A$enemies$269                                                  0000BF GR
+  0 A$enemies$273                                                  0000C1 GR
+  0 A$enemies$278                                                  0000C3 GR
+  0 A$enemies$279                                                  0000C5 GR
+  0 A$enemies$280                                                  0000C6 GR
+  0 A$enemies$281                                                  0000C8 GR
+  0 A$enemies$283                                                  0000C9 GR
+  0 A$enemies$284                                                  0000CA GR
+  0 A$enemies$285                                                  0000CB GR
+  0 A$enemies$286                                                  0000CD GR
+  0 A$enemies$287                                                  0000CE GR
+  0 A$enemies$288                                                  0000CF GR
+  0 A$enemies$289                                                  0000D1 GR
+  0 A$enemies$291                                                  0000D2 GR
+  0 A$enemies$294                                                  0000D3 GR
+  0 A$enemies$297                                                  0000D5 GR
+  0 A$enemies$298                                                  0000D6 GR
+  0 A$enemies$299                                                  0000D7 GR
+  0 A$enemies$300                                                  0000DA GR
+  0 A$enemies$301                                                  0000DB GR
+  0 A$enemies$302                                                  0000DC GR
+  0 A$enemies$303                                                  0000DD GR
+  0 A$enemies$304                                                  0000DE GR
+  0 A$enemies$305                                                  0000DF GR
+  0 A$enemies$306                                                  0000E1 GR
+  0 A$enemies$307                                                  0000E2 GR
+  0 A$enemies$309                                                  0000E3 GR
+  0 A$enemies$310                                                  0000E5 GR
+  0 A$enemies$311                                                  0000E6 GR
+  0 A$enemies$312                                                  0000E7 GR
+  0 A$enemies$313                                                  0000E8 GR
+  0 A$enemies$314                                                  0000E9 GR
+  0 A$enemies$315                                                  0000EA GR
+  0 A$enemies$316                                                  0000EB GR
+  0 A$enemies$318                                                  0000EC GR
+  0 A$enemies$321                                                  0000ED GR
+  0 A$enemies$324                                                  0000EF GR
+  0 A$enemies$325                                                  0000F0 GR
+  0 A$enemies$326                                                  0000F1 GR
+  0 A$enemies$327                                                  0000F4 GR
+  0 A$enemies$329                                                  0000F5 GR
+  0 A$enemies$330                                                  0000F7 GR
+  0 A$enemies$331                                                  0000F8 GR
+  0 A$enemies$335                                                  0000F9 GR
+  0 A$enemies$336                                                  0000FB GR
+  0 A$enemies$337                                                  0000FC GR
+  0 A$enemies$338                                                  0000FD GR
+  0 A$enemies$339                                                  0000FF GR
+  0 A$enemies$343                                                  000101 GR
+  0 A$enemies$348                                                  000103 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$enemies$349                                                  000105 GR
+  0 A$enemies$350                                                  000106 GR
+  0 A$enemies$351                                                  000108 GR
+  0 A$enemies$353                                                  000109 GR
+  0 A$enemies$354                                                  00010A GR
+  0 A$enemies$355                                                  00010B GR
+  0 A$enemies$356                                                  00010D GR
+  0 A$enemies$357                                                  00010E GR
+  0 A$enemies$358                                                  00010F GR
+  0 A$enemies$359                                                  000111 GR
+  0 A$enemies$361                                                  000112 GR
+  0 A$enemies$364                                                  000113 GR
+  0 A$enemies$367                                                  000115 GR
+  0 A$enemies$368                                                  000116 GR
+  0 A$enemies$369                                                  000117 GR
+  0 A$enemies$370                                                  00011A GR
+  0 A$enemies$371                                                  00011B GR
+  0 A$enemies$372                                                  00011C GR
+  0 A$enemies$373                                                  00011D GR
+  0 A$enemies$374                                                  00011E GR
+  0 A$enemies$375                                                  00011F GR
+  0 A$enemies$376                                                  000121 GR
+  0 A$enemies$377                                                  000122 GR
+  0 A$enemies$379                                                  000123 GR
+  0 A$enemies$380                                                  000125 GR
+  0 A$enemies$381                                                  000126 GR
+  0 A$enemies$382                                                  000127 GR
+  0 A$enemies$383                                                  000128 GR
+  0 A$enemies$384                                                  000129 GR
+  0 A$enemies$385                                                  00012A GR
+  0 A$enemies$386                                                  00012B GR
+  0 A$enemies$388                                                  00012C GR
+  0 A$enemies$391                                                  00012D GR
+  0 A$enemies$394                                                  00012F GR
+  0 A$enemies$395                                                  000130 GR
+  0 A$enemies$396                                                  000131 GR
+  0 A$enemies$397                                                  000134 GR
+  0 A$enemies$399                                                  000135 GR
+  0 A$enemies$400                                                  000137 GR
+  0 A$enemies$401                                                  000138 GR
+  0 A$enemies$405                                                  000139 GR
+  0 A$enemies$406                                                  00013B GR
+  0 A$enemies$407                                                  00013C GR
+  0 A$enemies$408                                                  00013D GR
+  0 A$enemies$409                                                  00013F GR
+  0 A$enemies$413                                                  000141 GR
+  0 A$enemies$418                                                  000143 GR
+  0 A$enemies$57                                                   000000 GR
+  0 A$enemies$58                                                   000002 GR
+  0 A$enemies$59                                                   000003 GR
+  0 A$enemies$60                                                   000005 GR
+  0 A$enemies$64                                                   000006 GR
+  0 A$enemies$65                                                   000008 GR
+  0 A$enemies$69                                                   00000A GR
+  0 A$enemies$70                                                   00000C GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 5
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$enemies$71                                                   00000D GR
+  0 A$enemies$72                                                   00000E GR
+  0 A$enemies$73                                                   000010 GR
+  0 A$enemies$74                                                   000012 GR
+  0 A$enemies$75                                                   000013 GR
+  0 A$enemies$76                                                   000014 GR
+  0 A$enemies$77                                                   000016 GR
+  0 A$enemies$78                                                   000018 GR
+  0 A$enemies$79                                                   000019 GR
+  0 A$enemies$80                                                   00001B GR
+  0 A$enemies$81                                                   00001D GR
+  0 A$enemies$826                                                  0002D6 GR
+  0 A$enemies$827                                                  0002D7 GR
+  0 A$enemies$828                                                  0002D8 GR
+  0 A$enemies$832                                                  0002DA GR
+  0 A$enemies$833                                                  0002DB GR
+  0 A$enemies$838                                                  0002DD GR
+  0 A$enemies$839                                                  0002DF GR
+  0 A$enemies$840                                                  0002E0 GR
+  0 A$enemies$841                                                  0002E1 GR
+  0 A$enemies$842                                                  0002E2 GR
+  0 A$enemies$843                                                  0002E3 GR
+  0 A$enemies$844                                                  0002E4 GR
+  0 A$enemies$845                                                  0002E5 GR
+  0 A$enemies$846                                                  0002E6 GR
+  0 A$enemies$850                                                  0002E7 GR
+  0 A$enemies$851                                                  0002E8 GR
+  0 A$enemies$852                                                  0002EB GR
+  0 A$enemies$853                                                  0002ED GR
+  0 A$enemies$854                                                  0002EE GR
+  0 A$enemies$855                                                  0002EF GR
+  0 A$enemies$856                                                  0002F1 GR
+  0 A$enemies$857                                                  0002F2 GR
+  0 A$enemies$858                                                  0002F3 GR
+  0 A$enemies$859                                                  0002F4 GR
+  0 A$enemies$860                                                  0002F5 GR
+  0 A$enemies$861                                                  0002F8 GR
+  0 A$enemies$863                                                  0002FA GR
+  0 A$enemies$865                                                  0002FB GR
+  0 A$enemies$868                                                  0002FC GR
+  0 A$enemies$871                                                  0002FE GR
+  0 A$enemies$872                                                  0002FF GR
+  0 A$enemies$873                                                  000300 GR
+  0 A$enemies$874                                                  000301 GR
+  0 A$enemies$875                                                  000302 GR
+  0 A$enemies$876                                                  000305 GR
+  0 A$enemies$877                                                  000306 GR
+  0 A$enemies$878                                                  000307 GR
+  0 A$enemies$880                                                  000308 GR
+  0 A$enemies$881                                                  00030B GR
+  0 A$enemies$883                                                  00030C GR
+  0 A$enemies$884                                                  00030D GR
+  0 A$enemies$885                                                  00030E GR
+  0 A$enemies$889                                                  00030F GR
+  0 A$enemies$89                                                   00001F GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 6
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 A$enemies$890                                                  000311 GR
+  0 A$enemies$891                                                  000312 GR
+  0 A$enemies$892                                                  000313 GR
+  0 A$enemies$893                                                  000315 GR
+  0 A$enemies$897                                                  000317 GR
+  0 A$enemies$898                                                  000318 GR
+  0 A$enemies$90                                                   000021 GR
+  0 A$enemies$903                                                  000319 GR
+  0 A$enemies$94                                                   000023 GR
+  0 C$enemies.c$48$0_0$101                                      =  000000 GR
+  0 C$enemies.c$50$2_0$101                                      =  000006 GR
+  0 C$enemies.c$51$1_0$101                                      =  00000A GR
+  0 C$enemies.c$52$2_0$102                                      =  00001F GR
+  0 C$enemies.c$53$2_0$102                                      =  00001F GR
+  0 C$enemies.c$54$2_0$102                                      =  000023 GR
+  0 C$enemies.c$55$2_0$102                                      =  000025 GR
+  0 C$enemies.c$56$2_0$102                                      =  000025 GR
+  0 C$enemies.c$57$2_0$102                                      =  000029 GR
+  0 C$enemies.c$58$2_0$102                                      =  00002B GR
+  0 C$enemies.c$59$2_0$102                                      =  00002B GR
+  0 C$enemies.c$60$2_0$102                                      =  00002F GR
+  0 C$enemies.c$61$2_0$102                                      =  000031 GR
+  0 C$enemies.c$62$2_0$102                                      =  000031 GR
+  0 C$enemies.c$65$2_0$101                                      =  000035 GR
+  0 C$enemies.c$65$2_0$103                                      =  000084 GR
+  0 C$enemies.c$66$3_0$104                                      =  000047 GR
+  0 C$enemies.c$68$2_0$101                                      =  00008C GR
+  0 C$enemies.c$68$2_0$105                                      =  0000BB GR
+  0 C$enemies.c$69$3_0$106                                      =  00008E GR
+  0 C$enemies.c$73$2_0$101                                      =  0000C1 GR
+  0 C$enemies.c$73$2_0$107                                      =  0000F9 GR
+  0 C$enemies.c$74$3_0$108                                      =  0000C3 GR
+  0 C$enemies.c$79$2_0$101                                      =  000101 GR
+  0 C$enemies.c$79$2_0$109                                      =  000139 GR
+  0 C$enemies.c$80$3_0$110                                      =  000103 GR
+  0 C$enemies.c$84$2_0$101                                      =  000143 GR
+  0 C$enemies.c$85$2_0$131                                      =  0002D6 GR
+  0 C$enemies.c$87$2_0$131                                      =  00030F GR
+  0 C$enemies.c$87$3_0$132                                      =  0002DA GR
+  0 C$enemies.c$88$3_0$132                                      =  0002DD GR
+  0 C$enemies.c$89$3_0$132                                      =  0002E7 GR
+  0 C$enemies.c$93$2_0$131                                      =  000319 GR
+  0 G$enemies$0_0$0                                             =  000144 GR
+  0 G$enemies_names$0_0$0                                       =  000156 GR
+  0 G$enemies_tileset$0_0$0                                     =  000176 GR
+  0 G$load_enemy$0$0                                            =  000000 GR
+  0 G$unload_enemy$0$0                                          =  0002D6 GR
+  0 XG$load_enemy$0$0                                           =  000143 GR
+  0 XG$unload_enemy$0$0                                         =  000319 GR
+  0 _enemies                                                       000144 GR
+  0 _enemies_names                                                 000156 GR
+  0 _enemies_tileset                                               000176 GR
+  0 _load_enemy                                                    000000 GR
+    _set_sprite_data                                               ****** GX
+    _shadow_OAM                                                    ****** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 7
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 _unload_enemy                                                  0002D6 GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 8
+Hexadecimal [24-Bits]
+
+Area Table
+
+   0 _CODE                                      size    31A   flags    0
+   1 _DATA                                      size      0   flags    0
+   2 _INITIALIZED                               size      0   flags    0
+   3 _DABS                                      size      0   flags    8
+   4 _HOME                                      size      0   flags    0
+   5 _GSINIT                                    size      0   flags    0
+   6 _GSFINAL                                   size      0   flags    0
+   7 _INITIALIZER                               size      0   flags    0
+   8 _CABS                                      size      0   flags    8
+

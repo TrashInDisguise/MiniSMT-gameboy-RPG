@@ -1,0 +1,41 @@
+;!FILE obj/combat.asm
+XL3
+H 9 areas F global symbols
+M combat
+O -msm83
+S .__.ABS. Def000000
+A _CODE size 8 flags 0 addr 0
+S G$combat_view_upd$0$0 Def000001
+S _combat_groups Def000002
+S G$combat_groups$0_0$0 Def000002
+S _combat_view_upd Def000001
+S G$init_combat$0$0 Def000000
+S C$combat.c$3$0_0$103 Def000000
+S C$combat.c$5$0_0$103 Def000000
+S XG$combat_view_upd$0$0 Def000001
+S C$combat.c$6$0_0$105 Def000001
+S A$combat$61 Def000000
+S C$combat.c$8$0_0$105 Def000001
+S _init_combat Def000000
+S A$combat$78 Def000001
+S XG$init_combat$0$0 Def000000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00 00
+R 00 00 00 00
+T 00 00 00 C9
+R 00 00 00 00
+T 01 00 00
+R 00 00 00 00
+T 01 00 00 C9
+R 00 00 00 00
+T 02 00 00
+R 00 00 00 00
+T 02 00 00 00 00 00 00 00 00
+R 00 00 00 00

@@ -3,12 +3,13 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "dng_crawling.h"
+#include "enemies.h"
+#include "combat.h"
 #include "../res/dng_wip.h"
 #include "../res/walls.h"
 #include "../res/UI_sprites.h"
 #include "../res/dragon_tileset.h"
 #include "../res/font.h"
-#include "enemies.h"
 
 
 
@@ -30,6 +31,7 @@ static uint8_t inventory[100] = {NULL};//every entry contains id of an item
 
 static enum direction player_dir = north;
 //system
+static uint8_t dng_w=15,dng_h=15;
 static uint8_t joypad_current=0,joypad_previous=0;
 
 const unsigned char white_screen[] = {
@@ -67,6 +69,7 @@ const unsigned char test_dungeon[] =
   0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
   0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
 };
+void state_switcher(uint8_t state);
 
 void init_dungeon(const unsigned char *dng,uint8_t dng_width, uint8_t dng_height) {
     //init variables for combat
@@ -79,11 +82,13 @@ void init_dungeon(const unsigned char *dng,uint8_t dng_width, uint8_t dng_height
     set_sprite_data(0,25,UI_tiles);
     
     //locating player start position
-    for(uint8_t i = 0; i < dng_width; i++){
-        for(uint8_t j = 0; j < dng_height; j++){
-            if(dng[i*dng_width+j]==0x01){
-                player_x = j;
-                player_y = i;
+    if(player_x==0&&player_y==0){
+        for(uint8_t i = 0; i < dng_width; i++){
+            for(uint8_t j = 0; j < dng_height; j++){
+                if(dng[i*dng_width+j]==0x01){
+                    player_x = j;
+                    player_y = i;
+                }
             }
         }
     }
@@ -92,8 +97,6 @@ void init_dungeon(const unsigned char *dng,uint8_t dng_width, uint8_t dng_height
 }
 
 void update_dng(unsigned char *dng,uint8_t dungeon_width, uint8_t dungeon_hieght){
-    uint8_t py = 0;
-    uint8_t px = 0;
     set_bkg_tiles(0,0,20,13,white_screen);
 
     check_l_walls(dng,dungeon_width,dungeon_hieght,player_x, player_y, player_dir);
@@ -101,10 +104,10 @@ void update_dng(unsigned char *dng,uint8_t dungeon_width, uint8_t dungeon_hieght
     check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,player_dir);
 
 }
-
+/*
 void collision_check(const unsigned char *dng, uint8_t dng_width, uint8_t dng_height){
     //TODO check collision refactoring + interactivetis
-}
+}*/
 
 void init_dng_UI(){
     //big letters
@@ -207,16 +210,15 @@ void update_dng_UI (){
 
 }
 
-void dungeon_logic_upd(){
-    joypad_previous = joypad_current;
-    joypad_current = joypad();
+void dungeon_logic_upd(uint8_t joypad_current,uint8_t joypad_previous){
+    
     //turning left
     if((joypad_current & J_LEFT) && !(joypad_previous & J_LEFT)){
         player_dir--;
         if (player_dir==255){
             player_dir = west;
         }
-        update_dng(test_dungeon,15,15);
+        update_dng(test_dungeon,dng_w,dng_h);
         //set_sprite_tile(0,player_dir);
     }
     //turning right
@@ -225,33 +227,33 @@ void dungeon_logic_upd(){
         if(player_dir==4){
             player_dir=north;
         }
-        update_dng(test_dungeon,15,15);
+        update_dng(test_dungeon,dng_w,dng_h);
         //set_sprite_tile(0,player_dir);
     }
     if((joypad_current & J_UP) && !(joypad_previous & J_UP)){
         switch(player_dir){
             case north:
-                if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+                if(return_value(test_dungeon,dng_w,dng_h,player_x,player_y-1)==0x00||return_value(test_dungeon,dng_w,dng_h,player_x,player_y-1)==0x01){
                     player_y--;
-                    update_dng(test_dungeon,15,15);
+                    update_dng(test_dungeon,dng_w,dng_h);
                 }
             break;
             case east:
-                if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
+                if(return_value(test_dungeon,dng_w,dng_h,player_x+1,player_y)==0x00||return_value(test_dungeon,dng_w,dng_h,player_x+1,player_y)==0x01){
                     player_x++;
-                    update_dng(test_dungeon,15,15);
+                    update_dng(test_dungeon,dng_w,dng_h);
                 }
             break;
             case south:
-                if(return_value(test_dungeon,15,15,player_x,player_y+1)==0x00||return_value(test_dungeon,15,15,player_x,player_y+1)==0x01){
+                if(return_value(test_dungeon,dng_w,dng_h,player_x,player_y+1)==0x00||return_value(test_dungeon,dng_w,dng_h,player_x,player_y+1)==0x01){
                     player_y++;
-                    update_dng(test_dungeon,15,15);
+                    update_dng(test_dungeon,dng_w,dng_h);
                 }
             break;
             case west:
-                if(return_value(test_dungeon,15,15,player_x-1,player_y)==0x00||return_value(test_dungeon,15,15,player_x-1,player_y)==0x01){
+                if(return_value(test_dungeon,dng_w,dng_h,player_x-1,player_y)==0x00||return_value(test_dungeon,dng_w,dng_h,player_x-1,player_y)==0x01){
                     player_x--;
-                    update_dng(test_dungeon,15,15);
+                    update_dng(test_dungeon,dng_w,dng_h);
                 }
             break;
         }
@@ -260,75 +262,55 @@ void dungeon_logic_upd(){
     if((joypad_current & J_DOWN) && !(joypad_previous & J_DOWN)){
         switch(player_dir){
             case north:
-                if(return_value(test_dungeon,15,15,player_x,player_y+1)==0x00||return_value(test_dungeon,15,15,player_x,player_y+1)==0x01){
+                if(return_value(test_dungeon,dng_w,dng_h,player_x,player_y+1)==0x00||return_value(test_dungeon,dng_w,dng_h,player_x,player_y+1)==0x01){
                     player_y++;
-                    update_dng(test_dungeon,15,15);
+                    update_dng(test_dungeon,dng_w,dng_h);
                 }
             break;
             case east:
-                if(return_value(test_dungeon,15,15,player_x-1,player_y)==0x00||return_value(test_dungeon,15,15,player_x-1,player_y)==0x01){
+                if(return_value(test_dungeon,dng_w,dng_h,player_x-1,player_y)==0x00||return_value(test_dungeon,dng_w,dng_h,player_x-1,player_y)==0x01){
                     player_x--;
-                    update_dng(test_dungeon,15,15);
+                    update_dng(test_dungeon,dng_w,dng_h);
                 }
             break;
             case south:
-                if(return_value(test_dungeon,15,15,player_x,player_y-1)==0x00||return_value(test_dungeon,15,15,player_x,player_y-1)==0x01){
+                if(return_value(test_dungeon,dng_w,dng_h,player_x,player_y-1)==0x00||return_value(test_dungeon,dng_w,dng_h,player_x,player_y-1)==0x01){
                     player_y--;
-                    update_dng(test_dungeon,15,15);
+                    update_dng(test_dungeon,dng_w,dng_h);
                 }
             break;
             case west:
-                if(return_value(test_dungeon,15,15,player_x+1,player_y)==0x00||return_value(test_dungeon,15,15,player_x+1,player_y)==0x01){
+                if(return_value(test_dungeon,dng_w,dng_h,player_x+1,player_y)==0x00||return_value(test_dungeon,dng_w,dng_h,player_x+1,player_y)==0x01){
                     player_x++;
-                    update_dng(test_dungeon,15,15);
+                    update_dng(test_dungeon,dng_w,dng_h);
                 }
             break;
         }
         encounter_timer++;
     }
     if(encounter_counter==encounter_timer){
-        global_state = 2;
+        state_switcher(2);
     }
 }
 
-void state_switcher(uint8_t t){
-    switch(t){
-        case 0://overworld//big change
-        break;
-
-        case 1://3d dungeon exploration//big change
-        break;
-
-        case 2://turn-based combat
-            //test data--------------------------
-
-
-            
-            //-----------------------------------
-
-
-
-
-        break;
-
-        case 3://inventory
-        break;
-
-        case 4://dialog
-        break;
-
-        case 5://interactive scene
-        break;
-
-
+void state_switcher(uint8_t state){
+    if(global_state==1&&state==2){
+        initrand(sys_time);
+        init_combat(rand()%GROUP_COUNT);
+        global_state = 2;
+    }
+    if(global_state==2&&state==1){
+        init_dungeon(test_dungeon,dng_w,dng_h);
+        init_dng_UI();
+        global_state = 1;
     }
 }
 
 void main(void)
 {   
-    init_dungeon(test_dungeon, 15, 15);
+    init_dungeon(test_dungeon, dng_w, dng_h);
     init_dng_UI();
-    update_dng(test_dungeon,15,15);
+    update_dng(test_dungeon,dng_w,dng_h);
     //set_sprite_data(0,26,UI_tiles);
     //enemies test------------------
     //load_enemy(0,0);
@@ -342,17 +324,38 @@ void main(void)
     //set_win_data(224,32,font['!'-32]);
     //set_bkg_tiles(0,0,16,3,pull_letters("It's dangerous to go alone take this",37,224));    
     //------------------------------
-    //state test--------------------
-    //state_switcher(2);
-    //------------------------------
     
     SHOW_SPRITES;
     // Loop forever
     while(1) {
         //controller handler
+        joypad_previous = joypad_current;
+        joypad_current = joypad();
+
+        switch (global_state)
+        {
+        case 0:
+            break;
+        case 1:
+            dungeon_logic_upd(joypad_current,joypad_previous);
+            update_dng_UI();
+            break;
+        case 2:
+
+            combat_view_upd();
+            state_switcher(1);//test code delete later
+            break;        
+        case 3:
+            break;
+        case 4:
+            break;        
+        case 5:
+            break;
+        default:
+            global_state = 0;
+            break;
+        }
         
-        dungeon_logic_upd();
-        update_dng_UI();
         
             
 
