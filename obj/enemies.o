@@ -1,337 +1,345 @@
 ;!FILE obj/enemies.asm
 XL3
-H 9 areas 148 global symbols
+H 9 areas 150 global symbols
 M enemies
 O -msm83
 S _set_sprite_data Ref000000
 S .__.ABS. Def000000
 S _shadow_OAM Ref000000
-A _CODE size 31A flags 0 addr 0
-S A$enemies$200 Def00007D
-S A$enemies$300 Def0000DA
-S A$enemies$210 Def000088
-S A$enemies$201 Def00007E
-S A$enemies$120 Def00002F
-S A$enemies$102 Def000025
-S C$enemies.c$51$1_0$101 Def00000A
-S C$enemies.c$50$2_0$101 Def000006
-S A$enemies$400 Def000137
-S A$enemies$310 Def0000E5
-S A$enemies$301 Def0000DB
-S A$enemies$220 Def00008E
-S A$enemies$211 Def00008A
-S A$enemies$202 Def00007F
-S A$enemies$103 Def000027
-S A$enemies$401 Def000138
-S A$enemies$311 Def0000E6
-S A$enemies$302 Def0000DC
-S A$enemies$221 Def00008F
-S A$enemies$203 Def000082
-S A$enemies$140 Def00003C
-S C$enemies.c$60$2_0$102 Def00002F
-S A$enemies$330 Def0000F7
-S A$enemies$321 Def0000ED
-S A$enemies$312 Def0000E7
-S A$enemies$303 Def0000DD
-S A$enemies$240 Def0000A1
-S A$enemies$231 Def000097
-S A$enemies$222 Def000091
-S A$enemies$141 Def00003D
-S C$enemies.c$61$2_0$102 Def000031
-S C$enemies.c$52$2_0$102 Def00001F
+A _CODE size 33F flags 0 addr 0
+S A$enemies$120 Def00002D
+S A$enemies$111 Def000029
+S A$enemies$400 Def000131
+S A$enemies$310 Def0000E1
+S A$enemies$301 Def0000D5
+S A$enemies$211 Def000084
+S A$enemies$202 Def00007B
+S A$enemies$410 Def00013B
+S A$enemies$401 Def000134
+S A$enemies$320 Def0000EB
+S A$enemies$311 Def0000E2
+S A$enemies$302 Def0000D6
+S A$enemies$230 Def000095
+S A$enemies$212 Def000086
+S A$enemies$203 Def00007C
+S A$enemies$140 Def000038
+S C$enemies.c$72$0_0$101 Def000000
+S A$enemies$411 Def00013C
+S A$enemies$330 Def0000F1
+S A$enemies$303 Def0000D7
+S A$enemies$240 Def00009B
+S A$enemies$213 Def000087
+S A$enemies$204 Def00007D
+S A$enemies$150 Def000045
+S A$enemies$141 Def000039
+S A$enemies$132 Def000031
 S _enemies Def000144
-S A$enemies$331 Def0000F8
-S A$enemies$313 Def0000E8
-S A$enemies$304 Def0000DE
-S A$enemies$250 Def0000AB
-S A$enemies$241 Def0000A2
-S A$enemies$151 Def000047
-S A$enemies$142 Def000040
-S A$enemies$115 Def00002B
-S C$enemies.c$80$3_0$110 Def000103
-S C$enemies.c$62$2_0$102 Def000031
-S C$enemies.c$53$2_0$102 Def00001F
-S A$enemies$413 Def000141
-S A$enemies$350 Def000106
-S A$enemies$314 Def0000E9
-S A$enemies$305 Def0000DF
-S A$enemies$260 Def0000B7
-S A$enemies$251 Def0000AD
-S A$enemies$224 Def000092
-S A$enemies$215 Def00008C
-S A$enemies$170 Def00005A
-S A$enemies$161 Def000051
-S A$enemies$152 Def000049
-S A$enemies$143 Def000041
-S A$enemies$134 Def000035
-S A$enemies$116 Def00002D
-S A$enemies$107 Def000029
-S C$enemies.c$73$2_0$101 Def0000C1
-S C$enemies.c$54$2_0$102 Def000023
-S C$enemies.c$48$0_0$101 Def000000
-S A$enemies$405 Def000139
-S A$enemies$351 Def000108
-S A$enemies$324 Def0000EF
-S A$enemies$315 Def0000EA
-S A$enemies$306 Def0000E1
-S A$enemies$261 Def0000B9
-S A$enemies$243 Def0000A3
-S A$enemies$234 Def000099
-S A$enemies$225 Def000093
-S A$enemies$207 Def000084
-S A$enemies$180 Def000066
-S A$enemies$171 Def00005B
-S A$enemies$153 Def00004A
-S A$enemies$144 Def000042
-S A$enemies$135 Def000037
+S A$enemies$412 Def00013D
+S A$enemies$403 Def000135
+S A$enemies$340 Def0000FB
+S A$enemies$331 Def0000F4
+S A$enemies$322 Def0000EC
+S A$enemies$313 Def0000E3
+S A$enemies$304 Def0000DA
+S A$enemies$250 Def0000A6
+S A$enemies$241 Def00009C
+S A$enemies$232 Def000096
+S A$enemies$214 Def000088
+S A$enemies$205 Def00007E
+S A$enemies$160 Def00004E
+S A$enemies$142 Def00003A
+S A$enemies$133 Def000033
+S A$enemies$124 Def00002F
+S A$enemies$106 Def000025
+S C$enemies.c$80$2_0$102 Def000025
+S A$enemies$422 Def000143
+S A$enemies$413 Def00013F
+S A$enemies$404 Def000137
+S A$enemies$341 Def0000FC
+S A$enemies$314 Def0000E5
+S A$enemies$305 Def0000DB
+S A$enemies$260 Def0000B2
+S A$enemies$251 Def0000A7
+S A$enemies$242 Def00009D
+S A$enemies$224 Def00008E
+S A$enemies$215 Def00008A
+S A$enemies$206 Def00007F
+S A$enemies$170 Def000055
+S A$enemies$161 Def00004F
+S A$enemies$143 Def00003B
+S A$enemies$107 Def000027
+S C$enemies.c$81$2_0$102 Def000029
+S A$enemies$900 Def000317
+S A$enemies$405 Def000138
+S A$enemies$360 Def00010D
+S A$enemies$342 Def0000FD
+S A$enemies$333 Def0000F5
+S A$enemies$315 Def0000E6
+S A$enemies$306 Def0000DC
+S A$enemies$270 Def0000BB
+S A$enemies$261 Def0000B4
+S A$enemies$252 Def0000A9
+S A$enemies$243 Def0000A0
+S A$enemies$225 Def00008F
+S A$enemies$207 Def000082
+S A$enemies$180 Def000062
+S A$enemies$171 Def000056
+S A$enemies$162 Def000050
+S A$enemies$144 Def00003C
 S G$enemies$0_0$0 Def000144
 S XG$load_enemy$0$0 Def000143
-S C$enemies.c$65$2_0$101 Def000035
-S C$enemies.c$55$2_0$102 Def000025
-S A$enemies$406 Def00013B
-S A$enemies$370 Def00011A
-S A$enemies$361 Def000112
-S A$enemies$343 Def000101
-S A$enemies$325 Def0000F0
-S A$enemies$316 Def0000EB
-S A$enemies$307 Def0000E2
-S A$enemies$280 Def0000C6
-S A$enemies$262 Def0000BA
-S A$enemies$253 Def0000AE
-S A$enemies$244 Def0000A4
-S A$enemies$235 Def00009A
-S A$enemies$226 Def000095
-S A$enemies$208 Def000086
-S A$enemies$190 Def000073
-S A$enemies$181 Def000067
-S A$enemies$172 Def00005C
-S A$enemies$154 Def00004C
-S A$enemies$145 Def000043
-S A$enemies$136 Def000038
-S C$enemies.c$84$2_0$101 Def000143
-S C$enemies.c$56$2_0$102 Def000025
-S A$enemies$407 Def00013C
-S A$enemies$380 Def000125
-S A$enemies$371 Def00011B
-S A$enemies$353 Def000109
-S A$enemies$335 Def0000F9
-S A$enemies$326 Def0000F1
-S A$enemies$281 Def0000C8
-S A$enemies$254 Def0000B1
-S A$enemies$245 Def0000A5
-S A$enemies$236 Def00009B
-S A$enemies$209 Def000087
-S A$enemies$191 Def000075
-S A$enemies$182 Def000068
-S A$enemies$173 Def00005E
-S A$enemies$164 Def000053
-S A$enemies$155 Def00004D
-S A$enemies$146 Def000045
-S A$enemies$137 Def000039
-S A$enemies$128 Def000031
-S C$enemies.c$65$2_0$103 Def000084
-S C$enemies.c$57$2_0$102 Def000029
-S A$enemies$903 Def000319
-S A$enemies$840 Def0002E0
-S A$enemies$408 Def00013D
-S A$enemies$381 Def000126
-S A$enemies$372 Def00011C
-S A$enemies$354 Def00010A
-S A$enemies$336 Def0000FB
-S A$enemies$327 Def0000F4
-S A$enemies$318 Def0000EC
-S A$enemies$309 Def0000E3
-S A$enemies$291 Def0000D2
-S A$enemies$273 Def0000C1
-S A$enemies$246 Def0000A6
-S A$enemies$237 Def00009C
-S A$enemies$228 Def000096
-S A$enemies$192 Def000076
-S A$enemies$183 Def000069
-S A$enemies$174 Def000060
-S A$enemies$165 Def000054
-S A$enemies$156 Def00004E
-S A$enemies$138 Def00003A
-S A$enemies$129 Def000033
-S C$enemies.c$68$2_0$101 Def00008C
-S C$enemies.c$58$2_0$102 Def00002B
-S A$enemies$850 Def0002E7
-S A$enemies$841 Def0002E1
-S A$enemies$832 Def0002DA
-S A$enemies$418 Def000143
-S A$enemies$409 Def00013F
-S A$enemies$391 Def00012D
-S A$enemies$382 Def000127
-S A$enemies$373 Def00011D
-S A$enemies$364 Def000113
-S A$enemies$355 Def00010B
-S A$enemies$337 Def0000FC
-S A$enemies$283 Def0000C9
-S A$enemies$256 Def0000B2
-S A$enemies$247 Def0000A7
-S A$enemies$238 Def00009D
-S A$enemies$193 Def000077
-S A$enemies$184 Def00006B
-S A$enemies$175 Def000061
-S A$enemies$166 Def000055
-S A$enemies$157 Def00004F
-S A$enemies$139 Def00003B
-S C$enemies.c$93$2_0$131 Def000319
-S C$enemies.c$59$2_0$102 Def00002B
-S A$enemies$860 Def0002F5
-S A$enemies$851 Def0002E8
-S A$enemies$842 Def0002E2
-S A$enemies$833 Def0002DB
-S A$enemies$383 Def000128
-S A$enemies$374 Def00011E
-S A$enemies$356 Def00010D
-S A$enemies$338 Def0000FD
-S A$enemies$329 Def0000F5
-S A$enemies$284 Def0000CA
-S A$enemies$266 Def0000BB
-S A$enemies$257 Def0000B4
-S A$enemies$248 Def0000A9
-S A$enemies$239 Def0000A0
-S A$enemies$194 Def000078
-S A$enemies$185 Def00006C
-S A$enemies$176 Def000062
-S A$enemies$167 Def000056
-S A$enemies$158 Def000050
-S C$enemies.c$85$2_0$131 Def0002D6
-S C$enemies.c$79$2_0$101 Def000101
-S C$enemies.c$73$2_0$107 Def0000F9
-S C$enemies.c$66$3_0$104 Def000047
-S A$enemies$861 Def0002F8
-S A$enemies$852 Def0002EB
-S A$enemies$843 Def0002E3
-S A$enemies$384 Def000129
-S A$enemies$375 Def00011F
-S A$enemies$357 Def00010E
-S A$enemies$348 Def000103
-S A$enemies$339 Def0000FF
-S A$enemies$294 Def0000D3
-S A$enemies$285 Def0000CB
-S A$enemies$267 Def0000BC
-S A$enemies$258 Def0000B5
-S A$enemies$249 Def0000AA
-S A$enemies$195 Def000079
-S A$enemies$186 Def00006D
-S A$enemies$177 Def000063
-S A$enemies$168 Def000057
-S A$enemies$880 Def000308
-S A$enemies$871 Def0002FE
-S A$enemies$853 Def0002ED
-S A$enemies$844 Def0002E4
-S A$enemies$826 Def0002D6
-S A$enemies$394 Def00012F
-S A$enemies$385 Def00012A
-S A$enemies$376 Def000121
-S A$enemies$367 Def000115
-S A$enemies$358 Def00010F
-S A$enemies$349 Def000105
-S A$enemies$286 Def0000CD
-S A$enemies$268 Def0000BD
-S A$enemies$259 Def0000B6
-S A$enemies$187 Def00006F
-S A$enemies$178 Def000064
-S A$enemies$169 Def000058
-S C$enemies.c$87$2_0$131 Def00030F
-S C$enemies.c$68$2_0$105 Def0000BB
-S A$enemies$890 Def000311
-S A$enemies$881 Def00030B
-S A$enemies$872 Def0002FF
-S A$enemies$863 Def0002FA
-S A$enemies$854 Def0002EE
-S A$enemies$845 Def0002E5
-S A$enemies$827 Def0002D7
-S A$enemies$395 Def000130
-S A$enemies$386 Def00012B
-S A$enemies$377 Def000122
-S A$enemies$368 Def000116
-S A$enemies$359 Def000111
-S A$enemies$287 Def0000CE
-S A$enemies$278 Def0000C3
-S A$enemies$269 Def0000BF
-S A$enemies$188 Def000071
-S A$enemies$179 Def000065
-S C$enemies.c$74$3_0$108 Def0000C3
-S A$enemies$891 Def000312
-S A$enemies$873 Def000300
-S A$enemies$855 Def0002EF
-S A$enemies$846 Def0002E6
-S A$enemies$828 Def0002D8
-S A$enemies$396 Def000131
-S A$enemies$369 Def000117
-S A$enemies$297 Def0000D5
-S A$enemies$288 Def0000CF
-S A$enemies$279 Def0000C5
-S A$enemies$198 Def00007B
-S A$enemies$189 Def000072
-S C$enemies.c$87$3_0$132 Def0002DA
-S A$enemies$892 Def000313
-S A$enemies$883 Def00030C
-S A$enemies$874 Def000301
-S A$enemies$865 Def0002FB
-S A$enemies$856 Def0002F1
-S A$enemies$838 Def0002DD
-S A$enemies$397 Def000134
-S A$enemies$388 Def00012C
-S A$enemies$379 Def000123
-S A$enemies$298 Def0000D6
-S A$enemies$289 Def0000D1
-S A$enemies$199 Def00007C
-S C$enemies.c$88$3_0$132 Def0002DD
-S C$enemies.c$69$3_0$106 Def00008E
-S A$enemies$893 Def000315
-S A$enemies$884 Def00030D
-S A$enemies$875 Def000302
-S A$enemies$857 Def0002F2
-S A$enemies$839 Def0002DF
-S A$enemies$299 Def0000D7
-S C$enemies.c$89$3_0$132 Def0002E7
-S G$unload_enemy$0$0 Def0002D6
-S A$enemies$885 Def00030E
-S A$enemies$876 Def000305
-S A$enemies$858 Def0002F3
-S A$enemies$399 Def000135
-S A$enemies$877 Def000306
-S A$enemies$868 Def0002FC
-S A$enemies$859 Def0002F4
-S A$enemies$60 Def000005
-S C$enemies.c$79$2_0$109 Def000139
-S A$enemies$878 Def000307
-S A$enemies$70 Def00000C
-S A$enemies$897 Def000317
-S A$enemies$80 Def00001B
-S A$enemies$71 Def00000D
-S A$enemies$898 Def000318
-S A$enemies$889 Def00030F
-S A$enemies$90 Def000021
-S A$enemies$81 Def00001D
-S A$enemies$72 Def00000E
-S A$enemies$73 Def000010
-S A$enemies$64 Def000006
-S A$enemies$74 Def000012
-S A$enemies$65 Def000008
-S A$enemies$75 Def000013
-S A$enemies$57 Def000000
-S A$enemies$94 Def000023
-S A$enemies$76 Def000014
-S A$enemies$58 Def000002
-S A$enemies$77 Def000016
-S A$enemies$59 Def000003
-S A$enemies$78 Def000018
-S A$enemies$69 Def00000A
-S _enemies_tileset Def000176
-S A$enemies$79 Def000019
-S _unload_enemy Def0002D6
-S A$enemies$89 Def00001F
-S G$enemies_tileset$0_0$0 Def000176
-S XG$unload_enemy$0$0 Def000319
+S C$enemies.c$92$2_0$101 Def00008C
+S C$enemies.c$82$2_0$102 Def00002B
+S C$enemies.c$75$1_0$101 Def00000A
+S C$enemies.c$74$2_0$101 Def000006
+S A$enemies$901 Def000318
+S A$enemies$361 Def00010E
+S A$enemies$352 Def000103
+S A$enemies$343 Def0000FF
+S A$enemies$334 Def0000F7
+S A$enemies$325 Def0000ED
+S A$enemies$316 Def0000E7
+S A$enemies$307 Def0000DD
+S A$enemies$271 Def0000BC
+S A$enemies$262 Def0000B5
+S A$enemies$253 Def0000AA
+S A$enemies$244 Def0000A1
+S A$enemies$235 Def000097
+S A$enemies$226 Def000091
+S A$enemies$190 Def00006D
+S A$enemies$181 Def000063
+S A$enemies$172 Def000057
+S A$enemies$145 Def00003D
+S C$enemies.c$83$2_0$102 Def00002B
+S A$enemies$920 Def00032B
+S A$enemies$911 Def000321
+S A$enemies$902 Def000319
+S A$enemies$380 Def000121
+S A$enemies$371 Def000115
+S A$enemies$362 Def00010F
+S A$enemies$353 Def000105
+S A$enemies$335 Def0000F8
+S A$enemies$317 Def0000E8
+S A$enemies$308 Def0000DE
+S A$enemies$290 Def0000CD
+S A$enemies$272 Def0000BD
+S A$enemies$263 Def0000B6
+S A$enemies$254 Def0000AB
+S A$enemies$245 Def0000A2
+S A$enemies$191 Def00006F
+S A$enemies$182 Def000064
+S A$enemies$173 Def000058
+S A$enemies$155 Def000047
+S A$enemies$146 Def000040
+S A$enemies$119 Def00002B
+S C$enemies.c$90$3_0$104 Def000047
+S C$enemies.c$84$2_0$102 Def00002F
+S A$enemies$921 Def00032C
+S A$enemies$903 Def00031A
+S A$enemies$417 Def000141
+S A$enemies$390 Def00012B
+S A$enemies$381 Def000122
+S A$enemies$372 Def000116
+S A$enemies$363 Def000111
+S A$enemies$354 Def000106
+S A$enemies$318 Def0000E9
+S A$enemies$309 Def0000DF
+S A$enemies$291 Def0000CE
+S A$enemies$282 Def0000C3
+S A$enemies$273 Def0000BF
+S A$enemies$264 Def0000B7
+S A$enemies$255 Def0000AD
+S A$enemies$228 Def000092
+S A$enemies$219 Def00008C
+S A$enemies$192 Def000071
+S A$enemies$183 Def000065
+S A$enemies$174 Def00005A
+S A$enemies$165 Def000051
+S A$enemies$156 Def000049
+S A$enemies$147 Def000041
+S A$enemies$138 Def000035
+S C$enemies.c$85$2_0$102 Def000031
+S C$enemies.c$76$2_0$102 Def00001F
+S A$enemies$940 Def00033C
+S A$enemies$904 Def00031D
+S A$enemies$409 Def000139
+S A$enemies$373 Def000117
+S A$enemies$355 Def000108
+S A$enemies$328 Def0000EF
+S A$enemies$319 Def0000EA
+S A$enemies$292 Def0000CF
+S A$enemies$283 Def0000C5
+S A$enemies$265 Def0000B9
+S A$enemies$247 Def0000A3
+S A$enemies$238 Def000099
+S A$enemies$229 Def000093
+S A$enemies$193 Def000072
+S A$enemies$184 Def000066
+S A$enemies$175 Def00005B
+S A$enemies$157 Def00004A
+S A$enemies$148 Def000042
+S A$enemies$139 Def000037
+S C$enemies.c$92$2_0$105 Def0000BB
+S C$enemies.c$86$2_0$102 Def000031
+S C$enemies.c$77$2_0$102 Def00001F
+S A$enemies$941 Def00033D
+S A$enemies$932 Def000334
+S A$enemies$923 Def00032D
+S A$enemies$914 Def000323
+S A$enemies$392 Def00012C
+S A$enemies$383 Def000123
+S A$enemies$374 Def00011A
+S A$enemies$365 Def000112
+S A$enemies$347 Def000101
+S A$enemies$329 Def0000F0
+S A$enemies$293 Def0000D1
+S A$enemies$284 Def0000C6
+S A$enemies$266 Def0000BA
+S A$enemies$257 Def0000AE
+S A$enemies$248 Def0000A4
+S A$enemies$239 Def00009A
+S A$enemies$194 Def000073
+S A$enemies$185 Def000067
+S A$enemies$176 Def00005C
+S A$enemies$158 Def00004C
+S A$enemies$149 Def000043
+S C$enemies.c$97$2_0$101 Def0000C1
+S C$enemies.c$78$2_0$102 Def000023
+S A$enemies$933 Def000336
+S A$enemies$924 Def000330
+S A$enemies$915 Def000324
+S A$enemies$906 Def00031F
+S A$enemies$870 Def0002FC
+S A$enemies$384 Def000125
+S A$enemies$375 Def00011B
+S A$enemies$357 Def000109
+S A$enemies$339 Def0000F9
+S A$enemies$285 Def0000C8
+S A$enemies$258 Def0000B1
+S A$enemies$249 Def0000A5
+S A$enemies$195 Def000075
+S A$enemies$186 Def000068
+S A$enemies$177 Def00005E
+S A$enemies$168 Def000053
+S A$enemies$159 Def00004D
+S C$enemies.c$89$2_0$101 Def000035
+S C$enemies.c$79$2_0$102 Def000025
+S A$enemies$934 Def000337
+S A$enemies$916 Def000325
+S A$enemies$871 Def0002FD
+S A$enemies$385 Def000126
+S A$enemies$376 Def00011C
+S A$enemies$358 Def00010A
+S A$enemies$295 Def0000D2
+S A$enemies$277 Def0000C1
+S A$enemies$196 Def000076
+S A$enemies$187 Def000069
+S A$enemies$178 Def000060
+S A$enemies$169 Def000054
+S C$enemies.c$93$3_0$106 Def00008E
+S A$enemies$935 Def000338
+S A$enemies$926 Def000331
+S A$enemies$917 Def000326
+S A$enemies$908 Def000320
+S A$enemies$881 Def000302
+S A$enemies$395 Def00012D
+S A$enemies$386 Def000127
+S A$enemies$377 Def00011D
+S A$enemies$368 Def000113
+S A$enemies$359 Def00010B
+S A$enemies$287 Def0000C9
+S A$enemies$197 Def000077
+S A$enemies$188 Def00006B
+S A$enemies$179 Def000061
+S C$enemies.c$89$2_0$103 Def000084
+S A$enemies$936 Def00033A
+S A$enemies$927 Def000332
+S A$enemies$918 Def000327
+S A$enemies$882 Def000304
+S A$enemies$387 Def000128
+S A$enemies$378 Def00011E
+S A$enemies$288 Def0000CA
+S A$enemies$198 Def000078
+S A$enemies$189 Def00006C
+S A$enemies$946 Def00033E
+S A$enemies$928 Def000333
+S A$enemies$919 Def00032A
+S A$enemies$883 Def000305
+S A$enemies$388 Def000129
+S A$enemies$379 Def00011F
+S A$enemies$298 Def0000D3
+S A$enemies$289 Def0000CB
+S A$enemies$199 Def000079
+S A$enemies$893 Def00030C
+S A$enemies$884 Def000306
+S A$enemies$875 Def0002FF
+S A$enemies$398 Def00012F
+S A$enemies$389 Def00012A
+S G$unload_enemy$0$0 Def0002FB
+S C$enemies.c$97$2_0$107 Def0000F9
+S A$enemies$894 Def00030D
+S A$enemies$885 Def000307
+S A$enemies$876 Def000300
+S A$enemies$399 Def000130
+S _e_agi Def000195
+S A$enemies$895 Def000310
+S A$enemies$886 Def000308
+S A$enemies$896 Def000312
+S A$enemies$887 Def000309
+S A$enemies$869 Def0002FB
+S A$enemies$61 Def000000
+S C$enemies.c$98$3_0$108 Def0000C3
+S A$enemies$897 Def000313
+S A$enemies$888 Def00030A
+S A$enemies$80 Def000014
+S A$enemies$62 Def000002
+S G$e_agi$0_0$0 Def000195
+S A$enemies$898 Def000314
+S A$enemies$889 Def00030B
+S A$enemies$81 Def000016
+S A$enemies$63 Def000003
+S A$enemies$899 Def000316
+S A$enemies$82 Def000018
+S A$enemies$73 Def00000A
+S A$enemies$64 Def000005
+S A$enemies$83 Def000019
+S A$enemies$74 Def00000C
+S A$enemies$93 Def00001F
+S A$enemies$84 Def00001B
+S A$enemies$75 Def00000D
+S A$enemies$94 Def000021
+S A$enemies$85 Def00001D
+S A$enemies$76 Def00000E
+S A$enemies$77 Def000010
+S A$enemies$68 Def000006
+S A$enemies$78 Def000012
+S A$enemies$69 Def000008
+S _enemies_tileset Def00019B
+S A$enemies$79 Def000013
+S _unload_enemy Def0002FB
+S A$enemies$98 Def000023
+S G$enemies_tileset$0_0$0 Def00019B
+S _e_con Def000198
+S G$e_con$0_0$0 Def000198
+S XG$unload_enemy$0$0 Def00033E
+S _e_int Def000192
 S G$load_enemy$0$0 Def000000
-S _enemies_names Def000156
-S G$enemies_names$0_0$0 Def000156
+S G$e_int$0_0$0 Def000192
+S C$enemies.c$103$2_0$101 Def000101
+S C$enemies.c$111$2_0$131 Def000334
+S C$enemies.c$104$3_0$110 Def000103
+S C$enemies.c$111$3_0$132 Def0002FF
+S C$enemies.c$112$3_0$132 Def000302
+S C$enemies.c$108$2_0$101 Def000143
+S C$enemies.c$113$3_0$132 Def00030C
+S _enemies_names Def00015F
+S C$enemies.c$117$2_0$131 Def00033E
+S C$enemies.c$103$2_0$109 Def000139
+S C$enemies.c$109$2_0$131 Def0002FB
+S G$enemies_names$0_0$0 Def00015F
 S _load_enemy Def000000
+S _e_str Def00018F
+S G$e_str$0_0$0 Def00018F
 A _DATA size 0 flags 0 addr 0
 A _INITIALIZED size 0 flags 0 addr 0
 A _DABS size 0 flags 8 addr 0
@@ -374,9 +382,9 @@ T 47 00 00
 R 00 00 00 00
 T 47 00 00 F8 05 6E 26 00 09 5D 54 1A 6F 26 00 29
 R 00 00 00 00
-T 54 00 00 29 29 29 7D C6 76 01 00 5F 7C CE
+T 54 00 00 29 29 29 7D C6 9B 01 00 5F 7C CE
 R 00 00 00 00 09 08 00 00
-T 5D 00 00 76 01 00 F8 02 73 23 22 7E 5F 87 87 87
+T 5D 00 00 9B 01 00 F8 02 73 23 22 7E 5F 87 87 87
 R 00 00 00 00 89 03 00 00
 T 68 00 00 83 F8 01 77 7E C6 65 F8 05 5E 83 F8 02
 R 00 00 00 00
@@ -422,89 +430,109 @@ T 37 01 00 22 70 F8 05 34 7E D6 03 38 C2 E8 06 C9
 R 00 00 00 00
 T 44 01 00
 R 00 00 00 00
-T 44 01 00 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 10
+T 44 01 00 00 00 00 00 00 00 00 00 00 04 05 06 07
 R 00 00 00 00
-T 51 01 00 11 12 13 14 15
+T 51 01 00 08 09 0A 0B 0C 0D 0E 0F 10 11 12 13 14
 R 00 00 00 00
-T 56 01 00
+T 5E 01 00 15
 R 00 00 00 00
-T 56 01 00 54 65 73 74 20 31 00 00 00 00 00 00 00
+T 5F 01 00
 R 00 00 00 00
-T 63 01 00 00 00 00 54 65 73 74 20 32 00 00 00 00
+T 5F 01 00 55 6E 6B 6E 6F 77 6E 00 00 00 00 00 00
 R 00 00 00 00
-T 70 01 00 00 00 00 00 00 00
+T 6C 01 00 00 00 00 54 65 73 74 20 31 00 00 00 00
 R 00 00 00 00
-T 76 01 00
+T 79 01 00 00 00 00 00 00 00 54 65 73 74 20 32 00
 R 00 00 00 00
-T 76 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+T 86 01 00 00 00 00 00 00 00 00 00 00
 R 00 00 00 00
-T 83 01 00 00 00 00 FF FF FF FF FF FF FF FF FF FF
+T 8F 01 00
 R 00 00 00 00
-T 90 01 00 FF FF FF FF FF FF 00 FF 00 FF 00 FF 00
+T 8F 01 00 00 0A 04
 R 00 00 00 00
-T 9D 01 00 FF 00 FF 00 FF 00 FF 00 FF FF 00 FF 00
+T 92 01 00
 R 00 00 00 00
-T AA 01 00 FF 00 FF 00 FF 00 FF 00 FF 00 FF 00 C0
+T 92 01 00 00 04 0A
 R 00 00 00 00
-T B7 01 00 C0 C0 C0 00 00 00 00 00 00 00 00 00 00
+T 95 01 00
 R 00 00 00 00
-T C4 01 00 00 00 18 18 18 18 00 00 00 00 00 00 00
+T 95 01 00 00 07 0A
 R 00 00 00 00
-T D1 01 00 00 00 00 00 00 03 03 03 03 00 00 00 00
+T 98 01 00
 R 00 00 00 00
-T DE 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+T 98 01 00 00 06 03
 R 00 00 00 00
-T EB 01 00 00 C0 C0 C0 C0 00 00 00 00 00 00 00 00
+T 9B 01 00
 R 00 00 00 00
-T F8 01 00 00 00 00 00 18 18 18 18 00 00 00 00 00
+T 9B 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 R 00 00 00 00
-T 05 02 00 00 00 00 00 00 00 00 03 03 03 03 00 00
+T A8 01 00 00 00 00 FF FF FF FF FF FF FF FF FF FF
 R 00 00 00 00
-T 12 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+T B5 01 00 FF FF FF FF FF FF 00 FF 00 FF 00 FF 00
 R 00 00 00 00
-T 1F 02 00 00 00 00 C0 C0 C0 C0 00 00 00 00 00 00
+T C2 01 00 FF 00 FF 00 FF 00 FF 00 FF FF 00 FF 00
 R 00 00 00 00
-T 2C 02 00 00 00 00 00 00 00 18 18 18 18 00 00 00
+T CF 01 00 FF 00 FF 00 FF 00 FF 00 FF 00 FF 00 C0
 R 00 00 00 00
-T 39 02 00 00 00 00 00 00 00 00 00 00 03 03 03 03
+T DC 01 00 C0 C0 C0 00 00 00 00 00 00 00 00 00 00
 R 00 00 00 00
-T 46 02 00 00 C0 00 C0 00 00 00 00 00 00 00 00 00
+T E9 01 00 00 00 18 18 18 18 00 00 00 00 00 00 00
 R 00 00 00 00
-T 53 02 00 00 00 00 00 18 00 18 00 00 00 00 00 00
+T F6 01 00 00 00 00 00 00 03 03 03 03 00 00 00 00
 R 00 00 00 00
-T 60 02 00 00 00 00 00 00 00 00 03 00 03 00 00 00
+T 03 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 R 00 00 00 00
-T 6D 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+T 10 02 00 00 C0 C0 C0 C0 00 00 00 00 00 00 00 00
 R 00 00 00 00
-T 7A 02 00 00 00 00 C0 00 C0 00 00 00 00 00 00 00
+T 1D 02 00 00 00 00 00 18 18 18 18 00 00 00 00 00
 R 00 00 00 00
-T 87 02 00 00 00 00 00 00 00 18 00 18 00 00 00 00
+T 2A 02 00 00 00 00 00 00 00 00 03 03 03 03 00 00
 R 00 00 00 00
-T 94 02 00 00 00 00 00 00 00 00 00 00 03 00 03 00
+T 37 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 R 00 00 00 00
-T A1 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+T 44 02 00 00 00 00 C0 C0 C0 C0 00 00 00 00 00 00
 R 00 00 00 00
-T AE 02 00 00 00 00 00 00 C0 00 C0 00 00 00 00 00
+T 51 02 00 00 00 00 00 00 00 18 18 18 18 00 00 00
 R 00 00 00 00
-T BB 02 00 00 00 00 00 00 00 00 00 18 00 18 00 00
+T 5E 02 00 00 00 00 00 00 00 00 00 00 03 03 03 03
 R 00 00 00 00
-T C8 02 00 00 00 00 00 00 00 00 00 00 00 00 03 00
+T 6B 02 00 00 C0 00 C0 00 00 00 00 00 00 00 00 00
 R 00 00 00 00
-T D5 02 00 03
+T 78 02 00 00 00 00 00 18 00 18 00 00 00 00 00 00
 R 00 00 00 00
-T D6 02 00
+T 85 02 00 00 00 00 00 00 00 00 03 00 03 00 00 00
 R 00 00 00 00
-T D6 02 00 3B 3B F8 00 22 36 00
+T 92 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 R 00 00 00 00
-T DD 02 00
+T 9F 02 00 00 00 00 C0 00 C0 00 00 00 00 00 00 00
 R 00 00 00 00
-T DD 02 00 F8 00 2A 4F 87 87 87 81 4E 81 4F 11
+T AC 02 00 00 00 00 00 00 00 18 00 18 00 00 00 00
 R 00 00 00 00
-T E9 02 00 76 01 C6 65 47 D5 3E 01 F5 33 C5 33 CD
+T B9 02 00 00 00 00 00 00 00 00 00 00 03 00 03 00
+R 00 00 00 00
+T C6 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+R 00 00 00 00
+T D3 02 00 00 00 00 00 00 C0 00 C0 00 00 00 00 00
+R 00 00 00 00
+T E0 02 00 00 00 00 00 00 00 00 00 18 00 18 00 00
+R 00 00 00 00
+T ED 02 00 00 00 00 00 00 00 00 00 00 00 00 03 00
+R 00 00 00 00
+T FA 02 00 03
+R 00 00 00 00
+T FB 02 00
+R 00 00 00 00
+T FB 02 00 3B 3B F8 00 22 36 00
+R 00 00 00 00
+T 02 03 00
+R 00 00 00 00
+T 02 03 00 F8 00 2A 4F 87 87 87 81 4E 81 4F 11
+R 00 00 00 00
+T 0E 03 00 9B 01 C6 65 47 D5 3E 01 F5 33 C5 33 CD
 R 00 00 00 00 00 03 00 00
-T F6 02 00 00 00 E8 04 58 69 26 00 29 29 4D 44 21
+T 1B 03 00 00 00 E8 04 58 69 26 00 29 29 4D 44 21
 R 00 00 00 00 02 03 00 00
-T 03 03 00 01 00 09 23 73 21 00 00 09 AF 22 77 F8
+T 28 03 00 01 00 09 23 73 21 00 00 09 AF 22 77 F8
 R 00 00 00 00 02 03 02 00 02 09 02 00
-T 10 03 00 01 34 7E D6 09 38 C6 33 33 C9
+T 35 03 00 01 34 7E D6 09 38 C6 33 33 C9
 R 00 00 00 00

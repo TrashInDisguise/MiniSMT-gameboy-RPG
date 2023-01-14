@@ -10,897 +10,940 @@
                                      10 ;--------------------------------------------------------
                                      11 	.globl _set_sprite_data
                                      12 	.globl _enemies_tileset
-                                     13 	.globl _enemies_names
-                                     14 	.globl _enemies
-                                     15 	.globl _load_enemy
-                                     16 	.globl _unload_enemy
-                                     17 ;--------------------------------------------------------
-                                     18 ; special function registers
-                                     19 ;--------------------------------------------------------
-                                     20 ;--------------------------------------------------------
-                                     21 ; ram data
-                                     22 ;--------------------------------------------------------
-                                     23 	.area _DATA
+                                     13 	.globl _e_con
+                                     14 	.globl _e_agi
+                                     15 	.globl _e_int
+                                     16 	.globl _e_str
+                                     17 	.globl _enemies_names
+                                     18 	.globl _enemies
+                                     19 	.globl _load_enemy
+                                     20 	.globl _unload_enemy
+                                     21 ;--------------------------------------------------------
+                                     22 ; special function registers
+                                     23 ;--------------------------------------------------------
                                      24 ;--------------------------------------------------------
                                      25 ; ram data
                                      26 ;--------------------------------------------------------
-                                     27 	.area _INITIALIZED
+                                     27 	.area _DATA
                                      28 ;--------------------------------------------------------
-                                     29 ; absolute external ram data
+                                     29 ; ram data
                                      30 ;--------------------------------------------------------
-                                     31 	.area _DABS (ABS)
+                                     31 	.area _INITIALIZED
                                      32 ;--------------------------------------------------------
-                                     33 ; global & static initialisations
+                                     33 ; absolute external ram data
                                      34 ;--------------------------------------------------------
-                                     35 	.area _HOME
-                                     36 	.area _GSINIT
-                                     37 	.area _GSFINAL
-                                     38 	.area _GSINIT
-                                     39 ;--------------------------------------------------------
-                                     40 ; Home
-                                     41 ;--------------------------------------------------------
-                                     42 	.area _HOME
-                                     43 	.area _HOME
-                                     44 ;--------------------------------------------------------
-                                     45 ; code
-                                     46 ;--------------------------------------------------------
-                                     47 	.area _CODE
-                           000000    48 	G$load_enemy$0$0	= .
-                                     49 	.globl	G$load_enemy$0$0
-                           000000    50 	C$enemies.c$48$0_0$101	= .
-                                     51 	.globl	C$enemies.c$48$0_0$101
-                                     52 ;src/enemies.c:48: void load_enemy(uint8_t enemy_id, uint8_t enemy_slot){
-                                     53 ;	---------------------------------
-                                     54 ; Function load_enemy
-                                     55 ; ---------------------------------
-      000000                         56 _load_enemy::
-      000000 E8 FA            [16]   57 	add	sp, #-6
-      000002 4F               [ 4]   58 	ld	c, a
-      000003 F8 04            [12]   59 	ldhl	sp,	#4
-      000005 73               [ 8]   60 	ld	(hl), e
-                           000006    61 	C$enemies.c$50$2_0$101	= .
-                                     62 	.globl	C$enemies.c$50$2_0$101
-                                     63 ;src/enemies.c:50: uint8_t x = 0;
-      000006 F8 00            [12]   64 	ldhl	sp,	#0
-      000008 36 00            [12]   65 	ld	(hl), #0x00
-                           00000A    66 	C$enemies.c$51$1_0$101	= .
-                                     67 	.globl	C$enemies.c$51$1_0$101
-                                     68 ;src/enemies.c:51: switch(enemy_slot){
-      00000A F8 04            [12]   69 	ldhl	sp,	#4
-      00000C 7E               [ 8]   70 	ld	a, (hl)
-      00000D B7               [ 4]   71 	or	a, a
-      00000E 28 0F            [12]   72 	jr	Z, 00101$
-      000010 F8 04            [12]   73 	ldhl	sp,	#4
-      000012 7E               [ 8]   74 	ld	a, (hl)
-      000013 3D               [ 4]   75 	dec	a
-      000014 28 0F            [12]   76 	jr	Z, 00102$
-      000016 F8 04            [12]   77 	ldhl	sp,	#4
-      000018 7E               [ 8]   78 	ld	a, (hl)
-      000019 D6 02            [ 8]   79 	sub	a, #0x02
-      00001B 28 0E            [12]   80 	jr	Z, 00103$
-      00001D 18 12            [12]   81 	jr	00104$
-                           00001F    82 	C$enemies.c$52$2_0$102	= .
-                                     83 	.globl	C$enemies.c$52$2_0$102
-                                     84 ;src/enemies.c:52: case 0:
-      00001F                         85 00101$:
-                           00001F    86 	C$enemies.c$53$2_0$102	= .
-                                     87 	.globl	C$enemies.c$53$2_0$102
-                                     88 ;src/enemies.c:53: x = SLOT0_X;
-      00001F F8 00            [12]   89 	ldhl	sp,	#0
-      000021 36 28            [12]   90 	ld	(hl), #0x28
-                           000023    91 	C$enemies.c$54$2_0$102	= .
-                                     92 	.globl	C$enemies.c$54$2_0$102
-                                     93 ;src/enemies.c:54: break;
-      000023 18 10            [12]   94 	jr	00129$
-                           000025    95 	C$enemies.c$55$2_0$102	= .
-                                     96 	.globl	C$enemies.c$55$2_0$102
-                                     97 ;src/enemies.c:55: case 1:
-      000025                         98 00102$:
-                           000025    99 	C$enemies.c$56$2_0$102	= .
-                                    100 	.globl	C$enemies.c$56$2_0$102
-                                    101 ;src/enemies.c:56: x = SLOT1_X;
-      000025 F8 00            [12]  102 	ldhl	sp,	#0
-      000027 36 4C            [12]  103 	ld	(hl), #0x4c
-                           000029   104 	C$enemies.c$57$2_0$102	= .
-                                    105 	.globl	C$enemies.c$57$2_0$102
-                                    106 ;src/enemies.c:57: break;
-      000029 18 0A            [12]  107 	jr	00129$
-                           00002B   108 	C$enemies.c$58$2_0$102	= .
-                                    109 	.globl	C$enemies.c$58$2_0$102
-                                    110 ;src/enemies.c:58: case 2:
-      00002B                        111 00103$:
-                           00002B   112 	C$enemies.c$59$2_0$102	= .
-                                    113 	.globl	C$enemies.c$59$2_0$102
-                                    114 ;src/enemies.c:59: x = SLOT2_X;
-      00002B F8 00            [12]  115 	ldhl	sp,	#0
-      00002D 36 70            [12]  116 	ld	(hl), #0x70
-                           00002F   117 	C$enemies.c$60$2_0$102	= .
-                                    118 	.globl	C$enemies.c$60$2_0$102
-                                    119 ;src/enemies.c:60: break;
-      00002F 18 04            [12]  120 	jr	00129$
-                           000031   121 	C$enemies.c$61$2_0$102	= .
-                                    122 	.globl	C$enemies.c$61$2_0$102
-                                    123 ;src/enemies.c:61: default:
-      000031                        124 00104$:
-                           000031   125 	C$enemies.c$62$2_0$102	= .
-                                    126 	.globl	C$enemies.c$62$2_0$102
-                                    127 ;src/enemies.c:62: enemy_slot = 0;
-      000031 F8 04            [12]  128 	ldhl	sp,	#4
-      000033 36 00            [12]  129 	ld	(hl), #0x00
-                           000035   130 	C$enemies.c$65$2_0$101	= .
-                                    131 	.globl	C$enemies.c$65$2_0$101
-                                    132 ;src/enemies.c:65: for (i=0;i<9;i++){
-      000035                        133 00129$:
-      000035 06 00            [ 8]  134 	ld	b, #0x00
-      000037 69               [ 4]  135 	ld	l, c
-      000038 60               [ 4]  136 	ld	h, b
-      000039 29               [ 8]  137 	add	hl, hl
-      00003A 29               [ 8]  138 	add	hl, hl
-      00003B 29               [ 8]  139 	add	hl, hl
-      00003C 09               [ 8]  140 	add	hl, bc
-      00003D 01r44r01         [12]  141 	ld	bc,#_enemies
-      000040 09               [ 8]  142 	add	hl,bc
-      000041 4D               [ 4]  143 	ld	c, l
-      000042 44               [ 4]  144 	ld	b, h
-      000043 F8 05            [12]  145 	ldhl	sp,	#5
-      000045 36 00            [12]  146 	ld	(hl), #0x00
-      000047                        147 00116$:
-                           000047   148 	C$enemies.c$66$3_0$104	= .
-                                    149 	.globl	C$enemies.c$66$3_0$104
-                                    150 ;src/enemies.c:66: set_sprite_data(ENEMIES_MEMORY_BASE_ADDRESS+(enemy_slot*9)+i,1,enemies_tileset+(enemies[enemy_id][i]*16));
-      000047 F8 05            [12]  151 	ldhl	sp,	#5
-      000049 6E               [ 8]  152 	ld	l, (hl)
-      00004A 26 00            [ 8]  153 	ld	h, #0x00
-      00004C 09               [ 8]  154 	add	hl, bc
-      00004D 5D               [ 4]  155 	ld	e, l
-      00004E 54               [ 4]  156 	ld	d, h
-      00004F 1A               [ 8]  157 	ld	a, (de)
-      000050 6F               [ 4]  158 	ld	l, a
-                                    159 ;	spillPairReg hl
-                                    160 ;	spillPairReg hl
-      000051 26 00            [ 8]  161 	ld	h, #0x00
-                                    162 ;	spillPairReg hl
+                                     35 	.area _DABS (ABS)
+                                     36 ;--------------------------------------------------------
+                                     37 ; global & static initialisations
+                                     38 ;--------------------------------------------------------
+                                     39 	.area _HOME
+                                     40 	.area _GSINIT
+                                     41 	.area _GSFINAL
+                                     42 	.area _GSINIT
+                                     43 ;--------------------------------------------------------
+                                     44 ; Home
+                                     45 ;--------------------------------------------------------
+                                     46 	.area _HOME
+                                     47 	.area _HOME
+                                     48 ;--------------------------------------------------------
+                                     49 ; code
+                                     50 ;--------------------------------------------------------
+                                     51 	.area _CODE
+                           000000    52 	G$load_enemy$0$0	= .
+                                     53 	.globl	G$load_enemy$0$0
+                           000000    54 	C$enemies.c$72$0_0$101	= .
+                                     55 	.globl	C$enemies.c$72$0_0$101
+                                     56 ;src/enemies.c:72: void load_enemy(uint8_t enemy_id, uint8_t enemy_slot){
+                                     57 ;	---------------------------------
+                                     58 ; Function load_enemy
+                                     59 ; ---------------------------------
+      000000                         60 _load_enemy::
+      000000 E8 FA            [16]   61 	add	sp, #-6
+      000002 4F               [ 4]   62 	ld	c, a
+      000003 F8 04            [12]   63 	ldhl	sp,	#4
+      000005 73               [ 8]   64 	ld	(hl), e
+                           000006    65 	C$enemies.c$74$2_0$101	= .
+                                     66 	.globl	C$enemies.c$74$2_0$101
+                                     67 ;src/enemies.c:74: uint8_t x = 0;
+      000006 F8 00            [12]   68 	ldhl	sp,	#0
+      000008 36 00            [12]   69 	ld	(hl), #0x00
+                           00000A    70 	C$enemies.c$75$1_0$101	= .
+                                     71 	.globl	C$enemies.c$75$1_0$101
+                                     72 ;src/enemies.c:75: switch(enemy_slot){
+      00000A F8 04            [12]   73 	ldhl	sp,	#4
+      00000C 7E               [ 8]   74 	ld	a, (hl)
+      00000D B7               [ 4]   75 	or	a, a
+      00000E 28 0F            [12]   76 	jr	Z, 00101$
+      000010 F8 04            [12]   77 	ldhl	sp,	#4
+      000012 7E               [ 8]   78 	ld	a, (hl)
+      000013 3D               [ 4]   79 	dec	a
+      000014 28 0F            [12]   80 	jr	Z, 00102$
+      000016 F8 04            [12]   81 	ldhl	sp,	#4
+      000018 7E               [ 8]   82 	ld	a, (hl)
+      000019 D6 02            [ 8]   83 	sub	a, #0x02
+      00001B 28 0E            [12]   84 	jr	Z, 00103$
+      00001D 18 12            [12]   85 	jr	00104$
+                           00001F    86 	C$enemies.c$76$2_0$102	= .
+                                     87 	.globl	C$enemies.c$76$2_0$102
+                                     88 ;src/enemies.c:76: case 0:
+      00001F                         89 00101$:
+                           00001F    90 	C$enemies.c$77$2_0$102	= .
+                                     91 	.globl	C$enemies.c$77$2_0$102
+                                     92 ;src/enemies.c:77: x = SLOT0_X;
+      00001F F8 00            [12]   93 	ldhl	sp,	#0
+      000021 36 28            [12]   94 	ld	(hl), #0x28
+                           000023    95 	C$enemies.c$78$2_0$102	= .
+                                     96 	.globl	C$enemies.c$78$2_0$102
+                                     97 ;src/enemies.c:78: break;
+      000023 18 10            [12]   98 	jr	00129$
+                           000025    99 	C$enemies.c$79$2_0$102	= .
+                                    100 	.globl	C$enemies.c$79$2_0$102
+                                    101 ;src/enemies.c:79: case 1:
+      000025                        102 00102$:
+                           000025   103 	C$enemies.c$80$2_0$102	= .
+                                    104 	.globl	C$enemies.c$80$2_0$102
+                                    105 ;src/enemies.c:80: x = SLOT1_X;
+      000025 F8 00            [12]  106 	ldhl	sp,	#0
+      000027 36 4C            [12]  107 	ld	(hl), #0x4c
+                           000029   108 	C$enemies.c$81$2_0$102	= .
+                                    109 	.globl	C$enemies.c$81$2_0$102
+                                    110 ;src/enemies.c:81: break;
+      000029 18 0A            [12]  111 	jr	00129$
+                           00002B   112 	C$enemies.c$82$2_0$102	= .
+                                    113 	.globl	C$enemies.c$82$2_0$102
+                                    114 ;src/enemies.c:82: case 2:
+      00002B                        115 00103$:
+                           00002B   116 	C$enemies.c$83$2_0$102	= .
+                                    117 	.globl	C$enemies.c$83$2_0$102
+                                    118 ;src/enemies.c:83: x = SLOT2_X;
+      00002B F8 00            [12]  119 	ldhl	sp,	#0
+      00002D 36 70            [12]  120 	ld	(hl), #0x70
+                           00002F   121 	C$enemies.c$84$2_0$102	= .
+                                    122 	.globl	C$enemies.c$84$2_0$102
+                                    123 ;src/enemies.c:84: break;
+      00002F 18 04            [12]  124 	jr	00129$
+                           000031   125 	C$enemies.c$85$2_0$102	= .
+                                    126 	.globl	C$enemies.c$85$2_0$102
+                                    127 ;src/enemies.c:85: default:
+      000031                        128 00104$:
+                           000031   129 	C$enemies.c$86$2_0$102	= .
+                                    130 	.globl	C$enemies.c$86$2_0$102
+                                    131 ;src/enemies.c:86: enemy_slot = 0;
+      000031 F8 04            [12]  132 	ldhl	sp,	#4
+      000033 36 00            [12]  133 	ld	(hl), #0x00
+                           000035   134 	C$enemies.c$89$2_0$101	= .
+                                    135 	.globl	C$enemies.c$89$2_0$101
+                                    136 ;src/enemies.c:89: for (i=0;i<9;i++){
+      000035                        137 00129$:
+      000035 06 00            [ 8]  138 	ld	b, #0x00
+      000037 69               [ 4]  139 	ld	l, c
+      000038 60               [ 4]  140 	ld	h, b
+      000039 29               [ 8]  141 	add	hl, hl
+      00003A 29               [ 8]  142 	add	hl, hl
+      00003B 29               [ 8]  143 	add	hl, hl
+      00003C 09               [ 8]  144 	add	hl, bc
+      00003D 01r44r01         [12]  145 	ld	bc,#_enemies
+      000040 09               [ 8]  146 	add	hl,bc
+      000041 4D               [ 4]  147 	ld	c, l
+      000042 44               [ 4]  148 	ld	b, h
+      000043 F8 05            [12]  149 	ldhl	sp,	#5
+      000045 36 00            [12]  150 	ld	(hl), #0x00
+      000047                        151 00116$:
+                           000047   152 	C$enemies.c$90$3_0$104	= .
+                                    153 	.globl	C$enemies.c$90$3_0$104
+                                    154 ;src/enemies.c:90: set_sprite_data(ENEMIES_MEMORY_BASE_ADDRESS+(enemy_slot*9)+i,1,enemies_tileset+(enemies[enemy_id][i]*16));
+      000047 F8 05            [12]  155 	ldhl	sp,	#5
+      000049 6E               [ 8]  156 	ld	l, (hl)
+      00004A 26 00            [ 8]  157 	ld	h, #0x00
+      00004C 09               [ 8]  158 	add	hl, bc
+      00004D 5D               [ 4]  159 	ld	e, l
+      00004E 54               [ 4]  160 	ld	d, h
+      00004F 1A               [ 8]  161 	ld	a, (de)
+      000050 6F               [ 4]  162 	ld	l, a
                                     163 ;	spillPairReg hl
-      000053 29               [ 8]  164 	add	hl, hl
-      000054 29               [ 8]  165 	add	hl, hl
-      000055 29               [ 8]  166 	add	hl, hl
-      000056 29               [ 8]  167 	add	hl, hl
-      000057 7D               [ 4]  168 	ld	a, l
-      000058 C6r76            [ 8]  169 	add	a, #<(_enemies_tileset)
-      00005A 5F               [ 4]  170 	ld	e, a
-      00005B 7C               [ 4]  171 	ld	a, h
-      00005C CEs01            [ 8]  172 	adc	a, #>(_enemies_tileset)
-      00005E F8 02            [12]  173 	ldhl	sp,	#2
-      000060 73               [ 8]  174 	ld	(hl), e
-      000061 23               [ 8]  175 	inc	hl
-      000062 22               [ 8]  176 	ld	(hl+), a
-      000063 7E               [ 8]  177 	ld	a, (hl)
-      000064 5F               [ 4]  178 	ld	e, a
-      000065 87               [ 4]  179 	add	a, a
-      000066 87               [ 4]  180 	add	a, a
-      000067 87               [ 4]  181 	add	a, a
-      000068 83               [ 4]  182 	add	a, e
-      000069 F8 01            [12]  183 	ldhl	sp,	#1
-      00006B 77               [ 8]  184 	ld	(hl), a
-      00006C 7E               [ 8]  185 	ld	a, (hl)
-      00006D C6 65            [ 8]  186 	add	a, #0x65
-      00006F F8 05            [12]  187 	ldhl	sp,	#5
-      000071 5E               [ 8]  188 	ld	e, (hl)
-      000072 83               [ 4]  189 	add	a, e
-      000073 F8 02            [12]  190 	ldhl	sp,	#2
-      000075 5E               [ 8]  191 	ld	e, (hl)
-      000076 23               [ 8]  192 	inc	hl
-      000077 56               [ 8]  193 	ld	d, (hl)
-      000078 D5               [16]  194 	push	de
-      000079 26 01            [ 8]  195 	ld	h, #0x01
-                                    196 ;	spillPairReg hl
-                                    197 ;	spillPairReg hl
-      00007B E5               [16]  198 	push	hl
-      00007C 33               [ 8]  199 	inc	sp
-      00007D F5               [16]  200 	push	af
-      00007E 33               [ 8]  201 	inc	sp
-      00007F CDr00r00         [24]  202 	call	_set_sprite_data
-      000082 E8 04            [16]  203 	add	sp, #4
-                           000084   204 	C$enemies.c$65$2_0$103	= .
-                                    205 	.globl	C$enemies.c$65$2_0$103
-                                    206 ;src/enemies.c:65: for (i=0;i<9;i++){
-      000084 F8 05            [12]  207 	ldhl	sp,	#5
-      000086 34               [12]  208 	inc	(hl)
-      000087 7E               [ 8]  209 	ld	a, (hl)
-      000088 D6 09            [ 8]  210 	sub	a, #0x09
-      00008A 38 BB            [12]  211 	jr	C, 00116$
-                           00008C   212 	C$enemies.c$68$2_0$101	= .
-                                    213 	.globl	C$enemies.c$68$2_0$101
-                                    214 ;src/enemies.c:68: for (i=0;i<3;i++){
-      00008C 06 00            [ 8]  215 	ld	b, #0x00
-      00008E                        216 00118$:
-                           00008E   217 	C$enemies.c$69$3_0$106	= .
-                                    218 	.globl	C$enemies.c$69$3_0$106
-                                    219 ;src/enemies.c:69: j=i+enemy_slot*9;
-      00008E 78               [ 4]  220 	ld	a, b
-      00008F F8 01            [12]  221 	ldhl	sp,	#1
-      000091 86               [ 8]  222 	add	a, (hl)
-                                    223 ;src/enemies.c:70: set_sprite_tile(j,ENEMIES_MEMORY_BASE_ADDRESS+j);
-      000092 5F               [ 4]  224 	ld	e, a
-      000093 C6 65            [ 8]  225 	add	a, #0x65
-      000095 4F               [ 4]  226 	ld	c, a
-                                    227 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
-      000096 6B               [ 4]  228 	ld	l, e
-                                    229 ;	spillPairReg hl
-                                    230 ;	spillPairReg hl
-      000097 26 00            [ 8]  231 	ld	h, #0x00
-                                    232 ;	spillPairReg hl
+                                    164 ;	spillPairReg hl
+      000051 26 00            [ 8]  165 	ld	h, #0x00
+                                    166 ;	spillPairReg hl
+                                    167 ;	spillPairReg hl
+      000053 29               [ 8]  168 	add	hl, hl
+      000054 29               [ 8]  169 	add	hl, hl
+      000055 29               [ 8]  170 	add	hl, hl
+      000056 29               [ 8]  171 	add	hl, hl
+      000057 7D               [ 4]  172 	ld	a, l
+      000058 C6r9B            [ 8]  173 	add	a, #<(_enemies_tileset)
+      00005A 5F               [ 4]  174 	ld	e, a
+      00005B 7C               [ 4]  175 	ld	a, h
+      00005C CEs01            [ 8]  176 	adc	a, #>(_enemies_tileset)
+      00005E F8 02            [12]  177 	ldhl	sp,	#2
+      000060 73               [ 8]  178 	ld	(hl), e
+      000061 23               [ 8]  179 	inc	hl
+      000062 22               [ 8]  180 	ld	(hl+), a
+      000063 7E               [ 8]  181 	ld	a, (hl)
+      000064 5F               [ 4]  182 	ld	e, a
+      000065 87               [ 4]  183 	add	a, a
+      000066 87               [ 4]  184 	add	a, a
+      000067 87               [ 4]  185 	add	a, a
+      000068 83               [ 4]  186 	add	a, e
+      000069 F8 01            [12]  187 	ldhl	sp,	#1
+      00006B 77               [ 8]  188 	ld	(hl), a
+      00006C 7E               [ 8]  189 	ld	a, (hl)
+      00006D C6 65            [ 8]  190 	add	a, #0x65
+      00006F F8 05            [12]  191 	ldhl	sp,	#5
+      000071 5E               [ 8]  192 	ld	e, (hl)
+      000072 83               [ 4]  193 	add	a, e
+      000073 F8 02            [12]  194 	ldhl	sp,	#2
+      000075 5E               [ 8]  195 	ld	e, (hl)
+      000076 23               [ 8]  196 	inc	hl
+      000077 56               [ 8]  197 	ld	d, (hl)
+      000078 D5               [16]  198 	push	de
+      000079 26 01            [ 8]  199 	ld	h, #0x01
+                                    200 ;	spillPairReg hl
+                                    201 ;	spillPairReg hl
+      00007B E5               [16]  202 	push	hl
+      00007C 33               [ 8]  203 	inc	sp
+      00007D F5               [16]  204 	push	af
+      00007E 33               [ 8]  205 	inc	sp
+      00007F CDr00r00         [24]  206 	call	_set_sprite_data
+      000082 E8 04            [16]  207 	add	sp, #4
+                           000084   208 	C$enemies.c$89$2_0$103	= .
+                                    209 	.globl	C$enemies.c$89$2_0$103
+                                    210 ;src/enemies.c:89: for (i=0;i<9;i++){
+      000084 F8 05            [12]  211 	ldhl	sp,	#5
+      000086 34               [12]  212 	inc	(hl)
+      000087 7E               [ 8]  213 	ld	a, (hl)
+      000088 D6 09            [ 8]  214 	sub	a, #0x09
+      00008A 38 BB            [12]  215 	jr	C, 00116$
+                           00008C   216 	C$enemies.c$92$2_0$101	= .
+                                    217 	.globl	C$enemies.c$92$2_0$101
+                                    218 ;src/enemies.c:92: for (i=0;i<3;i++){
+      00008C 06 00            [ 8]  219 	ld	b, #0x00
+      00008E                        220 00118$:
+                           00008E   221 	C$enemies.c$93$3_0$106	= .
+                                    222 	.globl	C$enemies.c$93$3_0$106
+                                    223 ;src/enemies.c:93: j=i+enemy_slot*9;
+      00008E 78               [ 4]  224 	ld	a, b
+      00008F F8 01            [12]  225 	ldhl	sp,	#1
+      000091 86               [ 8]  226 	add	a, (hl)
+                                    227 ;src/enemies.c:94: set_sprite_tile(j,ENEMIES_MEMORY_BASE_ADDRESS+j);
+      000092 5F               [ 4]  228 	ld	e, a
+      000093 C6 65            [ 8]  229 	add	a, #0x65
+      000095 4F               [ 4]  230 	ld	c, a
+                                    231 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
+      000096 6B               [ 4]  232 	ld	l, e
                                     233 ;	spillPairReg hl
-      000099 29               [ 8]  234 	add	hl, hl
-      00009A 29               [ 8]  235 	add	hl, hl
-      00009B 5D               [ 4]  236 	ld	e, l
-      00009C 54               [ 4]  237 	ld	d, h
-      00009D 21r01r00         [12]  238 	ld	hl,#_shadow_OAM + 1
-      0000A0 19               [ 8]  239 	add	hl,de
-      0000A1 23               [ 8]  240 	inc	hl
-      0000A2 71               [ 8]  241 	ld	(hl), c
-                                    242 ;src/enemies.c:71: move_sprite(j,x+i*8,SLOTS_Y);
-      0000A3 78               [ 4]  243 	ld	a, b
-      0000A4 87               [ 4]  244 	add	a, a
-      0000A5 87               [ 4]  245 	add	a, a
-      0000A6 87               [ 4]  246 	add	a, a
-      0000A7 F8 00            [12]  247 	ldhl	sp,	#0
-      0000A9 4E               [ 8]  248 	ld	c, (hl)
-      0000AA 81               [ 4]  249 	add	a, c
-      0000AB F8 05            [12]  250 	ldhl	sp,	#5
-      0000AD 77               [ 8]  251 	ld	(hl), a
-                                    252 ;../gbdk/include/gb/gb.h:1675: OAM_item_t * itm = &shadow_OAM[nb];
-      0000AE 21r00r00         [12]  253 	ld	hl, #_shadow_OAM
-      0000B1 19               [ 8]  254 	add	hl, de
-                                    255 ;../gbdk/include/gb/gb.h:1676: itm->y=y, itm->x=x;
-      0000B2 3E 50            [ 8]  256 	ld	a, #0x50
-      0000B4 22               [ 8]  257 	ld	(hl+), a
-      0000B5 5D               [ 4]  258 	ld	e, l
-      0000B6 54               [ 4]  259 	ld	d, h
-      0000B7 F8 05            [12]  260 	ldhl	sp,	#5
-      0000B9 7E               [ 8]  261 	ld	a, (hl)
-      0000BA 12               [ 8]  262 	ld	(de), a
-                           0000BB   263 	C$enemies.c$68$2_0$105	= .
-                                    264 	.globl	C$enemies.c$68$2_0$105
-                                    265 ;src/enemies.c:68: for (i=0;i<3;i++){
-      0000BB 04               [ 4]  266 	inc	b
-      0000BC 78               [ 4]  267 	ld	a, b
-      0000BD D6 03            [ 8]  268 	sub	a, #0x03
-      0000BF 38 CD            [12]  269 	jr	C, 00118$
-                           0000C1   270 	C$enemies.c$73$2_0$101	= .
-                                    271 	.globl	C$enemies.c$73$2_0$101
-                                    272 ;src/enemies.c:73: for (i=0;i<3;i++){
-      0000C1 36 00            [12]  273 	ld	(hl), #0x00
-      0000C3                        274 00120$:
-                           0000C3   275 	C$enemies.c$74$3_0$108	= .
-                                    276 	.globl	C$enemies.c$74$3_0$108
-                                    277 ;src/enemies.c:74: j=i+enemy_slot*9;
-      0000C3 F8 05            [12]  278 	ldhl	sp,	#5
-      0000C5 7E               [ 8]  279 	ld	a, (hl)
-      0000C6 F8 01            [12]  280 	ldhl	sp,	#1
-      0000C8 86               [ 8]  281 	add	a, (hl)
-                                    282 ;src/enemies.c:75: set_sprite_tile(j+3,ENEMIES_MEMORY_BASE_ADDRESS+j+3);
-      0000C9 23               [ 8]  283 	inc	hl
-      0000CA 5F               [ 4]  284 	ld	e, a
-      0000CB C6 68            [ 8]  285 	add	a, #0x68
-      0000CD 22               [ 8]  286 	ld	(hl+), a
-      0000CE 7B               [ 4]  287 	ld	a, e
-      0000CF C6 03            [ 8]  288 	add	a, #0x03
-      0000D1 77               [ 8]  289 	ld	(hl), a
-                                    290 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
-      0000D2 6E               [ 8]  291 	ld	l, (hl)
-                                    292 ;	spillPairReg hl
-                                    293 ;	spillPairReg hl
-      0000D3 26 00            [ 8]  294 	ld	h, #0x00
-                                    295 ;	spillPairReg hl
+                                    234 ;	spillPairReg hl
+      000097 26 00            [ 8]  235 	ld	h, #0x00
+                                    236 ;	spillPairReg hl
+                                    237 ;	spillPairReg hl
+      000099 29               [ 8]  238 	add	hl, hl
+      00009A 29               [ 8]  239 	add	hl, hl
+      00009B 5D               [ 4]  240 	ld	e, l
+      00009C 54               [ 4]  241 	ld	d, h
+      00009D 21r01r00         [12]  242 	ld	hl,#_shadow_OAM + 1
+      0000A0 19               [ 8]  243 	add	hl,de
+      0000A1 23               [ 8]  244 	inc	hl
+      0000A2 71               [ 8]  245 	ld	(hl), c
+                                    246 ;src/enemies.c:95: move_sprite(j,x+i*8,SLOTS_Y);
+      0000A3 78               [ 4]  247 	ld	a, b
+      0000A4 87               [ 4]  248 	add	a, a
+      0000A5 87               [ 4]  249 	add	a, a
+      0000A6 87               [ 4]  250 	add	a, a
+      0000A7 F8 00            [12]  251 	ldhl	sp,	#0
+      0000A9 4E               [ 8]  252 	ld	c, (hl)
+      0000AA 81               [ 4]  253 	add	a, c
+      0000AB F8 05            [12]  254 	ldhl	sp,	#5
+      0000AD 77               [ 8]  255 	ld	(hl), a
+                                    256 ;../gbdk/include/gb/gb.h:1675: OAM_item_t * itm = &shadow_OAM[nb];
+      0000AE 21r00r00         [12]  257 	ld	hl, #_shadow_OAM
+      0000B1 19               [ 8]  258 	add	hl, de
+                                    259 ;../gbdk/include/gb/gb.h:1676: itm->y=y, itm->x=x;
+      0000B2 3E 50            [ 8]  260 	ld	a, #0x50
+      0000B4 22               [ 8]  261 	ld	(hl+), a
+      0000B5 5D               [ 4]  262 	ld	e, l
+      0000B6 54               [ 4]  263 	ld	d, h
+      0000B7 F8 05            [12]  264 	ldhl	sp,	#5
+      0000B9 7E               [ 8]  265 	ld	a, (hl)
+      0000BA 12               [ 8]  266 	ld	(de), a
+                           0000BB   267 	C$enemies.c$92$2_0$105	= .
+                                    268 	.globl	C$enemies.c$92$2_0$105
+                                    269 ;src/enemies.c:92: for (i=0;i<3;i++){
+      0000BB 04               [ 4]  270 	inc	b
+      0000BC 78               [ 4]  271 	ld	a, b
+      0000BD D6 03            [ 8]  272 	sub	a, #0x03
+      0000BF 38 CD            [12]  273 	jr	C, 00118$
+                           0000C1   274 	C$enemies.c$97$2_0$101	= .
+                                    275 	.globl	C$enemies.c$97$2_0$101
+                                    276 ;src/enemies.c:97: for (i=0;i<3;i++){
+      0000C1 36 00            [12]  277 	ld	(hl), #0x00
+      0000C3                        278 00120$:
+                           0000C3   279 	C$enemies.c$98$3_0$108	= .
+                                    280 	.globl	C$enemies.c$98$3_0$108
+                                    281 ;src/enemies.c:98: j=i+enemy_slot*9;
+      0000C3 F8 05            [12]  282 	ldhl	sp,	#5
+      0000C5 7E               [ 8]  283 	ld	a, (hl)
+      0000C6 F8 01            [12]  284 	ldhl	sp,	#1
+      0000C8 86               [ 8]  285 	add	a, (hl)
+                                    286 ;src/enemies.c:99: set_sprite_tile(j+3,ENEMIES_MEMORY_BASE_ADDRESS+j+3);
+      0000C9 23               [ 8]  287 	inc	hl
+      0000CA 5F               [ 4]  288 	ld	e, a
+      0000CB C6 68            [ 8]  289 	add	a, #0x68
+      0000CD 22               [ 8]  290 	ld	(hl+), a
+      0000CE 7B               [ 4]  291 	ld	a, e
+      0000CF C6 03            [ 8]  292 	add	a, #0x03
+      0000D1 77               [ 8]  293 	ld	(hl), a
+                                    294 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
+      0000D2 6E               [ 8]  295 	ld	l, (hl)
                                     296 ;	spillPairReg hl
-      0000D5 29               [ 8]  297 	add	hl, hl
-      0000D6 29               [ 8]  298 	add	hl, hl
-      0000D7 11r00r00         [12]  299 	ld	de, #_shadow_OAM
-      0000DA 19               [ 8]  300 	add	hl, de
-      0000DB 23               [ 8]  301 	inc	hl
-      0000DC 23               [ 8]  302 	inc	hl
-      0000DD 5D               [ 4]  303 	ld	e, l
-      0000DE 54               [ 4]  304 	ld	d, h
-      0000DF F8 02            [12]  305 	ldhl	sp,	#2
-      0000E1 7E               [ 8]  306 	ld	a, (hl)
-      0000E2 12               [ 8]  307 	ld	(de), a
-                                    308 ;src/enemies.c:76: move_sprite(j+3,x+i*8,SLOTS_Y+8);
-      0000E3 F8 05            [12]  309 	ldhl	sp,	#5
-      0000E5 3A               [ 8]  310 	ld	a, (hl-)
-      0000E6 2B               [ 8]  311 	dec	hl
-      0000E7 87               [ 4]  312 	add	a, a
-      0000E8 87               [ 4]  313 	add	a, a
-      0000E9 87               [ 4]  314 	add	a, a
-      0000EA 81               [ 4]  315 	add	a, c
-      0000EB 47               [ 4]  316 	ld	b, a
-                                    317 ;../gbdk/include/gb/gb.h:1675: OAM_item_t * itm = &shadow_OAM[nb];
-      0000EC 6E               [ 8]  318 	ld	l, (hl)
-                                    319 ;	spillPairReg hl
-                                    320 ;	spillPairReg hl
-      0000ED 26 00            [ 8]  321 	ld	h, #0x00
-                                    322 ;	spillPairReg hl
+                                    297 ;	spillPairReg hl
+      0000D3 26 00            [ 8]  298 	ld	h, #0x00
+                                    299 ;	spillPairReg hl
+                                    300 ;	spillPairReg hl
+      0000D5 29               [ 8]  301 	add	hl, hl
+      0000D6 29               [ 8]  302 	add	hl, hl
+      0000D7 11r00r00         [12]  303 	ld	de, #_shadow_OAM
+      0000DA 19               [ 8]  304 	add	hl, de
+      0000DB 23               [ 8]  305 	inc	hl
+      0000DC 23               [ 8]  306 	inc	hl
+      0000DD 5D               [ 4]  307 	ld	e, l
+      0000DE 54               [ 4]  308 	ld	d, h
+      0000DF F8 02            [12]  309 	ldhl	sp,	#2
+      0000E1 7E               [ 8]  310 	ld	a, (hl)
+      0000E2 12               [ 8]  311 	ld	(de), a
+                                    312 ;src/enemies.c:100: move_sprite(j+3,x+i*8,SLOTS_Y+8);
+      0000E3 F8 05            [12]  313 	ldhl	sp,	#5
+      0000E5 3A               [ 8]  314 	ld	a, (hl-)
+      0000E6 2B               [ 8]  315 	dec	hl
+      0000E7 87               [ 4]  316 	add	a, a
+      0000E8 87               [ 4]  317 	add	a, a
+      0000E9 87               [ 4]  318 	add	a, a
+      0000EA 81               [ 4]  319 	add	a, c
+      0000EB 47               [ 4]  320 	ld	b, a
+                                    321 ;../gbdk/include/gb/gb.h:1675: OAM_item_t * itm = &shadow_OAM[nb];
+      0000EC 6E               [ 8]  322 	ld	l, (hl)
                                     323 ;	spillPairReg hl
-      0000EF 29               [ 8]  324 	add	hl, hl
-      0000F0 29               [ 8]  325 	add	hl, hl
-      0000F1 11r00r00         [12]  326 	ld	de, #_shadow_OAM
-      0000F4 19               [ 8]  327 	add	hl, de
-                                    328 ;../gbdk/include/gb/gb.h:1676: itm->y=y, itm->x=x;
-      0000F5 3E 58            [ 8]  329 	ld	a, #0x58
-      0000F7 22               [ 8]  330 	ld	(hl+), a
-      0000F8 70               [ 8]  331 	ld	(hl), b
-                           0000F9   332 	C$enemies.c$73$2_0$107	= .
-                                    333 	.globl	C$enemies.c$73$2_0$107
-                                    334 ;src/enemies.c:73: for (i=0;i<3;i++){
-      0000F9 F8 05            [12]  335 	ldhl	sp,	#5
-      0000FB 34               [12]  336 	inc	(hl)
-      0000FC 7E               [ 8]  337 	ld	a, (hl)
-      0000FD D6 03            [ 8]  338 	sub	a, #0x03
-      0000FF 38 C2            [12]  339 	jr	C, 00120$
-                           000101   340 	C$enemies.c$79$2_0$101	= .
-                                    341 	.globl	C$enemies.c$79$2_0$101
-                                    342 ;src/enemies.c:79: for (i=0;i<3;i++){
-      000101 36 00            [12]  343 	ld	(hl), #0x00
-      000103                        344 00122$:
-                           000103   345 	C$enemies.c$80$3_0$110	= .
-                                    346 	.globl	C$enemies.c$80$3_0$110
-                                    347 ;src/enemies.c:80: j=i+enemy_slot*9;
-      000103 F8 05            [12]  348 	ldhl	sp,	#5
-      000105 7E               [ 8]  349 	ld	a, (hl)
-      000106 F8 01            [12]  350 	ldhl	sp,	#1
-      000108 86               [ 8]  351 	add	a, (hl)
-                                    352 ;src/enemies.c:81: set_sprite_tile(j+6,ENEMIES_MEMORY_BASE_ADDRESS+j+6);
-      000109 23               [ 8]  353 	inc	hl
-      00010A 5F               [ 4]  354 	ld	e, a
-      00010B C6 6B            [ 8]  355 	add	a, #0x6b
-      00010D 22               [ 8]  356 	ld	(hl+), a
-      00010E 7B               [ 4]  357 	ld	a, e
-      00010F C6 06            [ 8]  358 	add	a, #0x06
-      000111 77               [ 8]  359 	ld	(hl), a
-                                    360 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
-      000112 6E               [ 8]  361 	ld	l, (hl)
-                                    362 ;	spillPairReg hl
-                                    363 ;	spillPairReg hl
-      000113 26 00            [ 8]  364 	ld	h, #0x00
-                                    365 ;	spillPairReg hl
+                                    324 ;	spillPairReg hl
+      0000ED 26 00            [ 8]  325 	ld	h, #0x00
+                                    326 ;	spillPairReg hl
+                                    327 ;	spillPairReg hl
+      0000EF 29               [ 8]  328 	add	hl, hl
+      0000F0 29               [ 8]  329 	add	hl, hl
+      0000F1 11r00r00         [12]  330 	ld	de, #_shadow_OAM
+      0000F4 19               [ 8]  331 	add	hl, de
+                                    332 ;../gbdk/include/gb/gb.h:1676: itm->y=y, itm->x=x;
+      0000F5 3E 58            [ 8]  333 	ld	a, #0x58
+      0000F7 22               [ 8]  334 	ld	(hl+), a
+      0000F8 70               [ 8]  335 	ld	(hl), b
+                           0000F9   336 	C$enemies.c$97$2_0$107	= .
+                                    337 	.globl	C$enemies.c$97$2_0$107
+                                    338 ;src/enemies.c:97: for (i=0;i<3;i++){
+      0000F9 F8 05            [12]  339 	ldhl	sp,	#5
+      0000FB 34               [12]  340 	inc	(hl)
+      0000FC 7E               [ 8]  341 	ld	a, (hl)
+      0000FD D6 03            [ 8]  342 	sub	a, #0x03
+      0000FF 38 C2            [12]  343 	jr	C, 00120$
+                           000101   344 	C$enemies.c$103$2_0$101	= .
+                                    345 	.globl	C$enemies.c$103$2_0$101
+                                    346 ;src/enemies.c:103: for (i=0;i<3;i++){
+      000101 36 00            [12]  347 	ld	(hl), #0x00
+      000103                        348 00122$:
+                           000103   349 	C$enemies.c$104$3_0$110	= .
+                                    350 	.globl	C$enemies.c$104$3_0$110
+                                    351 ;src/enemies.c:104: j=i+enemy_slot*9;
+      000103 F8 05            [12]  352 	ldhl	sp,	#5
+      000105 7E               [ 8]  353 	ld	a, (hl)
+      000106 F8 01            [12]  354 	ldhl	sp,	#1
+      000108 86               [ 8]  355 	add	a, (hl)
+                                    356 ;src/enemies.c:105: set_sprite_tile(j+6,ENEMIES_MEMORY_BASE_ADDRESS+j+6);
+      000109 23               [ 8]  357 	inc	hl
+      00010A 5F               [ 4]  358 	ld	e, a
+      00010B C6 6B            [ 8]  359 	add	a, #0x6b
+      00010D 22               [ 8]  360 	ld	(hl+), a
+      00010E 7B               [ 4]  361 	ld	a, e
+      00010F C6 06            [ 8]  362 	add	a, #0x06
+      000111 77               [ 8]  363 	ld	(hl), a
+                                    364 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
+      000112 6E               [ 8]  365 	ld	l, (hl)
                                     366 ;	spillPairReg hl
-      000115 29               [ 8]  367 	add	hl, hl
-      000116 29               [ 8]  368 	add	hl, hl
-      000117 11r00r00         [12]  369 	ld	de, #_shadow_OAM
-      00011A 19               [ 8]  370 	add	hl, de
-      00011B 23               [ 8]  371 	inc	hl
-      00011C 23               [ 8]  372 	inc	hl
-      00011D 5D               [ 4]  373 	ld	e, l
-      00011E 54               [ 4]  374 	ld	d, h
-      00011F F8 02            [12]  375 	ldhl	sp,	#2
-      000121 7E               [ 8]  376 	ld	a, (hl)
-      000122 12               [ 8]  377 	ld	(de), a
-                                    378 ;src/enemies.c:82: move_sprite(j+6,x+i*8,SLOTS_Y+16);
-      000123 F8 05            [12]  379 	ldhl	sp,	#5
-      000125 3A               [ 8]  380 	ld	a, (hl-)
-      000126 2B               [ 8]  381 	dec	hl
-      000127 87               [ 4]  382 	add	a, a
-      000128 87               [ 4]  383 	add	a, a
-      000129 87               [ 4]  384 	add	a, a
-      00012A 81               [ 4]  385 	add	a, c
-      00012B 47               [ 4]  386 	ld	b, a
-                                    387 ;../gbdk/include/gb/gb.h:1675: OAM_item_t * itm = &shadow_OAM[nb];
-      00012C 6E               [ 8]  388 	ld	l, (hl)
-                                    389 ;	spillPairReg hl
-                                    390 ;	spillPairReg hl
-      00012D 26 00            [ 8]  391 	ld	h, #0x00
-                                    392 ;	spillPairReg hl
+                                    367 ;	spillPairReg hl
+      000113 26 00            [ 8]  368 	ld	h, #0x00
+                                    369 ;	spillPairReg hl
+                                    370 ;	spillPairReg hl
+      000115 29               [ 8]  371 	add	hl, hl
+      000116 29               [ 8]  372 	add	hl, hl
+      000117 11r00r00         [12]  373 	ld	de, #_shadow_OAM
+      00011A 19               [ 8]  374 	add	hl, de
+      00011B 23               [ 8]  375 	inc	hl
+      00011C 23               [ 8]  376 	inc	hl
+      00011D 5D               [ 4]  377 	ld	e, l
+      00011E 54               [ 4]  378 	ld	d, h
+      00011F F8 02            [12]  379 	ldhl	sp,	#2
+      000121 7E               [ 8]  380 	ld	a, (hl)
+      000122 12               [ 8]  381 	ld	(de), a
+                                    382 ;src/enemies.c:106: move_sprite(j+6,x+i*8,SLOTS_Y+16);
+      000123 F8 05            [12]  383 	ldhl	sp,	#5
+      000125 3A               [ 8]  384 	ld	a, (hl-)
+      000126 2B               [ 8]  385 	dec	hl
+      000127 87               [ 4]  386 	add	a, a
+      000128 87               [ 4]  387 	add	a, a
+      000129 87               [ 4]  388 	add	a, a
+      00012A 81               [ 4]  389 	add	a, c
+      00012B 47               [ 4]  390 	ld	b, a
+                                    391 ;../gbdk/include/gb/gb.h:1675: OAM_item_t * itm = &shadow_OAM[nb];
+      00012C 6E               [ 8]  392 	ld	l, (hl)
                                     393 ;	spillPairReg hl
-      00012F 29               [ 8]  394 	add	hl, hl
-      000130 29               [ 8]  395 	add	hl, hl
-      000131 11r00r00         [12]  396 	ld	de, #_shadow_OAM
-      000134 19               [ 8]  397 	add	hl, de
-                                    398 ;../gbdk/include/gb/gb.h:1676: itm->y=y, itm->x=x;
-      000135 3E 60            [ 8]  399 	ld	a, #0x60
-      000137 22               [ 8]  400 	ld	(hl+), a
-      000138 70               [ 8]  401 	ld	(hl), b
-                           000139   402 	C$enemies.c$79$2_0$109	= .
-                                    403 	.globl	C$enemies.c$79$2_0$109
-                                    404 ;src/enemies.c:79: for (i=0;i<3;i++){
-      000139 F8 05            [12]  405 	ldhl	sp,	#5
-      00013B 34               [12]  406 	inc	(hl)
-      00013C 7E               [ 8]  407 	ld	a, (hl)
-      00013D D6 03            [ 8]  408 	sub	a, #0x03
-      00013F 38 C2            [12]  409 	jr	C, 00122$
-                           000141   410 	C$enemies.c$84$2_0$101	= .
-                                    411 	.globl	C$enemies.c$84$2_0$101
-                                    412 ;src/enemies.c:84: }
-      000141 E8 06            [16]  413 	add	sp, #6
-                           000143   414 	C$enemies.c$84$2_0$101	= .
-                                    415 	.globl	C$enemies.c$84$2_0$101
-                           000143   416 	XG$load_enemy$0$0	= .
-                                    417 	.globl	XG$load_enemy$0$0
-      000143 C9               [16]  418 	ret
-                           000144   419 G$enemies$0_0$0 == .
-      000144                        420 _enemies:
-      000144 04                     421 	.db #0x04	; 4
-      000145 05                     422 	.db #0x05	; 5
-      000146 06                     423 	.db #0x06	; 6
-      000147 07                     424 	.db #0x07	; 7
-      000148 08                     425 	.db #0x08	; 8
-      000149 09                     426 	.db #0x09	; 9
-      00014A 0A                     427 	.db #0x0a	; 10
-      00014B 0B                     428 	.db #0x0b	; 11
-      00014C 0C                     429 	.db #0x0c	; 12
-      00014D 0D                     430 	.db #0x0d	; 13
-      00014E 0E                     431 	.db #0x0e	; 14
-      00014F 0F                     432 	.db #0x0f	; 15
-      000150 10                     433 	.db #0x10	; 16
-      000151 11                     434 	.db #0x11	; 17
-      000152 12                     435 	.db #0x12	; 18
-      000153 13                     436 	.db #0x13	; 19
-      000154 14                     437 	.db #0x14	; 20
-      000155 15                     438 	.db #0x15	; 21
-                           000156   439 G$enemies_names$0_0$0 == .
-      000156                        440 _enemies_names:
-      000156 54 65 73 74 20 31      441 	.ascii "Test 1"
-      00015C 00                     442 	.db 0x00
-      00015D 00                     443 	.db 0x00
-      00015E 00                     444 	.db 0x00
-      00015F 00                     445 	.db 0x00
-      000160 00                     446 	.db 0x00
-      000161 00                     447 	.db 0x00
-      000162 00                     448 	.db 0x00
-      000163 00                     449 	.db 0x00
-      000164 00                     450 	.db 0x00
-      000165 00                     451 	.db 0x00
-      000166 54 65 73 74 20 32      452 	.ascii "Test 2"
-      00016C 00                     453 	.db 0x00
-      00016D 00                     454 	.db 0x00
-      00016E 00                     455 	.db 0x00
-      00016F 00                     456 	.db 0x00
-      000170 00                     457 	.db 0x00
-      000171 00                     458 	.db 0x00
-      000172 00                     459 	.db 0x00
-      000173 00                     460 	.db 0x00
-      000174 00                     461 	.db 0x00
-      000175 00                     462 	.db 0x00
-                           000176   463 G$enemies_tileset$0_0$0 == .
-      000176                        464 _enemies_tileset:
-      000176 00                     465 	.db #0x00	; 0
-      000177 00                     466 	.db #0x00	; 0
-      000178 00                     467 	.db #0x00	; 0
-      000179 00                     468 	.db #0x00	; 0
-      00017A 00                     469 	.db #0x00	; 0
-      00017B 00                     470 	.db #0x00	; 0
-      00017C 00                     471 	.db #0x00	; 0
-      00017D 00                     472 	.db #0x00	; 0
-      00017E 00                     473 	.db #0x00	; 0
-      00017F 00                     474 	.db #0x00	; 0
-      000180 00                     475 	.db #0x00	; 0
-      000181 00                     476 	.db #0x00	; 0
-      000182 00                     477 	.db #0x00	; 0
-      000183 00                     478 	.db #0x00	; 0
-      000184 00                     479 	.db #0x00	; 0
-      000185 00                     480 	.db #0x00	; 0
-      000186 FF                     481 	.db #0xff	; 255
-      000187 FF                     482 	.db #0xff	; 255
-      000188 FF                     483 	.db #0xff	; 255
-      000189 FF                     484 	.db #0xff	; 255
-      00018A FF                     485 	.db #0xff	; 255
-      00018B FF                     486 	.db #0xff	; 255
-      00018C FF                     487 	.db #0xff	; 255
-      00018D FF                     488 	.db #0xff	; 255
-      00018E FF                     489 	.db #0xff	; 255
-      00018F FF                     490 	.db #0xff	; 255
-      000190 FF                     491 	.db #0xff	; 255
-      000191 FF                     492 	.db #0xff	; 255
-      000192 FF                     493 	.db #0xff	; 255
-      000193 FF                     494 	.db #0xff	; 255
-      000194 FF                     495 	.db #0xff	; 255
-      000195 FF                     496 	.db #0xff	; 255
-      000196 00                     497 	.db #0x00	; 0
-      000197 FF                     498 	.db #0xff	; 255
-      000198 00                     499 	.db #0x00	; 0
-      000199 FF                     500 	.db #0xff	; 255
-      00019A 00                     501 	.db #0x00	; 0
-      00019B FF                     502 	.db #0xff	; 255
-      00019C 00                     503 	.db #0x00	; 0
-      00019D FF                     504 	.db #0xff	; 255
-      00019E 00                     505 	.db #0x00	; 0
-      00019F FF                     506 	.db #0xff	; 255
-      0001A0 00                     507 	.db #0x00	; 0
-      0001A1 FF                     508 	.db #0xff	; 255
-      0001A2 00                     509 	.db #0x00	; 0
-      0001A3 FF                     510 	.db #0xff	; 255
-      0001A4 00                     511 	.db #0x00	; 0
-      0001A5 FF                     512 	.db #0xff	; 255
-      0001A6 FF                     513 	.db #0xff	; 255
-      0001A7 00                     514 	.db #0x00	; 0
-      0001A8 FF                     515 	.db #0xff	; 255
-      0001A9 00                     516 	.db #0x00	; 0
-      0001AA FF                     517 	.db #0xff	; 255
-      0001AB 00                     518 	.db #0x00	; 0
-      0001AC FF                     519 	.db #0xff	; 255
-      0001AD 00                     520 	.db #0x00	; 0
-      0001AE FF                     521 	.db #0xff	; 255
-      0001AF 00                     522 	.db #0x00	; 0
-      0001B0 FF                     523 	.db #0xff	; 255
-      0001B1 00                     524 	.db #0x00	; 0
-      0001B2 FF                     525 	.db #0xff	; 255
-      0001B3 00                     526 	.db #0x00	; 0
-      0001B4 FF                     527 	.db #0xff	; 255
-      0001B5 00                     528 	.db #0x00	; 0
-      0001B6 C0                     529 	.db #0xc0	; 192
-      0001B7 C0                     530 	.db #0xc0	; 192
-      0001B8 C0                     531 	.db #0xc0	; 192
-      0001B9 C0                     532 	.db #0xc0	; 192
-      0001BA 00                     533 	.db #0x00	; 0
-      0001BB 00                     534 	.db #0x00	; 0
-      0001BC 00                     535 	.db #0x00	; 0
-      0001BD 00                     536 	.db #0x00	; 0
-      0001BE 00                     537 	.db #0x00	; 0
-      0001BF 00                     538 	.db #0x00	; 0
-      0001C0 00                     539 	.db #0x00	; 0
-      0001C1 00                     540 	.db #0x00	; 0
-      0001C2 00                     541 	.db #0x00	; 0
-      0001C3 00                     542 	.db #0x00	; 0
-      0001C4 00                     543 	.db #0x00	; 0
-      0001C5 00                     544 	.db #0x00	; 0
-      0001C6 18                     545 	.db #0x18	; 24
-      0001C7 18                     546 	.db #0x18	; 24
-      0001C8 18                     547 	.db #0x18	; 24
-      0001C9 18                     548 	.db #0x18	; 24
-      0001CA 00                     549 	.db #0x00	; 0
-      0001CB 00                     550 	.db #0x00	; 0
-      0001CC 00                     551 	.db #0x00	; 0
-      0001CD 00                     552 	.db #0x00	; 0
-      0001CE 00                     553 	.db #0x00	; 0
-      0001CF 00                     554 	.db #0x00	; 0
-      0001D0 00                     555 	.db #0x00	; 0
-      0001D1 00                     556 	.db #0x00	; 0
-      0001D2 00                     557 	.db #0x00	; 0
-      0001D3 00                     558 	.db #0x00	; 0
-      0001D4 00                     559 	.db #0x00	; 0
-      0001D5 00                     560 	.db #0x00	; 0
-      0001D6 03                     561 	.db #0x03	; 3
-      0001D7 03                     562 	.db #0x03	; 3
-      0001D8 03                     563 	.db #0x03	; 3
-      0001D9 03                     564 	.db #0x03	; 3
-      0001DA 00                     565 	.db #0x00	; 0
-      0001DB 00                     566 	.db #0x00	; 0
-      0001DC 00                     567 	.db #0x00	; 0
-      0001DD 00                     568 	.db #0x00	; 0
-      0001DE 00                     569 	.db #0x00	; 0
-      0001DF 00                     570 	.db #0x00	; 0
-      0001E0 00                     571 	.db #0x00	; 0
-      0001E1 00                     572 	.db #0x00	; 0
-      0001E2 00                     573 	.db #0x00	; 0
-      0001E3 00                     574 	.db #0x00	; 0
-      0001E4 00                     575 	.db #0x00	; 0
-      0001E5 00                     576 	.db #0x00	; 0
-      0001E6 00                     577 	.db #0x00	; 0
-      0001E7 00                     578 	.db #0x00	; 0
-      0001E8 00                     579 	.db #0x00	; 0
-      0001E9 00                     580 	.db #0x00	; 0
-      0001EA 00                     581 	.db #0x00	; 0
-      0001EB 00                     582 	.db #0x00	; 0
-      0001EC C0                     583 	.db #0xc0	; 192
-      0001ED C0                     584 	.db #0xc0	; 192
-      0001EE C0                     585 	.db #0xc0	; 192
-      0001EF C0                     586 	.db #0xc0	; 192
-      0001F0 00                     587 	.db #0x00	; 0
-      0001F1 00                     588 	.db #0x00	; 0
-      0001F2 00                     589 	.db #0x00	; 0
-      0001F3 00                     590 	.db #0x00	; 0
-      0001F4 00                     591 	.db #0x00	; 0
-      0001F5 00                     592 	.db #0x00	; 0
-      0001F6 00                     593 	.db #0x00	; 0
-      0001F7 00                     594 	.db #0x00	; 0
-      0001F8 00                     595 	.db #0x00	; 0
-      0001F9 00                     596 	.db #0x00	; 0
-      0001FA 00                     597 	.db #0x00	; 0
-      0001FB 00                     598 	.db #0x00	; 0
-      0001FC 18                     599 	.db #0x18	; 24
-      0001FD 18                     600 	.db #0x18	; 24
-      0001FE 18                     601 	.db #0x18	; 24
-      0001FF 18                     602 	.db #0x18	; 24
-      000200 00                     603 	.db #0x00	; 0
-      000201 00                     604 	.db #0x00	; 0
-      000202 00                     605 	.db #0x00	; 0
-      000203 00                     606 	.db #0x00	; 0
-      000204 00                     607 	.db #0x00	; 0
-      000205 00                     608 	.db #0x00	; 0
-      000206 00                     609 	.db #0x00	; 0
-      000207 00                     610 	.db #0x00	; 0
-      000208 00                     611 	.db #0x00	; 0
-      000209 00                     612 	.db #0x00	; 0
-      00020A 00                     613 	.db #0x00	; 0
-      00020B 00                     614 	.db #0x00	; 0
-      00020C 03                     615 	.db #0x03	; 3
-      00020D 03                     616 	.db #0x03	; 3
-      00020E 03                     617 	.db #0x03	; 3
-      00020F 03                     618 	.db #0x03	; 3
-      000210 00                     619 	.db #0x00	; 0
-      000211 00                     620 	.db #0x00	; 0
-      000212 00                     621 	.db #0x00	; 0
-      000213 00                     622 	.db #0x00	; 0
-      000214 00                     623 	.db #0x00	; 0
-      000215 00                     624 	.db #0x00	; 0
-      000216 00                     625 	.db #0x00	; 0
-      000217 00                     626 	.db #0x00	; 0
-      000218 00                     627 	.db #0x00	; 0
-      000219 00                     628 	.db #0x00	; 0
-      00021A 00                     629 	.db #0x00	; 0
-      00021B 00                     630 	.db #0x00	; 0
-      00021C 00                     631 	.db #0x00	; 0
-      00021D 00                     632 	.db #0x00	; 0
-      00021E 00                     633 	.db #0x00	; 0
-      00021F 00                     634 	.db #0x00	; 0
-      000220 00                     635 	.db #0x00	; 0
-      000221 00                     636 	.db #0x00	; 0
-      000222 C0                     637 	.db #0xc0	; 192
-      000223 C0                     638 	.db #0xc0	; 192
-      000224 C0                     639 	.db #0xc0	; 192
-      000225 C0                     640 	.db #0xc0	; 192
-      000226 00                     641 	.db #0x00	; 0
-      000227 00                     642 	.db #0x00	; 0
-      000228 00                     643 	.db #0x00	; 0
-      000229 00                     644 	.db #0x00	; 0
-      00022A 00                     645 	.db #0x00	; 0
-      00022B 00                     646 	.db #0x00	; 0
-      00022C 00                     647 	.db #0x00	; 0
-      00022D 00                     648 	.db #0x00	; 0
-      00022E 00                     649 	.db #0x00	; 0
-      00022F 00                     650 	.db #0x00	; 0
-      000230 00                     651 	.db #0x00	; 0
-      000231 00                     652 	.db #0x00	; 0
-      000232 18                     653 	.db #0x18	; 24
-      000233 18                     654 	.db #0x18	; 24
-      000234 18                     655 	.db #0x18	; 24
-      000235 18                     656 	.db #0x18	; 24
-      000236 00                     657 	.db #0x00	; 0
-      000237 00                     658 	.db #0x00	; 0
-      000238 00                     659 	.db #0x00	; 0
-      000239 00                     660 	.db #0x00	; 0
-      00023A 00                     661 	.db #0x00	; 0
-      00023B 00                     662 	.db #0x00	; 0
-      00023C 00                     663 	.db #0x00	; 0
-      00023D 00                     664 	.db #0x00	; 0
-      00023E 00                     665 	.db #0x00	; 0
-      00023F 00                     666 	.db #0x00	; 0
-      000240 00                     667 	.db #0x00	; 0
-      000241 00                     668 	.db #0x00	; 0
-      000242 03                     669 	.db #0x03	; 3
-      000243 03                     670 	.db #0x03	; 3
-      000244 03                     671 	.db #0x03	; 3
-      000245 03                     672 	.db #0x03	; 3
-      000246 00                     673 	.db #0x00	; 0
-      000247 C0                     674 	.db #0xc0	; 192
-      000248 00                     675 	.db #0x00	; 0
-      000249 C0                     676 	.db #0xc0	; 192
-      00024A 00                     677 	.db #0x00	; 0
-      00024B 00                     678 	.db #0x00	; 0
-      00024C 00                     679 	.db #0x00	; 0
-      00024D 00                     680 	.db #0x00	; 0
-      00024E 00                     681 	.db #0x00	; 0
-      00024F 00                     682 	.db #0x00	; 0
-      000250 00                     683 	.db #0x00	; 0
-      000251 00                     684 	.db #0x00	; 0
-      000252 00                     685 	.db #0x00	; 0
-      000253 00                     686 	.db #0x00	; 0
-      000254 00                     687 	.db #0x00	; 0
-      000255 00                     688 	.db #0x00	; 0
-      000256 00                     689 	.db #0x00	; 0
-      000257 18                     690 	.db #0x18	; 24
-      000258 00                     691 	.db #0x00	; 0
-      000259 18                     692 	.db #0x18	; 24
-      00025A 00                     693 	.db #0x00	; 0
-      00025B 00                     694 	.db #0x00	; 0
-      00025C 00                     695 	.db #0x00	; 0
-      00025D 00                     696 	.db #0x00	; 0
-      00025E 00                     697 	.db #0x00	; 0
-      00025F 00                     698 	.db #0x00	; 0
-      000260 00                     699 	.db #0x00	; 0
-      000261 00                     700 	.db #0x00	; 0
-      000262 00                     701 	.db #0x00	; 0
-      000263 00                     702 	.db #0x00	; 0
-      000264 00                     703 	.db #0x00	; 0
-      000265 00                     704 	.db #0x00	; 0
-      000266 00                     705 	.db #0x00	; 0
-      000267 03                     706 	.db #0x03	; 3
-      000268 00                     707 	.db #0x00	; 0
-      000269 03                     708 	.db #0x03	; 3
-      00026A 00                     709 	.db #0x00	; 0
-      00026B 00                     710 	.db #0x00	; 0
-      00026C 00                     711 	.db #0x00	; 0
-      00026D 00                     712 	.db #0x00	; 0
-      00026E 00                     713 	.db #0x00	; 0
-      00026F 00                     714 	.db #0x00	; 0
-      000270 00                     715 	.db #0x00	; 0
-      000271 00                     716 	.db #0x00	; 0
-      000272 00                     717 	.db #0x00	; 0
-      000273 00                     718 	.db #0x00	; 0
-      000274 00                     719 	.db #0x00	; 0
-      000275 00                     720 	.db #0x00	; 0
-      000276 00                     721 	.db #0x00	; 0
-      000277 00                     722 	.db #0x00	; 0
-      000278 00                     723 	.db #0x00	; 0
-      000279 00                     724 	.db #0x00	; 0
-      00027A 00                     725 	.db #0x00	; 0
-      00027B 00                     726 	.db #0x00	; 0
-      00027C 00                     727 	.db #0x00	; 0
-      00027D C0                     728 	.db #0xc0	; 192
-      00027E 00                     729 	.db #0x00	; 0
-      00027F C0                     730 	.db #0xc0	; 192
-      000280 00                     731 	.db #0x00	; 0
-      000281 00                     732 	.db #0x00	; 0
-      000282 00                     733 	.db #0x00	; 0
-      000283 00                     734 	.db #0x00	; 0
-      000284 00                     735 	.db #0x00	; 0
-      000285 00                     736 	.db #0x00	; 0
-      000286 00                     737 	.db #0x00	; 0
-      000287 00                     738 	.db #0x00	; 0
-      000288 00                     739 	.db #0x00	; 0
-      000289 00                     740 	.db #0x00	; 0
-      00028A 00                     741 	.db #0x00	; 0
-      00028B 00                     742 	.db #0x00	; 0
-      00028C 00                     743 	.db #0x00	; 0
-      00028D 18                     744 	.db #0x18	; 24
-      00028E 00                     745 	.db #0x00	; 0
-      00028F 18                     746 	.db #0x18	; 24
-      000290 00                     747 	.db #0x00	; 0
-      000291 00                     748 	.db #0x00	; 0
-      000292 00                     749 	.db #0x00	; 0
-      000293 00                     750 	.db #0x00	; 0
-      000294 00                     751 	.db #0x00	; 0
-      000295 00                     752 	.db #0x00	; 0
-      000296 00                     753 	.db #0x00	; 0
-      000297 00                     754 	.db #0x00	; 0
-      000298 00                     755 	.db #0x00	; 0
-      000299 00                     756 	.db #0x00	; 0
-      00029A 00                     757 	.db #0x00	; 0
-      00029B 00                     758 	.db #0x00	; 0
-      00029C 00                     759 	.db #0x00	; 0
-      00029D 03                     760 	.db #0x03	; 3
-      00029E 00                     761 	.db #0x00	; 0
-      00029F 03                     762 	.db #0x03	; 3
-      0002A0 00                     763 	.db #0x00	; 0
-      0002A1 00                     764 	.db #0x00	; 0
-      0002A2 00                     765 	.db #0x00	; 0
-      0002A3 00                     766 	.db #0x00	; 0
-      0002A4 00                     767 	.db #0x00	; 0
-      0002A5 00                     768 	.db #0x00	; 0
-      0002A6 00                     769 	.db #0x00	; 0
-      0002A7 00                     770 	.db #0x00	; 0
-      0002A8 00                     771 	.db #0x00	; 0
-      0002A9 00                     772 	.db #0x00	; 0
-      0002AA 00                     773 	.db #0x00	; 0
-      0002AB 00                     774 	.db #0x00	; 0
-      0002AC 00                     775 	.db #0x00	; 0
-      0002AD 00                     776 	.db #0x00	; 0
-      0002AE 00                     777 	.db #0x00	; 0
-      0002AF 00                     778 	.db #0x00	; 0
-      0002B0 00                     779 	.db #0x00	; 0
-      0002B1 00                     780 	.db #0x00	; 0
-      0002B2 00                     781 	.db #0x00	; 0
-      0002B3 C0                     782 	.db #0xc0	; 192
-      0002B4 00                     783 	.db #0x00	; 0
-      0002B5 C0                     784 	.db #0xc0	; 192
-      0002B6 00                     785 	.db #0x00	; 0
-      0002B7 00                     786 	.db #0x00	; 0
-      0002B8 00                     787 	.db #0x00	; 0
-      0002B9 00                     788 	.db #0x00	; 0
-      0002BA 00                     789 	.db #0x00	; 0
-      0002BB 00                     790 	.db #0x00	; 0
-      0002BC 00                     791 	.db #0x00	; 0
-      0002BD 00                     792 	.db #0x00	; 0
-      0002BE 00                     793 	.db #0x00	; 0
-      0002BF 00                     794 	.db #0x00	; 0
-      0002C0 00                     795 	.db #0x00	; 0
-      0002C1 00                     796 	.db #0x00	; 0
-      0002C2 00                     797 	.db #0x00	; 0
-      0002C3 18                     798 	.db #0x18	; 24
-      0002C4 00                     799 	.db #0x00	; 0
-      0002C5 18                     800 	.db #0x18	; 24
-      0002C6 00                     801 	.db #0x00	; 0
-      0002C7 00                     802 	.db #0x00	; 0
-      0002C8 00                     803 	.db #0x00	; 0
-      0002C9 00                     804 	.db #0x00	; 0
-      0002CA 00                     805 	.db #0x00	; 0
-      0002CB 00                     806 	.db #0x00	; 0
-      0002CC 00                     807 	.db #0x00	; 0
-      0002CD 00                     808 	.db #0x00	; 0
-      0002CE 00                     809 	.db #0x00	; 0
-      0002CF 00                     810 	.db #0x00	; 0
-      0002D0 00                     811 	.db #0x00	; 0
-      0002D1 00                     812 	.db #0x00	; 0
-      0002D2 00                     813 	.db #0x00	; 0
-      0002D3 03                     814 	.db #0x03	; 3
-      0002D4 00                     815 	.db #0x00	; 0
-      0002D5 03                     816 	.db #0x03	; 3
-                           0002D6   817 	G$unload_enemy$0$0	= .
-                                    818 	.globl	G$unload_enemy$0$0
-                           0002D6   819 	C$enemies.c$85$2_0$131	= .
-                                    820 	.globl	C$enemies.c$85$2_0$131
-                                    821 ;src/enemies.c:85: void unload_enemy(uint8_t enemy_slot){
-                                    822 ;	---------------------------------
-                                    823 ; Function unload_enemy
-                                    824 ; ---------------------------------
-      0002D6                        825 _unload_enemy::
-      0002D6 3B               [ 8]  826 	dec	sp
-      0002D7 3B               [ 8]  827 	dec	sp
-      0002D8 F8 00            [12]  828 	ldhl	sp,	#0
-                           0002DA   829 	C$enemies.c$87$3_0$132	= .
-                                    830 	.globl	C$enemies.c$87$3_0$132
-                                    831 ;src/enemies.c:87: for (i=0;i<9;i++){
-      0002DA 22               [ 8]  832 	ld	(hl+), a
-      0002DB 36 00            [12]  833 	ld	(hl), #0x00
-      0002DD                        834 00104$:
-                           0002DD   835 	C$enemies.c$88$3_0$132	= .
-                                    836 	.globl	C$enemies.c$88$3_0$132
-                                    837 ;src/enemies.c:88: j=i+enemy_slot*9;
-      0002DD F8 00            [12]  838 	ldhl	sp,	#0
-      0002DF 2A               [ 8]  839 	ld	a, (hl+)
-      0002E0 4F               [ 4]  840 	ld	c, a
-      0002E1 87               [ 4]  841 	add	a, a
-      0002E2 87               [ 4]  842 	add	a, a
-      0002E3 87               [ 4]  843 	add	a, a
-      0002E4 81               [ 4]  844 	add	a, c
-      0002E5 4E               [ 8]  845 	ld	c, (hl)
-      0002E6 81               [ 4]  846 	add	a, c
-                           0002E7   847 	C$enemies.c$89$3_0$132	= .
-                                    848 	.globl	C$enemies.c$89$3_0$132
-                                    849 ;src/enemies.c:89: set_sprite_data(ENEMIES_MEMORY_BASE_ADDRESS+j,1,enemies_tileset);
-      0002E7 4F               [ 4]  850 	ld	c, a
-      0002E8 11r76r01         [12]  851 	ld	de, #_enemies_tileset
-      0002EB C6 65            [ 8]  852 	add	a, #0x65
-      0002ED 47               [ 4]  853 	ld	b, a
-      0002EE D5               [16]  854 	push	de
-      0002EF 3E 01            [ 8]  855 	ld	a, #0x01
-      0002F1 F5               [16]  856 	push	af
-      0002F2 33               [ 8]  857 	inc	sp
-      0002F3 C5               [16]  858 	push	bc
-      0002F4 33               [ 8]  859 	inc	sp
-      0002F5 CDr00r00         [24]  860 	call	_set_sprite_data
-      0002F8 E8 04            [16]  861 	add	sp, #4
-                                    862 ;src/enemies.c:90: set_sprite_tile(j,ENEMIES_MEMORY_BASE_ADDRESS+j);
-      0002FA 58               [ 4]  863 	ld	e, b
-                                    864 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
-      0002FB 69               [ 4]  865 	ld	l, c
-                                    866 ;	spillPairReg hl
-                                    867 ;	spillPairReg hl
-      0002FC 26 00            [ 8]  868 	ld	h, #0x00
-                                    869 ;	spillPairReg hl
-                                    870 ;	spillPairReg hl
-      0002FE 29               [ 8]  871 	add	hl, hl
-      0002FF 29               [ 8]  872 	add	hl, hl
-      000300 4D               [ 4]  873 	ld	c, l
-      000301 44               [ 4]  874 	ld	b, h
-      000302 21r01r00         [12]  875 	ld	hl,#_shadow_OAM + 1
-      000305 09               [ 8]  876 	add	hl,bc
-      000306 23               [ 8]  877 	inc	hl
-      000307 73               [ 8]  878 	ld	(hl), e
-                                    879 ;../gbdk/include/gb/gb.h:1675: OAM_item_t * itm = &shadow_OAM[nb];
-      000308 21r00r00         [12]  880 	ld	hl, #_shadow_OAM
-      00030B 09               [ 8]  881 	add	hl, bc
-                                    882 ;../gbdk/include/gb/gb.h:1676: itm->y=y, itm->x=x;
-      00030C AF               [ 4]  883 	xor	a, a
-      00030D 22               [ 8]  884 	ld	(hl+), a
-      00030E 77               [ 8]  885 	ld	(hl), a
-                           00030F   886 	C$enemies.c$87$2_0$131	= .
-                                    887 	.globl	C$enemies.c$87$2_0$131
-                                    888 ;src/enemies.c:87: for (i=0;i<9;i++){
-      00030F F8 01            [12]  889 	ldhl	sp,	#1
-      000311 34               [12]  890 	inc	(hl)
-      000312 7E               [ 8]  891 	ld	a, (hl)
-      000313 D6 09            [ 8]  892 	sub	a, #0x09
-      000315 38 C6            [12]  893 	jr	C, 00104$
-                           000317   894 	C$enemies.c$93$2_0$131	= .
-                                    895 	.globl	C$enemies.c$93$2_0$131
-                                    896 ;src/enemies.c:93: }
-      000317 33               [ 8]  897 	inc	sp
-      000318 33               [ 8]  898 	inc	sp
-                           000319   899 	C$enemies.c$93$2_0$131	= .
-                                    900 	.globl	C$enemies.c$93$2_0$131
-                           000319   901 	XG$unload_enemy$0$0	= .
-                                    902 	.globl	XG$unload_enemy$0$0
-      000319 C9               [16]  903 	ret
-                                    904 	.area _CODE
-                                    905 	.area _INITIALIZER
-                                    906 	.area _CABS (ABS)
+                                    394 ;	spillPairReg hl
+      00012D 26 00            [ 8]  395 	ld	h, #0x00
+                                    396 ;	spillPairReg hl
+                                    397 ;	spillPairReg hl
+      00012F 29               [ 8]  398 	add	hl, hl
+      000130 29               [ 8]  399 	add	hl, hl
+      000131 11r00r00         [12]  400 	ld	de, #_shadow_OAM
+      000134 19               [ 8]  401 	add	hl, de
+                                    402 ;../gbdk/include/gb/gb.h:1676: itm->y=y, itm->x=x;
+      000135 3E 60            [ 8]  403 	ld	a, #0x60
+      000137 22               [ 8]  404 	ld	(hl+), a
+      000138 70               [ 8]  405 	ld	(hl), b
+                           000139   406 	C$enemies.c$103$2_0$109	= .
+                                    407 	.globl	C$enemies.c$103$2_0$109
+                                    408 ;src/enemies.c:103: for (i=0;i<3;i++){
+      000139 F8 05            [12]  409 	ldhl	sp,	#5
+      00013B 34               [12]  410 	inc	(hl)
+      00013C 7E               [ 8]  411 	ld	a, (hl)
+      00013D D6 03            [ 8]  412 	sub	a, #0x03
+      00013F 38 C2            [12]  413 	jr	C, 00122$
+                           000141   414 	C$enemies.c$108$2_0$101	= .
+                                    415 	.globl	C$enemies.c$108$2_0$101
+                                    416 ;src/enemies.c:108: }
+      000141 E8 06            [16]  417 	add	sp, #6
+                           000143   418 	C$enemies.c$108$2_0$101	= .
+                                    419 	.globl	C$enemies.c$108$2_0$101
+                           000143   420 	XG$load_enemy$0$0	= .
+                                    421 	.globl	XG$load_enemy$0$0
+      000143 C9               [16]  422 	ret
+                           000144   423 G$enemies$0_0$0 == .
+      000144                        424 _enemies:
+      000144 00                     425 	.db #0x00	; 0
+      000145 00                     426 	.db #0x00	; 0
+      000146 00                     427 	.db #0x00	; 0
+      000147 00                     428 	.db #0x00	; 0
+      000148 00                     429 	.db #0x00	; 0
+      000149 00                     430 	.db #0x00	; 0
+      00014A 00                     431 	.db #0x00	; 0
+      00014B 00                     432 	.db #0x00	; 0
+      00014C 00                     433 	.db #0x00	; 0
+      00014D 04                     434 	.db #0x04	; 4
+      00014E 05                     435 	.db #0x05	; 5
+      00014F 06                     436 	.db #0x06	; 6
+      000150 07                     437 	.db #0x07	; 7
+      000151 08                     438 	.db #0x08	; 8
+      000152 09                     439 	.db #0x09	; 9
+      000153 0A                     440 	.db #0x0a	; 10
+      000154 0B                     441 	.db #0x0b	; 11
+      000155 0C                     442 	.db #0x0c	; 12
+      000156 0D                     443 	.db #0x0d	; 13
+      000157 0E                     444 	.db #0x0e	; 14
+      000158 0F                     445 	.db #0x0f	; 15
+      000159 10                     446 	.db #0x10	; 16
+      00015A 11                     447 	.db #0x11	; 17
+      00015B 12                     448 	.db #0x12	; 18
+      00015C 13                     449 	.db #0x13	; 19
+      00015D 14                     450 	.db #0x14	; 20
+      00015E 15                     451 	.db #0x15	; 21
+                           00015F   452 G$enemies_names$0_0$0 == .
+      00015F                        453 _enemies_names:
+      00015F 55 6E 6B 6E 6F 77 6E   454 	.ascii "Unknown"
+      000166 00                     455 	.db 0x00
+      000167 00                     456 	.db 0x00
+      000168 00                     457 	.db 0x00
+      000169 00                     458 	.db 0x00
+      00016A 00                     459 	.db 0x00
+      00016B 00                     460 	.db 0x00
+      00016C 00                     461 	.db 0x00
+      00016D 00                     462 	.db 0x00
+      00016E 00                     463 	.db 0x00
+      00016F 54 65 73 74 20 31      464 	.ascii "Test 1"
+      000175 00                     465 	.db 0x00
+      000176 00                     466 	.db 0x00
+      000177 00                     467 	.db 0x00
+      000178 00                     468 	.db 0x00
+      000179 00                     469 	.db 0x00
+      00017A 00                     470 	.db 0x00
+      00017B 00                     471 	.db 0x00
+      00017C 00                     472 	.db 0x00
+      00017D 00                     473 	.db 0x00
+      00017E 00                     474 	.db 0x00
+      00017F 54 65 73 74 20 32      475 	.ascii "Test 2"
+      000185 00                     476 	.db 0x00
+      000186 00                     477 	.db 0x00
+      000187 00                     478 	.db 0x00
+      000188 00                     479 	.db 0x00
+      000189 00                     480 	.db 0x00
+      00018A 00                     481 	.db 0x00
+      00018B 00                     482 	.db 0x00
+      00018C 00                     483 	.db 0x00
+      00018D 00                     484 	.db 0x00
+      00018E 00                     485 	.db 0x00
+                           00018F   486 G$e_str$0_0$0 == .
+      00018F                        487 _e_str:
+      00018F 00                     488 	.db #0x00	; 0
+      000190 0A                     489 	.db #0x0a	; 10
+      000191 04                     490 	.db #0x04	; 4
+                           000192   491 G$e_int$0_0$0 == .
+      000192                        492 _e_int:
+      000192 00                     493 	.db #0x00	; 0
+      000193 04                     494 	.db #0x04	; 4
+      000194 0A                     495 	.db #0x0a	; 10
+                           000195   496 G$e_agi$0_0$0 == .
+      000195                        497 _e_agi:
+      000195 00                     498 	.db #0x00	; 0
+      000196 07                     499 	.db #0x07	; 7
+      000197 0A                     500 	.db #0x0a	; 10
+                           000198   501 G$e_con$0_0$0 == .
+      000198                        502 _e_con:
+      000198 00                     503 	.db #0x00	; 0
+      000199 06                     504 	.db #0x06	; 6
+      00019A 03                     505 	.db #0x03	; 3
+                           00019B   506 G$enemies_tileset$0_0$0 == .
+      00019B                        507 _enemies_tileset:
+      00019B 00                     508 	.db #0x00	; 0
+      00019C 00                     509 	.db #0x00	; 0
+      00019D 00                     510 	.db #0x00	; 0
+      00019E 00                     511 	.db #0x00	; 0
+      00019F 00                     512 	.db #0x00	; 0
+      0001A0 00                     513 	.db #0x00	; 0
+      0001A1 00                     514 	.db #0x00	; 0
+      0001A2 00                     515 	.db #0x00	; 0
+      0001A3 00                     516 	.db #0x00	; 0
+      0001A4 00                     517 	.db #0x00	; 0
+      0001A5 00                     518 	.db #0x00	; 0
+      0001A6 00                     519 	.db #0x00	; 0
+      0001A7 00                     520 	.db #0x00	; 0
+      0001A8 00                     521 	.db #0x00	; 0
+      0001A9 00                     522 	.db #0x00	; 0
+      0001AA 00                     523 	.db #0x00	; 0
+      0001AB FF                     524 	.db #0xff	; 255
+      0001AC FF                     525 	.db #0xff	; 255
+      0001AD FF                     526 	.db #0xff	; 255
+      0001AE FF                     527 	.db #0xff	; 255
+      0001AF FF                     528 	.db #0xff	; 255
+      0001B0 FF                     529 	.db #0xff	; 255
+      0001B1 FF                     530 	.db #0xff	; 255
+      0001B2 FF                     531 	.db #0xff	; 255
+      0001B3 FF                     532 	.db #0xff	; 255
+      0001B4 FF                     533 	.db #0xff	; 255
+      0001B5 FF                     534 	.db #0xff	; 255
+      0001B6 FF                     535 	.db #0xff	; 255
+      0001B7 FF                     536 	.db #0xff	; 255
+      0001B8 FF                     537 	.db #0xff	; 255
+      0001B9 FF                     538 	.db #0xff	; 255
+      0001BA FF                     539 	.db #0xff	; 255
+      0001BB 00                     540 	.db #0x00	; 0
+      0001BC FF                     541 	.db #0xff	; 255
+      0001BD 00                     542 	.db #0x00	; 0
+      0001BE FF                     543 	.db #0xff	; 255
+      0001BF 00                     544 	.db #0x00	; 0
+      0001C0 FF                     545 	.db #0xff	; 255
+      0001C1 00                     546 	.db #0x00	; 0
+      0001C2 FF                     547 	.db #0xff	; 255
+      0001C3 00                     548 	.db #0x00	; 0
+      0001C4 FF                     549 	.db #0xff	; 255
+      0001C5 00                     550 	.db #0x00	; 0
+      0001C6 FF                     551 	.db #0xff	; 255
+      0001C7 00                     552 	.db #0x00	; 0
+      0001C8 FF                     553 	.db #0xff	; 255
+      0001C9 00                     554 	.db #0x00	; 0
+      0001CA FF                     555 	.db #0xff	; 255
+      0001CB FF                     556 	.db #0xff	; 255
+      0001CC 00                     557 	.db #0x00	; 0
+      0001CD FF                     558 	.db #0xff	; 255
+      0001CE 00                     559 	.db #0x00	; 0
+      0001CF FF                     560 	.db #0xff	; 255
+      0001D0 00                     561 	.db #0x00	; 0
+      0001D1 FF                     562 	.db #0xff	; 255
+      0001D2 00                     563 	.db #0x00	; 0
+      0001D3 FF                     564 	.db #0xff	; 255
+      0001D4 00                     565 	.db #0x00	; 0
+      0001D5 FF                     566 	.db #0xff	; 255
+      0001D6 00                     567 	.db #0x00	; 0
+      0001D7 FF                     568 	.db #0xff	; 255
+      0001D8 00                     569 	.db #0x00	; 0
+      0001D9 FF                     570 	.db #0xff	; 255
+      0001DA 00                     571 	.db #0x00	; 0
+      0001DB C0                     572 	.db #0xc0	; 192
+      0001DC C0                     573 	.db #0xc0	; 192
+      0001DD C0                     574 	.db #0xc0	; 192
+      0001DE C0                     575 	.db #0xc0	; 192
+      0001DF 00                     576 	.db #0x00	; 0
+      0001E0 00                     577 	.db #0x00	; 0
+      0001E1 00                     578 	.db #0x00	; 0
+      0001E2 00                     579 	.db #0x00	; 0
+      0001E3 00                     580 	.db #0x00	; 0
+      0001E4 00                     581 	.db #0x00	; 0
+      0001E5 00                     582 	.db #0x00	; 0
+      0001E6 00                     583 	.db #0x00	; 0
+      0001E7 00                     584 	.db #0x00	; 0
+      0001E8 00                     585 	.db #0x00	; 0
+      0001E9 00                     586 	.db #0x00	; 0
+      0001EA 00                     587 	.db #0x00	; 0
+      0001EB 18                     588 	.db #0x18	; 24
+      0001EC 18                     589 	.db #0x18	; 24
+      0001ED 18                     590 	.db #0x18	; 24
+      0001EE 18                     591 	.db #0x18	; 24
+      0001EF 00                     592 	.db #0x00	; 0
+      0001F0 00                     593 	.db #0x00	; 0
+      0001F1 00                     594 	.db #0x00	; 0
+      0001F2 00                     595 	.db #0x00	; 0
+      0001F3 00                     596 	.db #0x00	; 0
+      0001F4 00                     597 	.db #0x00	; 0
+      0001F5 00                     598 	.db #0x00	; 0
+      0001F6 00                     599 	.db #0x00	; 0
+      0001F7 00                     600 	.db #0x00	; 0
+      0001F8 00                     601 	.db #0x00	; 0
+      0001F9 00                     602 	.db #0x00	; 0
+      0001FA 00                     603 	.db #0x00	; 0
+      0001FB 03                     604 	.db #0x03	; 3
+      0001FC 03                     605 	.db #0x03	; 3
+      0001FD 03                     606 	.db #0x03	; 3
+      0001FE 03                     607 	.db #0x03	; 3
+      0001FF 00                     608 	.db #0x00	; 0
+      000200 00                     609 	.db #0x00	; 0
+      000201 00                     610 	.db #0x00	; 0
+      000202 00                     611 	.db #0x00	; 0
+      000203 00                     612 	.db #0x00	; 0
+      000204 00                     613 	.db #0x00	; 0
+      000205 00                     614 	.db #0x00	; 0
+      000206 00                     615 	.db #0x00	; 0
+      000207 00                     616 	.db #0x00	; 0
+      000208 00                     617 	.db #0x00	; 0
+      000209 00                     618 	.db #0x00	; 0
+      00020A 00                     619 	.db #0x00	; 0
+      00020B 00                     620 	.db #0x00	; 0
+      00020C 00                     621 	.db #0x00	; 0
+      00020D 00                     622 	.db #0x00	; 0
+      00020E 00                     623 	.db #0x00	; 0
+      00020F 00                     624 	.db #0x00	; 0
+      000210 00                     625 	.db #0x00	; 0
+      000211 C0                     626 	.db #0xc0	; 192
+      000212 C0                     627 	.db #0xc0	; 192
+      000213 C0                     628 	.db #0xc0	; 192
+      000214 C0                     629 	.db #0xc0	; 192
+      000215 00                     630 	.db #0x00	; 0
+      000216 00                     631 	.db #0x00	; 0
+      000217 00                     632 	.db #0x00	; 0
+      000218 00                     633 	.db #0x00	; 0
+      000219 00                     634 	.db #0x00	; 0
+      00021A 00                     635 	.db #0x00	; 0
+      00021B 00                     636 	.db #0x00	; 0
+      00021C 00                     637 	.db #0x00	; 0
+      00021D 00                     638 	.db #0x00	; 0
+      00021E 00                     639 	.db #0x00	; 0
+      00021F 00                     640 	.db #0x00	; 0
+      000220 00                     641 	.db #0x00	; 0
+      000221 18                     642 	.db #0x18	; 24
+      000222 18                     643 	.db #0x18	; 24
+      000223 18                     644 	.db #0x18	; 24
+      000224 18                     645 	.db #0x18	; 24
+      000225 00                     646 	.db #0x00	; 0
+      000226 00                     647 	.db #0x00	; 0
+      000227 00                     648 	.db #0x00	; 0
+      000228 00                     649 	.db #0x00	; 0
+      000229 00                     650 	.db #0x00	; 0
+      00022A 00                     651 	.db #0x00	; 0
+      00022B 00                     652 	.db #0x00	; 0
+      00022C 00                     653 	.db #0x00	; 0
+      00022D 00                     654 	.db #0x00	; 0
+      00022E 00                     655 	.db #0x00	; 0
+      00022F 00                     656 	.db #0x00	; 0
+      000230 00                     657 	.db #0x00	; 0
+      000231 03                     658 	.db #0x03	; 3
+      000232 03                     659 	.db #0x03	; 3
+      000233 03                     660 	.db #0x03	; 3
+      000234 03                     661 	.db #0x03	; 3
+      000235 00                     662 	.db #0x00	; 0
+      000236 00                     663 	.db #0x00	; 0
+      000237 00                     664 	.db #0x00	; 0
+      000238 00                     665 	.db #0x00	; 0
+      000239 00                     666 	.db #0x00	; 0
+      00023A 00                     667 	.db #0x00	; 0
+      00023B 00                     668 	.db #0x00	; 0
+      00023C 00                     669 	.db #0x00	; 0
+      00023D 00                     670 	.db #0x00	; 0
+      00023E 00                     671 	.db #0x00	; 0
+      00023F 00                     672 	.db #0x00	; 0
+      000240 00                     673 	.db #0x00	; 0
+      000241 00                     674 	.db #0x00	; 0
+      000242 00                     675 	.db #0x00	; 0
+      000243 00                     676 	.db #0x00	; 0
+      000244 00                     677 	.db #0x00	; 0
+      000245 00                     678 	.db #0x00	; 0
+      000246 00                     679 	.db #0x00	; 0
+      000247 C0                     680 	.db #0xc0	; 192
+      000248 C0                     681 	.db #0xc0	; 192
+      000249 C0                     682 	.db #0xc0	; 192
+      00024A C0                     683 	.db #0xc0	; 192
+      00024B 00                     684 	.db #0x00	; 0
+      00024C 00                     685 	.db #0x00	; 0
+      00024D 00                     686 	.db #0x00	; 0
+      00024E 00                     687 	.db #0x00	; 0
+      00024F 00                     688 	.db #0x00	; 0
+      000250 00                     689 	.db #0x00	; 0
+      000251 00                     690 	.db #0x00	; 0
+      000252 00                     691 	.db #0x00	; 0
+      000253 00                     692 	.db #0x00	; 0
+      000254 00                     693 	.db #0x00	; 0
+      000255 00                     694 	.db #0x00	; 0
+      000256 00                     695 	.db #0x00	; 0
+      000257 18                     696 	.db #0x18	; 24
+      000258 18                     697 	.db #0x18	; 24
+      000259 18                     698 	.db #0x18	; 24
+      00025A 18                     699 	.db #0x18	; 24
+      00025B 00                     700 	.db #0x00	; 0
+      00025C 00                     701 	.db #0x00	; 0
+      00025D 00                     702 	.db #0x00	; 0
+      00025E 00                     703 	.db #0x00	; 0
+      00025F 00                     704 	.db #0x00	; 0
+      000260 00                     705 	.db #0x00	; 0
+      000261 00                     706 	.db #0x00	; 0
+      000262 00                     707 	.db #0x00	; 0
+      000263 00                     708 	.db #0x00	; 0
+      000264 00                     709 	.db #0x00	; 0
+      000265 00                     710 	.db #0x00	; 0
+      000266 00                     711 	.db #0x00	; 0
+      000267 03                     712 	.db #0x03	; 3
+      000268 03                     713 	.db #0x03	; 3
+      000269 03                     714 	.db #0x03	; 3
+      00026A 03                     715 	.db #0x03	; 3
+      00026B 00                     716 	.db #0x00	; 0
+      00026C C0                     717 	.db #0xc0	; 192
+      00026D 00                     718 	.db #0x00	; 0
+      00026E C0                     719 	.db #0xc0	; 192
+      00026F 00                     720 	.db #0x00	; 0
+      000270 00                     721 	.db #0x00	; 0
+      000271 00                     722 	.db #0x00	; 0
+      000272 00                     723 	.db #0x00	; 0
+      000273 00                     724 	.db #0x00	; 0
+      000274 00                     725 	.db #0x00	; 0
+      000275 00                     726 	.db #0x00	; 0
+      000276 00                     727 	.db #0x00	; 0
+      000277 00                     728 	.db #0x00	; 0
+      000278 00                     729 	.db #0x00	; 0
+      000279 00                     730 	.db #0x00	; 0
+      00027A 00                     731 	.db #0x00	; 0
+      00027B 00                     732 	.db #0x00	; 0
+      00027C 18                     733 	.db #0x18	; 24
+      00027D 00                     734 	.db #0x00	; 0
+      00027E 18                     735 	.db #0x18	; 24
+      00027F 00                     736 	.db #0x00	; 0
+      000280 00                     737 	.db #0x00	; 0
+      000281 00                     738 	.db #0x00	; 0
+      000282 00                     739 	.db #0x00	; 0
+      000283 00                     740 	.db #0x00	; 0
+      000284 00                     741 	.db #0x00	; 0
+      000285 00                     742 	.db #0x00	; 0
+      000286 00                     743 	.db #0x00	; 0
+      000287 00                     744 	.db #0x00	; 0
+      000288 00                     745 	.db #0x00	; 0
+      000289 00                     746 	.db #0x00	; 0
+      00028A 00                     747 	.db #0x00	; 0
+      00028B 00                     748 	.db #0x00	; 0
+      00028C 03                     749 	.db #0x03	; 3
+      00028D 00                     750 	.db #0x00	; 0
+      00028E 03                     751 	.db #0x03	; 3
+      00028F 00                     752 	.db #0x00	; 0
+      000290 00                     753 	.db #0x00	; 0
+      000291 00                     754 	.db #0x00	; 0
+      000292 00                     755 	.db #0x00	; 0
+      000293 00                     756 	.db #0x00	; 0
+      000294 00                     757 	.db #0x00	; 0
+      000295 00                     758 	.db #0x00	; 0
+      000296 00                     759 	.db #0x00	; 0
+      000297 00                     760 	.db #0x00	; 0
+      000298 00                     761 	.db #0x00	; 0
+      000299 00                     762 	.db #0x00	; 0
+      00029A 00                     763 	.db #0x00	; 0
+      00029B 00                     764 	.db #0x00	; 0
+      00029C 00                     765 	.db #0x00	; 0
+      00029D 00                     766 	.db #0x00	; 0
+      00029E 00                     767 	.db #0x00	; 0
+      00029F 00                     768 	.db #0x00	; 0
+      0002A0 00                     769 	.db #0x00	; 0
+      0002A1 00                     770 	.db #0x00	; 0
+      0002A2 C0                     771 	.db #0xc0	; 192
+      0002A3 00                     772 	.db #0x00	; 0
+      0002A4 C0                     773 	.db #0xc0	; 192
+      0002A5 00                     774 	.db #0x00	; 0
+      0002A6 00                     775 	.db #0x00	; 0
+      0002A7 00                     776 	.db #0x00	; 0
+      0002A8 00                     777 	.db #0x00	; 0
+      0002A9 00                     778 	.db #0x00	; 0
+      0002AA 00                     779 	.db #0x00	; 0
+      0002AB 00                     780 	.db #0x00	; 0
+      0002AC 00                     781 	.db #0x00	; 0
+      0002AD 00                     782 	.db #0x00	; 0
+      0002AE 00                     783 	.db #0x00	; 0
+      0002AF 00                     784 	.db #0x00	; 0
+      0002B0 00                     785 	.db #0x00	; 0
+      0002B1 00                     786 	.db #0x00	; 0
+      0002B2 18                     787 	.db #0x18	; 24
+      0002B3 00                     788 	.db #0x00	; 0
+      0002B4 18                     789 	.db #0x18	; 24
+      0002B5 00                     790 	.db #0x00	; 0
+      0002B6 00                     791 	.db #0x00	; 0
+      0002B7 00                     792 	.db #0x00	; 0
+      0002B8 00                     793 	.db #0x00	; 0
+      0002B9 00                     794 	.db #0x00	; 0
+      0002BA 00                     795 	.db #0x00	; 0
+      0002BB 00                     796 	.db #0x00	; 0
+      0002BC 00                     797 	.db #0x00	; 0
+      0002BD 00                     798 	.db #0x00	; 0
+      0002BE 00                     799 	.db #0x00	; 0
+      0002BF 00                     800 	.db #0x00	; 0
+      0002C0 00                     801 	.db #0x00	; 0
+      0002C1 00                     802 	.db #0x00	; 0
+      0002C2 03                     803 	.db #0x03	; 3
+      0002C3 00                     804 	.db #0x00	; 0
+      0002C4 03                     805 	.db #0x03	; 3
+      0002C5 00                     806 	.db #0x00	; 0
+      0002C6 00                     807 	.db #0x00	; 0
+      0002C7 00                     808 	.db #0x00	; 0
+      0002C8 00                     809 	.db #0x00	; 0
+      0002C9 00                     810 	.db #0x00	; 0
+      0002CA 00                     811 	.db #0x00	; 0
+      0002CB 00                     812 	.db #0x00	; 0
+      0002CC 00                     813 	.db #0x00	; 0
+      0002CD 00                     814 	.db #0x00	; 0
+      0002CE 00                     815 	.db #0x00	; 0
+      0002CF 00                     816 	.db #0x00	; 0
+      0002D0 00                     817 	.db #0x00	; 0
+      0002D1 00                     818 	.db #0x00	; 0
+      0002D2 00                     819 	.db #0x00	; 0
+      0002D3 00                     820 	.db #0x00	; 0
+      0002D4 00                     821 	.db #0x00	; 0
+      0002D5 00                     822 	.db #0x00	; 0
+      0002D6 00                     823 	.db #0x00	; 0
+      0002D7 00                     824 	.db #0x00	; 0
+      0002D8 C0                     825 	.db #0xc0	; 192
+      0002D9 00                     826 	.db #0x00	; 0
+      0002DA C0                     827 	.db #0xc0	; 192
+      0002DB 00                     828 	.db #0x00	; 0
+      0002DC 00                     829 	.db #0x00	; 0
+      0002DD 00                     830 	.db #0x00	; 0
+      0002DE 00                     831 	.db #0x00	; 0
+      0002DF 00                     832 	.db #0x00	; 0
+      0002E0 00                     833 	.db #0x00	; 0
+      0002E1 00                     834 	.db #0x00	; 0
+      0002E2 00                     835 	.db #0x00	; 0
+      0002E3 00                     836 	.db #0x00	; 0
+      0002E4 00                     837 	.db #0x00	; 0
+      0002E5 00                     838 	.db #0x00	; 0
+      0002E6 00                     839 	.db #0x00	; 0
+      0002E7 00                     840 	.db #0x00	; 0
+      0002E8 18                     841 	.db #0x18	; 24
+      0002E9 00                     842 	.db #0x00	; 0
+      0002EA 18                     843 	.db #0x18	; 24
+      0002EB 00                     844 	.db #0x00	; 0
+      0002EC 00                     845 	.db #0x00	; 0
+      0002ED 00                     846 	.db #0x00	; 0
+      0002EE 00                     847 	.db #0x00	; 0
+      0002EF 00                     848 	.db #0x00	; 0
+      0002F0 00                     849 	.db #0x00	; 0
+      0002F1 00                     850 	.db #0x00	; 0
+      0002F2 00                     851 	.db #0x00	; 0
+      0002F3 00                     852 	.db #0x00	; 0
+      0002F4 00                     853 	.db #0x00	; 0
+      0002F5 00                     854 	.db #0x00	; 0
+      0002F6 00                     855 	.db #0x00	; 0
+      0002F7 00                     856 	.db #0x00	; 0
+      0002F8 03                     857 	.db #0x03	; 3
+      0002F9 00                     858 	.db #0x00	; 0
+      0002FA 03                     859 	.db #0x03	; 3
+                           0002FB   860 	G$unload_enemy$0$0	= .
+                                    861 	.globl	G$unload_enemy$0$0
+                           0002FB   862 	C$enemies.c$109$2_0$131	= .
+                                    863 	.globl	C$enemies.c$109$2_0$131
+                                    864 ;src/enemies.c:109: void unload_enemy(uint8_t enemy_slot){
+                                    865 ;	---------------------------------
+                                    866 ; Function unload_enemy
+                                    867 ; ---------------------------------
+      0002FB                        868 _unload_enemy::
+      0002FB 3B               [ 8]  869 	dec	sp
+      0002FC 3B               [ 8]  870 	dec	sp
+      0002FD F8 00            [12]  871 	ldhl	sp,	#0
+                           0002FF   872 	C$enemies.c$111$3_0$132	= .
+                                    873 	.globl	C$enemies.c$111$3_0$132
+                                    874 ;src/enemies.c:111: for (i=0;i<9;i++){
+      0002FF 22               [ 8]  875 	ld	(hl+), a
+      000300 36 00            [12]  876 	ld	(hl), #0x00
+      000302                        877 00104$:
+                           000302   878 	C$enemies.c$112$3_0$132	= .
+                                    879 	.globl	C$enemies.c$112$3_0$132
+                                    880 ;src/enemies.c:112: j=i+enemy_slot*9;
+      000302 F8 00            [12]  881 	ldhl	sp,	#0
+      000304 2A               [ 8]  882 	ld	a, (hl+)
+      000305 4F               [ 4]  883 	ld	c, a
+      000306 87               [ 4]  884 	add	a, a
+      000307 87               [ 4]  885 	add	a, a
+      000308 87               [ 4]  886 	add	a, a
+      000309 81               [ 4]  887 	add	a, c
+      00030A 4E               [ 8]  888 	ld	c, (hl)
+      00030B 81               [ 4]  889 	add	a, c
+                           00030C   890 	C$enemies.c$113$3_0$132	= .
+                                    891 	.globl	C$enemies.c$113$3_0$132
+                                    892 ;src/enemies.c:113: set_sprite_data(ENEMIES_MEMORY_BASE_ADDRESS+j,1,enemies_tileset);
+      00030C 4F               [ 4]  893 	ld	c, a
+      00030D 11r9Br01         [12]  894 	ld	de, #_enemies_tileset
+      000310 C6 65            [ 8]  895 	add	a, #0x65
+      000312 47               [ 4]  896 	ld	b, a
+      000313 D5               [16]  897 	push	de
+      000314 3E 01            [ 8]  898 	ld	a, #0x01
+      000316 F5               [16]  899 	push	af
+      000317 33               [ 8]  900 	inc	sp
+      000318 C5               [16]  901 	push	bc
+      000319 33               [ 8]  902 	inc	sp
+      00031A CDr00r00         [24]  903 	call	_set_sprite_data
+      00031D E8 04            [16]  904 	add	sp, #4
+                                    905 ;src/enemies.c:114: set_sprite_tile(j,ENEMIES_MEMORY_BASE_ADDRESS+j);
+      00031F 58               [ 4]  906 	ld	e, b
+                                    907 ;../gbdk/include/gb/gb.h:1602: shadow_OAM[nb].tile=tile;
+      000320 69               [ 4]  908 	ld	l, c
+                                    909 ;	spillPairReg hl
+                                    910 ;	spillPairReg hl
+      000321 26 00            [ 8]  911 	ld	h, #0x00
+                                    912 ;	spillPairReg hl
+                                    913 ;	spillPairReg hl
+      000323 29               [ 8]  914 	add	hl, hl
+      000324 29               [ 8]  915 	add	hl, hl
+      000325 4D               [ 4]  916 	ld	c, l
+      000326 44               [ 4]  917 	ld	b, h
+      000327 21r01r00         [12]  918 	ld	hl,#_shadow_OAM + 1
+      00032A 09               [ 8]  919 	add	hl,bc
+      00032B 23               [ 8]  920 	inc	hl
+      00032C 73               [ 8]  921 	ld	(hl), e
+                                    922 ;../gbdk/include/gb/gb.h:1675: OAM_item_t * itm = &shadow_OAM[nb];
+      00032D 21r00r00         [12]  923 	ld	hl, #_shadow_OAM
+      000330 09               [ 8]  924 	add	hl, bc
+                                    925 ;../gbdk/include/gb/gb.h:1676: itm->y=y, itm->x=x;
+      000331 AF               [ 4]  926 	xor	a, a
+      000332 22               [ 8]  927 	ld	(hl+), a
+      000333 77               [ 8]  928 	ld	(hl), a
+                           000334   929 	C$enemies.c$111$2_0$131	= .
+                                    930 	.globl	C$enemies.c$111$2_0$131
+                                    931 ;src/enemies.c:111: for (i=0;i<9;i++){
+      000334 F8 01            [12]  932 	ldhl	sp,	#1
+      000336 34               [12]  933 	inc	(hl)
+      000337 7E               [ 8]  934 	ld	a, (hl)
+      000338 D6 09            [ 8]  935 	sub	a, #0x09
+      00033A 38 C6            [12]  936 	jr	C, 00104$
+                           00033C   937 	C$enemies.c$117$2_0$131	= .
+                                    938 	.globl	C$enemies.c$117$2_0$131
+                                    939 ;src/enemies.c:117: }
+      00033C 33               [ 8]  940 	inc	sp
+      00033D 33               [ 8]  941 	inc	sp
+                           00033E   942 	C$enemies.c$117$2_0$131	= .
+                                    943 	.globl	C$enemies.c$117$2_0$131
+                           00033E   944 	XG$unload_enemy$0$0	= .
+                                    945 	.globl	XG$unload_enemy$0$0
+      00033E C9               [16]  946 	ret
+                                    947 	.area _CODE
+                                    948 	.area _INITIALIZER
+                                    949 	.area _CABS (ABS)

@@ -28,8 +28,14 @@ static uint8_t p_con=0;
 static uint8_t p_luk=0;
 
 static uint8_t inventory[100] = {NULL};//every entry contains id of an item
-
+// 3d dungeon variables
 static enum direction player_dir = north;
+//combat variables
+struct slot sl1;
+struct slot sl2; 
+struct slot sl3; 
+
+
 //system
 static uint8_t dng_w=15,dng_h=15;
 static uint8_t joypad_current=0,joypad_previous=0;
@@ -99,9 +105,9 @@ void init_dungeon(const unsigned char *dng,uint8_t dng_width, uint8_t dng_height
 void update_dng(unsigned char *dng,uint8_t dungeon_width, uint8_t dungeon_hieght){
     set_bkg_tiles(0,0,20,13,white_screen);
 
-    check_l_walls(dng,dungeon_width,dungeon_hieght,player_x, player_y, player_dir);
-    check_r_walls(dng,dungeon_width,dungeon_hieght,player_x, player_y, player_dir);
-    check_m_walls(dng,dungeon_width,dungeon_hieght, player_x, player_y,player_dir);
+    check_l_walls(dng, dungeon_width, dungeon_hieght, player_x, player_y, player_dir);
+    check_r_walls(dng, dungeon_width, dungeon_hieght, player_x, player_y, player_dir);
+    check_m_walls(dng, dungeon_width, dungeon_hieght, player_x, player_y,player_dir);
 
 }
 /*
@@ -148,8 +154,8 @@ void update_dng_UI (){
             set_sprite_tile(1,3);
             set_sprite_tile(2,4);
             set_sprite_tile(3,4);
-            set_sprite_prop(2,  S_FLIPY);
-            set_sprite_prop(1,  S_FLIPY);
+            set_sprite_prop(2, S_FLIPY);
+            set_sprite_prop(1, S_FLIPY);
         break;
 
         case 2:
@@ -157,8 +163,8 @@ void update_dng_UI (){
             set_sprite_tile(1,5);
             set_sprite_tile(2,6);
             set_sprite_tile(3,5);
-            set_sprite_prop(1,  S_FLIPY | S_FLIPX);
-            set_sprite_prop(2,  S_FLIPY | S_FLIPX);
+            set_sprite_prop(1, S_FLIPY | S_FLIPX);
+            set_sprite_prop(2, S_FLIPY | S_FLIPX);
 
 
         break;
@@ -168,12 +174,12 @@ void update_dng_UI (){
             set_sprite_tile(1,8);
             set_sprite_tile(2,8);
             set_sprite_tile(3,7);
-            set_sprite_prop(2,  S_FLIPX);
-            set_sprite_prop(3,  S_FLIPX);
+            set_sprite_prop(2, S_FLIPX);
+            set_sprite_prop(3, S_FLIPX);
         break;
     }
 
-    //left small letter
+    //left and right small letters
     switch(player_dir){
         case 0:            
             set_sprite_tile(4,12);
@@ -296,10 +302,14 @@ void dungeon_logic_upd(uint8_t joypad_current,uint8_t joypad_previous){
 void state_switcher(uint8_t state){
     if(global_state==1&&state==2){
         initrand(sys_time);
-        init_combat(rand()%GROUP_COUNT);
+        init_combat(rand()%GROUP_COUNT,sl1,sl2,sl3);
         global_state = 2;
     }
     if(global_state==2&&state==1){
+        uint8_t i;
+        for(i=0;i<3;i++){
+            unload_enemy(i);
+        }
         init_dungeon(test_dungeon,dng_w,dng_h);
         init_dng_UI();
         global_state = 1;
@@ -332,17 +342,17 @@ void main(void)
         joypad_previous = joypad_current;
         joypad_current = joypad();
 
+        //doing stuff acording to current state
         switch (global_state)
         {
         case 0:
             break;
-        case 1:
-            dungeon_logic_upd(joypad_current,joypad_previous);
+        case 1://dungeon crawling
+            dungeon_logic_upd(joypad_current, joypad_previous);
             update_dng_UI();
             break;
-        case 2:
-
-            combat_view_upd();
+        case 2://combat
+            combat_view_upd(joypad_current, joypad_previous);
             state_switcher(1);//test code delete later
             break;        
         case 3:

@@ -9,81 +9,506 @@
                                       9 ; Public variables in this module
                                      10 ;--------------------------------------------------------
                                      11 	.globl _combat_groups
-                                     12 	.globl _init_combat
-                                     13 	.globl _combat_view_upd
-                                     14 ;--------------------------------------------------------
-                                     15 ; special function registers
-                                     16 ;--------------------------------------------------------
+                                     12 	.globl _load_enemy
+                                     13 	.globl _init_combat
+                                     14 	.globl _combat_view_upd
+                                     15 ;--------------------------------------------------------
+                                     16 ; special function registers
                                      17 ;--------------------------------------------------------
-                                     18 ; ram data
-                                     19 ;--------------------------------------------------------
-                                     20 	.area _DATA
-                                     21 ;--------------------------------------------------------
-                                     22 ; ram data
-                                     23 ;--------------------------------------------------------
-                                     24 	.area _INITIALIZED
-                                     25 ;--------------------------------------------------------
-                                     26 ; absolute external ram data
-                                     27 ;--------------------------------------------------------
-                                     28 	.area _DABS (ABS)
-                                     29 ;--------------------------------------------------------
-                                     30 ; global & static initialisations
-                                     31 ;--------------------------------------------------------
-                                     32 	.area _HOME
-                                     33 	.area _GSINIT
-                                     34 	.area _GSFINAL
-                                     35 	.area _GSINIT
-                                     36 ;--------------------------------------------------------
-                                     37 ; Home
-                                     38 ;--------------------------------------------------------
-                                     39 	.area _HOME
+                                     18 ;--------------------------------------------------------
+                                     19 ; ram data
+                                     20 ;--------------------------------------------------------
+                                     21 	.area _DATA
+                                     22 ;--------------------------------------------------------
+                                     23 ; ram data
+                                     24 ;--------------------------------------------------------
+                                     25 	.area _INITIALIZED
+                                     26 ;--------------------------------------------------------
+                                     27 ; absolute external ram data
+                                     28 ;--------------------------------------------------------
+                                     29 	.area _DABS (ABS)
+                                     30 ;--------------------------------------------------------
+                                     31 ; global & static initialisations
+                                     32 ;--------------------------------------------------------
+                                     33 	.area _HOME
+                                     34 	.area _GSINIT
+                                     35 	.area _GSFINAL
+                                     36 	.area _GSINIT
+                                     37 ;--------------------------------------------------------
+                                     38 ; Home
+                                     39 ;--------------------------------------------------------
                                      40 	.area _HOME
-                                     41 ;--------------------------------------------------------
-                                     42 ; code
-                                     43 ;--------------------------------------------------------
-                                     44 	.area _CODE
-                           000000    45 	G$init_combat$0$0	= .
-                                     46 	.globl	G$init_combat$0$0
-                           000000    47 	C$combat.c$3$0_0$103	= .
-                                     48 	.globl	C$combat.c$3$0_0$103
-                                     49 ;src/combat.c:3: void init_combat(uint8_t combat_group){
-                                     50 ;	---------------------------------
-                                     51 ; Function init_combat
-                                     52 ; ---------------------------------
-      000000                         53 _init_combat::
-                           000000    54 	C$combat.c$5$0_0$103	= .
-                                     55 	.globl	C$combat.c$5$0_0$103
-                                     56 ;src/combat.c:5: }
-                           000000    57 	C$combat.c$5$0_0$103	= .
-                                     58 	.globl	C$combat.c$5$0_0$103
-                           000000    59 	XG$init_combat$0$0	= .
-                                     60 	.globl	XG$init_combat$0$0
-      000000 C9               [16]   61 	ret
-                           000001    62 	G$combat_view_upd$0$0	= .
-                                     63 	.globl	G$combat_view_upd$0$0
-                           000001    64 	C$combat.c$6$0_0$105	= .
-                                     65 	.globl	C$combat.c$6$0_0$105
-                                     66 ;src/combat.c:6: void combat_view_upd(){
-                                     67 ;	---------------------------------
-                                     68 ; Function combat_view_upd
-                                     69 ; ---------------------------------
-      000001                         70 _combat_view_upd::
-                           000001    71 	C$combat.c$8$0_0$105	= .
-                                     72 	.globl	C$combat.c$8$0_0$105
-                                     73 ;src/combat.c:8: }
-                           000001    74 	C$combat.c$8$0_0$105	= .
-                                     75 	.globl	C$combat.c$8$0_0$105
-                           000001    76 	XG$combat_view_upd$0$0	= .
-                                     77 	.globl	XG$combat_view_upd$0$0
-      000001 C9               [16]   78 	ret
-                                     79 	.area _CODE
-                           000002    80 G$combat_groups$0_0$0 == .
-      000002                         81 _combat_groups:
-      000002 00                      82 	.db #0x00	; 0
-      000003 00                      83 	.db #0x00	; 0
-      000004 00                      84 	.db #0x00	; 0
-      000005 00                      85 	.db #0x00	; 0
-      000006 00                      86 	.db #0x00	; 0
-      000007 00                      87 	.db #0x00	; 0
-                                     88 	.area _INITIALIZER
-                                     89 	.area _CABS (ABS)
+                                     41 	.area _HOME
+                                     42 ;--------------------------------------------------------
+                                     43 ; code
+                                     44 ;--------------------------------------------------------
+                                     45 	.area _CODE
+                           000000    46 	G$init_combat$0$0	= .
+                                     47 	.globl	G$init_combat$0$0
+                           000000    48 	C$combat.c$3$0_0$104	= .
+                                     49 	.globl	C$combat.c$3$0_0$104
+                                     50 ;src/combat.c:3: void init_combat(uint8_t combat_group,struct slot sl1,struct slot sl2,struct slot sl3){
+                                     51 ;	---------------------------------
+                                     52 ; Function init_combat
+                                     53 ; ---------------------------------
+      000000                         54 _init_combat::
+      000000 E8 FB            [16]   55 	add	sp, #-5
+      000002 4F               [ 4]   56 	ld	c, a
+                           000003    57 	C$combat.c$5$5_0$107	= .
+                                     58 	.globl	C$combat.c$5$5_0$107
+                                     59 ;src/combat.c:5: for(i=0;i<MAX_COMBAT_GROUP_SIZE;i++){
+      000003 06 00            [ 8]   60 	ld	b, #0x00
+      000005 69               [ 4]   61 	ld	l, c
+      000006 60               [ 4]   62 	ld	h, b
+      000007 29               [ 8]   63 	add	hl, hl
+      000008 09               [ 8]   64 	add	hl, bc
+      000009 4D               [ 4]   65 	ld	c, l
+      00000A 44               [ 4]   66 	ld	b, h
+      00000B 21rC8r01         [12]   67 	ld	hl, #_combat_groups
+      00000E 09               [ 8]   68 	add	hl, bc
+      00000F 33               [ 8]   69 	inc	sp
+      000010 33               [ 8]   70 	inc	sp
+      000011 E5               [16]   71 	push	hl
+      000012 F8 04            [12]   72 	ldhl	sp,	#4
+      000014 36 00            [12]   73 	ld	(hl), #0x00
+      000016                         74 00108$:
+                           000016    75 	C$combat.c$7$3_0$105	= .
+                                     76 	.globl	C$combat.c$7$3_0$105
+                                     77 ;src/combat.c:7: if(combat_groups[combat_group][i]!=0){
+      000016 D1               [12]   78 	pop	de
+      000017 D5               [16]   79 	push	de
+      000018 F8 04            [12]   80 	ldhl	sp,	#4
+      00001A 6E               [ 8]   81 	ld	l, (hl)
+      00001B 26 00            [ 8]   82 	ld	h, #0x00
+      00001D 19               [ 8]   83 	add	hl, de
+      00001E E5               [16]   84 	push	hl
+      00001F 7D               [ 4]   85 	ld	a, l
+      000020 F8 04            [12]   86 	ldhl	sp,	#4
+      000022 77               [ 8]   87 	ld	(hl), a
+      000023 E1               [12]   88 	pop	hl
+      000024 7C               [ 4]   89 	ld	a, h
+      000025 F8 03            [12]   90 	ldhl	sp,	#3
+      000027 32               [ 8]   91 	ld	(hl-), a
+      000028 2A               [ 8]   92 	ld	a, (hl+)
+      000029 5F               [ 4]   93 	ld	e, a
+      00002A 56               [ 8]   94 	ld	d, (hl)
+      00002B 1A               [ 8]   95 	ld	a, (de)
+      00002C 4F               [ 4]   96 	ld	c, a
+      00002D B7               [ 4]   97 	or	a, a
+      00002E CArB8r01         [16]   98 	jp	Z, 00109$
+                           000031    99 	C$combat.c$8$4_0$106	= .
+                                    100 	.globl	C$combat.c$8$4_0$106
+                                    101 ;src/combat.c:8: load_enemy(combat_groups[combat_group][i],i);
+      000031 23               [ 8]  102 	inc	hl
+      000032 5E               [ 8]  103 	ld	e, (hl)
+      000033 79               [ 4]  104 	ld	a, c
+      000034 CDr00r00         [24]  105 	call	_load_enemy
+                           000037   106 	C$combat.c$9$4_0$106	= .
+                                    107 	.globl	C$combat.c$9$4_0$106
+                                    108 ;src/combat.c:9: switch(i){
+      000037 F8 04            [12]  109 	ldhl	sp,	#4
+      000039 7E               [ 8]  110 	ld	a, (hl)
+      00003A B7               [ 4]  111 	or	a, a
+      00003B 28 12            [12]  112 	jr	Z, 00101$
+      00003D F8 04            [12]  113 	ldhl	sp,	#4
+      00003F 7E               [ 8]  114 	ld	a, (hl)
+      000040 3D               [ 4]  115 	dec	a
+      000041 CArCFr00         [16]  116 	jp	Z,00102$
+      000044 F8 04            [12]  117 	ldhl	sp,	#4
+      000046 7E               [ 8]  118 	ld	a, (hl)
+      000047 D6 02            [ 8]  119 	sub	a, #0x02
+      000049 CAr45r01         [16]  120 	jp	Z,00103$
+      00004C C3rB8r01         [16]  121 	jp	00109$
+                           00004F   122 	C$combat.c$10$5_0$107	= .
+                                    123 	.globl	C$combat.c$10$5_0$107
+                                    124 ;src/combat.c:10: case 0:
+      00004F                        125 00101$:
+                           00004F   126 	C$combat.c$11$5_0$107	= .
+                                    127 	.globl	C$combat.c$11$5_0$107
+                                    128 ;src/combat.c:11: sl1.id = combat_groups[combat_group][i];
+      00004F F8 02            [12]  129 	ldhl	sp,#2
+      000051 2A               [ 8]  130 	ld	a, (hl+)
+      000052 5F               [ 4]  131 	ld	e, a
+      000053 56               [ 8]  132 	ld	d, (hl)
+      000054 1A               [ 8]  133 	ld	a, (de)
+      000055 F8 07            [12]  134 	ldhl	sp,	#7
+      000057 77               [ 8]  135 	ld	(hl), a
+                           000058   136 	C$combat.c$12$5_0$107	= .
+                                    137 	.globl	C$combat.c$12$5_0$107
+                                    138 ;src/combat.c:12: sl1.max_hp = e_con[sl1.id]/4*10;
+      000058 4E               [ 8]  139 	ld	c, (hl)
+      000059 21r00r00         [12]  140 	ld	hl, #_e_con
+      00005C 06 00            [ 8]  141 	ld	b, #0x00
+      00005E 09               [ 8]  142 	add	hl, bc
+      00005F 4E               [ 8]  143 	ld	c, (hl)
+      000060 06 00            [ 8]  144 	ld	b, #0x00
+      000062 F8 02            [12]  145 	ldhl	sp,	#2
+      000064 79               [ 4]  146 	ld	a, c
+      000065 22               [ 8]  147 	ld	(hl+), a
+      000066 70               [ 8]  148 	ld	(hl), b
+      000067 CB 78            [ 8]  149 	bit	7, b
+      000069 28 07            [12]  150 	jr	Z, 00112$
+      00006B 2B               [ 8]  151 	dec	hl
+      00006C 03               [ 8]  152 	inc	bc
+      00006D 03               [ 8]  153 	inc	bc
+      00006E 03               [ 8]  154 	inc	bc
+      00006F 79               [ 4]  155 	ld	a, c
+      000070 22               [ 8]  156 	ld	(hl+), a
+      000071 70               [ 8]  157 	ld	(hl), b
+      000072                        158 00112$:
+      000072 F8 02            [12]  159 	ldhl	sp,#2
+      000074 2A               [ 8]  160 	ld	a, (hl+)
+      000075 4F               [ 4]  161 	ld	c, a
+      000076 46               [ 8]  162 	ld	b, (hl)
+      000077 CB 28            [ 8]  163 	sra	b
+      000079 CB 19            [ 8]  164 	rr	c
+      00007B CB 28            [ 8]  165 	sra	b
+      00007D CB 19            [ 8]  166 	rr	c
+      00007F 79               [ 4]  167 	ld	a, c
+      000080 87               [ 4]  168 	add	a, a
+      000081 87               [ 4]  169 	add	a, a
+      000082 81               [ 4]  170 	add	a, c
+      000083 87               [ 4]  171 	add	a, a
+      000084 F8 18            [12]  172 	ldhl	sp,	#24
+      000086 77               [ 8]  173 	ld	(hl), a
+                           000087   174 	C$combat.c$13$5_0$107	= .
+                                    175 	.globl	C$combat.c$13$5_0$107
+                                    176 ;src/combat.c:13: sl1.hp = sl1.max_hp;
+      000087 2A               [ 8]  177 	ld	a, (hl+)
+      000088 77               [ 8]  178 	ld	(hl), a
+                           000089   179 	C$combat.c$14$5_0$107	= .
+                                    180 	.globl	C$combat.c$14$5_0$107
+                                    181 ;src/combat.c:14: sl1.max_mp = e_int[sl1.id]/5*10;
+      000089 F8 07            [12]  182 	ldhl	sp,	#7
+      00008B 4E               [ 8]  183 	ld	c, (hl)
+      00008C 21r00r00         [12]  184 	ld	hl, #_e_int
+      00008F 06 00            [ 8]  185 	ld	b, #0x00
+      000091 09               [ 8]  186 	add	hl, bc
+      000092 5E               [ 8]  187 	ld	e, (hl)
+      000093 16 00            [ 8]  188 	ld	d, #0x00
+      000095 01 05 00         [12]  189 	ld	bc, #0x0005
+      000098 CDr00r00         [24]  190 	call	__divsint
+      00009B 79               [ 4]  191 	ld	a, c
+      00009C 87               [ 4]  192 	add	a, a
+      00009D 87               [ 4]  193 	add	a, a
+      00009E 81               [ 4]  194 	add	a, c
+      00009F 87               [ 4]  195 	add	a, a
+      0000A0 F8 1A            [12]  196 	ldhl	sp,	#26
+      0000A2 77               [ 8]  197 	ld	(hl), a
+                           0000A3   198 	C$combat.c$15$5_0$107	= .
+                                    199 	.globl	C$combat.c$15$5_0$107
+                                    200 ;src/combat.c:15: sl1.mp = sl1.max_mp;
+      0000A3 2A               [ 8]  201 	ld	a, (hl+)
+      0000A4 77               [ 8]  202 	ld	(hl), a
+                           0000A5   203 	C$combat.c$16$5_0$107	= .
+                                    204 	.globl	C$combat.c$16$5_0$107
+                                    205 ;src/combat.c:16: sl1.e_str = e_str[sl1.id];
+      0000A5 F8 07            [12]  206 	ldhl	sp,	#7
+      0000A7 4E               [ 8]  207 	ld	c, (hl)
+      0000A8 21r00r00         [12]  208 	ld	hl, #_e_str
+      0000AB 06 00            [ 8]  209 	ld	b, #0x00
+      0000AD 09               [ 8]  210 	add	hl, bc
+      0000AE 7E               [ 8]  211 	ld	a, (hl)
+      0000AF F8 1C            [12]  212 	ldhl	sp,	#28
+      0000B1 77               [ 8]  213 	ld	(hl), a
+                           0000B2   214 	C$combat.c$17$5_0$107	= .
+                                    215 	.globl	C$combat.c$17$5_0$107
+                                    216 ;src/combat.c:17: sl1.e_agi = e_agi[sl1.id];
+      0000B2 F8 07            [12]  217 	ldhl	sp,	#7
+      0000B4 4E               [ 8]  218 	ld	c, (hl)
+      0000B5 21r00r00         [12]  219 	ld	hl, #_e_agi
+      0000B8 06 00            [ 8]  220 	ld	b, #0x00
+      0000BA 09               [ 8]  221 	add	hl, bc
+      0000BB 7E               [ 8]  222 	ld	a, (hl)
+      0000BC F8 1D            [12]  223 	ldhl	sp,	#29
+      0000BE 77               [ 8]  224 	ld	(hl), a
+                           0000BF   225 	C$combat.c$18$5_0$107	= .
+                                    226 	.globl	C$combat.c$18$5_0$107
+                                    227 ;src/combat.c:18: sl1.e_int = e_int[sl1.id];
+      0000BF F8 07            [12]  228 	ldhl	sp,	#7
+      0000C1 4E               [ 8]  229 	ld	c, (hl)
+      0000C2 21r00r00         [12]  230 	ld	hl, #_e_int
+      0000C5 06 00            [ 8]  231 	ld	b, #0x00
+      0000C7 09               [ 8]  232 	add	hl, bc
+      0000C8 7E               [ 8]  233 	ld	a, (hl)
+      0000C9 F8 1E            [12]  234 	ldhl	sp,	#30
+      0000CB 77               [ 8]  235 	ld	(hl), a
+                           0000CC   236 	C$combat.c$19$5_0$107	= .
+                                    237 	.globl	C$combat.c$19$5_0$107
+                                    238 ;src/combat.c:19: break;
+      0000CC C3rB8r01         [16]  239 	jp	00109$
+                           0000CF   240 	C$combat.c$21$5_0$107	= .
+                                    241 	.globl	C$combat.c$21$5_0$107
+                                    242 ;src/combat.c:21: case 1:
+      0000CF                        243 00102$:
+                           0000CF   244 	C$combat.c$22$5_0$107	= .
+                                    245 	.globl	C$combat.c$22$5_0$107
+                                    246 ;src/combat.c:22: sl2.id = combat_groups[combat_group][i];
+      0000CF F8 02            [12]  247 	ldhl	sp,#2
+      0000D1 2A               [ 8]  248 	ld	a, (hl+)
+      0000D2 5F               [ 4]  249 	ld	e, a
+      0000D3 56               [ 8]  250 	ld	d, (hl)
+      0000D4 1A               [ 8]  251 	ld	a, (de)
+      0000D5 F8 1F            [12]  252 	ldhl	sp,	#31
+      0000D7 77               [ 8]  253 	ld	(hl), a
+                           0000D8   254 	C$combat.c$23$5_0$107	= .
+                                    255 	.globl	C$combat.c$23$5_0$107
+                                    256 ;src/combat.c:23: sl2.max_hp = e_con[sl2.id]/4*10;
+      0000D8 4E               [ 8]  257 	ld	c, (hl)
+      0000D9 21r00r00         [12]  258 	ld	hl, #_e_con
+      0000DC 06 00            [ 8]  259 	ld	b, #0x00
+      0000DE 09               [ 8]  260 	add	hl, bc
+      0000DF 4E               [ 8]  261 	ld	c, (hl)
+      0000E0 06 00            [ 8]  262 	ld	b, #0x00
+      0000E2 69               [ 4]  263 	ld	l, c
+                                    264 ;	spillPairReg hl
+                                    265 ;	spillPairReg hl
+      0000E3 60               [ 4]  266 	ld	h, b
+                                    267 ;	spillPairReg hl
+                                    268 ;	spillPairReg hl
+      0000E4 CB 78            [ 8]  269 	bit	7, b
+      0000E6 28 05            [12]  270 	jr	Z, 00113$
+      0000E8 69               [ 4]  271 	ld	l, c
+                                    272 ;	spillPairReg hl
+                                    273 ;	spillPairReg hl
+      0000E9 60               [ 4]  274 	ld	h, b
+                                    275 ;	spillPairReg hl
+                                    276 ;	spillPairReg hl
+      0000EA 23               [ 8]  277 	inc	hl
+      0000EB 23               [ 8]  278 	inc	hl
+      0000EC 23               [ 8]  279 	inc	hl
+      0000ED                        280 00113$:
+      0000ED CB 2C            [ 8]  281 	sra	h
+      0000EF CB 1D            [ 8]  282 	rr	l
+      0000F1 CB 2C            [ 8]  283 	sra	h
+      0000F3 CB 1D            [ 8]  284 	rr	l
+      0000F5 7D               [ 4]  285 	ld	a, l
+      0000F6 4F               [ 4]  286 	ld	c, a
+      0000F7 87               [ 4]  287 	add	a, a
+      0000F8 87               [ 4]  288 	add	a, a
+      0000F9 81               [ 4]  289 	add	a, c
+      0000FA 87               [ 4]  290 	add	a, a
+      0000FB F8 30            [12]  291 	ldhl	sp,	#48
+      0000FD 77               [ 8]  292 	ld	(hl), a
+                           0000FE   293 	C$combat.c$24$5_0$107	= .
+                                    294 	.globl	C$combat.c$24$5_0$107
+                                    295 ;src/combat.c:24: sl2.hp = sl2.max_hp;
+      0000FE 2A               [ 8]  296 	ld	a, (hl+)
+      0000FF 77               [ 8]  297 	ld	(hl), a
+                           000100   298 	C$combat.c$25$5_0$107	= .
+                                    299 	.globl	C$combat.c$25$5_0$107
+                                    300 ;src/combat.c:25: sl2.max_mp = e_int[sl2.id]/5*10;
+      000100 F8 1F            [12]  301 	ldhl	sp,	#31
+      000102 4E               [ 8]  302 	ld	c, (hl)
+      000103 21r00r00         [12]  303 	ld	hl, #_e_int
+      000106 06 00            [ 8]  304 	ld	b, #0x00
+      000108 09               [ 8]  305 	add	hl, bc
+      000109 5E               [ 8]  306 	ld	e, (hl)
+      00010A 16 00            [ 8]  307 	ld	d, #0x00
+      00010C 01 05 00         [12]  308 	ld	bc, #0x0005
+      00010F CDr00r00         [24]  309 	call	__divsint
+      000112 79               [ 4]  310 	ld	a, c
+      000113 87               [ 4]  311 	add	a, a
+      000114 87               [ 4]  312 	add	a, a
+      000115 81               [ 4]  313 	add	a, c
+      000116 87               [ 4]  314 	add	a, a
+      000117 F8 32            [12]  315 	ldhl	sp,	#50
+      000119 77               [ 8]  316 	ld	(hl), a
+                           00011A   317 	C$combat.c$26$5_0$107	= .
+                                    318 	.globl	C$combat.c$26$5_0$107
+                                    319 ;src/combat.c:26: sl2.mp = sl2.max_mp;
+      00011A 2A               [ 8]  320 	ld	a, (hl+)
+      00011B 77               [ 8]  321 	ld	(hl), a
+                           00011C   322 	C$combat.c$27$5_0$107	= .
+                                    323 	.globl	C$combat.c$27$5_0$107
+                                    324 ;src/combat.c:27: sl2.e_str = e_str[sl2.id];
+      00011C F8 1F            [12]  325 	ldhl	sp,	#31
+      00011E 4E               [ 8]  326 	ld	c, (hl)
+      00011F 21r00r00         [12]  327 	ld	hl, #_e_str
+      000122 06 00            [ 8]  328 	ld	b, #0x00
+      000124 09               [ 8]  329 	add	hl, bc
+      000125 7E               [ 8]  330 	ld	a, (hl)
+      000126 F8 34            [12]  331 	ldhl	sp,	#52
+      000128 77               [ 8]  332 	ld	(hl), a
+                           000129   333 	C$combat.c$28$5_0$107	= .
+                                    334 	.globl	C$combat.c$28$5_0$107
+                                    335 ;src/combat.c:28: sl2.e_agi = e_agi[sl2.id];
+      000129 F8 1F            [12]  336 	ldhl	sp,	#31
+      00012B 4E               [ 8]  337 	ld	c, (hl)
+      00012C 21r00r00         [12]  338 	ld	hl, #_e_agi
+      00012F 06 00            [ 8]  339 	ld	b, #0x00
+      000131 09               [ 8]  340 	add	hl, bc
+      000132 7E               [ 8]  341 	ld	a, (hl)
+      000133 F8 35            [12]  342 	ldhl	sp,	#53
+      000135 77               [ 8]  343 	ld	(hl), a
+                           000136   344 	C$combat.c$29$5_0$107	= .
+                                    345 	.globl	C$combat.c$29$5_0$107
+                                    346 ;src/combat.c:29: sl2.e_int = e_int[sl2.id];
+      000136 F8 1F            [12]  347 	ldhl	sp,	#31
+      000138 4E               [ 8]  348 	ld	c, (hl)
+      000139 21r00r00         [12]  349 	ld	hl, #_e_int
+      00013C 06 00            [ 8]  350 	ld	b, #0x00
+      00013E 09               [ 8]  351 	add	hl, bc
+      00013F 7E               [ 8]  352 	ld	a, (hl)
+      000140 F8 36            [12]  353 	ldhl	sp,	#54
+      000142 77               [ 8]  354 	ld	(hl), a
+                           000143   355 	C$combat.c$30$5_0$107	= .
+                                    356 	.globl	C$combat.c$30$5_0$107
+                                    357 ;src/combat.c:30: break;
+      000143 18 73            [12]  358 	jr	00109$
+                           000145   359 	C$combat.c$32$5_0$107	= .
+                                    360 	.globl	C$combat.c$32$5_0$107
+                                    361 ;src/combat.c:32: case 2:
+      000145                        362 00103$:
+                           000145   363 	C$combat.c$33$5_0$107	= .
+                                    364 	.globl	C$combat.c$33$5_0$107
+                                    365 ;src/combat.c:33: sl3.id = combat_groups[combat_group][i];
+      000145 F8 02            [12]  366 	ldhl	sp,#2
+      000147 2A               [ 8]  367 	ld	a, (hl+)
+      000148 5F               [ 4]  368 	ld	e, a
+      000149 56               [ 8]  369 	ld	d, (hl)
+      00014A 1A               [ 8]  370 	ld	a, (de)
+      00014B F8 37            [12]  371 	ldhl	sp,	#55
+      00014D 77               [ 8]  372 	ld	(hl), a
+                           00014E   373 	C$combat.c$34$5_0$107	= .
+                                    374 	.globl	C$combat.c$34$5_0$107
+                                    375 ;src/combat.c:34: sl3.max_hp = e_con[sl3.id]/4*10;
+      00014E 4E               [ 8]  376 	ld	c, (hl)
+      00014F 21r00r00         [12]  377 	ld	hl, #_e_con
+      000152 06 00            [ 8]  378 	ld	b, #0x00
+      000154 09               [ 8]  379 	add	hl, bc
+      000155 6E               [ 8]  380 	ld	l, (hl)
+                                    381 ;	spillPairReg hl
+      000156 26 00            [ 8]  382 	ld	h, #0x00
+                                    383 ;	spillPairReg hl
+                                    384 ;	spillPairReg hl
+      000158 4D               [ 4]  385 	ld	c, l
+      000159 44               [ 4]  386 	ld	b, h
+      00015A CB 7C            [ 8]  387 	bit	7, h
+      00015C 28 05            [12]  388 	jr	Z, 00114$
+      00015E 23               [ 8]  389 	inc	hl
+      00015F 23               [ 8]  390 	inc	hl
+      000160 23               [ 8]  391 	inc	hl
+      000161 4D               [ 4]  392 	ld	c, l
+      000162 44               [ 4]  393 	ld	b, h
+      000163                        394 00114$:
+      000163 CB 28            [ 8]  395 	sra	b
+      000165 CB 19            [ 8]  396 	rr	c
+      000167 CB 28            [ 8]  397 	sra	b
+      000169 CB 19            [ 8]  398 	rr	c
+      00016B 79               [ 4]  399 	ld	a, c
+      00016C 87               [ 4]  400 	add	a, a
+      00016D 87               [ 4]  401 	add	a, a
+      00016E 81               [ 4]  402 	add	a, c
+      00016F 87               [ 4]  403 	add	a, a
+      000170 F8 48            [12]  404 	ldhl	sp,	#72
+      000172 77               [ 8]  405 	ld	(hl), a
+                           000173   406 	C$combat.c$35$5_0$107	= .
+                                    407 	.globl	C$combat.c$35$5_0$107
+                                    408 ;src/combat.c:35: sl3.hp = sl3.max_hp;
+      000173 2A               [ 8]  409 	ld	a, (hl+)
+      000174 77               [ 8]  410 	ld	(hl), a
+                           000175   411 	C$combat.c$36$5_0$107	= .
+                                    412 	.globl	C$combat.c$36$5_0$107
+                                    413 ;src/combat.c:36: sl3.max_mp = e_int[sl3.id]/5*10;
+      000175 F8 37            [12]  414 	ldhl	sp,	#55
+      000177 4E               [ 8]  415 	ld	c, (hl)
+      000178 21r00r00         [12]  416 	ld	hl, #_e_int
+      00017B 06 00            [ 8]  417 	ld	b, #0x00
+      00017D 09               [ 8]  418 	add	hl, bc
+      00017E 5E               [ 8]  419 	ld	e, (hl)
+      00017F 16 00            [ 8]  420 	ld	d, #0x00
+      000181 01 05 00         [12]  421 	ld	bc, #0x0005
+      000184 CDr00r00         [24]  422 	call	__divsint
+      000187 79               [ 4]  423 	ld	a, c
+      000188 87               [ 4]  424 	add	a, a
+      000189 87               [ 4]  425 	add	a, a
+      00018A 81               [ 4]  426 	add	a, c
+      00018B 87               [ 4]  427 	add	a, a
+      00018C F8 4A            [12]  428 	ldhl	sp,	#74
+      00018E 77               [ 8]  429 	ld	(hl), a
+                           00018F   430 	C$combat.c$37$5_0$107	= .
+                                    431 	.globl	C$combat.c$37$5_0$107
+                                    432 ;src/combat.c:37: sl3.mp = sl3.max_mp;
+      00018F 2A               [ 8]  433 	ld	a, (hl+)
+      000190 77               [ 8]  434 	ld	(hl), a
+                           000191   435 	C$combat.c$38$5_0$107	= .
+                                    436 	.globl	C$combat.c$38$5_0$107
+                                    437 ;src/combat.c:38: sl3.e_str = e_str[sl3.id];
+      000191 F8 37            [12]  438 	ldhl	sp,	#55
+      000193 4E               [ 8]  439 	ld	c, (hl)
+      000194 21r00r00         [12]  440 	ld	hl, #_e_str
+      000197 06 00            [ 8]  441 	ld	b, #0x00
+      000199 09               [ 8]  442 	add	hl, bc
+      00019A 7E               [ 8]  443 	ld	a, (hl)
+      00019B F8 4C            [12]  444 	ldhl	sp,	#76
+      00019D 77               [ 8]  445 	ld	(hl), a
+                           00019E   446 	C$combat.c$39$5_0$107	= .
+                                    447 	.globl	C$combat.c$39$5_0$107
+                                    448 ;src/combat.c:39: sl3.e_agi = e_agi[sl3.id];
+      00019E F8 37            [12]  449 	ldhl	sp,	#55
+      0001A0 4E               [ 8]  450 	ld	c, (hl)
+      0001A1 21r00r00         [12]  451 	ld	hl, #_e_agi
+      0001A4 06 00            [ 8]  452 	ld	b, #0x00
+      0001A6 09               [ 8]  453 	add	hl, bc
+      0001A7 7E               [ 8]  454 	ld	a, (hl)
+      0001A8 F8 4D            [12]  455 	ldhl	sp,	#77
+      0001AA 77               [ 8]  456 	ld	(hl), a
+                           0001AB   457 	C$combat.c$40$5_0$107	= .
+                                    458 	.globl	C$combat.c$40$5_0$107
+                                    459 ;src/combat.c:40: sl3.e_int = e_int[sl3.id];
+      0001AB F8 37            [12]  460 	ldhl	sp,	#55
+      0001AD 4E               [ 8]  461 	ld	c, (hl)
+      0001AE 21r00r00         [12]  462 	ld	hl, #_e_int
+      0001B1 06 00            [ 8]  463 	ld	b, #0x00
+      0001B3 09               [ 8]  464 	add	hl, bc
+      0001B4 7E               [ 8]  465 	ld	a, (hl)
+      0001B5 F8 4E            [12]  466 	ldhl	sp,	#78
+      0001B7 77               [ 8]  467 	ld	(hl), a
+                           0001B8   468 	C$combat.c$43$3_0$105	= .
+                                    469 	.globl	C$combat.c$43$3_0$105
+                                    470 ;src/combat.c:43: }
+      0001B8                        471 00109$:
+                           0001B8   472 	C$combat.c$5$2_0$104	= .
+                                    473 	.globl	C$combat.c$5$2_0$104
+                                    474 ;src/combat.c:5: for(i=0;i<MAX_COMBAT_GROUP_SIZE;i++){
+      0001B8 F8 04            [12]  475 	ldhl	sp,	#4
+      0001BA 34               [12]  476 	inc	(hl)
+      0001BB 7E               [ 8]  477 	ld	a, (hl)
+      0001BC D6 03            [ 8]  478 	sub	a, #0x03
+      0001BE DAr16r00         [16]  479 	jp	C, 00108$
+                           0001C1   480 	C$combat.c$46$2_0$104	= .
+                                    481 	.globl	C$combat.c$46$2_0$104
+                                    482 ;src/combat.c:46: }
+      0001C1 E8 05            [16]  483 	add	sp, #5
+      0001C3 E1               [12]  484 	pop	hl
+      0001C4 E8 48            [16]  485 	add	sp, #72
+      0001C6 E9               [ 4]  486 	jp	(hl)
+                           0001C7   487 	G$combat_view_upd$0$0	= .
+                                    488 	.globl	G$combat_view_upd$0$0
+                           0001C7   489 	C$combat.c$47$2_0$110	= .
+                                    490 	.globl	C$combat.c$47$2_0$110
+                                    491 ;src/combat.c:47: void combat_view_upd(uint8_t joypad_current, uint8_t joypad_previous ){
+                                    492 ;	---------------------------------
+                                    493 ; Function combat_view_upd
+                                    494 ; ---------------------------------
+      0001C7                        495 _combat_view_upd::
+                           0001C7   496 	C$combat.c$49$2_0$110	= .
+                                    497 	.globl	C$combat.c$49$2_0$110
+                                    498 ;src/combat.c:49: }
+                           0001C7   499 	C$combat.c$49$2_0$110	= .
+                                    500 	.globl	C$combat.c$49$2_0$110
+                           0001C7   501 	XG$combat_view_upd$0$0	= .
+                                    502 	.globl	XG$combat_view_upd$0$0
+      0001C7 C9               [16]  503 	ret
+                                    504 	.area _CODE
+                           0001C8   505 G$combat_groups$0_0$0 == .
+      0001C8                        506 _combat_groups:
+      0001C8 01                     507 	.db #0x01	; 1
+      0001C9 00                     508 	.db #0x00	; 0
+      0001CA 02                     509 	.db #0x02	; 2
+      0001CB 02                     510 	.db #0x02	; 2
+      0001CC 00                     511 	.db #0x00	; 0
+      0001CD 02                     512 	.db #0x02	; 2
+                                    513 	.area _INITIALIZER
+                                    514 	.area _CABS (ABS)

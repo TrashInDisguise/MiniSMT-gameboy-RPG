@@ -11,13 +11,37 @@
 //enemy sprites 3x3 tiles
 
 const uint8_t enemies[][9]={
+    {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00},
     {0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c},
     {0x0d, 0x0e, 0x0f, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15},
 };
 
 const unsigned char enemies_names[][16]={
+    "Unknown\0",
     "Test 1\0",
     "Test 2\0",
+};
+
+const uint8_t e_str[]={
+    0,
+    10,
+    4
+};
+const uint8_t e_int[]={
+    0,
+    4,
+    10
+};
+const uint8_t e_agi[]={
+    0,
+    7,
+    10
+
+};
+const uint8_t e_con[]={
+    0,
+    6,
+    3
 };
 
 const unsigned char enemies_tileset[]={//test data
